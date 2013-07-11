@@ -1,0 +1,523 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Quest:	Spirit Of Craftsman (アルティザンの魂) (103)
+// LV:		10+
+// Location:	Front of Newbie Guide in Dark Elf Village
+// Reward:	Blood Saber(ブラッドサーベル)(975), Echo Crystals
+// 		Lesser Healing Potion(体力回復剤)(1060) x100, SSN Beginners
+// 		EXP & SP for enough to become Lv15
+// Please don't forget set use Soulshot: No Grade for Beginners
+//  or Spiritshot: No Grade for Beginners with Attack command!
+// ------------------------------------------------------------------
+
+Jump("Buff_SpiritOfCraftsman")
+
+Start_SpiritOfCraftsman:
+{
+//	Jump("103_0_TalkToKarrod")
+	Jump("103_1_Talk_Cecktinon")
+	Jump("103_2_Talk_Harne")
+	Jump("103_4_Talk_Harne")
+	Jump("103_5_Talk_Cecktinon")
+	Jump("103_6_Hunt_Zombies")
+	Jump("103_7_Talk_Cecktinon")
+	Jump("103_8_Talk_Karrod")
+	Jump("103_X_Get_Bonus")
+
+	If(CountItem(1107) > 0)
+	{
+		If(CountItem(1107) < 10)
+		{
+			Jump("103_3_Hunt_Skeletons")
+		}
+	}
+
+	Jump("103_0_TalkToKarrod")
+}
+
+//Jump("End_SpiritOfCraftsman")
+
+103_0_TalkToKarrod:
+{
+Msg(Console, "debug: 103_0_TalkToKarrod")
+	If(CountItem(968) < 1)
+	{
+		MoveTo(11757, 17393, -4600)
+		MoveTo(10700, 17792, -4552)
+
+		//Karrod's Letter(カロイドの手紙)
+		While(CountItem(968) < 1)
+		{
+			MoveTo(10597, 17609, -4552)
+			//Karrod(カロイド)
+			NpcDialog(30307)
+			Delay(1500)
+			//SelectDialog("Quest")
+			//SelectDialog("クエスト")
+			SelectDialog(4)
+			Delay(1500)
+			//SelectDialog("Ask about Steelbender")
+			//SelectDialog("スチールベンダーについて")
+			SelectDialog(1)
+			Delay(1500)
+			//SelectDialog("Say you will help")
+			//SelectDialog("手伝う")
+			SelectDialog(1)
+			Delay(1500)
+			CloseDialog()
+			Delay(1500)
+		}
+	}
+	Return
+}
+
+///103-1 Method of Refining Oriharukon Ore(オリハルコンの精錬方法)
+103_1_Talk_Cecktinon:
+{
+Msg(Console, "debug: 103_1_Talk_Cecktinon")
+	If(CountItem(968) == 1)
+	{
+		MoveTo(10700, 17792, -4552)
+		MoveTo(11757, 17393, -4600)
+		MoveTo(12127, 16737, -4584)
+
+		//GoNGToCecktinon_SpiritOfCraftsman:
+		MoveTo(12127, 16737, -4584)
+		MoveTo(16806, 15629, -4256)
+		MoveTo(16624, 14913, -4064)
+		MoveTo(15976, 14499, -3832)
+		MoveTo(16119, 13825, -3712)
+		MoveTo(18220, 12830, -3720)
+		MoveTo(28000, 13360, -3720)
+		MoveTo(28190, 13040, -3720)
+
+		//Cecktinon's First Voucher(セクティノンの紹介状)
+		While(CountItem(969) < 1)
+		{
+			//TalkToCecktinon_SpiritOfCraftsman:
+			MoveTo(28190, 13040, -3720)
+			//Cecktinon(セクティノン)
+			NpcDialog(30132)
+			Delay(1500)
+			//SelectDialog("Quest")
+			//SelectDialog("クエスト")
+			SelectDialog(1)
+			Delay(1500)
+			CloseDialog()
+			Delay(1500)
+		}
+		//GoCecktinonToNG_SpiritOfCraftsman:
+		MoveTo(28190, 13040, -3720)
+		MoveTo(28000, 13360, -3720)
+		MoveTo(18220, 12830, -3720)
+		MoveTo(16119, 13825, -3712)
+		MoveTo(15976, 14499, -3832)
+		MoveTo(16624, 14913, -4064)
+		MoveTo(16806, 15629, -4256)
+		MoveTo(12127, 16737, -4584)
+	}
+	Return
+}
+
+///103-2 Net for Tying Up Dead Spirits(ソウル キャッチャー)
+103_2_Talk_Harne:
+{
+Msg(Console, "debug: 103_2_Talk_Harne")
+	If(CountItem(969) == 1)
+	{
+		//GoNGToHarne_SpiritOfCraftsman:
+		MoveTo(12127, 16737, -4584)
+		MoveTo(11156, 15849, -4584)
+		MoveTo(10805, 14321, -4240)
+		MoveTo(10379, 14436, -4240)
+
+		//Cecktinon's Second Voucher(セクティノンの紹介状)
+		While(CountItem(970) < 1)
+		{
+			//TalkToHarne_SpiritOfCraftsman:
+			MoveTo(10379, 14436, -4240)
+			//Harne(ハルネ)
+			NpcDialog(30144)
+			Delay(1500)
+			//SelectDialog("Quest")
+			//SelectDialog("クエスト")
+			SelectDialog(4)
+			Delay(1500)
+			CloseDialog()
+			Delay(1500)
+		}
+
+		//GoHarneToNG_SpiritOfCraftsman:
+		MoveTo(10379, 14436, -4240)
+		MoveTo(10805, 14321, -4240)
+		MoveTo(11156, 15849, -4584)
+		MoveTo(12127, 16737, -4584)
+
+	}
+}
+
+///103-3 Ingredients for Soul Catcher(ソウル キャッチャーの材料)
+103_3_Hunt_Skeletons:
+{
+Msg(Console, "debug: 103_3_Hunt_Skeletons")
+	If(CountItem(970) == 1)
+	{
+		If(CountItem(1107) < 10)
+		{
+			MoveTo(10260, 16910, -4584)
+			MoveTo(9700, 15590, -4568)
+			//Jasmine(ジャスミン)
+			NpcDialog(30134)
+			Delay(1500)
+			//SelectDialog("Teleport")
+			//SelectDialog("テレポートする")
+			SelectDialog(1)
+			Delay(1500)
+			//SelectDialog("Spider Nest")
+			//SelectDialog("クモの巣")
+			SelectDialog(9)
+			Delay(1500)
+			While(! LocInRange(-60989, 75015, -3352, 500))
+			{
+				Delay(1000)
+			}
+
+			// go to the School of Dark Arts
+			MoveTo(-60319, 73284, -3352)
+			MoveTo(-56971, 71688, -3184)
+			MoveTo(-54304, 69359, -3240)
+			MoveTo(-51237, 67152, -3192)
+			MoveTo(-47130, 59585, -3328)
+
+			// dive into the School of Dark Arts
+			MoveTo(-47137, 55347, -3864)
+			MoveTo(-46720, 55360, -3864)
+			MoveTo(-46750, 57645, -4376)
+			MoveTo(-45650, 57630, -4376)
+			MoveTo(-43945, 54905, -4888)
+			MoveTo(-43930, 54170, -4888)
+
+			//add Hunting area once
+			ClearHuntingArea()
+			AddRectHuntingArea(-44020, 53620, -4888, 700)
+			AddHuntingArea(-44540, 53450, -4888, 0)
+			AddHuntingArea(-45400, 53450, -4888, 0)
+			AddRectHuntingArea(-45945, 53045, -4888, 1000)
+
+			BattleStart()
+
+			//Bone Fragment(ボーン ピース)
+			While(CountItem(1107) < 10)
+			{
+				Delay(5000)
+				If(Char.HP == 0)
+				{
+					Msg(Console, "u had die... return hunting")
+					BattleStop()
+					Delay(5000)
+					ReturnToVillage()
+					Delay(5000)
+					// added for wait spawn in village
+					While(! LocInRange(11400, 16870, -4656, 3000))
+					{
+						Delay(1000)
+					}
+					Jump("Start_SpiritOfCraftsman")
+				}
+			}
+			BattleStop()
+			Delay(5000)
+			UseItem(10650)
+			Delay(10000)
+			// added for wait spawn in village
+			While(! LocInRange(11400, 16870, -4656, 3000))
+			{
+				Delay(1500)
+			}
+		}
+	}
+	Return
+}
+
+///103-4 Return to Harne(ハルネに戻ろう)
+103_4_Talk_Harne:
+{
+Msg(Console, "debug: 103_4_Talk_Harne")
+	If(CountItem(1107) == 10)
+	{
+		//GoNGToHarne_SpiritOfCraftsman:
+		MoveTo(12127, 16737, -4584)
+		MoveTo(11156, 15849, -4584)
+		MoveTo(10805, 14321, -4240)
+		MoveTo(10379, 14436, -4240)
+
+		//Soul Catcher(ソウル キャッチャー)
+		While(CountItem(971) < 1)
+		{
+			//TalkToHarne_SpiritOfCraftsman:
+			MoveTo(10379, 14436, -4240)
+			//Harne(ハルネ)
+			NpcDialog(30144)
+			Delay(1500)
+			//SelectDialog("Quest")
+			//SelectDialog("クエスト")
+			SelectDialog(4)
+			Delay(1500)
+			CloseDialog()
+			Delay(1500)
+		}
+
+		//GoHarneToNG_SpiritOfCraftsman:
+		MoveTo(10379, 14436, -4240)
+		MoveTo(10805, 14321, -4240)
+		MoveTo(11156, 15849, -4584)
+		MoveTo(12127, 16737, -4584)
+	}
+	Return
+}
+
+///103-5 Container to Hold Souls(魂を入れる器)
+103_5_Talk_Cecktinon:
+{
+Msg(Console, "debug: 103_5_Talk_Cecktinon")
+	If(CountItem(971) == 1)
+	{
+		MoveTo(10700, 17792, -4552)
+		MoveTo(11757, 17393, -4600)
+		MoveTo(12127, 16737, -4584)
+
+		//GoNGToCecktinon_SpiritOfCraftsman:
+		MoveTo(12127, 16737, -4584)
+		MoveTo(16806, 15629, -4256)
+		MoveTo(16624, 14913, -4064)
+		MoveTo(15976, 14499, -3832)
+		MoveTo(16119, 13825, -3712)
+		MoveTo(18220, 12830, -3720)
+		MoveTo(28000, 13360, -3720)
+		MoveTo(28190, 13040, -3720)
+
+		//Preserving Oil(保存液)
+		While(CountItem(972) < 1)
+		{
+			//TalkToCecktinon_SpiritOfCraftsman:
+			MoveTo(28190, 13040, -3720)
+			//Cecktinon(セクティノン)
+			NpcDialog(30132)
+			Delay(1500)
+			//SelectDialog("Quest")
+			//SelectDialog("クエスト")
+			SelectDialog(1)
+			Delay(1500)
+			CloseDialog()
+			Delay(1500)
+		}
+
+		//GoCecktinonToNG_SpiritOfCraftsman:
+		MoveTo(28190, 13040, -3720)
+		MoveTo(28000, 13360, -3720)
+		MoveTo(18220, 12830, -3720)
+		MoveTo(16119, 13825, -3712)
+		MoveTo(15976, 14499, -3832)
+		MoveTo(16624, 14913, -4064)
+		MoveTo(16806, 15629, -4256)
+		MoveTo(12127, 16737, -4584)
+	}
+	Return
+}
+
+///103-6 Zombie's Head(ゾンビの頭)
+103_6_Hunt_Zombies:
+{
+Msg(Console, "debug: 103_6_Hunt_Zombies")
+	If(CountItem(972) == 1)
+	{
+	If(CountItem(973) < 1)
+	{
+		MoveTo(10260, 16910, -4584)
+		MoveTo(9700, 15590, -4568)
+		//Jasmine(ジャスミン)
+		NpcDialog(30134)
+		Delay(1500)
+		//SelectDialog("Teleport")
+		//SelectDialog("テレポートする")
+		SelectDialog(1)
+		Delay(1500)
+		//SelectDialog("Swampland")
+		//SelectDialog("沼地帯")
+		SelectDialog(8)
+		Delay(1500)
+		While(! LocInRange(-21966, 40544, -3192, 500))
+		{
+			Delay(1000)
+		}
+
+		//add Hunting area
+		ClearHuntingArea()
+		AddHuntingArea(-18200, 40000, -3592, 3500)
+
+		BattleStart()
+
+		//Zombie Head(ゾンビの頭)
+		While(CountItem(973) < 1)
+		{
+			Delay(5000)
+			If(Char.HP == 0)
+			{
+				Msg(Console, "u had die... return hunting")
+				BattleStop()
+				Delay(5000)
+				ReturnToVillage()
+				Delay(5000)
+				// added for wait spawn in village
+				While(! LocInRange(11400, 16870, -4656, 3000))
+				{
+					Delay(1000)
+				}
+				Jump("Start_SpiritOfCraftsman")
+			}
+		}
+		BattleStop()
+		Delay(5000)
+		UseItem(10650)
+		Delay(10000)
+		// added for wait spawn in village
+		While(! LocInRange(11400, 16870, -4656, 3000))
+		{
+			Delay(1000)
+		}
+	}
+	}
+}
+
+///103-7 Return to Abyssal Celebrant Cecktinon(司祭 セクティノンに戻ろう)
+103_7_Talk_Cecktinon:
+{
+Msg(Console, "debug: 103_7_Talk_Cecktinon")
+	If(CountItem(973) == 1)
+	{
+		//GoNGToCecktinon_SpiritOfCraftsman:
+		MoveTo(12127, 16737, -4584)
+		MoveTo(16806, 15629, -4256)
+		MoveTo(16624, 14913, -4064)
+		MoveTo(15976, 14499, -3832)
+		MoveTo(16119, 13825, -3712)
+		MoveTo(18220, 12830, -3720)
+		MoveTo(28000, 13360, -3720)
+		MoveTo(28190, 13040, -3720)
+
+		//Steelbender Head(不死身スチールベンダーの頭)
+		While(CountItem(974) < 1)
+		{
+			//TalkToCecktinon_SpiritOfCraftsman:
+			MoveTo(28190, 13040, -3720)
+			//Cecktinon(セクティノン)
+			NpcDialog(30132)
+			Delay(1500)
+			//SelectDialog("Quest")
+			//SelectDialog("クエスト")
+			SelectDialog(1)
+			Delay(1500)
+			CloseDialog()
+			Delay(1500)
+		}
+
+		//GoCecktinonToNG_SpiritOfCraftsman:
+		MoveTo(28190, 13040, -3720)
+		MoveTo(28000, 13360, -3720)
+		MoveTo(18220, 12830, -3720)
+		MoveTo(16119, 13825, -3712)
+		MoveTo(15976, 14499, -3832)
+		MoveTo(16624, 14913, -4064)
+		MoveTo(16806, 15629, -4256)
+		MoveTo(12127, 16737, -4584)
+	}
+	Return
+}
+
+///103-8 Steelbender Head(スチールベンダーの頭)
+103_8_Talk_Karrod:
+{
+Msg(Console, "debug: 103_8_Talk_Karrod")
+	If(CountItem(974) == 1)
+	{
+		MoveTo(11757, 17393, -4600)
+		MoveTo(10700, 17792, -4552)
+
+		//Blood Saber(ブラッドサーベル)
+		While(CountItem(975) < 1)
+		{
+			MoveTo(10597, 17609, -4552)
+			//Karrod(カロイド)
+			NpcDialog(30307)
+			Delay(1500)
+			//SelectDialog("Quest")
+			//SelectDialog("クエスト")
+			SelectDialog(4)
+			Delay(1500)
+			CloseDialog()
+			Delay(1500)
+		}
+	}
+	Return
+}
+
+103_X_Get_Bonus:
+{
+Msg(Console, "debug: 103_X_Get_Bonus")
+	If(CountItem(975) == 1)
+	{
+		MoveTo(10700, 17792, -4552)
+		MoveTo(11757, 17393, -4600)
+		MoveTo(12127, 16737, -4584)
+
+		//GetBonus_SpiritOfCraftsman:
+		NpcDialog(30600)
+		Delay(1500)
+		CloseDialog()
+		Delay(1500)
+		Jump("End_SpiritOfCraftsman")
+	}
+	Return
+}
+
+
+// ------------------------------------------------------------------
+//Get Newbie Buff from  Adventurers' Guide
+Buff_SpiritOfCraftsman:
+{
+Msg(Console, "debug: Buff_SpiritOfCraftsman")
+	If(LocInRange(12111, 16686, -4584, 2000))
+	{
+		MoveTo(12127, 16737, -4584)
+	}
+	NpcDialog(30600)
+	Delay(1500)
+	//SelectDialog("Receive blessing of protection.")
+	//SelectDialog("保護の祝福を受ける")
+	SelectDialog(3)
+	Delay(1500)
+	//SelectDialog("Receive the protection blessing.")
+	//SelectDialog("保護の祝福をしてもらう")
+	SelectDialog(1)
+	Delay(1500)
+	NpcDialog(30600)
+	Delay(1500)
+	//SelectDialog("Check the list of available Support Magic.")
+	//SelectDialog("受けられる補助魔法を確認する")
+	SelectDialog(5)
+	Delay(1500)
+	//SelectDialog("Receive supplemental magic.")
+	//SelectDialog("補助魔法をかけてもらう")
+	SelectDialog(1)
+	Delay(1500)
+	CloseDialog()
+	Delay(1500)
+	Return
+}
+
+
+End_SpiritOfCraftsman:
+{
+Msg(Console, "debug: End_SpiritOfCraftsman")
+	Exit
+}

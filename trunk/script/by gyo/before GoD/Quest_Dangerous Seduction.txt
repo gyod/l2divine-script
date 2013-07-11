@@ -1,0 +1,181 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Quest:	Dangerous Seduction(危険な誘惑)(170)
+// LV:		21+
+// Race:	Dark Elf only
+// Location:	Front of GK in Dark Elf Village
+// Require:	Scroll of Escape(736) x more than 1
+// Reward:	Exp 38607, SP 4018, 102680 Adena
+// ------------------------------------------------------------------
+
+Init_DangerousSeduction:
+If (Char.LV < 21)
+{
+	Msg(Console, "U r too young to do!")
+	Jump("End_DangerousSeduction")
+}
+
+//GKToVellior
+MoveTo(9710, 15570, -4568)
+MoveTo(10640, 15600, -4568)
+MoveTo(10670, 15000, -4336)
+MoveTo(10970, 14960, -4336)
+MoveTo(10800, 14280, -4240)
+MoveTo(10360, 14290, -4240)
+
+//Vellior(ベリオール)
+NpcDialog(30305)
+Delay(2000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(2)
+Delay(1500)
+//SelectDialog("Say you will get rid of the nightmare for him")
+//SelectDialog("夢魔を倒すと言う")
+SelectDialog(1)
+Delay(1500)
+CloseDialog()
+Delay(1500)
+
+//--
+// Chasing a Dream-Catching Succubus(夢魔の追跡)
+//--
+//VelliorToNG
+MoveTo(10360, 14290, -4240)
+MoveTo(10805, 14321, -4240)
+MoveTo(11156, 15849, -4584)
+MoveTo(12127, 16737, -4584)
+
+NewbieBuff_DangerousSeduction:
+MoveTo(12127, 16737, -4584)
+NpcDialog(30600)
+Delay(1000)
+//SelectDialog("Receive blessing of protection.")
+//SelectDialog("保護の祝福を受ける")
+SelectDialog(3)
+Delay(1000)
+//SelectDialog("Receive the protection blessing.")
+//SelectDialog("保護の祝福をしてもらう")
+SelectDialog(1)
+Delay(1000)
+NpcDialog(30600)
+Delay(1000)
+//SelectDialog("Check the list of available Support Magic.")
+//SelectDialog("受けられる補助魔法を確認する")
+SelectDialog(6)
+Delay(1000)
+//SelectDialog("Receive supplemental magic.")
+//SelectDialog("補助魔法をかけてもらう")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+
+//NGToGK
+MoveTo(10260, 16910, -4584)
+MoveTo(9700, 15590, -4568)
+
+//TeleportToForest_DangerousSeduction:
+MoveTo(9700, 15590, -4568)
+//Jasmine(ジャスミン)
+NpcDialog(30134)
+Delay(1000)
+//SelectDialog("Teleport")
+//SelectDialog("テレポートする")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("Spider Nest")
+//SelectDialog("クモの巣")
+SelectDialog(8)
+Delay(1000)
+While (! LocInRange(-60989, 75015, -3352, 500))
+{
+	Delay(1000)
+}
+
+// go to the School of Dark Arts
+MoveTo(-60319, 73284, -3352)
+MoveTo(-56971, 71688, -3184)
+MoveTo(-54304, 69359, -3240)
+MoveTo(-51237, 67152, -3192)
+MoveTo(-47130, 59585, -3328)
+
+// dive into the School of Dark Arts
+MoveTo(-47137, 55347, -3864)
+MoveTo(-46720, 55360, -3864)
+MoveTo(-46750, 57645, -4376)
+MoveTo(-45650, 57630, -4376)
+MoveTo(-43945, 54905, -4888)
+MoveTo(-43930, 54170, -4888)
+MoveTo(-43805, 53579, -4888)
+MoveTo(-44309, 52955, -4888)
+MoveTo(-44325, 47027, -5400)
+MoveTo(-44729, 47195, -5400)
+MoveTo(-44738, 49453, -5912)
+MoveTo(-46893, 49433, -5720)
+
+ClearHuntingArea()
+AddRectHuntingArea(-47400, 49420, -5812, 1300)
+BattleStart()
+
+//Nightmare Crystal(ナイトメア クリスタル)
+While (CountItem(1046) < 1)
+{
+	SelectTarget(27022)
+	ForceAttack(27022)
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u are die... return hunting")
+		BattleStop()
+		ReturnToVillage()
+		Delay(5000)
+		Jump("NewbieBuff_DangerousSeduction")
+	}
+}
+BattleStop()
+Delay(5000)
+
+//--
+// Nightmare Crystal(ナイトメア クリスタル)
+//--
+Delay(5000)
+UseItem(736)
+Delay(10000)
+
+//Spawn Location in Dark Elf Village
+//(11632, 16812, -4500)
+//(11217, 16837, -4500)
+//(11498, 16979, -4500)
+//(11404, 16699, -4500)
+//(12501, 16768, -4500)
+//(12104, 17385, -4500)
+//(11603, 17770, -4500)
+//(12519, 16376, -4500)
+//(10355, 17270, -4500)
+//(10146, 16965, -4500)
+//(10691, 16343, -4500)
+//(11193, 15963, -4500)
+
+//CheckInDarkElfVillage_DangerousSeduction:
+If (LocInRange(11370, 16820, -4688, 2500))
+{
+	MoveTo(12127, 16737, -4584)
+}
+
+//NGToVellior
+MoveTo(12127, 16737, -4584)
+MoveTo(11156, 15849, -4584)
+MoveTo(10805, 14321, -4240)
+MoveTo(10360, 14290, -4240)
+
+//Vellior(ベリオール)
+NpcDialog(30305)
+Delay(2000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(2)
+Delay(1500)
+Delay(1500)
+
+End_DangerousSeduction:

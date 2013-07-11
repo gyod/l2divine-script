@@ -1,0 +1,53 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Leveling Script for Dark Fighter: Lv1-18
+// NOTICE: Don't forget set Attack command with SSN Beginners and other settings!
+// ------------------------------------------------------------------
+
+Include("Quest_Tutorial for Dark Elf.txt")
+Include("Quest_Supply Check.txt")
+Include("Snippet_Get Adventures Weapon.txt")
+Include("Quest_Head for the Hills.txt")
+
+// Teleport to Dark Elf Village
+MoveTo(-119790, 44520, 360)
+NpcDialog(32135)
+Delay(1000)
+//SelectDialog("?Teleport to initial village of another race?")
+//SelectDialog("他種族の初期村にテレポートする")
+SelectDialog(4)
+Delay(1000)
+//SelectDialog("Dark Elf Village")
+//SelectDialog("ダークエルフ村")
+SelectDialog(2)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+While (! LocInRange(12111, 16686, -4584, 500))
+{
+	Delay(1000)
+}
+
+Include("Quest_Spirit Of Craftsman.txt")
+
+// Teleport to the Kamael Village
+MoveTo(12127, 16737, -4584)
+NpcDialog(30600)
+Delay(1000)
+//SelectDialog("?Teleport to initial village of another race?")
+//SelectDialog("他種族の初期村にテレポートする")
+SelectDialog(4)
+Delay(1000)
+//SelectDialog("Kamael Village")
+//SelectDialog("カマエル村")
+SelectDialog(5)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+While (! LocInRange(-119790, 44520, 360, 500))
+{
+	Delay(1000)
+}
+
+Include("Quest_The Few the Proud the Brave.txt")
+Msg(Console, "gyo: U became Lv18! Don't forget leann skills before Class Change Script!")

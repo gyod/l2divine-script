@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <MainForm>
+    <LoadBtn>Load</LoadBtn>
+    <SaveBtn>Save</SaveBtn>
+    <ImpBtn>Import</ImpBtn>
+    <ExpBtn>Export</ExpBtn>
+    <MenuFile>File</MenuFile>
+    <MenuFileOpen>OpenFolder</MenuFileOpen>
+    <MenuFileLoad>Load</MenuFileLoad>
+    <MenuFileSave>Save</MenuFileSave>
+    <MenuFileImp>Import</MenuFileImp>
+    <MenuFileExp>Export</MenuFileExp>
+    <MenuFileExit>Exit</MenuFileExit>
+    <MenuOption>Option</MenuOption>
+    <MenuL2encdecTools>L2encdecTools</MenuL2encdecTools>
+    <MenuL2encdecItem1>Patch System</MenuL2encdecItem1>
+    <MenuL2encdecItem2>Edit INI Files</MenuL2encdecItem2>
+    <MenuAbout>About</MenuAbout>
+  </MainForm>
+  <OptionForm>
+    <ChronicleLabel>ChronicleSetting</ChronicleLabel>
+    <Encodinglabel>TextEncoding</Encodinglabel>
+    <LanguageLabel>Language</LanguageLabel>
+    <OkBtn>O K</OkBtn>
+    <CancelBtn>Cancel</CancelBtn>
+  </OptionForm>
+  <IniEditBox>
+    <SaveBtn>Save</SaveBtn>
+    <CancelBtn>Cancel</CancelBtn>
+  </IniEditBox>
+  <Messages>
+    <SystemDir_Error>LineageII System directory is not found or specification is wrong.
+Please specify an effective LineageII System directory.</SystemDir_Error>
+    <DirectoryDialog_Desc>Choose directory where LineageII System.</DirectoryDialog_Desc>
+    <MsgBoxTitle_Error>Error</MsgBoxTitle_Error>
+    <MsgBoxTitle_Information>Information</MsgBoxTitle_Information>
+    <COMPLETE>[COMPLETE] </COMPLETE>
+    <ERROR>[ERROR] </ERROR>
+    <ChronicleSetting>[ChronicleSetting] </ChronicleSetting>
+    <TextEncoding>[TextEncoding] </TextEncoding>
+    <PleaseWait>Please Wait...</PleaseWait>
+    <FileNotFound>File Not Found.</FileNotFound>
+    <DataIsEmpty>Data Is Empty.</DataIsEmpty>
+    <CompleteLoad>Loaded {0} Datas.</CompleteLoad>
+    <CompleteSave>Saveed {0} Datas.</CompleteSave>
+    <CompleteImp>Imported {0} Datas.</CompleteImp>
+    <CompleteExp>Exported {0} Datas.</CompleteExp>
+    <CompletePatchSystem>Patched System Files.</CompletePatchSystem>
+  </Messages>
+</root>

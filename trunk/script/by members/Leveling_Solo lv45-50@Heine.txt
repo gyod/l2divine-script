@@ -1,0 +1,199 @@
+// http://projectdivine.com/forum/topic_view.jsp?c=NxQ=&f=MRZGIA==
+// Solo lv45-50@Heine.txt
+// Auther:	redtears
+
+//----------------------------------------
+
+// ***Creator: redtears --- L2FusionGaming@yahoo.com
+// ***Email with questions, requests, or comments
+
+// Start -> Heine> Water Fountain below Adventurers' Guide
+// Recommend*
+// Level > 45 (x2 HP Mobs level 43)
+// Healing potions x 100
+// Auto Counter -> On
+// Z-Limit -> On at 500
+// When not found mob -> Change Hunting Area
+// Timeout -> On at 5 sec
+// Item: Top Grade Weapon & Armor
+// Item: SOE x 10 or 20
+// Item: > 5,000 Soul Shot C Grade in Warehouse 
+// (Recommend keeping 25,000+ CSS in warehous)
+// Note: If run out of CSS and none in warehouse will log out.
+//----------------------------------------
+
+// If already in hunting area
+If (LocInRange(115814, 185264, -3424, 2500))
+{
+	// Start battle
+	Jump("Battle")
+}
+
+BlindSpot:
+
+// Run to buffer if SoE'd to blind spot in front of magic shop
+
+Msg(Console, "We might be on the other side of town, checking...")
+
+//If (TargetInRange("Territory Manager"))
+If (TargetInRange(36495))
+{
+	// Move to NPC
+	MoveTo(108920, 217564, -3712)
+	MoveTo(110040, 217190, -3744)
+	MoveTo(110052, 219562, -3472)
+	MoveTo(110213, 219567, -3472)
+	MoveTo(110298, 220188, -3600)
+	MoveTo(111178, 220236, -3664)
+}
+
+WarehouseRun:
+
+Msg(Console, "If we have less then 1,000 soulshots were going to get some from warehouse...")
+
+
+If (CountItem(1464) < 1000)
+{
+	MoveTo(110469, 220137, -3592)
+	MoveTo(110208, 220033, -3600)
+	MoveTo(110184, 219553, -3472)
+	MoveTo(109911, 219547, -3472)
+	MoveTo(109919, 220123, -3512)
+	MoveTo(109709, 220119, -3512)
+	NpcDialog(30895)
+	Delay(1000)
+	SelectDialog(1)
+	Delay(1000)
+	SelectDialog(2)
+	Delay(5000)
+	AddItem(1464, 5000)
+	Delay(1000)
+	Confirm()
+	CloseDialog()
+	Delay(1000)
+
+	// Recheck again
+
+	If (CountItem(1464) < 100)
+	{
+		Msg(Console, "Not enough Soul Shots in Warehouse, logging out for safety.")
+		//Logout(0,0)
+	}
+
+	MoveTo(109919, 220123, -3512)
+	MoveTo(109911, 219547, -3472)
+	MoveTo(110184, 219553, -3472)
+	MoveTo(110208, 220033, -3600)
+	MoveTo(110469, 220137, -3592)
+}
+
+RecieveBuff:
+
+// If not start at Adventurers' Guide
+
+Msg(Console, "Alrighty, going to get some buffs!")
+
+If (!LocInRange(111174, 220976, -3544, 200))
+{
+	// Move to NPC
+	MoveTo(111603, 220156, -3672)
+	MoveTo(111576, 221168, -3536)
+	MoveTo(111185, 221179, -3536)
+	MoveTo(111174, 220976, -3544)
+}
+
+// Adventurers' buff
+Delay(2000)
+NpcDialog(32327)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+
+// Go to Gatekeeper
+//Msg(Console, "Moving to Event Gatekeeper")
+Msg(Console, "Moving to Gatekeeper")
+MoveTo(111188, 219000, -3536)
+MoveTo(111373, 219391, -3544)
+
+// Talk to Event Gatekeeper (Heine Town)
+Msg(Console, "Teleporting to Aligator Island")
+Delay(2000)
+//NpcDialog(31222)
+NpcDialog(30899)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+//SelectDialog(5)
+SelectDialog(12)
+Delay(1500)
+
+// Go to Hunting Zone
+Msg(Console, "Moving to Hunting Zone")
+MoveTo(115345, 191128, -3448)
+MoveTo(115330, 187850, -3752)
+MoveTo(116006, 186096, -3392)
+
+Battle:
+
+Msg(Console, "Time to grind like chinese people")
+
+ClearHuntingArea()
+AddHuntingArea(115814, 185264, -3424, 2500)
+AddHuntingArea(112806, 183422, -3760, 2500)
+BattleStart()
+
+CheckBuff:
+
+// Check Adventurers's Buff (Every buff should disappear together so only check windwalk)
+If (BuffLevel(4322) == 0)
+{
+	// Stop battle
+	BattleStop()
+
+	// Make sure all of aggr mob was killed
+	Delay(30000)
+
+	// Back to Heine by SOE
+	UseItem(736)
+
+	// Delay time for use SOE
+	Delay(25000)
+
+	// Delay time to wait for party member
+	//Delay(5000)
+
+	Jump("BlindSpot")
+}
+
+Delay(1500)
+
+CheckSoulShots:
+
+// If soul shots < 300 SoE back to town & repeat script from beginning
+
+If (CountItem(1464) < 300)
+{
+	// Stop battle
+	BattleStop()
+
+	// Make sure all of aggr mob was killed
+	Delay(30000)
+
+	// Back to Heine by SOE
+	UseItem(736)
+
+	// Delay time for use SOE
+	Delay(25000)
+
+	// Delay time to wait for party member
+	//Delay(5000)
+
+	Jump("BlindSpot")
+}
+
+Delay(10000)
+Jump("CheckBuff")
+
+End:

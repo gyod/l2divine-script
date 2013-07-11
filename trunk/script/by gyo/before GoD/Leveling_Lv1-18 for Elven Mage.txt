@@ -1,0 +1,57 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Leveling Script for Elven Mage: Lv1-18
+// NOTICE: Don't forget set Attack command with SSN Beginners and other settings!
+// ------------------------------------------------------------------
+
+Include("Quest_Tutorial for Elf.txt")
+Include("Quest_Supply Check.txt")
+UseItem(425)
+Delay(1000)
+UseItem(461)
+Delay(1000)
+Include("Snippet_Get Adventures Weapon for Mage.txt")
+Include("Quest_Head for the Hills.txt")
+
+// Teleport to the Elven Village
+MoveTo(-119790, 44520, 360)
+NpcDialog(32135)
+Delay(1000)
+//SelectDialog("?Teleport to initial village of another race?")
+//SelectDialog("他種族の初期村にテレポートする")
+SelectDialog(4)
+Delay(1000)
+//SelectDialog("Elven Village")
+//SelectDialog("エルフ村")
+SelectDialog(3)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+While (! LocInRange(45475, 48359, -3056, 500))
+{
+	Delay(1000)
+}
+
+Include("Quest_Skirmish With Orcs(forMage).txt")
+
+// Teleport to the Kamael Village
+MoveTo(45466, 48406, -3056)
+NpcDialog(30599)
+Delay(1000)
+//SelectDialog("?Teleport to initial village of another race?")
+//SelectDialog("他種族の初期村にテレポートする")
+SelectDialog(4)
+Delay(1000)
+//SelectDialog("Kamael Village")
+//SelectDialog("カマエル村")
+SelectDialog(5)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+While (! LocInRange(-119790, 44520, 360, 500))
+{
+	Delay(1000)
+}
+
+Include("Quest_The Few the Proud the Brave.txt")
+Msg(Console, "gyo: U became Lv18! Don't forget leann skills before Class Change Script!")

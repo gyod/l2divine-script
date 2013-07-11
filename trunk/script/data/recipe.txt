@@ -1,0 +1,936 @@
+[1] Recipe: Wooden Arrow
+[2] Recipe: Broad Sword
+[3] Recipe: Willow Staff
+[4] Recipe: Bow
+[5] Recipe: Cedar Staff
+[6] Recipe: Dirk
+[7] Recipe: Brandish
+[8] Recipe: Short Spear
+[9] Recipe: Sword of Reflection
+[10] Recipe: Forest Bow
+[11] Recipe:Leather Shoes
+[12] Recipe: Leather Tunic
+[13] Recipe: Leather Stockings
+[14] Recipe: Leather Helmet
+[15] Recipe: Leather Gloves
+[16] Recipe: Piece Bone Breastplate
+[17] Recipe: Piece Bone Gaiters
+[18] Recipe: Necklace of Anguish
+[19] Recipe: Necklace of Wisdom
+[20] Recipe: Soulshot: D-Grade
+[21] Recipe: Soulshot: C-Grade
+[22] Recipe: Soulshot: B-Grade
+[23] Recipe: Soulshot: A-Grade
+[24] Recipe: Soulshot: S Grade
+[25] Recipe: Leather
+[26] Recipe: Cord
+[27] Recipe: Oriharukon
+[28] Recipe: Braided Hemp
+[29] Recipe: Cokes
+[30] Recipe: Steel
+[31] Recipe: Coarse Bone Powder (100%)
+[32] Recipe: Steel Mold
+[33] Recipe: High Grade Suede
+[34] Recipe: Silver Mold
+[35] Recipe: Varnish of Purity
+[36] Recipe: Synthetic Cokes
+[37] Recipe: Compound Braid
+[38] Recipe: Mithril Alloy
+[39] Recipe: Artisan's frame
+[40] Recipe: Blacksmith's frame
+[41] Recipe: Crafted Leather
+[42] Recipe: Metallic Fiber
+[43] Recipe: Blue Diamond Necklace
+[44] Recipe: Necklace of Devotion
+[45] Recipe: Enchanted Necklace
+[46] Recipe: Tiger's Eye Earring
+[47] Recipe: Elven Earring
+[48] Recipe: Elven Ring
+[49] Recipe: Elven Necklace
+[50] Recipe: Omen Beast's Eye Earring
+[51] Recipe: Mithril Ring
+[52] Recipe: Necklace of Darkness
+[53] Recipe: Moonstone Earring
+[54] Recipe: Aquastone Ring
+[55] Recipe: Aquastone Necklace
+[56] Recipe: Earring of Protection
+[57] Recipe: Ring of Protection
+[58] Recipe: Necklace of Protection
+[59] Recipe: Earrings of Binding (100%)
+[60] Recipe: Ring of Ages
+[61] Recipe: Necklace of Mermaid
+[62] Recipe: Necklace of Binding
+[63] Recipe: Nassen's Earring
+[64] Recipe: Sage's Ring
+[65] Recipe: Sage's Necklace
+[66] Recipe: Hard Leather Shirt
+[67] Recipe: Hard Leather Gaiters
+[68] Recipe: Boots
+[69] Recipe: Leather Boots
+[70] Recipe: Bone Helmet
+[71] Recipe: Dark Stockings
+[72] Recipe: Crafted Leather Gloves
+[73] Recipe: Scale Mail
+[74] Recipe: White Tunic
+[75] Recipe: Scale Gaiters
+[76] Recipe: Mithril Banded Mail
+[77] Recipe: Mithril Banded Gaiters
+[78] Recipe: Iron Boots
+[79] Recipe: Brigandine Tunic
+[80] Recipe: Manticore Skin Shirt
+[81] Recipe: Manticore Skin Gaiters
+[82] Recipe: Mithril Tunic
+[83] Recipe: Mithril Stockings
+[84] Recipe: RIP Gauntlets
+[85] Recipe: Kite Shield
+[86] Recipe: Boots of Power
+[87] Recipe: Mithril Gloves
+[88] Recipe: Half Plate Armor
+[89] Recipe: Plate Gaiters
+[90] Recipe: Salamander Skin Mail
+[91] Recipe: Sage's Rag
+[92] Recipe: Karmian Stockings
+[93] Recipe: Chain Helmet
+[94] Recipe: Square Shield
+[95] Recipe: Assault Boots
+[96] Recipe: Mithril Boots
+[97] Recipe: Chain Mail Shirt
+[98] Recipe: Chain Gaiters
+[99] Recipe: Mithril Shirt
+[100] Recipe: Karmian Tunic
+[101] Recipe: Ogre Power Gauntlets
+[102] Recipe: Eldarake
+[103] Recipe: Steel Plate Helmet
+[104] Recipe: Plated Leather Armor
+[105] Recipe: Plated Leather Gaiters
+[106] Recipe: Dwarven Chain Mail Shirt
+[107] Recipe: Dwarven Chain Gaiters
+[108] Recipe: Robe of Seal
+[109] Recipe: Great Helmet
+[110] Recipe: Knight's Shield
+[111] Recipe: Pa'agrian Hand
+[112] Recipe: Crimson Boots
+[113] Recipe: Rind Leather Armor
+[114] Recipe: Rind Leather Gaiters
+[115] Recipe: Composite Armor
+[116] Recipe: Tower Shield
+[117] Recipe: Demon's Tunic
+[118] Recipe: Demon's Stockings
+[119] Recipe: Mithril Gauntlets
+[120] Recipe: Forgotten Boots
+[121] Recipe: Shining Circlet
+[122] Recipe: Theca Leather Armor
+[123] Recipe: Theca Leather Gaiters
+[124] Recipe: Full Plate Armor
+[125] Recipe: Drake Leather Armor
+[126] Recipe: Divine Tunic
+[127] Recipe: Divine Stockings
+[128] Recipe: Mithril Helmet
+[129] Recipe: Cap of Mana
+[130] Recipe: Paradia Hood
+[131] Recipe: Hood of Solar Eclipse
+[132] Recipe: Hood of Summoning
+[133] Recipe: Elemental Hood
+[134] Recipe: Hood of Grace
+[135] Recipe: Phoenix Hood
+[136] Recipe: Hood of Aid
+[137] Recipe: Flame Helm
+[138] Recipe: Pata (60%)
+[139] Recipe: Helm of Avadon
+[140] Recipe: Helmet of Pledge
+[141] Recipe: Gauntlets of Ghost
+[142] Recipe: Adamantite Boots
+[143] Recipe: Bone Arrow
+[144] Recipe: Steel Arrow
+[145] Recipe: Iron Hammer
+[146] Recipe: Sword Breaker
+[147] Recipe: Composite Bow
+[148] Recipe: Saber
+[149] Recipe: Assassin Knife
+[150] Recipe: Trident
+[151] Recipe: Temptation of Abyss
+[152] Recipe: Spinebone Sword
+[153] Recipe: Mace of Judgment
+[154] Recipe: Conjuror's Staff
+[155] Recipe: Elven Bow
+[156] Recipe: Dwarven Trident
+[157] Recipe: Two-handed Sword
+[158] Recipe: Spiked Club
+[159] Recipe: Shilen Knife
+[160] Recipe: Gastraphetes
+[161] Recipe: Tome of Blood
+[162] Recipe: Morning Star
+[163] Recipe: Goat Head Staff
+[164] Recipe: Winged Spear
+[165] Recipe: Sword of Revolution
+[166] Recipe: Tarbar
+[167] Recipe: Skull Breaker
+[168] Recipe: Heavy Bone Club
+[169] Recipe: Maingauche
+[170] Recipe: Bich'hwa
+[171] Recipe: Strengthened Long Bow
+[172] Recipe: War Pick
+[173] Recipe: Crucifix of Blood
+[174] Recipe: Eye of Infinity
+[175] Recipe: Cursed Maingauche
+[176] Recipe: Blue Crystal Skull
+[177] Recipe: Demon Fangs
+[178] Recipe: Claymore
+[179] Recipe: Bonebreaker
+[180] Recipe: Atuba Hammer
+[181] Recipe: Ghost Staff
+[182] Recipe: Staff of Life
+[183] Recipe: Mithril Dagger
+[184] Recipe: Scallop Jamadhr
+[185] Recipe: Light Crossbow
+[186] Recipe: Glaive
+[187] Recipe: Vajra Wands
+[188] Recipe: Ancient Reagent
+[189] Recipe: Atuba Mace
+[190] Recipe: Flamberge
+[191] Recipe: Stormbringer
+[192] Recipe: Big Hammer
+[193] Recipe: Scythe
+[194] Recipe: Battle Axe
+[195] Recipe: Silver Axe
+[196] Recipe: Skull Graver
+[197] Recipe: Heavy Doom Hammer
+[198] Recipe: Crystal Staff
+[199] Recipe: Stick of Faith
+[200] Recipe: Heavy Doom Axe
+[201] Recipe: Cursed Dagger
+[202] Recipe: Wolverine Needle
+[203] Recipe: Dark Elven Dagger
+[204] Recipe: Chakram
+[205] Recipe: Crystallized Ice Bow
+[206] Recipe: Orcish Glaive
+[207] Recipe: Body Slasher
+[208] Recipe: Shamshir
+[209] Recipe: Katana
+[210] Recipe: Bec de Corbin
+[211] Recipe: Spirit Sword
+[212] Recipe: Raid Sword
+[213] Recipe: Cursed Staff
+[214] Recipe: Stiletto
+[215] Recipe: Soulfire Dirk
+[216] Recipe: Elemental Bow
+[217] Recipe: Elven Bow of Nobility
+[218] Recipe: Tears of Fairy
+[219] Recipe: Horn of Glory
+[220] Recipe: Caliburs
+[221] Recipe: Sword of Delusion
+[222] Recipe: Tsurugi
+[223] Recipe: Homunkulus's Sword
+[224] Recipe: Poleaxe
+[225] Recipe: Sword of Limit
+[226] Recipe: Sword of Nightmare
+[227] Recipe: Sword of Whispering Death
+[228] Recipe: War Axe
+[229] Recipe: Nirvana Axe
+[230] Recipe: Stick of Eternity
+[231] Recipe: Paradia Staff
+[232] Recipe: Inferno Staff
+[233] Recipe: Pa'agrian Hammer
+[234] Recipe: Sage's Staff
+[235] Recipe: Club of Nature
+[236] Recipe: Mace of the Underworld
+[237] Recipe: Grace Dagger
+[238] Recipe: Dark Screamer
+[239] Recipe: Fisted Blade
+[240] Recipe: Akat Long Bow
+[241] Recipe: Heathen's Book
+[242] Recipe: Hex Doll
+[243] Recipe: Pa'agrian Axe
+[244] Recipe: Scorpion
+[245] Recipe: Widow Maker
+[246] Recipe: Samurai Longsword
+[247] Recipe: Deadman's Staff
+[248] Recipe: Ghoul's Staff
+[249] Recipe: Demon's Staff
+[250] Recipe: Crystal Dagger
+[251] Recipe: Great Pata
+[252] Recipe: Eminence Bow
+[253] Recipe: Orcish Poleaxe
+[254] Recipe: Candle of Wisdom
+[255] Recipe: Blessed Branch
+[256] Recipe: Phoenix Feather
+[257] Recipe: Cerberus Eye
+[258] Recipe: Scroll of Destruction
+[259] Recipe: Claws of Black Dragon
+[260] Recipe: Three Eyed Crow's Feather
+[261] Recipe: Ring of Binding
+[262] Recipe: Mithril Scale Gaiters
+[263] Recipe: Brigandine Gaiters
+[264] Recipe: Elven Mithril Tunic
+[265] Recipe: Elven Mithril Stockings
+[266] Recipe: Brigandine Helmet
+[267] Recipe: Manticore Skin Boots
+[268] Recipe: Brigandine Boots
+[269] Recipe: Elven Mithril Boots
+[270] Recipe: Manticore Skin Gloves
+[271] Recipe: Brigandine Gauntlets
+[272] Recipe: Mithril Gloves
+[273] Recipe: Brigandine Shield
+[274] Recipe: Plate Helmet
+[275] Recipe: Salamander Skin Boots
+[276] Recipe: Plate Boots
+[277] Recipe: Sage's Worn Gloves
+[278] Recipe: Plate Shield
+[279] Recipe: Tempered Mithril Gaiters
+[280] Recipe: Chain Hood
+[281] Recipe: Chain Boots
+[282] Recipe: Karmian Boots
+[283] Recipe: Plated Leather Boots
+[284] Recipe: Dwarven Chain Boots
+[285] Recipe: Boots of Seal
+[286] Recipe: Reinforced Mithril Gloves
+[287] Recipe: Chain Gloves
+[288] Recipe: Karmian Gloves
+[289] Recipe: Chain Shield
+[290] Recipe: Plated Leather Gloves
+[291] Recipe: Dwarven Chain Shield
+[292] Recipe: Rind Leather Boots
+[293] Recipe: Dwarven Chain Gloves
+[294] Recipe: Gloves of Seal
+[295] Recipe: Rind Leather Gloves
+[296] Recipe: Demon's Boots
+[297] Recipe: Demon's Gloves
+[298] Recipe: Theca Leather Boots
+[299] Recipe: Theca Leather Gloves
+[300] Recipe: Composite Boots
+[301] Recipe: Composite Helmet
+[302] Recipe: Divine Boots
+[303] Recipe: Full Plate Helmet
+[304] Recipe: Drake Leather Boots
+[305] Recipe: Full Plate Boots
+[306] Recipe: Drake Leather Gloves
+[307] Recipe: Full Plate Gauntlets
+[308] Recipe: Divine Gloves
+[309] Recipe: Blessed Gloves
+[310] Recipe: Full Plate Shield
+[311] Recipe: Elven Long Sword
+[312] Recipe: Dwarven War Hammer
+[313] Recipe: Yaksa Mace
+[314] Recipe: Titan Key
+[315] Recipe: Journeyman Ring
+[316] Recipe: Amber Bead
+[317] Recipe: Spiritshot D
+[318] Recipe: Spiritshot C
+[319] Recipe: Spiritshot B
+[320] Recipe: Spiritshot A
+[321] Recipe: Spiritshot S
+[322] Recipe: Titan's Powerstone
+[323] Recipe: Blessed Spiritshot D
+[324] Recipe: Blessed Spiritshot C
+[325] Recipe: Blessed Spiritshot B
+[326] Recipe: Blessed Spiritshot A
+[327] Recipe: Blessed Spiritshot S
+[328] Recipe: Adamantite Earrings (70%)
+[329] Recipe: Adamantite Earrings (100%)
+[330] Recipe: Adamantite Ring (70%)
+[331] Recipe: Adamantite Ring (100%)
+[332] Recipe: Adamantite Necklace (70%)
+[333] Recipe: Adamantite Necklace (100%)
+[334] Recipe: Earring of Black Ore (70%)
+[335] Recipe: Earrings of Black Ore (100%)
+[336] Recipe: Ring of Black Ore (70%)
+[337] Recipe: Ring of Black Ore (100%)
+[338] Recipe: Necklace of Black Ore (70%)
+[339] Recipe: Necklace of Black Ore (100%)
+[340] Recipe: Composite Shield (100%)
+[341] Recipe: Zubei's Breastplate (60%)
+[342] Recipe: Zubei's Breastplate (100%)
+[343] Recipe: Zubei's Gaiters (60%)
+[344] Recipe: Zubei's Gaiters (100%)
+[345] Recipe: Implosion Boots (60%)
+[346] Recipe: Implosion Boots (100%)
+[347] Recipe: Boots of Silence (60%)
+[348] Recipe: Boots of Silence (100%)
+[349] Recipe: Guardian's Boots (60%)
+[350] Recipe: Guardian's Boots (100%)
+[351] Recipe: Paradia Boots (60%)
+[352] Recipe: Paradia Boots (100%)
+[353] Recipe: Elemental Boots (60%)
+[354] Recipe: Elemental Boots (100%)
+[355] Recipe: Boots of Grace (60%)
+[356] Recipe: Boots of Grace (100%)
+[357] Recipe: Avadon Breastplate (60%)
+[358] Recipe: Avadon Breastplate (100%)
+[359] Recipe: Avadon Gaiters (60%)
+[360] Recipe: Avadon Gaiters (100%)
+[361] Recipe: Zubei's Leather Shirt (60%)
+[362] Recipe: Zubei's Leather Shirt (100%)
+[363] Recipe: Zubei's Leather Gaiters (60%)
+[364] Recipe: Zubei's Leather Gaiters (100%)
+[365] Recipe: Avadon Leather Armor (60%)
+[366] Recipe: Avadon Leather Armor (100%)
+[367] Recipe: Tunic of Zubei (60%)
+[368] Recipe: Tunic of Zubei (100%)
+[369] Recipe: Stockings of Zubei (60%)
+[370] Recipe: Stockings of Zubei (100%)
+[371] Recipe: Avadon Robe (60%)
+[372] Recipe: Avadon Robe (100%)
+[373] Recipe: Avadon Circlet (60%)
+[374] Recipe: Avadon Circlet (100%)
+[375] Recipe: Avadon Gloves (60%)
+[376] Recipe: Avadon Gloves (100%)
+[377] Recipe: Chain Gloves of Silence (60%)
+[378] Recipe: Chain Gloves of Silence (100%)
+[379] Recipe: Guardian's Gloves (60%)
+[380] Recipe: Guardian's Gloves (100%)
+[381] Recipe: Gloves of Blessing (60%)
+[382] Recipe: Gloves of Blessing (100%)
+[383] Recipe: Doom Shield (60%)
+[384] Recipe: Doom Shield (100%)
+[385] Recipe: Blue Wolf Breastplate (60%)
+[386] Recipe: Blue Wolf Breastplate (100%)
+[387] Recipe: Boots of Blessing (60%)
+[388] Recipe: Boots of Blessing (100%)
+[389] Recipe: Blue Wolf Gaiters (60%)
+[390] Recipe: Blue Wolf Gaiters (100%)
+[391] Recipe: Doom Plate Armor (60%)
+[392] Recipe: Doom Plate Armor (100%)
+[393] Recipe: Blue Wolf Leather Armor (60%)
+[394] Recipe: Blue Wolf Leather Armor (100%)
+[395] Recipe: Leather Armor of Doom (60%)
+[396] Recipe: Leather Armor of Doom (100%)
+[397] Recipe: Blue Wolf Tunic (60%)
+[398] Recipe: Blue Wolf Tunic (100%)
+[399] Recipe: Tunic of Doom (60%)
+[400] Recipe: Tunic of Doom (100%)
+[401] Recipe: Blue Wolf Stockings (60%)
+[402] Recipe: Blue Wolf Stockings (100%)
+[403] Recipe: Stockings of Doom (60%)
+[404] Recipe: Stockings of Doom (100%)
+[405] Recipe: Blue Wolf Helmet (60%)
+[406] Recipe: Blue Wolf Helmet (100%)
+[407] Recipe: Doom Helmet (60%)
+[408] Recipe: Doom Helmet (100%)
+[409] Recipe: Blue Wolf Boots (60%)
+[410] Recipe: Blue Wolf Boots (100%)
+[411] Recipe: Doom Gloves (60%)
+[412] Recipe: Doom Gloves (100%)
+[413] Recipe: Elemental Gloves (60%)
+[414] Recipe: Elemental Gloves (100%)
+[415] Recipe: Gloves of Grace (60%)
+[416] Recipe: Gloves of Grace (100%)
+[417] Recipe: Implosion Gauntlets (60%)
+[418] Recipe: Implosion Gauntlets (100%)
+[419] Recipe: Paradia Gloves (60%)
+[420] Recipe: Paradia Gloves (100%)
+[421] Recipe: Blue Wolf Gloves (60%)
+[422] Recipe: Blue Wolf Gloves (100%)
+[423] Recipe: Zubei's Boots (60%)
+[424] Recipe: Zubei's Boots (100%)
+[425] Recipe: Avadon Boots (60%)
+[426] Recipe: Avadon Boots (100%)
+[427] Recipe: Doom Boots (60%)
+[428] Recipe: Doom Boots (100%)
+[429] Recipe: Zubei's Gauntlets (60%)
+[430] Recipe: Zubei's Gauntlets (100%)
+[431] Recipe: Zubei's Shield (60%)
+[432] Recipe: Zubei's Shield (100%)
+[433] Recipe: Zubei's Helmet (60%)
+[434] Recipe: Zubei's Helmet (100%)
+[435] Recipe: Silver Arrow (100%)
+[436] Recipe: Pata (60%)
+[437] Recipe: Pata (100%)
+[438] Recipe: Great Sword (60%)
+[439] Recipe: Great Sword (100%)
+[440] Recipe: Heavy War Axe (60%)
+[441] Recipe: Heavy War Axe (100%)
+[442] Recipe: Sprite's Staff (60%)
+[443] Recipe: Sprite's Staff (100%)
+[444] Recipe: Keshanberk (60%)
+[445] Recipe: Keshanberk (100%)
+[446] Recipe: Sword of Valhalla (60%)
+[447] Recipe: Sword of Valhalla (100%)
+[448] Recipe: Kris (60%)
+[449] Recipe: Kris (100%)
+[450] Recipe: Hell Knife (60%)
+[451] Recipe: Hell Knife (100%)
+[452] Recipe: Arthro Nail (60%)
+[453] Recipe: Arthro Nail (100%)
+[454] Recipe: Dark Elven Long Bow (60%)
+[455] Recipe: Dark Elven Long Bow (100%)
+[456] Recipe: Great Axe (60%)
+[457] Recipe: Great Axe (100%)
+[458] Recipe: Sword of Damascus (60%)
+[459] Recipe: Sword of Damascus (100%)
+[460] Recipe: Lance (60%)
+[461] Recipe: Lance (100%)
+[462] Recipe: Deadman's Glory (60%)
+[463] Recipe: Deadman's Glory (100%)
+[464] Recipe: Art of Battle Axe (60%)
+[465] Recipe: Art of Battle Axe (100%)
+[466] Recipe: Staff of Evil Spirits (60%)
+[467] Recipe: Staff of Evil Spirits (100%)
+[468] Recipe: Demon Dagger (60%)
+[469] Recipe: Demon Dagger (100%)
+[470] Recipe: Bellion Cestus (60%)
+[471] Recipe: Bellion Cestus (100%)
+[472] Recipe: Bow of Peril (60%)
+[473] Recipe: Bow of Peril (100%)
+[474] Recipe: Maestro Holder (100%)
+[475] Recipe: Maestro Anvil Lock (100%)
+[476] Recipe: Craftsman Mold (100%)
+[477] Recipe: Maestro Mold (100%)
+[478] Recipe: Avadon Shield (60%)
+[479] Recipe: Avadon Shield
+[480] Recipe: Soulshot (D) Compressed Package (100%)
+[481] Recipe: Soulshot (C) Compressed Package (100%)
+[482] Recipe: Soulshot (B) Compressed Package (100%)
+[483] Recipe: Soulshot (A) Compressed Package (100%)
+[484] Recipe: Soulshot (S) Compressed Package (100%)
+[485] Recipe: Spiritshot (D) Compressed Package (100%)
+[486] Recipe: Spiritshot (C) Compressed Package (100%)
+[487] Recipe: Spiritshot (B) Compressed Package (100%)
+[488] Recipe: Spiritshot (A) Compressed Package (100%)
+[489] Recipe: Spiritshot (S) Compressed Package (100%)
+[490] Recipe: Blessed Spiritshot (D) Compressed Package (100%)
+[491] Recipe: Blessed Spiritshot (C) Compressed Package (100%)
+[492] Recipe: Blessed Spiritshot (B) Compressed Package (100%)
+[493] Recipe: Blessed Spiritshot (A) Compressed Package (100%)
+[494] Recipe: Blessed Spiritshot (S) Compressed Package (100%)
+[495] Recipe: Knuckle Duster
+[496] Recipe: Mithril Arrow (100%)
+[497] Recipe: Metal Hardener (100%)
+[498] Recipe: Greater Soulshot (D) Compressed Package (100%)
+[499] Recipe: Greater Soulshot (C) Compressed Package(100%)
+[500] Recipe: Greater Soulshot (B) Compressed Package(100%)
+[501] Recipe: Greater Soulshot (A) Compressed Package(100%)
+[502] Recipe: Greater Soulshot (S) Compressed Package(100%)
+[503] Recipe: Greater Spiritshot (D) Compressed Package(100%)
+[504] Recipe: Greater Spiritshot (C) Compressed Package(100%)
+[505] Recipe: Greater Spiritshot (B) Compressed Package(100%)
+[506] Recipe: Greater Spiritshot (A) Compressed Package(100%)
+[507] Recipe: Greater Spiritshot (S) Compressed Package(100%)
+[508] Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%)
+[509] Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%)
+[510] Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%)
+[511] Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%)
+[512] Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%)
+[513] Recipe: Sealed Dark Crystal Leather Armor(60%)
+[514] Recipe: Sealed Dark Crystal Leather Armor(100%)
+[515] Recipe: Sealed Tallum Leather Armor(60%)
+[516] Recipe: Sealed Tallum Leather Armor(100%)
+[517] Recipe: Sealed Leather Armor of Nightmare(60%)
+[518] Recipe: Sealed Leather Armor of Nightmare(100%)
+[519] Recipe: Sealed Majestic Leather Armor(60%)
+[520] Recipe: Sealed Majestic Leather Armor(100%)
+[521] Recipe: Sealed Dark Crystal Leggings(60%)
+[522] Recipe: Sealed Dark Crystal Leggings(100%)
+[523] Recipe: Sealed Tallum Tunic(60%)
+[524] Recipe: Sealed Tallum Tunic(100%)
+[525] Recipe: Sealed Dark Crystal Robe(60%)
+[526] Recipe: Sealed Dark Crystal Robe(100%)
+[527] Recipe: Sealed Nightmare Robe(60%)
+[528] Recipe: Sealed Nightmare Robe(100%)
+[529] Recipe: Sealed Majestic Robe(60%)
+[530] Recipe: Sealed Majestic Robe(100%)
+[531] Recipe: Sealed Tallum Stockings(60%)
+[532] Recipe: Sealed Tallum Stockings(100%)
+[533] Recipe: Sealed Dark Crystal Shield(60%)
+[534] Recipe: Sealed Dark Crystal Shield(100%)
+[535] Recipe: Sealed Shield of Nightmare(60%)
+[536] Recipe: Sealed Shield of Nightmare(100%)
+[537] Recipe: Sealed Dark Crystal Boots(60%)
+[538] Recipe: Sealed Dark Crystal Boots(100%)
+[539] Recipe: Sealed Tallum Boots(60%)
+[540] Recipe: Sealed Tallum Boots(100%)
+[541] Recipe: Sealed Boots of Nightmare(60%)
+[542] Recipe: Sealed Boots of Nightmare(100%)
+[543] Recipe: Sealed Majestic Boots(60%)
+[544] Recipe: Sealed Majestic Boots(100%)
+[545] Recipe: Sealed Dark Crystal Gloves(60%)
+[546] Recipe: Sealed Dark Crystal Gloves(100%)
+[547] Recipe: Sealed Tallum Gloves(60%)
+[548] Recipe: Sealed Tallum Gloves(100%)
+[549] Recipe: Sealed Gauntlets of Nightmare(60%)
+[550] Recipe: Sealed Gauntlets of Nightmare(100%)
+[551] Recipe: Sealed Majestic Gauntlets(60%)
+[552] Recipe: Sealed Majestic Gauntlets(100%)
+[553] Recipe: Sealed Dark Crystal Breastplate(60%)
+[554] Recipe: Sealed Dark Crystal Breastplate(100%)
+[555] Recipe: Sealed Tallum Plate Armor(60%)
+[556] Recipe: Sealed Tallum Plate Armor(100%)
+[557] Recipe: Sealed Armor of Nightmare(60%)
+[558] Recipe: Sealed Armor of Nightmare(100%)
+[559] Recipe: Sealed Majestic Plate Armor(60%)
+[560] Recipe: Sealed Majestic Plate Armor(100%)
+[561] Recipe: Sealed Dark Crystal Gaiters(60%)
+[562] Recipe: Sealed Dark Crystal Gaiters(100%)
+[563] Recipe: Sealed Dark Crystal Helmet(60%)
+[564] Recipe: Sealed Dark Crystal Helmet(100%)
+[565] Recipe: Sealed Tallum Helmet(60%)
+[566] Recipe: Sealed Tallum Helmet(100%)
+[567] Recipe: Sealed Helm of Nightmare(60%)
+[568] Recipe: Sealed Helm of Nightmare(100%)
+[569] Recipe: Sealed Majestic Circlet (60%)
+[570] Recipe: Sealed Majestic Circlet (100%)
+[571] Recipe: Dragon Slayer(60%)
+[572] Recipe: Dragon Slayer(100%)
+[573] Recipe: Berserker Blade(100%)
+[574] Recipe: Heavy Sword(100%)
+[575] Recipe: Meteor Shower(60%)
+[576] Recipe: Meteor Shower(100%)
+[577] Recipe: Elysian(60%)
+[578] Recipe: Elysian(100%)
+[579] Recipe: Soul Bow(60%)
+[580] Recipe: Soul Bow(100%)
+[581] Recipe: Carnage Bow(60%)
+[582] Recipe: Carnage Bow(100%)
+[583] Recipe: Bloody Orchid(60%)
+[584] Recipe: Bloody Orchid(100%)
+[585] Recipe: Soul Separator(60%)
+[586] Recipe: Soul Separator(100%)
+[587] Recipe: Dragon Grinder(60%)
+[588] Recipe: Dragon Grinder(100%)
+[589] Recipe: Blood Tornado(60%)
+[590] Recipe: Blood Tornado(100%)
+[591] Recipe: Tallum Glaive(60%)
+[592] Recipe: Tallum Glaive(100%)
+[593] Recipe: Halberd(60%)
+[594] Recipe: Halberd(100%)
+[595] Recipe: Dasparion's Staff(60%)
+[596] Recipe: Dasparion's Staff(100%)
+[597] Recipe: Branch of the Mother Tree(60%)
+[598] Recipe: Branch of the Mother Tree(100%)
+[599] Recipe: Dark Legion's Edge(60%)
+[600] Recipe: Dark Legion's Edge(100%)
+[601] Recipe: Sword of Miracles(60%)
+[602] Recipe: Sword of Miracles(100%)
+[603] Recipe: Elemental Sword(60%)
+[604] Recipe: Elemental Sword(100%)
+[605] Recipe: Tallum Blade(60%)
+[606] Recipe: Tallum Blade(100%)
+[607] Recipe: Metallic Thread(100%)
+[608] Recipe: Durable Metal Plate(100%)
+[609] Recipe: Reorin's Mold(100%)
+[610] Recipe: Warsmith's Mold(100%)
+[611] Recipe: Arcsmith's Anvil(100%)
+[612] Recipe: Warsmith's Holder(100%)
+[613] Recipe: Sealed Phoenix Earring(70%)
+[614] Recipe: Sealed Phoenix Earring(100%)
+[615] Recipe: Sealed Majestic Earring(70%)
+[616] Recipe: Sealed Majestic Earring(100%)
+[617] Recipe: Sealed Phoenix Necklace(70%)
+[618] Recipe: Sealed Phoenix Necklace(100%)
+[619] Recipe: Sealed Majestic Necklace(70%)
+[620] Recipe: Sealed Majestic Necklace(100%)
+[621] Recipe: Sealed Phoenix Ring(70%)
+[622] Recipe: Sealed Phoenix Ring(100%)
+[623] Recipe: Sealed Majestic Ring(70%)
+[624] Recipe: Sealed Majestic Ring(100%)
+[625] Recipe: Shining Arrow (100%)
+[626] Recipe: Forgotten Blade (60%)
+[627] Recipe: Forgotten Blade (100%)
+[628] Recipe: Basalt Battlehammer (60%)
+[629] Recipe: Basalt Battlehammer (100%)
+[630] Recipe: Imperial Staff (60%)
+[631] Recipe: Imperial Staff(100%)
+[632] Recipe: Angel Slayer (60%)
+[633] Recipe: Angel Slayer (100%)
+[634] Recipe: Shining Bow (60%)
+[635] Recipe: Shining Bow (100%)
+[636] Recipe: Dragon Hunter Axe (60%)
+[637] Recipe: Dragon Hunter Axe (100%)
+[638] Recipe: Saint Spear (60%)
+[639] Recipe: Saint Spear (100%)
+[640] Recipe: Demon Splinter (60%)
+[641] Recipe: Demon Splinter (100%)
+[642] Recipe: Heavens Divider (60%)
+[643] Recipe: Heavens Divider (100%)
+[644] Recipe: Arcana Mace (60%)
+[645] Recipe: Arcana Mace (100%)
+[646] Recipe: Sealed Tateossian Earring (70%)
+[647] Recipe: Sealed Tateossian Earring (100%)
+[648] Recipe: Sealed Tateossian Ring(70%)
+[649] Recipe: Sealed Tateossian Ring(100%)
+[650] Recipe: Sealed Tateossian Necklace(70%)
+[651] Recipe: Sealed Tateossian Necklace(100%)
+[652] Recipe: Sealed Imperial Crusader Breastplate (60%)
+[653] Recipe: Sealed Imperial Crusader Breastplate (100%)
+[654] Recipe: Sealed Imperial Crusader Gaiters (60%)
+[655] Recipe: Sealed Imperial Crusader Gaiters (100%)
+[656] Recipe: Sealed Imperial Crusader Gauntlets (60%)
+[657] Recipe: Sealed Imperial Crusader Gauntlets (100%)
+[658] Recipe: Sealed Imperial Crusader Boots (60%)
+[659] Recipe: Sealed Imperial Crusader Boots (100%)
+[660] Recipe: Sealed Imperial Crusader Shield (60%)
+[661] Recipe: Sealed Imperial Crusader Shield (100%)
+[662] Recipe: Sealed Imperial Crusader Helmet (60%)
+[663] Recipe: Sealed Imperial Crusader Helmet (100%)
+[664] Recipe: Sealed Draconic Leather Armor (60%)
+[665] Recipe: Sealed Draconic Leather Armor (100%)
+[666] Recipe: Sealed Draconic Leather Gloves (60%)
+[667] Recipe: Sealed Draconic Leather Gloves (100%)
+[668] Recipe: Sealed Draconic Leather Boots (60%)
+[669] Recipe: Sealed Draconic Leather Boots (100%)
+[670] Recipe: Sealed Draconic Leather Helmet (60%)
+[671] Recipe: Sealed Draconic Leather Helmet (100%)
+[672] Recipe: Sealed Major Arcana Robe (60%)
+[673] Recipe: Sealed Major Arcana Robe (100%)
+[674] Recipe: Sealed Major Arcana Gloves (60%)
+[675] Recipe: Sealed Major Arcana Gloves (100%)
+[676] Recipe: Sealed Major Arcana Boots (60%)
+[677] Recipe: Sealed Major Arcana Boots (100%)
+[678] Recipe: Sealed Major Arcana Circlet (60%)
+[679] Recipe: Sealed Major Arcana Circlet (100%)
+[680] Recipe: Greater Fish Oil (100%)
+[681] Recipe: Premium Fish Oil(100%)
+[682] Recipe: Party Mask (100%)
+[683] Recipe: Lady's Hair Pin (100%)
+[684] Recipe: Pirate's Eye Patch (100%)
+[685] Recipe: Monocle (100%)
+[686] Recipe: Lesser Healing Potion (100%)
+[687] Recipe: Healing Potion (100%)
+[688] Recipe: Greater Healing Potion (100%)
+[689] Recipe: Antidote (100%)
+[690] Recipe: Greater Antidote (100%)
+[691] Recipe: Bandage (100%)
+[692] Recipe: Emergency Dressing (100%)
+[693] Recipe: Haste Potion (100%)
+[694] Recipe: Potion of Alacrity (100%)
+[695] Recipe: Greater Haste Potion (100%)
+[696] Recipe: Greater Swift Attack Potion (100%)
+[697] Recipe: Magic Haste Potion (100%)
+[698] Recipe: Greater Magic Haste Potion (100%)
+[699] Recipe: Mystery Potion (100%)
+[700] Recipe: Facelifting Potion - A (100%)
+[701] Recipe: Facelifting Potion - B (100%)
+[702] Recipe: Facelifting Potion - C (100%)
+[703] Recipe: Dye Potion - A (100%)
+[704] Recipe: Dye Potion - B (100%)
+[705] Recipe: Dye Potion - C (100%)
+[706] Recipe: Dye Potion - D (100%)
+[707] Recipe: Hair Style Change Potion - A (100%)
+[708] Recipe: Hair Style Change Potion - B (100%)
+[709] Recipe: Hair Style Change Potion - C (100%)
+[710] Recipe: Hair Style Change Potion - D (100%)
+[711] Recipe: Hair Style Change Potion - E (100%)
+[712] Recipe: Hair Style Change Potion - F (100%)
+[713] Recipe: Hair Style Change Potion - G (100%)
+[714] Recipe: Dye of STR <Str+1 Con-1> (100%)
+[715] Recipe: Dye of STR <Str+1 Dex-1> (100%)
+[716] Recipe: Dye of CON <Con+1 Str-1> (100%)
+[717] Recipe: Dye of CON <Con+1 Dex-1> (100%)
+[718] Recipe: Dye of DEX <Dex+1 Str-1> (100%)
+[719] Recipe: Dye of DEX <Dex+1 Con-1> (100%)
+[720] Recipe: Dye of INT <Int+1 Men-1> (100%)
+[721] Recipe: Dye of INT <Int+1 Wit-1> (100%)
+[722] Recipe: Dye of MEN <Men+1 Int-1> (100%)
+[723] Recipe: Dye of MEN <Men+1 Wit-1> (100%)
+[724] Recipe: Dye of WIT<Wit+1 Int-1> (100%)
+[725] Recipe: Dye of WIT<Wit+1 Men-1> (100%)
+[726] Recipe: Greater Dye of STR <Str+1 Con-1> (100%)
+[727] Recipe: Greater Dye of STR <Str+1 Dex-1> (100%)
+[728] Recipe: Greater Dye of CON <Con+1 Str-1> (100%)
+[729] Recipe: Greater Dye of CON <Con+1 Dex-1> (100%)
+[730] Recipe: Greater Dye of DEX <Dex+1 Str-1> (100%)
+[731] Recipe: Greater Dye of DEX <Dex+1 Con-1> (100%)
+[732] Recipe: Greater Dye of INT <Int+1 Men-1> (100%)
+[733] Recipe: Greater Dye of INT <Int+1 Wit-1> (100%)
+[734] Recipe: Greater Dye of MEN <Men+1 Int-1> (100%)
+[735] Recipe: Greater Dye of MEN <Men+1 Wit-1> (100%)
+[736] Recipe: Greater Dye of WIT<Wit+1 Int-1> (100%)
+[737] Recipe: Greater Dye of WIT<Wit+1 Men-1> (100%)
+[738] Recipe: Greater Dye of STR <Str+2 Con-2> (100%)
+[739] Recipe: Greater Dye of STR <Str+2 Dex-2> (100%)
+[740] Recipe: Greater Dye of CON <Con+2 Str-2> (100%)
+[741] Recipe: Greater Dye of CON <Con+2 Dex-2> (100%)
+[742] Recipe: Greater Dye of DEX <Dex+2 Str-2> (100%)
+[743] Recipe: Greater Dye of DEX <Dex+2 Con-2> (100%)
+[744] Recipe: Greater Dye of INT <Int+2 Men-2> (100%)
+[745] Recipe: Greater Dye of INT <Int+2 Wit-2> (100%)
+[746] Recipe: Greater Dye of MEN <Men+2 Int-2> (100%)
+[747] Recipe: Greater Dye of MEN <Men+2 Wit-2> (100%)
+[748] Recipe: Greater Dye of WIT<Wit+2 Int-2> (100%)
+[749] Recipe: Greater Dye of WIT<Wit+2 Men-2> (100%)
+[750] Recipe: Greater Dye of STR <Str+3 Con-3> (100%)
+[751] Recipe: Greater Dye of STR <Str+3 Dex-3> (100%)
+[752] Recipe: Greater Dye of CON <Con+3 Str-3> (100%)
+[753] Recipe: Greater Dye of CON <Con+3 Dex-3> (100%)
+[754] Recipe: Greater Dye of DEX <Dex+3 Str-3> (100%)
+[755] Recipe: Greater Dye of DEX <Dex+3 Con-3> (100%)
+[756] Recipe: Greater Dye of INT <Int+3 Men-3> (100%)
+[757] Recipe: Greater Dye of INT <Int+3 Wit-3> (100%)
+[758] Recipe: Greater Dye of MEN <Men+3 Int-3> (100%)
+[759] Recipe: Greater Dye of MEN <Men+3 Wit-3> (100%)
+[760] Recipe: Greater Dye of WIT<Wit+3 Int-3> (100%)
+[761] Recipe: Greater Dye of WIT<Wit+3 Men-3> (100%)
+[762] Recipe: Greater Dye of STR <Str+4 Con-4> (100%)
+[763] Recipe: Greater Dye of STR <Str+4 Dex-4> (100%)
+[764] Recipe: Greater Dye of CON <Con+4 Str-4> (100%)
+[765] Recipe: Greater Dye of CON <Con+4 Dex-4> (100%)
+[766] Recipe: Greater Dye of DEX <Dex+4 Str-4> (100%)
+[767] Recipe: Greater Dye of DEX <Dex+4 Con-4> (100%)
+[768] Recipe: Greater Dye of INT <Int+4 Men-4> (100%)
+[769] Recipe: Greater Dye of INT <Int+4 Wit-4> (100%)
+[770] Recipe: Greater Dye of MEN <Men+4 Int-4> (100%)
+[771] Recipe: Greater Dye of MEN <Men+4 Wit-4> (100%)
+[772] Recipe: Greater Dye of WIT<Wit+4 Int-4> (100%)
+[773] Recipe: Greater Dye of WIT<Wit+4 Men-4> (100%)
+[774] Recipe: Draconic Bow (60%)
+[775] Recipe: Draconic Bow (100%)
+[776] Recipe - Raccoon Ears (100%)
+[777] Recipe - Outlaw's Eyepatch (100%)
+[778] Recipe - Maiden's Hairpin (100%)
+[779] Recipe - Rabbit Ears (100%)
+[780] Recipe - Cat Ears (100%)
+[781] Recipe: Forget-me-not Hairpin (100%)
+[782] Recipe: Daisy Hairpin (100%)
+[783] Recipe: Steel Sword (100%)
+[784] Recipe: Priest Sword (100%)
+[785] Recipe: Titan Sword (100%)
+[786] Recipe: Sword of Magic Fog (100%)
+[787] Recipe: Priest Mace (100%)
+[788] Recipe: Titan Hammer (100%)
+[789] Recipe: Pa'agrian Sword (100%)
+[790] Recipe: Karik Horn (100%)
+[791] Recipe: Mysterious Sword (100%)
+[792] Recipe: Ecliptic Sword (100%)
+[793] Recipe: Ecliptic Axe (100%)
+[794] Recipe: Spell Breaker (60%)
+[795] Recipe: Spell Breaker (100%)
+[796] Recipe: Ice Storm Hammer (60%)
+[797] Recipe: Ice Storm Hammer (100%)
+[798] Recipe: Wizard's Tear (60%)
+[799] Recipe: Wizard's Tear (100%)
+[800] Recipe: Kaim Vanul's Bones (60%)
+[801] Recipe: Kaim Vanul's Bones (100%)
+[802] Recipe: Star Buster (60%)
+[803] Recipe: Star Buster (100%)
+[804] Recipe: Spiritual Eye (60%)
+[805] Recipe: Spiritual Eye (100%)
+[806] Recipe: Flaming Dragon Skull (60%)
+[807] Recipe: Flaming Dragon Skull (100%)
+[808] Recipe: Doom Crusher (60%)
+[809] Recipe: Doom Crusher (100%)
+[810] Recipe: Guardian's Sword (60%)
+[811] Recipe: Guardian's Sword (100%)
+[812] Recipe: Destroyer Hammer (60%)
+[813] Recipe: Destroyer Hammer (100%)
+[814] Recipe: Infernal Master (60%)
+[815] Recipe: Infernal Master (100%)
+[816] Recipe: Dwarven Hammer (100%)
+[817] Recipe: Red Horn of Victory (100%)
+[818] Recipe: Little Angel Wings (100%)
+[819] Recipe: Fairy Antennae (100%)
+[820] Recipe: Party Hat (70%)
+[821] Recipe: Party Hat (100%)
+[822] Recipe: Feathered Hat (70%)
+[823] Recipe: Feathered Hat (100%)
+[824] Recipe: Artisan's Goggles (70%)
+[825] Recipe: Artisan's Goggles (100%)
+[826] Recipe: Elixir of Life (No Grade) (100%)
+[827] Recipe: Elixir of Life (D-Grade)
+[828] Recipe: Elixir of Life (C-Grade) (100%)
+[829] Recipe: Elixir of Life (B-Grade) (100%)
+[830] Recipe: Elixir of Life (A-Grade) (100%)
+[831] Recipe: Elixir of Life (S-Grade) (100%)
+[832] Recipe: Elixir of Mental Strength (No Grade) (100%)
+[833] Recipe: Elixir of Mental Strength (D-Grade) (100%)
+[834] Recipe: Elixir of Mental Strength (C-Grade) (100%)
+[835] Recipe: Elixir of Mental Strength (B-Grade) (100%)
+[836] Recipe: Elixir of Mental Strength (A-Grade) (100%)
+[837] Recipe: Elixir of Mental Strength (S-Grade) (100%)
+[838] Recipe: Elixir of CP (No Grade) (100%)
+[839] Recipe: Elixir of CP (D-Grade) (100%)
+[840] Recipe: Elixir of CP (C-Grade) (100%)
+[841] Recipe: Elixir of CP (B-Grade) (100%)
+[842] Recipe: Elixir of CP (A-Grade) (100%)
+[843] Recipe: Elixir of CP (S-Grade) (100%)
+[844] Recipe: Sirra's Blade (60%)
+[845] Recipe: Sirra's Blade (100%)
+[846] Recipe: Sword of Ipos (60%)
+[847] Recipe: Sword of Ipos (100%)
+[848] Recipe: Barakiel's Axe (60%)
+[849] Recipe: Barakiel's Axe (100%)
+[850] Recipe: Behemoth's Tuning Fork (60%)
+[851] Recipe: Behemoth's Tuning Fork (100%)
+[852] Recipe: Naga Storm (60%)
+[853] Recipe: Naga Storm (100%)
+[854] Recipe: Tiphon's Spear (60%)
+[855] Recipe: Tiphon's Spear (100%)
+[856] Recipe: Shyeed's Bow (60%)
+[857] Recipe: Shyeed's Bow (100%)
+[858] Recipe: Sobekk's Hurricane (60%)
+[859] Recipe: Sobekk's Hurricane (100%)
+[860] Recipe: Themis' Tongue (60%)
+[861] Recipe: Themis' Tongue (100%)
+[862] Recipe: Cabrio's Hand (60%)
+[863] Recipe: Cabrio's Hand (100%)
+[864] Recipe: Daimon Crystal (60%)
+[865] Recipe: Daimon Crystal (100%)
+[866] Red Philosopher's Stone Transmutation Circle
+[867] Blue Philosopher's Stone Transmutation Circle
+[868] Orange Philosopher's Stone Transmutation Circle
+[869] Black Philosopher's Stone Transmutation Circle
+[870] White Philosopher's Stone Transmutation Circle
+[871] Green Philosopher's Stone Transmutation Circle
+[872] Recipe - Dynasty Sword (60%)
+[873] Recipe - Dynasty Blade (60%)
+[874] Recipe - Dynasty Phantom (60%)
+[875] Recipe - Dynasty Bow (60%)
+[876] Recipe - Dynasty Knife (60%)
+[877] Recipe - Dynasty Halberd (60%)
+[878] Recipe - Dynasty Cudgel (60%)
+[879] Recipe - Dynasty Mace (60%)
+[880] Recipe - Dynasty Bagh-Nakh (60%)
+[881] Recipe: Sealed Dynasty Breast Plate (60%)
+[882] Recipe: Sealed Dynasty Gaiter (60%)
+[883] Recipe: Sealed Dynasty Helmet (60%)
+[884] Recipe: Sealed Dynasty Gauntlet (60%)
+[885] Recipe: Sealed Dynasty Boots (60%)
+[886] Recipe: Sealed Dynasty Leather Armor (60%)
+[887] Recipe: Sealed Dynasty Leather Leggings (60%)
+[888] Recipe: Sealed Dynasty Leather Helmet (60%)
+[889] Recipe: Sealed Dynasty Leather Gloves (60%)
+[890] Recipe: Sealed Dynasty Leather Boots (60%)
+[891] Recipe: Sealed Dynasty Tunic (60%)
+[892] Recipe: Sealed Dynasty Stockings (60%)
+[893] Recipe: Sealed Dynasty Circlet (60%)
+[894] Recipe: Sealed Dynasty Gloves (60%)
+[895] Recipe: Sealed Dynasty Shoes (60%)
+[896] Recipe: Sealed Dynasty Shield (60%)
+[897] Recipe - Sealed Dynasty Earrings (70%)
+[898] Recipe - Sealed Dynasty Necklace (70%)
+[899] Recipe - Sealed Dynasty Ring (70%)
+[900] Recipe - Icarus Sawsword (60%)
+[901] Recipe - Icarus Disperser (60%)
+[902] Recipe - Icarus Spirit (60%)
+[903] Recipe - Icarus Heavy Arms (60%)
+[904] Recipe - Icarus Trident (60%)
+[905] Recipe - Icarus Hammer (60%)
+[906] Recipe - Icarus Hand (60%)
+[907] Recipe - Icarus Hall (60%)
+[908] Recipe - Icarus Spitter (60%)
+[909] Recipe - Dynasty Staff(60%)
+[910] Recipe - Dynasty Crusher(60%)
+[911] Recipe - Sealed Arcana Sigil (60%)
+[912] Recipe - Sealed Arcana Sigil (100%)
+[913] Recipe: Sealed Dynasty Sigil (60%)
+[914] Design - Stone of Stamina
+[915] Design - Stone of Mana
+[916] Design - Stone of Recovery
+[917] Design - Stone of Destruction
+[918] Design - Stone of Invincibility
+[919] Design - Stone of Great Speed
+[920] Design - Stone of Speed
+[921] Design - Stone of Concentration
+[922] Design - Stone of Ease
+[923] Design - Stone of Abundance
+[924] Olympiad Token
+[925] Design - High Quality MP Recovery Stone
+[926] Design - High Quality HP MP Recovery Stone
+[927] Design - Recovery Stone
+[928] Design - Energy Star Stone
+[929] Design - High Quality Energy Star Stone
+[930] Design - Crystal of Fire
+[931] Design - Crystal of Water
+[932] Design - Crystal of Wind
+[933] Design - Crystal of Earth
+[934] Design - Crystal of Darkness
+[935] Design - Crystal of Sacred
+[3000] Valentine Cake Recipe

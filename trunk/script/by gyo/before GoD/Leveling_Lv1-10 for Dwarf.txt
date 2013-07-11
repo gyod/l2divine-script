@@ -1,0 +1,10 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.3 by gyo
+// Leveling Script for Dwarf: Lv1-10
+// NOTICE: Don't forget set Attack command with SSN Beginners and other settings!
+// ------------------------------------------------------------------
+
+Include("Quest_Tutorial for Dwarf.txt")
+Include("Quest_Supply Check.txt")
+Include("Snippet_Get Adventures Weapon.txt")
+Include("Quest_Head for the Hills.txt")

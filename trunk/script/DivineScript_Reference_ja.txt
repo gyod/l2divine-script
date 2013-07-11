@@ -1,0 +1,1174 @@
++---------------------------+
+| DivineScript リファレンス |
++---------------------------+
+
+バージョン：	2.0
+最終更新日：	Jan 13, 2013
+著者：		Dev
+訳者：		gyo
+
+------+
+| 目次 |
++------+
+セクション１：基本事項
+- スクリプト作成
+- コメント
+- 比較演算子
+- 文法
+-- アルファベットの大文字と小文字を区別します
+-- 1行につき1コマンドだけ
+-- スコープを示すカッコ（{}）も1行使い省略不可
+-- 文字列はダブルクォーテーション（"）で囲む
+- グローバルプロパティ
+- 他のスクリプトを取り込む
+セクション２：コマンド
+- ActionSorrow
+- AddHuntingArea
+- AddRectHuntingArea
+- AddItem
+- BattleStart
+- BattleStop
+- Buy
+- CancelAttackTarget
+- CharBuffLevel
+- CheckNPCRange
+- ClearHuntingArea
+- CloseDialog
+- CloseWindow
+- Confirm
+- CounterTargetPlayer
+- CountItem
+- CountQuestDefeatNpc
+- CraftItem
+- CrystalizeItem
+- Delay
+- DestroyItem
+- DialogContain
+- Dismiss
+- DropItem
+- EnchantItem
+- EnchantLevel
+- Exit
+- FishingStart
+- FishingStop
+- FollowSelectTarget
+- ForceAttack
+- ForceAttackTarget
+- FoundEnemyInRange
+- FoundKarmaPlayer
+- FoundPlayerInRange
+- If
+- Include
+- Invite
+- IsMember
+- Jump
+- Label
+- LearnSkill
+- LeaveParty
+- LocInRange
+- Logout
+- MoveTo
+- MoveToTarget
+- Msg
+- NoMobInHuntingArea
+- NpcDialog
+- PlayerBuffLevel
+- PlaySound
+- Recommend
+- Return
+- ReturnToVillage
+- ReturnToClanHall
+- SelectDialog
+- SelectKarmaPlayer
+- SelectNearestEnemy
+- SelectNearestMob
+- SelectNearestPlayer
+- SelectPlayerByClass
+- SelectTarget
+- Sell
+- SetBattleArea
+- SetRestArea
+- Sit
+- Stand
+- SocialAction
+- TargetInRange
+- TradeStart
+- TradeStop
+- UseItem
+- UseSkill
+- While
+セクション３：IDリファレンス
+
++------------------------+
+| セクション１：基本事項 |
++------------------------+
+
+DivineScriptリファレンスへようこそ。DivineScriptコマンドの総合リストであり、
+さらに説明や使用例も含んでいます。
+
++----------------+
+| スクリプト作成 |
++----------------+
+
+スクリプトを作成する簡単な方法は、メモ帳などのテキストエディタを使用すること
+です。では、あなたの選んだテキストエディタで次の使用例のテキストを入力して、
+テキストファイルを作成しましょう。DivineScriptは大文字小文字を区別するので、
+自分で作成する際には特に注意してください。
+（訳者注：スクリプトの文字コードはShift-JISで構いませんが、他国ユーザへ公開
+したい場合は、NPC・MOB・アイテム・スキルなどをIDで指定、NPCチャットのリンク
+は文字列ではなくインデックスで指定、文字コードをUTF-16リトルエンディアンで
+BOMを付けて（メモ帳では「Unicode」で）保存してください。私はは秀丸エディタ
+を使用していますが、フリーウェアにもいろいろ使えるものがあります。）
+
+--- 使用例 ---
+Msg(Console, "こんにちはL2Divine")
+
++----------+
+| コメント |
++----------+
+二重のスラッシュ「//」がコメント記号です。ソースファイル中で何をするのかを説
+明を記述したり、コードを行ごとコメントアウトし、実行されるコードから行を分離
+できます。（訳者注：コマンドの後ろには書けず、先頭にスペースやタブは置けるも
+のの、1 行丸ごとをコメントとするような書き方しかできません。また、コメントだ
+けの行の場合でも、後ろに半角スペース等何らかの文字がないとエラーになります）
+
++------------+
+| 比較演算子 |
++------------+
+If文やWhile文で値を比較するための演算子を使用できます。DivineScriptでは以下
+の演算子を使用できます。
+==	等号(Equal)
+!=	不等号(Not Equal)
+>	大なり(Greater than)
+<	小なり(Lower than)
+>=	以上(Equal or greater than)
+<=	以下(Equal or lower than)
+!	偽(Not)
+&	論理積(And) （ビット演算子）
+
+--- 使用例 ---
+
+// HPが50%を下回ったら体力回復剤を使用する
+If (Char.HP% < 50)
+{
+	UseItem("体力回復剤")
+}
+
+// ターゲットが異常状態かチェック
+If (Target.AbnormalStatus & 7)
+{
+	Msg(Console, "スタンかかっとるがなっ!")
+}
+
++------+
+| 文法 |
++------+
+
+--- アルファベットの大文字と小文字を区別します ---
+
+有効な文法：
+	Msg(Console, "こんにちはL2Divine")
+
+無効な文法（実行時にエラーが発生して実行されません）：
+	MSG(Console, "こんにちはL2Divine")
+	mSG(Console, "こんにちはL2Divine")
+
+--- 1行につき1コマンドだけ ---
+
+有効な文法：
+	MoveTo(115968, -174345, -760)
+	if (CountItem("鉄鉱石") > 0)
+	{
+	}
+
+無効な文法：
+	MoveTo(115968, -174345, -760) Delay(3000)
+	if (CountItem("鉄鉱石") > 0) {
+	}
+
+--- スコープを示すカッコ（{}）も1行使い省略不可 ---
+
+有効な文法：
+	while (Char.HP > 500)
+	{
+	}
+
+無効な文法：
+	while (Char.HP > 500)
+	}
+
+--- 文字列はダブルクォーテーション（"）で囲む ---
+
+有効な文法：
+	Msg(Console, "こんにちはL2Divine")
+
+無効な文法：
+	Msg(Console, こんにちはL2Divine)
+
++----------------------+
+| グローバルプロパティ |
++----------------------+
+
+キャラクタやターゲットのステータス情報取得に以下のプロパティを使用できます。
+
+Char.HP		キャラクタのHPの値
+Char.HP%	キャラクタのHPのパーセンテージ
+Char.MP		キャラクタのMPの値
+Char.MP%	キャラクタのMPのパーセンテージ
+Char.CP		キャラクタのCPの値
+Char.CP%	キャラクタのCPのパーセンテージ
+Char.Soul	キャラクタのキャラクタの魂の値（カマエルのみ）
+Char.LV		キャラクタのレベルの値
+Char.Load%	キャラクタの重量のパーセンテージ
+Char.InParty	キャラクタがパーティーに参加しているか否か
+Char.Vitality	キャラクタのバイタリティーの値
+Char.Race	キャラクタの種族
+Char.Class	キャラクタのジョブクラス
+Char.IsSelectTarget	キャラクタがターゲットを選択しているか否か
+Char.IsTargetByPlayer	キャラクタが他プレイヤーからターゲットされているか否か
+Char.IsAttackByPlayer	キャラクタが他プレイヤーから攻撃されているか否か
+Target.HP	ターゲットのHPの値
+Target.HP%	ターゲットのHPのパーセンテージ
+Target.MP	ターゲットのMPの値
+Target.MP%	ターゲットのMPのパーセンテージ
+Target.Range	ターゲットとキャラクター間の距離
+Target.IsDead	ターゲットの生死状態（生/死）
+Target.AbnormalStatus	ターゲットの異常状態
+Target.IsPlayer	ターゲットがプレイヤーか否か
+Target.IsMob	ターゲットがMOBか否か
+Target.IsNPC	ターゲットがNPCか否か
+Target.IsTeam	ターゲットがチームメンバーか否か
+Target.IsEnemy	ターゲットが敵か否か
+Target.IsClanWar	ターゲットが血盟戦の相手か否か
+
++--------------------------+
+| 他のスクリプトを取り込む |
++--------------------------+
+
+Include コマンドを使用することで、ひとつの他のスクリプトファイルの内容を挿入
+することができます。
+
+--- 使用例 main.txt ---
+Include("mylib.txt")
+Msg(Console, "こんにちは1")
+Msg(Console, "こんにちは2")
+
+--- 使用例 mylib.txt ---
+Msg(Console, "MyLibからこんにちは1")
+Msg(Console, "MyLibからこんにちは2")
+
+※注：Include コマンドで指定するスクリプトファイルは、取り込む側のスクリプト
+と同じディレクトリ（フォルダ）に置いておく必要があります。
+
++------------------------+
+| セクション２：コマンド |
++------------------------+
+
+ActionSorrow()
+	引数	なし
+	返値	なし
+	目的	悲哀アクション　※注：「SocialAction(35)」と同等
+
+AddHuntingArea(x, y, z, radius)
+AddHuntingArea(radius)
+	引数	位置(x,y,z) 、半径または半径（現在地を起点）
+	返値	なし
+	目的	現在の設定に円形のハンティングエリアを追加
+	使用例	AddHuntingArea(115968, -174345, -760, 2500)
+
+AddRectHuntingArea(x, y, z, radius)
+AddRectHuntingArea(radius)
+	引数	位置(x,y,z) 、半径または半径（現在地を起点）
+	返値	なし
+	目的	現在の設定に矩形のハンティングエリアを追加
+	使用例	AddRectHuntingArea(115968, -174345, -760, 2500)
+
+AddItem(Item ID, Count)
+AddItem(Item Name, Count)
+	引数	アイテムIDまたはアイテム名、数量（「*」で全て対象）
+	返値	なし
+	目的	開いているトレードダイアログに購入、販売、預ける、取り出す
+		アイテムを追加
+	使用例	AddItem("帰還スクロール", 1)
+		AddItem(17, *)
+
+BattleStart()
+	引数	なし
+	返値	なし
+	目的	バトルモード開始（ﾊﾞﾄﾙ開始ボタンと同等）
+
+BattleStop()
+	引数	なし
+	返値	なし
+	目的	バトルモード終了（ﾊﾞﾄﾙ停止ボタンと同等）
+
+Buy()
+	引数	なし
+	返値	なし
+	目的	NPCとの取引モードを購入に変更（2ndスローンPlusのみ）
+
+CancelAttackTarget()
+	引数	なし
+	返値	なし
+	目的	現在のターゲットへの行動（攻撃(melee attack)、スキル等）
+		をキャンセルする
+
+CharBuffLevel(Skill ID)
+CharBuffLevel(Skill Name)
+	引数	スキルIDまたはスキル名（スキルやバフ画面で確認可能）
+	返値	かっているスキルのレベル数
+	目的	キャラクタにかかっているスキルのレベル数を取得
+		（IfまたはWhileコマンドで使用）
+		※訳注：旧BuffLevelと同等というか名称変更
+
+CheckNPCRange(NPC ID)
+	引数	NPC（MOB）ID
+	返値	True/False（ブール（真偽）値）
+	目的	特定範囲内にNPCまたはMOBが存在するか確認する
+		（IfまたはWhileコマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start:
+		If (CheckNPCRange(33587) < 100)
+		{
+			Msg(Console, "範囲内にいますぜ!!!")
+		}
+		Else
+		{
+			Msg(Console, "範囲内におりませぬ...")
+		}
+
+		Delay(1000)
+		Jump("Start")
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ClearHuntingArea()
+	引数	なし
+	返値	なし
+	目的	現在の設定から全てのハンティングエリアを削除
+
+CloseDialog()
+	引数	なし
+	返値	なし
+	目的	開いているNPC とのチャットダイアログを閉じる
+
+CloseWindow()
+	引数	なし
+	返値	なし
+	目的	現在のゲームアカウントで開いているウィンドウを全て閉じる
+
+Confirm()
+	引数	なし
+	返値	なし
+	目的	NP とのアイテムの購入、販売、預ける、取り出すといった取り引
+		きを実行（確定）する
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// キャット君と話す
+		NpcDialog(31756)
+		Delay(2000)
+
+		// アイテム購入のため選択肢リストの6と1を選択
+		SelectDialog(6)
+		Delay(2000)
+		SelectDialog(1)
+		Delay(2000)
+
+		// トレードリストにクリスタル：Dグレードを3 個追加
+		AddItem(1458, 3)
+
+		// トレード実行
+		Confirm()
+
+		// ダイアログを閉じる
+		CloseDialog()
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CounterTargetPlayer()
+	引数	なし
+	返値	なし
+	目的	キャラクタをターゲットしているプレイヤーにターゲットし返す
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (Char.IsTargetByPlayer)
+		{
+			Msg(Console, "タゲられてるのでタゲり返す")
+			// タゲり返し
+			CounterTargetPlayer()
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CountItem(Item ID)
+CountItem(Item Name)
+	引数	アイテムIDまたはアイテム名（インベントリ画面で確認可能）
+	返値	合計アイテム数
+	目的	インベントリのアイテム数を取得（IfまたはWhileコマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// ソウルショット：Dグレードの数を調べる
+		While (CountItem(1463) < 1000)
+		{
+			// 何もしない
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CountQuestDefeatNpc(NPC ID)
+	引数	NPC ID
+	返値	倒したNPC数
+	目的	クエストで倒したNPC数を取得 （ifまたはwhileコマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// クエストID 10362（捜索隊の証明）で倒したハスク ストーカーの数を調べる
+		If (CountQuestDefeatNpc(22992) == 10)
+		{
+			// 何もしない
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CraftItem(Receipt ID)
+	引数	製作図ID（動作設定>アイテム製作画面で確認可能）
+	返値	なし
+	目的	アイテムを製作する
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// ソウルショット：Dグレードを製作する
+		CraftItem(20)
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CrystalizeItem(Item ID)
+CrystalizeItem(Item Name)
+	引数	アイテムIDまたはアイテム名
+	返値	なし
+	目的	アイテムをクリスタライズする
+
+Delay(Millisecond)
+	引数	ミリ秒単位の時間
+	返値	なし
+	目的	スクリプトの実行を一時停止（設定時間経過まで待機）
+
+DestroyItem(Item ID, count)
+DestroyItem(Item Name, count)
+	引数	アイテムIDまたはアイテム名、数量（「*」で全て対象）
+	返値	なし
+	目的	アイテムを破壊する
+
+DialogContain(text)
+	引数	文字列（ダブルクォーテーション必須）
+	返値	True/False（ブール（真偽）値）
+	目的	開いたダイアログに特定文字列が含まれているかどうかを確認
+		（IfまたはWhileコマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (DialogContain("2.4 km"))
+		{
+			SelectDialog("2.4 km")
+			Return
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dismiss(Name)
+	引数	キャラクター名
+	返値	なし
+	目的	指定キャラクターをパーティーから追放する
+
+DropItem(Item ID, count)
+DropItem(Item Name, count)
+	引数	アイテムIDまたはアイテム名、数量（「*」で全て対象）
+	返値	なし
+	目的	現在地にアイテムを捨てる
+
+EnchantItem(Item ID, Item ID)
+	引数	武器または防具のアイテムID、強化スクロールのアイテムID
+	返値	なし
+	目的	武器や防具を指定した強化スクロールで強化する
+	使用例	Enchant Item.txt をご覧ください（サーベルを強化する例）
+
+EnchantLevel(Item ID)
+	引数	アイテムID
+	返値	アイテムの強化レベル数
+	目的	指定したアイテムID の強化レベル数を取得
+		（IfまたはWhileコマンドで使用）
+
+Exit
+	引数	なし
+	返値	なし
+	目的	スクリプトの実行を終了する
+
+FishingStart()
+	引数	なし
+	返値	なし
+	目的	フィッシングモード開始（ﾌｨｯｼﾝｸﾞ開始ボタンと同等）
+
+FishingStop()
+	引数	なし
+	返値	なし
+	目的	フィッシングモード終了（ﾌｨｯｼﾝｸﾞ停止ボタンと同等）
+
+FollowSelectTarget(Name)
+	引数	マップ中のオブジェクト名
+	返値	なし
+	目的	特定のオブジェクト（リーダーやパーティーメンバー等）名の
+		ターゲットをターゲットする
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// プレイヤー名「dev」のターゲットに合わせる（追従する）
+		FollowSelectTarget("dev")
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ForceAttack(NPC ID)
+	引数	NPC ID
+	返値	なし
+	目的	特定NPCを強制攻撃
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Down Level:
+
+		// 死ぬまで攻撃
+		While (Char.HP > 0)
+		{
+			ForceAttack(30545)
+			Delay(2000)
+		}
+
+		// 最寄る
+		ReturnToVillage()
+		Delay(2000)
+
+		// レベル25に下がるまで続ける
+		If (Char.LV > 25)
+		{
+			Jump("Down Level")
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ForceAttackTarget()
+	引数	なし
+	返値	なし
+	目的	現在のターゲットを攻撃（melee attack）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Start:
+
+		// 1秒間隔でPVP状態か確認
+		Delay(1000)
+		If (Char.IsAttackByPlayer)
+		{
+			Msg(Console, "誰かに攻撃されてる～！")
+			Jump("PVP")
+		}
+		Else 
+		{
+			Jump("Start")
+		}
+
+		PVP:
+
+		// タゲり返す
+		CounterTargetPlayer()
+
+		// ターゲットとの距離が100になるまで近づく
+		If (Target.Range > 100)
+		{
+			MoveToTarget(100)
+		}
+
+		Delay(500)
+		ForceAttackTarget()
+
+		// 死ぬまで攻撃し続ける
+		If (!Target.IsDead)
+		{
+			Jump("PVP")
+		}
+		Else 
+		{
+			Jump("Start")
+			CancelAttackTarget()
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FoundEnemyInRange(Range)
+	引数	現在地からの範囲（半径）
+	返値	True/False（ブール（真偽）値）
+	目的	敵が指定範囲内に存在するか確認（IfまたはWhileコマンドで使用）
+
+FoundKarmaPlayer(Range)
+	引数	現在地からの範囲（半径）
+	返値	True/False（ブール（真偽）値）
+	目的	赤ネームが指定範囲内に存在するか確認（IfまたはWhileコマンドで使用）
+
+FoundPlayerInRange(Range)
+	引数	現在地からの範囲（半径）
+	返値	True/False（ブール（真偽）値）
+	目的	他プレイヤーが指定範囲内に存在するか確認
+		（IfまたはWhileコマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// 範囲1000に他プレイヤーがいるか確認
+		If (FoundPlayerInRange(1000))
+		{
+			Msg(Console, "いた!!!")
+		}
+		Else
+		{
+			Msg(Console, "いない")
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If () {} Else {}
+	引数	グローバルプロパティまたはコマンド、比較演算子を用いた式、値
+	返値	True/False（ブール（真偽）値）
+	目的	式を評価して処理フローを分岐する
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (CountItem(1835) == 0)
+		{
+			// 購入リストの1番目を選択
+			SelectDialog(1)
+		}
+		Else
+		{
+			// 購入リストの3番目を選択
+			SelectDialog(3)
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Include(filename)
+	引数	スクリプトのファイル名
+	返値	なし
+	目的	実行時に指定スクリプトがその位置に取り込まれる
+
+Invite(Name)
+	引数	キャラクター名
+	返値	なし
+	目的	特定キャラクターをパーティーに招待する
+	使用例	Invite("dev")
+
+IsMember(Name)
+	引数	キャラクター名
+	返値	True/False（ブール（真偽）値）
+	目的	特定キャラクターがパーティーに参加しているか否かを確認
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (IsMember("dev"))
+		{
+			Msg(Console, "dev 参加しとる")
+		}
+		Else
+		{
+			Msg(Console, "dev 参加してねぇ")
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Jump(Label)
+	引数	アドレスラベル（文字列でダブルクォーテーション必須。日本語可）
+	返値	なし
+	目的	指定したアドレスラベルへジャンプ
+
+Label:
+	引数	なし
+	返値	なし
+	目的	アドレスラベルを定義（コロンで終る文字列でダブルクォーテーション不要。日本語可）
+	使用例	Exit:
+
+LearnSkill(Skill ID)
+LearnSkill(Skill Name)
+	引数	スキルIDまたはスキル名
+	返値	なし
+	目的	スキルを習得
+	使用例	LearnSkill(141)
+
+LeaveParty()
+	引数	なし
+	返値	なし
+	目的	パーティーから脱退する
+
+LocInRange(x, y, z, radius)
+	引数	位置(x, y, z)、半径
+	返値	True/False（ブール（真偽）値）
+	目的	現在地が指定した範囲内か否かを確認
+		（If またはWhile コマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (LocInRange(-59569, -56184, -2032, 500))
+		{
+			Msg(Console, "範囲内")
+		}
+		Else
+		{
+			Msg(Console, "範囲外")
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Logout(Delay, Relogin Delay)
+	引数	ログアウトまでの待ち時間（秒）、再ログインまでの待ち時間（秒）
+	返値	なし
+	目的	強制的にログアウトした後に再ログイン
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// 今すぐログアウトして10 秒後に再ログイン
+		Logout(0, 10)
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MoveTo(x, y, z)
+	引数	位置(x, y, z)
+	返値	なし
+	目的	指定位置へ移動する。現在地は「/loc」コマンドで確認可能
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// ブラックウルフが湧く場所まで移動（ドワ村周辺）
+		MoveTo(116633, -183771, -1568)
+		MoveTo(116504, -183755, -1560)
+		MoveTo(116548, -184397, -1568)
+		MoveTo(116633, -185163, -1744)
+		MoveTo(117115, -186064, -2088)
+		MoveTo(117678, -186667, -2384)
+		MoveTo(118566, -187339, -2776)
+		MoveTo(119119, -188103, -3096)
+		MoveTo(119674, -188351, -3264)
+		MoveTo(120054, -187729, -3304)
+		MoveTo(119537, -186438, -3248)
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MoveToTarget(range)
+	引数	キャラクタ－ターゲット間の範囲
+	返値	なし
+	目的	ターゲットの指定範囲内まで移動する
+
+Msg(Output, Message)
+Msg(Output, Message, Target)
+	引数	出力先、メッセージ本文（、ターゲット）
+		出力先には以下のものがあります：
+		Console	コンソール（L2Divine内部で使用するだけで、サーバへは送信されません）
+		General	いわゆる白チャ
+		Shout	叫び（シャウト）
+		Trade	トレードチャット
+		Party	パーティーチャット
+		Clan	血盟チャット
+		Ally	同盟チャット
+		Friend	フレンドチャット（ターゲット指定が必要）
+		Whisper	ウィスパー（ターゲット指定が必要）
+	返値	なし
+	目的	指定した出力先（のターゲット）へメッセージを送信します
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Msg(General, "こんにちは")
+		Msg(Whisper, "こんにちは", "Dev")
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NoMobInHuntingArea()
+	引数	なし
+	返値	True/False（ブール（真偽）値）
+	目的	現在のハンティングエリアにMOBがいないか確認
+		（If またはWhile コマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (NoMobInHuntingArea())
+		{
+			Msg(Console, "MOBいないあるよ")
+		}
+		Else
+		{
+			Msg(Console, "MOBいたあるよ")
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NpcDialog(NPC ID)
+NpcDialog(NPC Name)
+	引数	NPC IDまたはNPC名
+	返値	なし
+	目的	NPCとのチャットダイアログを開く
+	使用例	Revenge of the Redbonnet.txt をご覧ください
+
+PlayerBuffLevel(Name, Skill ID)
+	引数	プレイヤー名、スキルID
+	返値	True/False（ブール（真偽）値）
+	目的	特定のプレイヤーにかかっている特定のバフのレベルを確認
+		（If またはWhile コマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// メンターバフの確認
+		If (PlayerBuffLevel("Foo",9227) == 1)
+		{
+			Msg(Console, "バフあり!!!")
+		}
+		Else
+		{
+			Msg(Console, "バフなす")
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PlaySound(Sound File)
+	引数	サウンドファイル（WAV）ファイルのパス
+	返値	なし
+	目的	サウンドを鳴らす
+		（If またはWhile コマンドで使用）※訳注：この記述があったが
+		おそらく間違い
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		PlaySound("C:\temp\L2Divine\sound\Alert.wav")
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Recommend(Player Name)
+	引数	プレイヤー名
+	返値	なし
+	目的	指定したプレイヤーを推薦する
+
+Return
+	引数	なし
+	返値	なし
+	目的	Jump で呼ばれた行の次のコマンドへ制御を戻す
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Jump("Start")
+
+		MyProc1:
+		Msg(Console, "関数1 コマンド1")
+		Return
+
+		MyProc2:
+		Msg(Console, "関数2 コマンド1")
+		Msg(Console, "関数2 コマンド2")
+		Return
+
+		Start:
+		Msg(Console, "コマンド1")
+		Jump("MyProc1")
+		Msg(Console, "コマンド2")
+		Jump("MyProc2")
+		Msg(Console, "コマンド3")
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ReturnToVillage()
+	引数	なし
+	返値	なし
+	目的	死亡時に最寄りの村に帰還する
+	使用例	Down_Level.txt をご覧ください
+
+ReturnToClanHall()
+	引数	なし
+	返値	なし
+	目的	死亡時にアジトに帰還する
+
+SelectDialog(Link Name)
+SelectDialog(Link Index)
+	引数	リンクの文字列またはリンクのインデックス番号
+	返値	なし
+	目的	開いているNPC チャットダイアログのリンク（選択肢）を選択
+		（インデックスは上から順に1 から始まる）
+
+SelectKarmaPlayer()
+	引数	なし
+	返値	なし
+	目的	現在地から半径10000の範囲内にいる最も近い赤ネームプレイヤー
+		をターゲットに選択する
+
+SelectNearestEnemy()
+	引数	なし
+	返値	なし
+	目的	現在地から半径10000の範囲内にいる最も近い敵をターゲットに
+		選択する
+
+SelectNearestMob()
+	引数	なし
+	返値	なし
+	目的	現在地から半径10000の範囲内にいる最も近いMOBをターゲットに
+		選択する
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// バトルエリアをセット
+		SetBattleArea(135470, -47998, -3096, 3000)
+		
+		// 一番近いMOBをタゲる
+		SelectNearestMob()
+
+		// そやつを攻撃じゃ！
+		While (!Target.IsDead)
+		{
+			Delay(500)
+			ForceAttackTarget()
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SelectNearestPlayer()
+	引数	なし
+	返値	なし
+	目的	現在地から半径10000の範囲内にいる最も近いプレイヤーを
+		ターゲットに選択する
+
+SelectPlayerByClass(Class ID)
+	引数	クラスID
+	返値	なし
+	目的	現在地から半径10000の範囲内にいる最も近い指定ジョブクラスの
+		プレイヤーをターゲットに選択する
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// ウィン サマナーをタゲる
+		SelectPlayerByClass(145)
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SelectTarget(Name)
+SelectTarget(Name, Title)
+SelectTarget(NPC ID)
+	引数	プレイヤー名、NPC IDやNPC名、または名前とタイトル
+	返値	なし
+	目的	プレイヤー、NPC、MOBをターゲット（別名「"Self"」で自分自身）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// 自分にバフしちゃう
+		SelectTarget("Self")
+		UseSkill(1059)
+		UseSkill(1068)
+		UseSkill(1077)
+		UseSkill(1040)
+		UseSkill(1204)
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sell()
+	引数	なし
+	返値	なし
+	目的	NPCとの取引モードを販売に変更（2ndスローンPlusのみ）
+
+SetBattleArea(x, y, z, radius)
+SetBattleArea(radius)
+	引数	位置(x, y, z)、半径または半径（現在地を起点）
+	返値	なし
+	目的	現在の設定にバトルエリアを設定する
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		SetBattleArea(115968, -174345, -760, 2500)
+
+		// 現在地を起点に半径1000のバトルエリアを設定する
+		SetBattleArea(1000)
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SetRestArea(x, y, z)
+	引数	位置(x, y, z)
+	返値	なし
+	目的	現在の設定に休憩エリアを設定する
+	使用例	SetRestArea(115968, -174345, -760)
+
+Sit()
+	引数	なし
+	返値	なし
+	目的	キャラクターを座らせる
+
+Stand()
+	引数	なし
+	返値	なし
+	目的	キャラクターを立たせる
+
+SocialAction(Action ID)
+	引数	アクションID (下記 SocialAction.ActionID 参照)
+	返値	なし
+	目的	ソーシャルアクションコマンドを使用する
+
+TargetInRange(Name)
+TargetInRange(NPC ID)
+	引数	プレイヤー名またはNPC IDやNPC名
+	返値	True/False（ブール（真偽）値）
+	目的	プレイヤー、NPC、MOBが可視範囲内にいるかどうか確認
+		（If またはWhile コマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (TargetInRange(32378))
+		{
+			Msg(Console, "発見")
+		}
+		Else
+		{
+			Msg(Console, "見当たらない")
+		}
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TradeStart()
+	引数	なし
+	返値	なし
+	目的	トレードモード開始（ﾄﾚｰﾄﾞ開始ボタンと同等）
+	使用例	Craft_Item.txt をご覧ください
+
+TradeStop()
+	引数	なし
+	返値	なし
+	目的	トレードモード終了（ﾄﾚｰﾄﾞ停止ボタンと同等）
+
+UseItem(Item ID)
+UseItem(Item Name)
+	引数	アイテムID またはアイテム名
+	返値	なし
+	目的	アイテムを使用する
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		UseItem(1830)
+		UseItem("帰還スクロール")
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+UseSkill(Skill ID)
+UseSkill(Skill Name)
+UseSkill(Skill ID, Target)
+UseSkill(Skill Name, Target)
+	引数	スキルID またはスキル名（、ターゲット）
+	返値	なし
+	目的	（ターゲットに）スキルを使用する
+	使用例	Faverites_Buff.txt をご覧ください
+
+While() {}
+	引数	グローバルプロパティ、コマンド、比較演算子を含む式、値
+	返値	True/False（ブール（真偽）値）
+	目的	条件式が偽（False）になるまで（真(True)の間）繰り返す
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		// バトル開始
+		Battle:
+		BattleStart()
+
+		// ブラックウルフの皮が40 個になるまで戦闘
+		While (CountItem(1482) < 40)
+		{
+			Delay(10000)
+		}
+
+		// バトル終了
+		BattleStop()
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++------------------------------+
+| セクション３：IDリファレンス |
++------------------------------+
+
++-------------------+
+| Char.Race（種族） |
++-------------------+
+0=ヒューマン(Human)
+1=エルフ(Elf)
+2=ダークエルフ(Darkelf)
+3=オーク(Orc)
+4=ドワーフ(Dwarf)
+5=カマエル(Kamael)
+
++----------------------------+
+| Char.Class（ジョブクラス） |
++----------------------------+
+0=ファイター(Fighter)
+1=ウォーリア(Warrior)
+2=グラディエーター(Gladiator)
+3=ウォーロード(Warlord)
+4=ナイト(Knight)
+5=パラディン(Paladin)
+6=ダーク アベンジャー(Dark Avenger)
+7=ローグ(Rogue)
+8=トレジャー ハンター(Treasure Hunter)
+9=ホークアイ(Hawkeye)
+10=メイジ(Mage)
+11=ウィザード(Wizard)
+12=ソーサラー(Sorceror)
+13=ネクロマンサー(Necromancer)
+14=ウォーロック(Warlock)
+15=クレリック(Cleric)
+16=ビショップ(Bishop)
+17=プロフィット(Prophet)
+18=エルヴン ファイター(Elven Fighter)
+19=エルヴン ナイト(Elven Knight)
+20=テンプル ナイト(Temple Knight)
+21=ソード シンガー(Sword Singer)
+22=エルヴン スカウト(Elven Scout)
+23=プレインズ ウォーカー(Plains Walker)
+24=シルバー レンジャー(Silver Ranger)
+25=エルヴン メイジ(Elven Mage)
+26=エルヴン ウィザード(Elven Wizard)
+27=スペルシンガー(Spellsinger)
+28=エレメンタル サマナー(Elemental Summoner)
+29=オラクル(Oracle)
+30=エルダー(Elder)
+31=ダークファイター(Dark Fighter)
+32=パラス ナイト(Palus Knight)
+33=シリエン ナイト(Shillien Knight)
+34=ブレードダンサー(Bladedancer)
+35=アサシン(Assassin)
+36=アビス ウォーカー(Abyss Walker)
+37=ファントム レンジャー(Phantom Ranger)
+38=ダーク メイジ(Dark Mage)
+39=ダーク ウィザード(Dark Wizard)
+40=スペルハウラー(Spellhowler)
+41=ファントム サマナー(Phantom Summoner)
+42=シリエン オラクル(Shillien Oracle)
+43=シリエン エルダー(Shillen Elder)
+44=オーク ファイター(Orc Fighter)
+45=オーク レイダー(Orc Raider)
+46=デストロイヤー(Destroyer)
+47=オーク モンク(Orc Monk)
+48=タイラント(Tyrant)
+49=オーク メイジ(Orc Mage)
+50=オーク シャーマン(Orc Shaman)
+51=オーバーロード(Overlord)
+52=ウォークライヤー(Warcryer)
+53=ドワーヴン ファイター(Dwarven Fighter)
+54=スカベンジャー(Scavenger)
+55=バウンティー ハンター(Bounty Hunter)
+56=アルティザン(Artisan)
+57=ウォースミス(Warsmith)
+88=デュエリスト(Duelist)
+89=ドレッドノート(Dreadnought)
+90=フェニックス ナイト(Phoenix Knight)
+91=ヘル ナイト(Hell Knight)
+92=サジタリウス(Sagittarius)
+93=アドベンチャラー(Adventurer)
+94=アークメイジ(Archmage)
+95=ソウルテイカー(Soultaker)
+96=アルカナ ロード(Arcana Lord)
+97=カーディナル(Cardinal)
+98=ハイエロファント(Hierophant)
+99=エヴァス テンプラー(Eva Templar)
+100=ソード ミューズ(Sword Muse)
+101=ウィンド ライダー(Wind Rider)
+102=ムーンライト センティネル(Moonlight Sentinel)
+103=ミスティック ミューズ(Mystic Muse)
+104=エレメンタル マスター(Elemental Master)
+105=エヴァス セイント(Eva Saint)
+106=シリエン テンプラー(Shillien Templar)
+107=スペクトラル ダンサー(Spectral Dancer)
+108=ゴースト ハンター(Ghost Hunter)
+109=ゴースト センティネル(Ghost Sentinel)
+110=ストーム スクリーマー(Storm Screamer)
+111=スペクトラル マスター(Spectral Master)
+112=シリエン セイント(Shillien Saint)
+113=タイタン(Titan)
+114=グランド カバタリ(Grand Khauatari)
+115=ドミネーター(Dominator)
+116=ドゥーム クライヤー(Doom Cryer)
+117=フォーチュン シーカー(Fortune Seeker)
+118=マエストロ(Maestro)
+123=カマエル ソルジャー(Kamael Soldier)
+124=カマエル ソルジャー(Kamael Soldier)
+125=トルーパー(Dragoon)
+126=ウォーダー(Warder)
+127=バーサーカー(Berserker)
+128=ソウル ブレーカー(Soul Breaker)
+129=ソウル ブレーカー(Soul Breaker)
+130=アヴァレスタ(Arbalester)
+131=ドゥーム ブリンガー(Doom Bringer)
+132=ソウル ハウンド(Soul Hound)
+133=ソウル ハウンド(Soul Hound)
+134=トリックスター(Trickster)
+135=インスペクター(Inspector)
+136=ジュディケーター(Judicator)
+139=シーゲル ナイト(Sigel Knight)
+140=ティール ウォーリア(Tyrr Warrior)
+141=オーセル ローグ(Othell Rogue)
+142=ユール アーチャー(Yul Archer)
+143=フェオ ウィザード(Feoh Wizard)
+144=イース エンチャンター(Iss Enchanter)
+145=ウィン サマナー(Wynn Summoner)
+146=エアロ ヒーラー(Aeore Healer)
+
++-----------------------------------+
+| Target.AbnormalStatus（異常状態） |
++-----------------------------------+
+1=出血(Bleed)
+2=毒(Poison)
+7=スタン(Stun)
+8=睡眠(Sleep)
+9=沈黙(Mute)
+10=ホールド(Root)
+11=ショック？(Hold)
+12=麻痺？(Hold)
+14=頭が大きくなった状態(Big Head)
+15=火炎？(Flame)
+18=浮揚？・ホールド(Float & Root)
+19=ダンス？・スタン(Dance & Stun)
+20=火炎？・ホールド・スタン(Fire & Root & Stun)
+21=ステルス(Stealth)
+22=収監された状態？(Imprisioning)
+23=収監された状態？(Imprisioning)
+24=マジックサークル？(Magic Circle)
+28=アルティメット ディフェンス(Ultimate Defend)
+
++---------------------------------------+
+| SocialAction.ActionID（アクションID） |
++---------------------------------------+
+12=挨拶(Greeting)
+13=勝利(Victory)
+14=突撃(Advance)
+24=同意する(Yes)
+25=同意しない(No)
+26=丁寧な挨拶(Bow)
+29=そうですね(Unaware)
+30=待機(Waiting)
+31=笑い(Laugh)
+33=拍手(Applaud)
+34=ダンス(Dance)
+35=悲哀(Sorrow)
+62=誘惑(Charm)
+66=恥ずかしい(Shyness)

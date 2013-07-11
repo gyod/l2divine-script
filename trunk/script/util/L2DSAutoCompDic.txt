@@ -1,0 +1,133 @@
+Char.HP
+Char.HP%
+Char.MP
+Char.MP%
+Char.CP
+Char.CP%
+Char.Soul
+Char.LV
+Char.Load%
+Char.InParty
+Char.Vitality
+Char.Race
+Char.Class
+Char.IsSelectTarget
+Char.IsTargetByPlayer
+Char.IsAttackByPlayer
+Target.HP
+Target.HP%
+Target.MP
+Target.MP%
+Target.Range
+Target.IsDead
+Target.AbnormalStatus
+Target.IsPlayer
+Target.IsMob
+Target.IsNPC
+Target.IsTeam
+Target.IsEnemy
+Target.IsClanWar
+ActionSorrow()
+AddHuntingArea(radius)
+AddHuntingArea(x, y, z, radius)
+AddRectHuntingArea(radius)
+AddRectHuntingArea(x, y, z, radius)
+AddItem(Item_ID, Count)
+AddItem("Item_Name", Count)
+BattleStart()
+BattleStop()
+Buy()
+CancelAttackTarget()
+CharBuffLevel(Skill_ID)
+CharBuffLevel("Skill_Name")
+CheckNPCRange(NPC_ID)
+ClearHuntingArea()
+CloseDialog()
+CloseWindow()
+Confirm()
+CounterTargetPlayer()
+CountItem(Item_ID)
+CountItem("Item_Name")
+CountQuestDefeatNpc(NPC_ID)
+CraftItem(Receipt_ID)
+CrystalizeItem(Item_ID)
+CrystalizeItem("Item_Name")
+Delay(Millisecond)
+DestroyItem(Item_ID, count)
+DestroyItem("Item_Name", count)
+DialogContain("text")
+Dismiss("Name")
+DropItem(Item_ID, count)
+DropItem("Item_Name", count)
+EnchantItem(Item_ID, Item_ID)
+EnchantLevel(Item_ID)
+Exit
+FishingStart()
+FishingStop()
+ForceAttack(NPC_ID)
+FollowSelectTarget("Name")
+ForceAttack(NPC_ID)
+ForceAttackTarget()
+FoundEnemyInRange(Range)
+FoundKarmaPlayer(Range)
+FoundPlayerInRange(Range)
+If() {}
+Else {}
+Include("filename")
+Invite("Name")
+IsMember("Name")
+Jump("Label")
+Label:
+LearnSkill(Skill_ID)
+LearnSkill("Skill_Name")
+LeaveParty()
+LocInRange(x, y, z, radius)
+Logout(Delay, Relogin Delay)
+MoveTo(x, y, z)
+MoveToTarget(range)
+Msg(Console, "Message")
+Msg(General, "Message")
+Msg(Shout, "Message")
+Msg(Trade, "Message")
+Msg(Party, "Message")
+Msg(Clan, "Message")
+Msg(Ally, "Message")
+Msg(Friend, "Message", "Target")
+Msg(Whisper, "Message", "Target")
+NoMobInHuntingArea()
+NpcDialog(NPC_ID)
+NpcDialog("NPC_Name")
+PlayerBuffLevel("Name", Skill_ID)
+PlaySound("Sound_File")
+Recommend(Player_Name)
+Return
+ReturnToVillage()
+ReturnToClanHall()
+SelectDialog("Link_Name")
+SelectDialog(Link_Index)
+SelectKarmaPlayer()
+SelectNearestEnemy()
+SelectNearestMob()
+SelectNearestPlayer()
+SelectPlayerByClass(Class_ID)
+SelectTarget("Name")
+SelectTarget("Name", "Title")
+SelectTarget(NPC_ID)
+Sell()
+SetBattleArea(radius)
+SetBattleArea(x, y, z, radius)
+SetRestArea(x, y, z)
+Sit()
+Stand()
+SocialAction(Action_ID)
+TargetInRange("Name")
+TargetInRange(NPC_ID)
+TradeStart()
+TradeStop()
+UseItem(Item_ID)
+UseItem("Item_Name")
+UseSkill(Skill_ID)
+UseSkill("Skill_Name")
+UseSkill(Skill_ID, "Target")
+UseSkill("Skill_Name", "Target")
+While() {}

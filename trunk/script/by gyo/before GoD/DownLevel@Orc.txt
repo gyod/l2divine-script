@@ -1,0 +1,22 @@
+Down Level:
+
+// Check spawn location
+MoveTo(-45112, -113605, -192)
+
+// Attack until die
+While (Char.HP > 0)
+{
+	ForceAttack(30584)
+	Delay(2000)
+}
+
+// Return to nearest village
+Delay(2000)
+ReturnToVillage()
+Delay(5000)
+
+// Until level = 25
+If (Char.LV > 19)
+{
+	Jump("Down Level")
+}
