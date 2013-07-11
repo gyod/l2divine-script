@@ -1,0 +1,73 @@
+// http://projectdivine.com/forum/topic_view.jsp?c=MQ==&f=MRZDKA==
+// Auther:	silence
+
+Enchant:
+
+// Count ヨギスタッフ
+If (CountItem(13539) <= 0)
+{
+	Msg(Console, "ヨギスタッフ購入")
+	NpcDialog(32599)
+	Delay(1000)
+	SelectDialog(2)
+	Delay(1000)
+	SelectDialog(1)
+	Confirm()
+	CloseDialog()
+	Delay(1000)
+	CloseWindow()
+	Jump("Enchant")
+}
+
+// Count Scroll: スクロール
+If (CountItem(13540) <= 0)
+{
+	Msg(Console, "スクロール終了")
+	Jump("Exit")
+}
+
+// Enchant until +16
+If (EnchantLevel(13539) >= 16)
+{
+	Msg(Console, "Reach enchant level")
+	Jump("CHANGE")
+}
+
+// Count down for + or crystal!
+Msg(Console, "READY!")
+Delay(1000)
+Msg(Console, "GO!")
+
+// Enchant ヨギスタッフ
+EnchantItem(13539,13540)
+Delay(1000)
+If (EnchantLevel(13539) == 7)
+{
+	Msg(Console, "+7成功")
+}
+If (EnchantLevel(13539) == 16)
+{
+	Msg(Console, "+16成功")
+}
+Confirm()
+CloseDialog()
+Delay(1000)
+CloseWindow()
+Jump("Enchant")
+
+
+CHANGE:
+UseItem(13539)
+Msg(Console, "交換")
+Delay(1000)
+NpcDialog(32599)
+Delay(1000)
+SelectDialog(3)
+Delay(1000)
+Confirm()
+CloseDialog()
+Delay(1000)
+CloseWindow()
+Jump("Enchant")
+
+Exit:

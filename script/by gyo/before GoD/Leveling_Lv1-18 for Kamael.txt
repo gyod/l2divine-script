@@ -1,0 +1,13 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Leveling Script for Kamael: Lv1-18
+// NOTICE:Don't forget set Attack command with SSN Beginners and other settings!
+// ------------------------------------------------------------------
+
+Include("Quest_Tutorial for Kamael.txt")
+Include("Quest_Supply Check.txt")
+Include("Snippet_Get Adventures Weapon.txt")
+Include("Quest_Head for the Hills.txt")
+Include("Quest_The Way of the Warrior.txt")
+Include("Quest_The Few the Proud the Brave.txt")
+Msg(Console, "gyo: U became Lv18! Don't forget leann skills before Class Change Script!")

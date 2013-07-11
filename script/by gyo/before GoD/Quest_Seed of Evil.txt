@@ -1,0 +1,187 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Quest:	Seed of Evil(極悪の種)(158)
+// LV:		21+
+// Location:	Front of GK in Talking Island
+// Require:	Scroll of Escape(736) x more than 1
+// Reward:	Exp 17818, SP 927, Adena and D-Grade Armor
+// ------------------------------------------------------------------
+
+Init_SeedOfEvil:
+If (Char.LV < 21)
+{
+	Msg(Console, "U r too young to do!")
+	Jump("End_SeedOfEvil")
+}
+
+//GKToBiotin
+MoveTo(-84140, 244620, -3728)
+MoveTo(-84550, 245410, -3712)
+
+//Biotin(ビオティン)(30031)
+NpcDialog(30031)
+Delay(2000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(4)
+Delay(1500)
+//SelectDialog("Say you will accept the job")
+//SelectDialog("クエストを引き受けると言う")
+SelectDialog(1)
+Delay(1500)
+CloseDialog()
+Delay(1500)
+
+//--
+// Evil Power(邪悪な力)
+//--
+//BiotinToGK
+MoveTo(-84550, 245410, -3712)
+MoveTo(-84140, 244620, -3728)
+
+//GKToNG
+MoveTo(-84140, 244620, -3728)
+MoveTo(-84560, 244110, -3728)
+MoveTo(-84070, 243270, -3728)
+
+NewbieBuff_SeedOfEvil:
+MoveTo(-84070, 243270, -3728)
+//Newbie Guide(初心者 案内人)
+NpcDialog(30598)
+Delay(1500)
+//SelectDialog("Receive blessing of protection.")
+//SelectDialog("保護の祝福を受ける")
+SelectDialog(3)
+Delay(1500)
+//SelectDialog("Receive the protection blessing.")
+//SelectDialog("保護の祝福をしてもらう")
+SelectDialog(1)
+Delay(1500)
+NpcDialog(30598)
+Delay(1500)
+//SelectDialog("Check the list of available Support Magic.")
+//SelectDialog("受けられる補助魔法を確認する")
+SelectDialog(6)
+Delay(1500)
+//SelectDialog("Receive supplemental magic.")
+//SelectDialog("補助魔法をかけてもらう")
+SelectDialog(1)
+Delay(1500)
+CloseDialog()
+
+//NGToGK
+MoveTo(-84070, 243270, -3728)
+MoveTo(-84560, 244110, -3728)
+MoveTo(-84140, 244620, -3728)
+
+//Teleport to Elven Ruins
+//Roxxy(ラプンツェル)
+NpcDialog(30006)
+//SelectDialog("Teleport")
+//SelectDialog("テレポートする")
+Delay(1500)
+SelectDialog(3)
+Delay(1500)
+//SelectDialog("Elven Ruins")
+//SelectDialog("エルフの遺跡")
+SelectDialog(7)
+Delay(1500)
+CloseDialog()
+Delay(1500)
+While(! LocInRange(-112367, 234703, -3688, 500))
+{
+	Delay(1000)
+}
+
+//Enter into Dangeon
+MoveTo(-113450, 235490, -3640)
+//Siff(シフォン)
+NpcDialog(30427)
+//SelectDialog("Teleport into the ruins")
+//SelectDialog("遺跡の中までテレポートする")
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+CloseDialog()
+Delay(1500)
+While(! LocInRange(48765, 248461, -6160, 500))
+{
+	Delay(1000)
+}
+
+//GoToHuntArea
+MoveTo(43630, 248460, -6496)
+MoveTo(43630, 246580, -6456)
+MoveTo(45860, 246640, -6608)
+MoveTo(46250, 246910, -6608)
+MoveTo(46950, 246590, -6656)
+
+ClearHuntingArea()
+AddRectHuntingArea(47010, 246560, -6656, 500)
+BattleStart()
+
+//Clay Tablet(タブレット)
+While (CountItem(1025) < 1)
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u are die... return hunting")
+		BattleStop()
+		ReturnToVillage()
+		Delay(5000)
+		Jump("NewbieBuff_SeedOfEvil")
+	}
+}
+BattleStop()
+Delay(5000)
+
+//--
+// Return to High Priest Biotin(ビオティンに戻ろう)
+//--
+Delay(5000)
+UseItem(736)
+Delay(10000)
+
+//Spawn Location in TI
+//(-83990, 243336, -3700)
+//(-83964, 242680, -3700)
+//(-84512, 242679, -3700)
+//(-84623, 243193, -3700)
+//(-83742, 242214, -3700)
+//(-83537, 242537, -3700)
+//(-83700, 242896, -3700)
+//(-83646, 243397, -3700)
+//(-83808, 243637, -3700)
+//(-84903, 243489, -3700)
+//(-84852, 243174, -3700)
+//(-84892, 242479, -3700)
+//(-84756, 242155, -3700)
+//(-83761, 243620, -3700)
+
+//CheckInTalkingIsland_BloodFiend:
+If (LocInRange(-84190, 243000, -3704, 3000))
+{
+	MoveTo(-84070, 243270, -3728)
+}
+
+//NGToGK
+MoveTo(-84070, 243270, -3728)
+MoveTo(-84560, 244110, -3728)
+MoveTo(-84140, 244620, -3728)
+
+//GKToBiotin
+MoveTo(-84140, 244620, -3728)
+MoveTo(-84550, 245410, -3712)
+
+//Biotin(ビオティン)(30031)
+NpcDialog(30031)
+Delay(2000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(4)
+Delay(1500)
+CloseDialog()
+Delay(1500)
+
+End_SeedOfEvil:

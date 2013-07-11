@@ -1,0 +1,184 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Quest:	Blood Fiend(血の悪魔)(164)
+// LV:		21+
+// Race:	Without Dark Elf
+// Location:	Front of GK in Elven Village
+// Require:	Scroll of Escape(736) x more than 1
+// Reward:	Exp 35637, SP 1854, 42130 Adena
+// ------------------------------------------------------------------
+
+Init_BloodFiend:
+If (Char.LV < 21)
+{
+	Msg(Console, "U r too young to do!")
+	Jump("End_BloodFiend")
+}
+
+//GKToCreamees
+MoveTo(46950, 51550, -2976)
+MoveTo(46960, 50670, -2992)
+MoveTo(45270, 49940, -3056)
+MoveTo(43570, 50380, -2992)
+MoveTo(43000, 50020, -2984)
+MoveTo(42750, 50120, -2976)
+
+//Creamees(クリミス)
+NpcDialog(30149)
+Delay(2000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(4)
+Delay(1500)
+//SelectDialog("Say you will avenge them")
+//SelectDialog("復讐すると言う")
+SelectDialog(1)
+Delay(1500)
+CloseDialog()
+Delay(1500)
+
+//--
+// Creamees' Revenge(クリミスの復讐)
+//--
+//CreameesToNG
+MoveTo(42750, 50120, -2976)
+MoveTo(43000, 50020, -2984)
+MoveTo(43570, 50380, -2992)
+MoveTo(45470, 48400, -3056)
+
+NewbieBuff_BloodFiend:
+MoveTo(45470, 48400, -3056)
+NpcDialog(30599)
+Delay(1000)
+//SelectDialog("Receive blessing of protection.")
+//SelectDialog("保護の祝福を受ける")
+SelectDialog(3)
+Delay(1000)
+//SelectDialog("Receive the protection blessing.")
+//SelectDialog("保護の祝福をしてもらう")
+SelectDialog(1)
+Delay(1000)
+NpcDialog(30599)
+Delay(1000)
+//SelectDialog("Check the list of available Support Magic.")
+//SelectDialog("受けられる補助魔法を確認する")
+SelectDialog(6)
+Delay(1000)
+//SelectDialog("Receive supplemental magic.")
+//SelectDialog("補助魔法をかけてもらう")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+
+//NGToGK
+MoveTo(46960, 50670, -2992)
+MoveTo(46950, 51550, -2976)
+
+//TeleportToForest_BloodFiend:
+MoveTo(46950, 51550, -2976)
+//Mirabel(ミンティエル)
+NpcDialog(30146)
+Delay(1000)
+//SelectDialog("Teleport")
+//SelectDialog("テレポートする")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("Elven Forest")
+//SelectDialog("エルフの地下要塞")
+SelectDialog(7)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+While(! LocInRange(29294, 74968, -3776, 500))
+{
+	Delay(1000)
+}
+
+//Enter into Dangeon
+MoveTo(29294, 74968, -3776)
+MoveTo(28899, 74972, -3760)
+MoveTo(24154, 74979, -4096)
+MoveTo(24155, 80886, -4096)
+MoveTo(21231, 80884, -4096)
+MoveTo(21224, 76969, -4280)
+MoveTo(16948, 76993, -4384)
+MoveTo(16809, 79131, -4416)
+MoveTo(16294, 79125, -4400)
+MoveTo(15034, 79130, -4288)
+MoveTo(15023, 82069, -4096)
+MoveTo(13191, 82059, -4096)
+MoveTo(13214, 80526, -4096)
+MoveTo(13699, 79865, -4096)
+MoveTo(13680, 78434, -4096)
+MoveTo(10164, 78438, -3840)
+MoveTo(9138, 78776, -3776)
+MoveTo(9133, 78432, -3728)
+
+ClearHuntingArea()
+AddRectHuntingArea(8837, 78444, -3752, 600)
+BattleStart()
+
+//Kirunak Skull(キルナークの頭骨)
+While (CountItem(1044) < 1)
+{
+	Delay(5000)
+	SelectTarget(27021)
+	ForceAttack(27021)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u are die... return hunting")
+		BattleStop()
+		Delay(5000)
+		ReturnToVillage()
+		Delay(5000)
+		Jump("NewbieBuff_BloodFiend")
+	}
+}
+BattleStop()
+
+//--
+// Who summoned Kirunak?(キルナークを呼んだのは誰か？)
+//--
+Delay(5000)
+UseItem(736)
+Delay(10000)
+
+//Spawn Location in Elven Village
+//(45487, 49767, -2950)
+//(45080, 49614, -2950)
+//(45284, 49309, -2950)
+//(45576, 49412, -2950)
+//(45896, 49831, -2950)
+//(45463, 50097, -2950)
+//(44935, 49798, -2950)
+//(44798, 49475, -2950)
+//(45100, 49025, -2950)
+//(45912, 49363, -2950)
+//(45788, 49861, -2950)
+//(45325, 50067, -2950)
+
+//CheckInElvenVillage_BloodFiend:
+If (LocInRange(45380, 49500, -3064, 2000))
+{
+	MoveTo(45466, 48406, -3056)
+}
+
+//CreameesToNG
+MoveTo(45470, 48400, -3056)
+MoveTo(43570, 50380, -2992)
+MoveTo(43000, 50020, -2984)
+MoveTo(42750, 50120, -2976)
+
+//Creamees(クリミス)
+NpcDialog(30149)
+Delay(2000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(4)
+Delay(1500)
+CloseDialog()
+Delay(1500)
+
+
+End_BloodFiend:

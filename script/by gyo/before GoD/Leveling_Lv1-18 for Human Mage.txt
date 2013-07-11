@@ -1,0 +1,37 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.4 by gyo
+// Leveling Script for Human Mage: Lv1-18
+// NOTICE: Don't forget set Attack command with SSN Beginners and other settings!
+// ------------------------------------------------------------------
+
+Include("Quest_Tutorial for Human Mage.txt")
+Include("Quest_Supply Check.txt")
+UseItem(425)
+Delay(1000)
+UseItem(461)
+Delay(1000)
+Include("Snippet_Get Adventures Weapon for Mage.txt")
+Include("Quest_Head for the Hills.txt")
+
+// Teleport to Talking Island
+MoveTo(-119790, 44520, 360)
+NpcDialog(32135)
+Delay(1000)
+//SelectDialog("?Teleport to initial village of another race?")
+//SelectDialog("他種族の初期村にテレポートする")
+SelectDialog(4)
+Delay(1000)
+//SelectDialog("Talking Island")
+//SelectDialog("話せる島")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+While (! LocInRange( -84081, 243227, -3728, 500))
+{
+	Delay(1000)
+}
+
+Include("Quest_Spirit of Mirrors.txt")
+Include("Quest_Cure for Fever Disease.txt")
+Msg(Console, "gyo: U became Lv18! Don't forget leann skills before Class Change Script!")

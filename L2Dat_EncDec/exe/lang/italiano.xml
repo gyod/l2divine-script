@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <MainForm>
+    <LoadBtn>Apri</LoadBtn>
+    <SaveBtn>Salva</SaveBtn>
+    <ImpBtn>Importa</ImpBtn>
+    <ExpBtn>Esporta</ExpBtn>
+    <MenuFile>File</MenuFile>
+    <MenuFileOpen>Apri Cartella</MenuFileOpen>
+    <MenuFileLoad>Apri</MenuFileLoad>
+    <MenuFileSave>Salva</MenuFileSave>
+    <MenuFileImp>Importa</MenuFileImp>
+    <MenuFileExp>Esporta</MenuFileExp>
+    <MenuFileExit>Esci</MenuFileExit>
+    <MenuOption>Opzioni</MenuOption>
+    <MenuL2encdecTools>Strumenti L2EncDec</MenuL2encdecTools>
+    <MenuL2encdecItem1>Patcha System</MenuL2encdecItem1>
+    <MenuL2encdecItem2>Modifica File INI</MenuL2encdecItem2>
+    <MenuAbout>Info su...</MenuAbout>
+  </MainForm>
+  <OptionForm>
+    <ChronicleLabel>Impostazioni Chronicle</ChronicleLabel>
+    <Encodinglabel>Codifica Testo</Encodinglabel>
+    <LanguageLabel>Lingua</LanguageLabel>
+    <OkBtn>OK</OkBtn>
+    <CancelBtn>Annulla</CancelBtn>
+  </OptionForm>
+  <IniEditBox>
+    <SaveBtn>Salva</SaveBtn>
+    <CancelBtn>Annulla</CancelBtn>
+  </IniEditBox>
+  <Messages>
+    <SystemDir_Error>La cartella System di Lineage II non è stata trovata o le specifiche sono errate.
+Specificare una cartella System di Lineage II.</SystemDir_Error>
+    <DirectoryDialog_Desc>Seleziona la cartella dove si trova la System di Lineage II.</DirectoryDialog_Desc>
+    <MsgBoxTitle_Error>Errore</MsgBoxTitle_Error>
+    <MsgBoxTitle_Information>Informazione</MsgBoxTitle_Information>
+    <COMPLETE>[COMPLETATO] </COMPLETE>
+    <ERROR>[ERRORE] </ERROR>
+    <ChronicleSetting>[Impostazioni Chronicle] </ChronicleSetting>
+    <TextEncoding>[Codifica Testo] </TextEncoding>
+    <PleaseWait>Attendere Prego...</PleaseWait>
+    <FileNotFound>File Non Trovato.</FileNotFound>
+    <DataIsEmpty>Non ci sono Dati.</DataIsEmpty>
+    <CompleteLoad>Aperti {0} Dati.</CompleteLoad>
+    <CompleteSave>Salvati {0} Dati.</CompleteSave>
+    <CompleteImp>Importati {0} Dati.</CompleteImp>
+    <CompleteExp>Esportati {0} Dati.</CompleteExp>
+    <CompletePatchSystem>File System Patchati.</CompletePatchSystem>
+  </Messages>
+</root>

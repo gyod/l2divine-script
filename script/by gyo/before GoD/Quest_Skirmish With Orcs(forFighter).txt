@@ -1,0 +1,288 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.3 by gyo
+// Quest:	Skirmish With Orcs (オークとの接戦) (105) for Elven Fighter
+// LV:		10+
+// Location:	Front of Newbie Guide in Elf Village
+// Reward:	Warrior's Sword(ソード オブ ウォリアー)(9720), Echo Crystals
+// 		Lesser Healing Potion(体力回復剤)(1060) x100, SSN Beginners x7000
+// 		EXP & SP for enough to become Lv15
+// Please don't forget set use Soulshot: No Grade for Beginners
+//  or Spiritshot: No Grade for Beginners with Attack command!
+// ------------------------------------------------------------------
+
+Start_SkirmishWithOrcs:
+If (LocInRange(45380, 49500, -3064, 2000))
+{
+	MoveTo(45466, 48406, -3056)
+}
+
+Jump("Buff_SkirmishWithOrcs")
+
+//Kendell(ケンドネル)
+TalkToKendell:
+MoveTo(47575, 51590, -2992)
+NpcDialog(30218)
+Delay(1000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(3)
+Delay(1000)
+//SelectDialog("Say that you will fight the orcs")
+//SelectDialog("オークと戦うと言う")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("Listen to the explanation about the role")
+//SelectDialog("任務についての説明を聞く")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+Delay(1000)
+
+// if u got Echo Crystals, then done.
+If(CountItem(4413) >= 10)
+{
+	Jump("End_SkirmishWithOrcs")
+}
+
+//Kendell's 1st Order(ケンドネルの指令書)(1836)->Uoph(ウーフ)
+GoToHuntUoph_SkirmishWithOrcs:
+If(CountItem(1836)==1)
+{
+	Jump("TeleportToWoods_SkirmishWithOrcs")
+
+	MoveTo(22340, 42240, -3648)
+	While(CountItem(1844) < 1)
+	{
+		//for Fighter
+		ForceAttack(27059)
+		//for Mage
+		//SelectTarget(27059)
+		//UseSkill(1177)
+	}
+}
+
+//Kendell's 2nd Order(ケンドネルの指令書)(1837)->Kracha(クラチャー)
+GoToHuntKracha_SkirmishWithOrcs:
+If(CountItem(1837)==1)
+{
+	Jump("TeleportToForest_SkirmishWithOrcs")
+
+	MoveTo(33216, 69871, -3680)
+	MoveTo(34064, 69038, -3664)
+	MoveTo(37771, 63183, -3672)
+	While(CountItem(1844) < 1)
+	{
+		//for Fighter
+		SelectTarget(27060)
+		ForceAttack(27060)
+		//for Mage
+		//UseSkill(1177)
+	}
+}
+
+//Kendell's 3rd Order(ケンドネルの指令書)(1838)->Batoh(バトー)
+GoToHuntBatoh_SkirmishWithOrcs:
+If(CountItem(1838)==1)
+{
+	Jump("TeleportToForest_SkirmishWithOrcs")
+
+	MoveTo(31658, 77655, -3504)
+	While(CountItem(1844) < 1)
+	{
+		SelectTarget(27061)
+		//for Fighter
+		ForceAttack(27061)
+		//for Mage
+		//UseSkill(1177)
+	}
+}
+
+//Kendell's 4th Order(ケンドネルの指令書)(1839)->Tanukia(タヌキア)
+GoToHuntTanukia_SkirmishWithOrcs:
+If(CountItem(1839)==1)
+{
+	Jump("TeleportToWoods_SkirmishWithOrcs")
+
+	MoveTo(23700, 57650, -3392)
+	While(CountItem(1844) < 1)
+	{
+		SelectTarget(27062)
+		//for Fighter
+		ForceAttack(27062)
+		//for Mage
+		//UseSkill(1177)
+	}
+}
+
+
+//Kendell's 5th Order(ケンドネルの指令書)(1840)->Turel(チュレル)
+	//He should be somewhere around the seashore ruins, northwest of Lake Iris.
+	//彼は現在アイリス湖北西側の湖畔の遺跡辺りにいるようです。
+GoToHuntTurel_SkirmishWithOrcs:
+If(CountItem(1840)==1)
+{
+	Jump("TeleportToForest_SkirmishWithOrcs")
+
+	MoveTo(34395, 72688, -3456)
+	MoveTo(43900, 73375, -3720)
+	MoveTo(41823, 69954, -3304)
+	While(CountItem(1845) < 1)
+	{
+		SelectTarget(27064)
+		//for Fighter
+		ForceAttack(27064)
+		//for Mage
+		//UseSkill(1177)
+	}
+}
+
+//Kendell's 6th Order(ケンドネルの指令書)(1841)->Roko(ロコ)
+	//He should be somewhere around the seashore ruins, west of Lake Iris.
+	//彼は現在アイリス湖の西側の湖畔の遺跡辺りにいるようです。
+GoToHuntRoko_SkirmishWithOrcs:
+If(CountItem(1841)==1)
+{
+	Jump("TeleportToForest_SkirmishWithOrcs")
+
+	MoveTo(33758, 79502, -3488)
+	While(CountItem(1845) < 1)
+	{
+		SelectTarget(27065)
+		//for Fighter
+		ForceAttack(27065)
+		//for Mage
+		//UseSkill(1177)
+	}
+}
+
+//Kendell's 7th Order(ケンドネルの指令書)(1842)->Kamut(カムート)
+	//He should be somewhere around the seashore ruins, south of Lake Iris.
+	//彼は現在アイリス湖の南側の湖畔の遺跡辺りにいるようです。
+GoToHuntKamut_SkirmishWithOrcs:
+If(CountItem(1842)==1)
+{
+	Jump("TeleportToForest_SkirmishWithOrcs")
+
+	MoveTo(29294, 74968, -3776)
+	MoveTo(32927, 77754, -3512)
+	MoveTo(37941, 85365, -3456)
+	MoveTo(37593, 89316, -3216)
+	MoveTo(47323, 90968, -3592)
+	While(CountItem(1845) < 1)
+	{
+		SelectTarget(27067)
+		//for Fighter
+		ForceAttack(27067)
+		//for Mage
+		//UseSkill(1177)
+	}
+}
+
+//Kendell's 8th Order(ケンドネルの指令書)(1843)->Murtika(ムーティカ)
+	//He should be somewhere around the seashore ruins, east of Lake Iris.
+	//彼は現在アイリス湖の東側の湖畔の遺跡辺りにいるようです。
+GoToHuntMurtika_SkirmishWithOrcs:
+If(CountItem(1843)==1)
+{
+	MoveTo(47579, 51586, -2992)
+	MoveTo(53357, 58742, -3560)
+	MoveTo(54723, 62402, -3560)
+	MoveTo(52282, 70653, -3440)
+	MoveTo(57855, 77756, -3568)
+	While(CountItem(1845) < 1)
+	{
+		SelectTarget(27068)
+		//for Fighter
+		ForceAttack(27068)
+		//for Mage
+		//UseSkill(1177)
+	}
+}
+
+// Return to Village
+Delay(5000)
+UseItem(10650)
+While(! LocInRange(45380, 49500, -3064, 2000))
+{
+	Delay(1000)
+}
+
+Jump("Start_SkirmishWithOrcs")
+
+Jump("End_SkirmishWithOrcs")
+
+
+// ------------------------------------------------------------------
+//Get Newbie Buff from  Adventurers' Guide
+Buff_SkirmishWithOrcs:
+	MoveTo(45466, 48406, -3056)
+	NpcDialog(30599)
+	Delay(1000)
+	//SelectDialog("Check the list of available Support Magic.")
+	//SelectDialog("受けられる補助魔法を確認する")
+	SelectDialog(5)
+	Delay(1000)
+	//SelectDialog("Receive supplemental magic.")
+	//SelectDialog("補助魔法をかけてもらう")
+	SelectDialog(1)
+	Delay(1000)
+	NpcDialog(30599)
+	Delay(1000)
+	//SelectDialog("Receive blessing of protection.")
+	//SelectDialog("保護の祝福を受ける")
+	SelectDialog(3)
+	Delay(1000)
+	//SelectDialog("Receive the protection blessing.")
+	//SelectDialog("保護の祝福をしてもらう")
+	SelectDialog(1)
+	Delay(1000)
+	CloseDialog()
+	Delay(1000)
+Return
+
+TeleportToWoods_SkirmishWithOrcs:
+	MoveTo(47000, 51500, -2976)
+	NpcDialog(30146)
+	Delay(1000)
+	//SelectDialog("Teleport")
+	//SelectDialog("テレポートする")
+	SelectDialog(1)
+	Delay(1000)
+	//SelectDialog("Elven Woods")
+	//SelectDialog("エルフの森")
+	SelectDialog(6)
+	Delay(1000)
+	CloseDialog()
+	Delay(1000)
+	While(! LocInRange(21362, 51122, -3688, 500))
+	{
+		Delay(1000)
+	}
+Return
+
+TeleportToForest_SkirmishWithOrcs:
+	MoveTo(47000, 51500, -2976)
+	NpcDialog(30146)
+	Delay(1000)
+	//SelectDialog("Teleport")
+	//SelectDialog("テレポートする")
+	SelectDialog(1)
+	Delay(1000)
+	//SelectDialog("Elven Forest")
+	//SelectDialog("エルフの地下要塞")
+	SelectDialog(7)
+	Delay(1000)
+	CloseDialog()
+	Delay(1000)
+	While(! LocInRange(29294, 74968, -3776, 500))
+	{
+		Delay(1000)
+	}
+Return
+
+End_SkirmishWithOrcs:
+	MoveTo(45466, 48406, -3056)
+	NpcDialog(30599)
+	Delay(1000)
+	CloseDialog()
+	Delay(1000)

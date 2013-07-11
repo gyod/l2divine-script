@@ -1,0 +1,268 @@
+// ------------------------------------------------------------------
+// L2Divine script for CT2.3 by gyo
+// for Shopping D grade equipments in Giran
+// LV:		20+
+// Location:	GK
+// ------------------------------------------------------------------
+
+//start:
+If (LocInRange(83551, 147945, -3400, 150))
+{
+	 MoveTo(83547, 147749, -3400)
+}
+
+MoveTo(81552, 147575, -3464)
+MoveTo(81434, 146914, -3528)
+MoveTo(80076, 146980, -3528)
+MoveTo(79828, 146600, -3520)
+
+//for Fighter Weapon
+GetFightersWeapon:
+While (CountItem(11725) < 1)
+{
+	NpcDialog(30084)
+	Delay(1500)
+	//装備を買う
+	SelectDialog(1)
+	Delay(1500)
+	//ファイター用の量産型装備を買う
+	SelectDialog(2)
+	Delay(1500)
+	//(量産兵器：クレイモア)(11736)
+	//(量産兵器：ボーン ブレーカー)(11727)
+	//(量産兵器：ミスリル ダガー)(11726)
+	//(量産兵器：スカラップ ジャマダル)(11730)
+	//(量産兵器：サイクロン ボウ)(11728)
+	//(量産兵器：グレイブ)(11725)
+	//(量産兵器：エルヴン ロング ソード)(11733)
+	AddItem(11725, 1)
+	Delay(1500)
+	Confirm()
+	Delay(1500)
+	CloseDialog()
+	UseItem(11725)
+}
+////for Mage Weapon
+//GetMagesWeapon:
+//While (CountItem(11729) < 1)
+//{
+//	NpcDialog(30085)
+//	Delay(1500)
+//	//装備を買う
+//	SelectDialog(1)
+//	Delay(1500)
+//	//メイジ用の量産型装備を買う
+//	SelectDialog(2)
+//	Delay(1500)
+//	//(量産兵器：アトゥバ ハンマー)(11732)
+//	//(量産兵器：ライフ スティック)(11729)
+//	//(量産兵器：ゴースト スタッフ)(11737)
+//	//(量産兵器：アトゥバ メイス)(11731)
+//	AddItem(11729, 1)
+//	Delay(1500)
+//	Confirm()
+//	Delay(1500)
+//	CloseDialog()
+//	UseItem(11729)
+//}
+
+MoveTo(79765, 147563, -3528)
+MoveTo(79777, 149034, -3528)
+MoveTo(80414, 149139, -3504)
+
+
+//Accessories
+GetAccessories:
+While (CountItem(12324) < 1)
+{
+	NpcDialog(30090)
+	Delay(1500)
+	//量産型アクセサリーを買う
+	SelectDialog(3)
+	Delay(1500)
+	//(量産兵器：オニキス ビースト アイ イアリング)(12325)
+	//(量産兵器：ミスリル リング)(12323)
+	//(量産兵器：暗闇のネックレス)(12324)
+	AddItem(12325, 2)
+	Delay(1000)
+	AddItem(12323, 2)
+	Delay(1000)
+	AddItem(12324, 1)
+	Delay(1000)
+	Confirm()
+	Delay(1500)
+	CloseDialog()
+	UseItem(12325)
+	Delay(1000)
+//	UseItem(12325)
+	Msg(Console, "Equip an Earring Manualy!")
+	Delay(1000)
+	UseItem(12323)
+	Delay(1000)
+//	UseItem(12323)
+	Msg(Console, "Equip a Ring Manualy!")
+	Delay(1000)
+	UseItem(12324)
+	Delay(1000)
+}
+
+MoveTo(79949, 149462, -3520)
+MoveTo(79690, 150704, -3512)
+
+
+//Heavy Armors
+While (CountItem(12081) < 1)
+{
+	NpcDialog(30088)
+	Delay(1500)
+	//装備を買う
+	SelectDialog(1)
+	Delay(1500)
+	//ファイター用の量産型装備を買う
+	SelectDialog(2)
+	Delay(1500)
+	//(量産兵器：ハーフ プレート)(12081)
+	//(量産兵器：プレート ゲートル)(12080)
+	//(量産兵器：オーガ パワー ガントレット)(12076)
+	//(量産兵器：プレート ブーツ)(12077)
+	//(量産兵器：プレート ヘルム)(12079)
+	//(量産兵器：プレート シールド)(12078)
+	AddItem(12081, 1)
+	Delay(1000)
+	AddItem(12080, 1)
+	Delay(1000)
+	AddItem(12076, 1)
+	Delay(1000)
+	AddItem(12077, 1)
+	Delay(1000)
+	AddItem(12079, 1)
+	Delay(1000)
+//	AddItem(12078, 1)
+//	Delay(1000)
+	Confirm()
+	Delay(1500)
+	CloseDialog()
+	UseItem(12081)
+	Delay(1000)
+	UseItem(12080)
+	Delay(1000)
+	UseItem(12076)
+	Delay(1000)
+	UseItem(12077)
+	Delay(1000)
+	UseItem(12079)
+	Delay(1000)
+//	UseItem(12078)
+//	Delay(1000)
+}
+
+////Light Armors
+//While (CountItem(12074) < 1)
+//{
+//	NpcDialog(30088)
+//	Delay(1500)
+//	//装備を買う
+//	SelectDialog(1)
+//	Delay(1500)
+//	//ファイター用の量産型装備を買う
+//	SelectDialog(2)
+//	Delay(1500)
+//	//(量産兵器：サラマンダー レザー メイル)(12074)
+//	//(量産兵器：ミスリル グローブ)(11722)
+//	//(量産兵器：サラマンダー レザー ブーツ)(12075)
+//	//(量産兵器：プレート ヘルム)(12079)
+//	AddItem(12074, 1)
+//	Delay(1000)
+//	AddItem(11722, 1)
+//	Delay(1000)
+//	AddItem(12075, 1)
+//	Delay(1000)
+//	AddItem(12079, 1)
+//	Delay(1000)
+//	Confirm()
+//	Delay(1500)
+//	CloseDialog()
+//	UseItem(12074)
+//	Delay(1000)
+//	UseItem(11722)
+//	Delay(1000)
+//	UseItem(12075)
+//	Delay(1000)
+//	UseItem(12079)
+//	Delay(1000)
+//}
+
+////Robes
+//While (CountItem(12083) < 1)
+//{
+//	NpcDialog(30087)
+//	Delay(1500)
+//	//装備を買う
+//	SelectDialog(1)
+//	Delay(1500)
+//	//メイジ用の量産型装備を買う
+//	SelectDialog(2)
+//	Delay(1500)
+//	//(量産兵器：セージ ラッグ)(12083)
+//	//(量産兵器：セージの古いグローブ)(12082)
+//	//(量産兵器：エルヴン ミスリル ブーツ)(12066)
+//	//(量産兵器：プレート ヘルム)(12079)
+//	//(量産兵器：スクエア シールド)(12073)
+//	AddItem(12083, 1)
+//	Delay(1000)
+//	AddItem(12082, 1)
+//	Delay(1000)
+//	AddItem(12066, 1)
+//	Delay(1000)
+//	AddItem(12079, 1)
+//	Delay(1000)
+////	AddItem(12073, 1)
+////	Delay(1000)
+//	Confirm()
+//	Delay(1500)
+//	CloseDialog()
+//	UseItem(12083)
+//	Delay(1000)
+//	UseItem(12082)
+//	Delay(1000)
+//	UseItem(12066)
+//	Delay(1000)
+//	UseItem(12079)
+//	Delay(1000)
+////	UseItem(12073)
+////	Delay(1000)
+//}
+
+//for MagicSpeed
+//	NpcDialog(30087)
+//	Delay(1500)
+//	//装備を買う
+//	SelectDialog(1)
+//	Delay(1500)
+//	//メイジ用の装備を買う
+//	SelectDialog(1)
+//	Delay(1500)
+//	//(デボーション チューニック)(1101)
+//	//(デボーション ホース)(1104)
+//	//(レザー ヘルム)(44)
+//	AddItem(1104, 1)
+//	Delay(1000)
+//	AddItem(1101, 1)
+//	Delay(1000)
+//	AddItem(1148, 1)
+//	Delay(1000)
+//	Confirm()
+//	Delay(1500)
+//	CloseDialog()
+//	UseItem(1104)
+//	Delay(1000)
+//	UseItem(1101)
+//	Delay(1000)
+//	UseItem(1148)
+//	Delay(1000)
+
+
+MoveTo(80605, 150446, -3528)
+MoveTo(81540, 150233, -3528)
+MoveTo(81536, 149445, -3464)
+MoveTo(83318, 147967, -3400)
