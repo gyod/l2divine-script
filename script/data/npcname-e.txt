@@ -9773,6 +9773,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 4375	a,Festival Goer\0	a,	9C	E8	A9	-1
 4376	a,Festival Goer\0	a,	9C	E8	A9	-1
 4377	a,Festival Goer\0	a,	9C	E8	A9	-1
+33891	a,Snake\0	a,Card Master\0	9C	E8	A9	-1
 35010	a,Mercenary\0	a,	9C	E8	A9	-1
 35011	a,Mercenary\0	a,	9C	E8	A9	-1
 35012	a,Mercenary\0	a,	9C	E8	A9	-1
