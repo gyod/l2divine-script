@@ -31,19 +31,19 @@ Include("Aden_Spawn_Loc.txt")
 MoveTo(147081, 25866, -2008)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
-SelectDialog(1)
-Delay(2000)
-CloseDialog()
-
-NpcDialog(32327)
+SelectDialog(2)
 Delay(2000)
 SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
 CloseDialog()
+
+//NpcDialog(32327)
+//Delay(2000)
+//SelectDialog(2)
+//Delay(2000)
+//SelectDialog(1)
+//Delay(2000)
+//CloseDialog()
 
 // Go to Forsaken Plains
 MoveTo(146859, 25837, -2008)
@@ -78,8 +78,8 @@ If (CountItem(1465) < 300)
 	CraftItem(22)
 }
 
-// Fight until shield warn off
-If (BuffLevel(4323) == 0)
+// Fight until Horn Melody (Adventurer) warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Jump("BackTown")
 }

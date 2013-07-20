@@ -114,8 +114,8 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until shield warn off
-If (PlayerBuffLevel("gyo", 15642) == 0)
+// Fight until Horn Melody (Adventurer) warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")

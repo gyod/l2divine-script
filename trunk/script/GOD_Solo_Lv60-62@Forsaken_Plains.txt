@@ -73,12 +73,12 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until shield warn off
-//If (BuffLevel(4323) == 0)
-//{
-//	Msg(Console, "No Buff!!!")
-//	Jump("BackTown")
-//}
+// Fight until Horn Melody (Adventurer) warn off
+If (CharBuffLevel(15642) == 0)
+{
+	Msg(Console, "No Buff!!!")
+	Jump("BackTown")
+}
 
 // Die -*-
 If (Char.HP == 0)
