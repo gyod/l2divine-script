@@ -1,0 +1,620 @@
+// ------------------------------------------------------------------
+// Auther:	Gyo, Fireball
+// Quest:	Delivery of special liquor(622) 
+// 		Egg Delivery(621)
+// LV:		68+
+// Location:	near GK at Goddard
+// NPC:		Jeremy(31521), Pulin(31543), Naff(31544), Crocus(31545)
+// 		Kuber(31546), Beorin(31547), Valentine(31584), Lietta (31267)
+// Target:	
+// Quest Item:	Drink(7197), Fee of drink(7198)
+// 		Boild eggs(7195), Fee of eggs(7196)
+// Reward:	Adena(57), Haste Portion(734) or Recipe of S-Grade accessory
+// Require:	Scroll of Escape(736)
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+If (LocInRange(147700, -56000, -2785, 2000))
+{
+	MoveTo(147943, -55318, -2739)
+	NpcDialog(31275)
+	Delay(1000)
+	SelectDialog(1)
+	Delay(1000)
+	SelectDialog(11)
+	Delay(10000)
+	CloseDialog()
+}
+
+MoveTo(147033, -111721, -2330)
+MoveTo(149565, -112584, -2069)
+
+// Check 'Auto counter attack' in Preference>Condition
+//BattleStart()
+
+Start Egg:
+NpcDialog(31521)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("[Egg Delivery]")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("I'll deliver your eggs.")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+If (CountItem(7195) == 5)
+{
+	Msg(Console, "Egg Quest Started!")
+}
+Else
+{
+	Jump("Start Egg")
+}
+
+Start Liquor:
+// Talk with Jeremy to accept quest
+NpcDialog(31521)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("[Delivery of special liquor]")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("I'll deliver your liquor.")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+If (CountItem(7197) == 5)
+{
+	Msg(Console, "Liquor Quest Started!")
+}
+Else
+{
+	Jump("Start Liquor")
+}
+
+Deliver1:
+// Move to 1st liquor delivery (Beolin)
+MoveTo(149528, -112629, -2065)
+MoveTo(149046, -112422, -2077)
+MoveTo(147528, -113282, -2113)
+Talk1:
+//talk to Beolin
+NpcDialog(31547)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Delivery of special liquor(in progress)]")
+SelectDialog(2)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7197) == 4)
+{
+	Msg(Console, "1st liquor deliver is ok!")
+}
+Else
+{
+	Jump("Talk1")
+}
+
+Deliver2:
+// Move to 2nd liquor delivery (kuber)
+MoveTo(146173, -111738, -2429)
+MoveTo(143796, -110642, -3600)
+MoveTo(143261, -110132, -3545)
+MoveTo(141670, -109434, -3592)
+Talk2:
+//talk to kuber
+NpcDialog(31546)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Delivery of special liquor(in progress)]")
+SelectDialog(2)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7197) == 3)
+{
+	Msg(Console, "2nd liquor deliver is ok!")
+}
+Else
+{
+	Jump("Talk2")
+}
+
+Deliver3:
+// Move to 3rd liquor delivery (Crocus)
+MoveTo(141716, -106464, -3544)
+MoveTo(140669, -105512, -3633)
+Talk3:
+//talk to Crocus
+NpcDialog(31545)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Delivery of special liquor(in progress)]")
+SelectDialog(2)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7197) == 2)
+{
+	Msg(Console, "3rd liquor deliver is ok!")
+}
+Else
+{
+	Jump("Talk3")
+}
+
+Deliver4:
+// Move to 4th liquor delivery (Naff)
+MoveTo(140684, -107346, -3658)
+MoveTo(145936, -108981, -3365)
+MoveTo(148746, -108849, -2621)
+MoveTo(149484, -109426, -2461)
+MoveTo(149935, -111669, -2414)
+MoveTo(150475, -112216, -2216)
+MoveTo(151175, -112131, -2495)
+MoveTo(151713, -111818, -2381)
+MoveTo(152423, -111362, -2501)
+MoveTo(153994, -110032, -2692)
+MoveTo(155611, -105728, -2755)
+Talk4:
+//talk to Naff
+NpcDialog(31544)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Delivery of special liquor(in progress)]")
+SelectDialog(2)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7197) == 1)
+{
+	Msg(Console, "4th liquor deliver is ok!")
+}
+Else
+{
+	Jump("Talk4")
+}
+
+Deliver5:
+// Move to 5th liquor delivery (Pulin)
+MoveTo(153994, -110032, -2692)
+MoveTo(152423, -111362, -2501)
+MoveTo(151713, -111818, -2381)
+MoveTo(151175, -112131, -2495)
+MoveTo(150475, -112216, -2216)
+MoveTo(150457, -114961, -1736)
+MoveTo(151135, -115229, -1592)
+MoveTo(154000, -115795, -1511)
+MoveTo(157626, -115371, -1904)
+Talk5:
+//talk to Pulin
+NpcDialog(31543)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Delivery of special liquor(in progress)]")
+SelectDialog(2)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7198) == 5)
+{
+	Msg(Console, "5th liquor deliver is ok!")
+}
+Else
+{
+	Jump("Talk5")
+}
+
+// Egg
+
+Talk6:
+NpcDialog(31543)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Egg Delivery(in progress)]")
+SelectDialog(1)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7195) == 4)
+{
+	Msg(Console, "1th egg deliver is ok!")
+}
+Else
+{
+	Jump("Talk6")
+}
+
+Deliver7:
+// Move to 2nd egg delivery (Naff)
+MoveTo(154000, -115795, -1511)
+MoveTo(151135, -115229, -1592)
+MoveTo(150457, -114961, -1736)
+MoveTo(150475, -112216, -2216)
+MoveTo(151175, -112131, -2495)
+MoveTo(151713, -111818, -2381)
+MoveTo(152423, -111362, -2501)
+MoveTo(153994, -110032, -2692)
+MoveTo(155611, -105728, -2755)
+Talk7:
+//talk to Naff
+NpcDialog(31544)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Egg Delivery(in progress)]")
+SelectDialog(1)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7195) == 3)
+{
+	Msg(Console, "2nd egg deliver is ok!")
+}
+Else
+{
+	Jump("Talk7")
+}
+
+Deliver8:
+// Move to 3rd egg delivery (Crocus)
+MoveTo(153994, -110032, -2692)
+MoveTo(152423, -111362, -2501)
+MoveTo(151713, -111818, -2381)
+MoveTo(151175, -112131, -2495)
+MoveTo(150475, -112216, -2216)
+MoveTo(149935, -111669, -2414)
+MoveTo(149484, -109426, -2461)
+MoveTo(148746, -108849, -2621)
+MoveTo(145936, -108981, -3365)
+MoveTo(140684, -107346, -3658)
+Talk8:
+//talk to Crocus
+NpcDialog(31545)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Egg Delivery(in progress)]")
+SelectDialog(1)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7195) == 2)
+{
+	Msg(Console, "3rd egg deliver is ok!")
+}
+Else
+{
+	Jump("Talk8")
+}
+
+Deliver9:
+// Move to 4th egg delivery (kuber)
+MoveTo(141716, -106464, -3544)
+MoveTo(141670, -109434, -3592)
+Talk9:
+//talk to kuber
+NpcDialog(31546)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Egg Delivery(in progress)]")
+SelectDialog(1)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7195) == 1)
+{
+	Msg(Console, "4th egg deliver is ok!")
+}
+Else
+{
+	Jump("Talk9")
+}
+
+Deliver10:
+// Move to 5th egg delivery (Beolin)
+MoveTo(144016, -109326, -3519)
+MoveTo(145828, -108945, -3394)
+MoveTo(149081, -108811, -2550)
+MoveTo(149819, -111617, -2216)
+MoveTo(147528, -113282, -2113)
+Talk10:
+//talk to Beolin
+NpcDialog(31547)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(1000)
+//SelectDialog("[Egg Delivery(in progress)]")
+SelectDialog(1)
+Delay(1000)
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+//check if its ok
+If (CountItem(7196) == 5)
+{
+	Msg(Console, "5th egg deliver is ok!")
+}
+Else
+{
+	Jump("Talk10")
+}
+
+// Done..! back to Jeremy
+MoveTo(149046, -112422, -2077)
+MoveTo(149528, -112629, -2065)
+MoveTo(149547, -112695, -2065)
+
+Jeremy:
+Delay(2000)
+
+End Liquor:
+NpcDialog(31521)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("[Delivery of special liquor(in progress)]")
+SelectDialog(2)
+Delay(1000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+Msg(Console, "liquor delivery done!")
+
+End Egg:
+NpcDialog(31521)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("[Egg Delivery(in progress)]")
+SelectDialog(1)
+Delay(1000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+Msg(Console, "egg delivery done!")
+
+//back to village (check for the item)
+check:
+If (CountItem(7198) == 5)
+{
+	Msg(Console, "Back to town")
+	//UseItem("Scroll of Escape")
+	UseItem(736)
+	Delay(20000)
+}
+Else
+{
+	Jump("Deliver1")
+}
+
+//spawns and paths to wh
+P:
+If (LocInRange(147680,-56928,-2776,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path1")
+}
+If (LocInRange(149872,-57424,-2968,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path2")
+}
+If (LocInRange(150400,-56752,-2968,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path3")
+}
+If (LocInRange(147680,-58208,-2968,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path4")
+}
+If (LocInRange(149088,-56256,-2776,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path5")
+}
+If (LocInRange(144752,-56752,-2968,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path6")
+}
+If (LocInRange(148560,-55904,-2776,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path7")
+}
+If (LocInRange(146272,-58176,-2976,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path8")
+}
+If (LocInRange(147664,-56464,-2776,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path9")
+}
+If (LocInRange(147232,-58480,-2968,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path10")
+}
+If (LocInRange(147680,-58208,-2968,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path11")
+}
+If (LocInRange(148288,-58304,-2968,500))
+{
+	Msg(Console, "Moving to warehouse")
+	Jump("path12")
+}
+
+//paths
+path1:
+MoveTo(147688,-58644,-2976)
+MoveTo(146149,-58006,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path2:
+MoveTo(149288,-58252,-2976)
+MoveTo(146074,-58172,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path3:
+MoveTo(149288,-58252,-2976)
+MoveTo(146074,-58172,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path4:
+MoveTo(146017,-58255,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path5:
+MoveTo(150013,-56953,-2976)
+MoveTo(149288,-58252,-2976)
+MoveTo(146074,-58172,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path6:
+MoveTo(146074,-58172,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path7:
+MoveTo(150013,-56953,-2976)
+MoveTo(149288,-58252,-2976)
+MoveTo(146074,-58172,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path8:
+MoveTo(146149,-58006,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path9:
+MoveTo(147688,-58644,-2976)
+MoveTo(146149,-58006,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path10:
+MoveTo(146017,-58255,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path11:
+MoveTo(146017,-58255,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+path12:
+MoveTo(146017,-58255,-2976)
+MoveTo(146417,-57537,-2960)
+Jump("Lietta")
+
+//talk to Lietta
+Lietta:
+NpcDialog(31267)
+Delay(1000)
+//SelectDialog("クエスト")
+SelectDialog(6)
+Delay(1000)
+//SelectDialog("Jeremy sent me to get some adena.")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+If (CountItem(7198) == 5)
+{
+	Jump("Lietta")
+}
+
+//talk to Valentine
+MoveTo(146036, -58252, -2985)
+MoveTo(149262, -58283, -2985)
+MoveTo(149117, -57642, -2972)
+MoveTo(149305, -57494, -2972)
+Valentine:
+NpcDialog(31584)
+Delay(1000)
+//SelectDialog("Quest")
+SelectDialog(1)
+Delay(1000)
+//SelectDialog("Jeremy sent me.")
+SelectDialog(1)
+Delay(1000)
+CloseDialog()
+If (CountItem(7198) == 5)
+{
+	Jump("Valentine")
+}
+
+BuySOE:
+If (CountItem(736) <= 5)
+{
+	Msg(Console, "Buy Scroll of Escape")
+	NpcDialog(31263)
+	Delay(1000)
+	SelectDialog(2)
+	Delay(1000)
+	AddItem(736, 10)
+	Delay(1000)
+	Confirm()
+	CloseDialog()
+}
+
+//back to gk
+Back:
+MoveTo(149083, -57645, -2972)
+MoveTo(149366, -58208, -2985)
+MoveTo(147710, -58054, -2985)
+MoveTo(147714, -56111, -2785)
+MoveTo(147952, -55268, -2728)
+//BattleStop()
+
+// for infinite loop
+//Msg(Console, "Stop script now if you want.")
+//Delay(20000)
+//Jump("Start")
+
+End:

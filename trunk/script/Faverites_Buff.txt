@@ -1,0 +1,24 @@
+// Buff myself
+SelectTarget("Me")
+UseSkill(1059)
+UseSkill(1068)
+UseSkill(1077)
+UseSkill(1040)
+UseSkill(1204)
+
+// Wait for MP
+If (Char.MP% < 100)
+{
+	Msg(Console, "Wait for MP")
+	Sit()
+	While (Char.MP% < 100)
+	{
+		Delay(2000)
+	}
+}
+
+Msg(Console, "MP FULL")
+Stand()
+Delay(3000)
+
+Exit:

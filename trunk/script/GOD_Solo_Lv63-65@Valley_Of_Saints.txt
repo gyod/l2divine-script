@@ -1,0 +1,118 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// LV:		63-65
+// Start Loc:	GK
+// Target:	Wisdom of Splendor, Blade of Splendor, Falsh of Splendor
+// Setting:	Auto Counter - On
+// Item:	SOE x 50
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's hunt some orc!")
+
+// Summon Mech. Golem
+//Msg(Console, "Summoning Mech. Golem ...!")
+//UseSkill(25)
+//Delay(15000)
+
+// At the battle area					
+If (LocInRange(73352, -75151, -3648, 4000))
+{
+	Jump("Battle")
+}
+
+Begin:
+
+// Spawn location
+Include("Rune_Spawn_Loc.txt")
+
+// Get Adventurer buff
+MoveTo(43566, -47683, -792)
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Servitor Buff
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Go to Valley of Saints
+MoveTo(43722, -47839, -792)
+MoveTo(43826, -47687, -792)
+NpcDialog(31320)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(11)
+Delay(2000)
+CloseDialog()
+Delay(5000)
+
+MoveTo(66004, -71654, -3752)
+MoveTo(67908, -71958, -3744)
+MoveTo(69198, -72308, -3792)
+MoveTo(70939, -73175, -3792)
+
+Battle:
+
+ClearHuntingArea()
+AddRectHuntingArea(73352, -75151, -3648, 2500)
+SetBattleArea(73352, -75151, -3648, 2500)
+
+BattleStart()
+
+BattleLoop:
+
+// Craft SSB
+//If (CountItem(1465) < 300)
+//{
+//	CraftItem(22)
+//}
+
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
+{
+	Msg(Console, "No Buff!!!")
+	Jump("BackTown")
+}
+
+// Die -*-
+If (Char.HP == 0)
+{
+	Jump("BackTown")
+}
+
+Delay(5000)
+Jump("BattleLoop")
+
+BackTown:
+
+BattleStop()
+
+// Back to nearest village
+If (Char.HP > 0)
+{
+	Msg(Console, "Delay 5 sec!")
+	Delay(5000)
+	UseItem(736)
+	Delay(20000)
+}
+Else
+{
+	ReturnToVillage()
+	Delay(5000)
+}
+
+Jump("Begin")
+
+Exit:

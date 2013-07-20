@@ -1,0 +1,163 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// LV:		75
+// Start Loc:	Aden's GK
+// Target:	Chimera Pieces, Solder of Ancient Times
+// Setting:	Auto Counter - On
+// Item:	SOE x 50
+// Quest Item:	Relic Box x 50
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's hunt some orc!")
+
+// At the battle area					
+If (LocInRange(173492, 57078, -5920, 2500))
+{
+	Jump("Battle")
+}
+
+Begin:
+
+// Spawn location
+Include("Aden_Spawn_Loc.txt")
+
+// Get free item
+MoveTo(147109, 25898, -2008)
+NpcDialog(33463)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Get Quest
+NpcDialog(33463)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog("[Wonders of Caring]")
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Get buff when level < 76
+If (Char.LV < 76)
+{
+	// Get Adventurer buff
+	NpcDialog(32327)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()
+
+	// Servitor Buff
+	NpcDialog(32327)
+	Delay(2000)
+	SelectDialog(2)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()	
+}
+
+MoveTo(146810, 25790, -2008)
+
+// Go to Silent Valley
+NpcDialog(30848)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(21)
+Delay(2000)
+CloseDialog()
+Delay(5000)
+
+MoveTo(171590, 56408, -5568)
+MoveTo(172238, 56624, -5712)
+MoveTo(173492, 57078, -5920)
+
+Battle:
+
+ClearHuntingArea()
+AddRectHuntingArea(173492, 57078, -5920, 1500)
+SetBattleArea(173492, 57078, -5920, 1500)
+
+BattleStart()
+
+// Use Miracle of Tree
+//UseItem(22620)
+
+BattleLoop:
+
+// Quest Item: Relic Box
+If (CountItem(19500) == 50)
+{
+	BattleStop()
+	Msg(Console, "Done!!!")
+	Delay(5000)
+	Stand()
+	UseItem(736)
+	Delay(20000)
+	Jump("Exit")
+}
+
+// Craft SSA
+//If (CountItem(1466) < 300)
+//{
+//	CraftItem(23)
+//}
+
+// Skip when level 76
+If (Char.LV > 75)
+{
+	Jump("Check_HP")
+}
+
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
+{
+	Msg(Console, "No Buff!!!")
+	Jump("BackTown")
+}
+
+Check_HP:
+
+// Die -*-
+If (Char.HP == 0)
+{
+	Jump("BackTown")
+}
+
+Delay(5000)
+Jump("BattleLoop")
+
+BackTown:
+
+BattleStop()
+
+// Back to nearest village
+If (Char.HP > 0)
+{
+	Msg(Console, "Delay 5 sec!")
+	Delay(5000)
+	Stand()
+	UseItem(736)
+	Delay(20000)
+}
+Else
+{
+	ReturnToVillage()
+	Delay(5000)
+}
+
+Jump("Begin")
+
+Exit:

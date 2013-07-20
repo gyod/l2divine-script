@@ -1,0 +1,1146 @@
++------------------------+
+| DivineScript Reference |
++------------------------+
+
+Version:	2.0
+Last updated:	Jan 13, 2013
+Author:		Dev
+
++-------------------+
+| Table of Contents |
++-------------------+
+Section 1: The Basics
+- Writing a Script
+- Code Comments
+- Compare Operator
+- Syntax
+-- Case sensitive
+-- One command per line
+-- Complete start and end scope
+-- Represent string with ""
+- Global Property
+- Including other script
+Section 2: Commands
+- ActionSorrow
+- AddHuntingArea
+- AddRectHuntingArea
+- AddItem
+- BattleStart
+- BattleStop
+- Buy
+- CancelAttackTarget
+- CharBuffLevel
+- CheckNPCRange
+- ClearHuntingArea
+- CloseDialog
+- CloseWindow
+- Confirm
+- CounterTargetPlayer
+- CountItem
+- CountQuestDefeatNpc
+- CraftItem
+- CrystalizeItem	
+- Delay
+- DestroyItem
+- DialogContain
+- Dismiss
+- DropItem
+- EnchantItem
+- EnchantLevel
+- Exit
+- FishingStart
+- FishingStop
+- FollowSelectTarget
+- ForceAttack
+- ForceAttackTarget
+- FoundEnemyInRange
+- FoundKarmaPlayer
+- FoundPlayerInRange
+- If
+- Include
+- Invite
+- IsMember
+- Jump
+- Label
+- LearnSkill
+- LeaveParty
+- LocInRange
+- Logout
+- MoveTo
+- MoveToTarget
+- Msg
+- NoMobInHuntingArea
+- NpcDialog
+- PlayerBuffLevel
+- PlaySound
+- Recommend
+- Return
+- ReturnToVillage
+- ReturnToClanHall
+- SelectDialog
+- SelectKarmaPlayer
+- SelectNearestEnemy
+- SelectNearestMob
+- SelectNearestPlayer
+- SelectPlayerByClass
+- SelectTarget
+- Sell
+- SetBattleArea	
+- SetRestArea
+- Sit
+- Stand
+- SocialAction
+- TargetInRange
+- TradeStart
+- TradeStop
+- UseItem
+- UseSkill
+- While
+Section 3: Reference ID
+
++------------------+
+| Section 1: Basic |
++------------------+
+
+Welcome to DivineScript Reference, a comprehensive listing of DivineScript 
+command and also includes explanations and examples.
+
++------------------+
+| Writing a Script |
++------------------+
+
+The easiest way to write a simple script is with a text editor. So, using the 
+text editor of your choice, create a text file with the following text.
+DivineScript are case sensitive, so if you type the code in yourself, 
+pay particular attention to the capitalization. 
+
+--- Example ---
+Msg(Console, "Hello L2Divine")
+
++---------------+
+| Code Comments |
++---------------+
+Double slashes or // is code comments. It's placed in source files to describe 
+what is happening in the code to comment-out lines of code to isolate the source 
+of execution. 
+
++------------------+
+| Compare Operator |
++------------------+
+You can use operators to compare value in If and While command.
+DivineScript supported for operator below
+==	Equal
+!=	Not equal
+>	Greater than
+<	Lower than
+>=	Equal or greater than
+<=	Equal or lower than
+!	Not
+&	And (Bitwise)
+
+--- Example ---
+
+// Use potion when HP fall below 50%
+If (Char.HP% < 50)
+{
+	UseItem("Potion")
+}
+
+// Check target abnormal status
+If (Target.AbnormalStatus & 7)
+{
+	Msg(Console, "Stun!")
+}
+
++--------+
+| Syntax |
++--------+
+
+--- Case sensitive ---
+
+Valid syntax:	Msg(Console, "Hello L2Divine")
+
+Invalid Syntax:	MSG(Console, "Hello L2Divine")
+		mSG(Console, "Hello L2Divine")
+		
+--- One command per line ---
+
+Valid syntax:	MoveTo(115968, -174345, -760)		
+		if (CountItem("Iron Ore") > 0)
+		{
+		}
+
+Invalid Syntax:	MoveTo(115968, -174345, -760) Delay(3000)
+		if (CountItem("Iron Ore") > 0) {
+		}							
+
+--- Complete start and end scope ---
+	
+Valid syntax:	while (Char.HP > 500)			
+		{
+		}
+
+Invalid Syntax:	while (Char.HP > 500)
+		}
+
+--- Represent string with "" ---
+	
+Valid syntax:	Msg(Console, "Hello L2Divine")
+
+Invalid Syntax:	Msg(Console, Hello L2Divine)
+
++-----------------+
+| Global Property |
++-----------------+
+ 
+You can use following properties to represent your character and target status :-
+
+Char.HP			Character HP
+Char.HP%		Character HP percentage
+Char.MP			Character MP
+Char.MP%		Character MP percentage
+Char.CP			Character CP
+Char.CP%		Character CP percentage
+Char.Soul		Character soul (Kamael only)
+Char.LV			Character level
+Char.Load%		Character weight percentage
+Char.InParty		Character join party status
+Char.Vitality		Character vitality
+Char.Race		Character race
+Char.Class		Character class
+Char.IsSelectTarget	Character is selected target
+Char.IsTargetByPlayer	Character is targeted by player
+Char.IsAttackByPlayer	Character is under attack by player
+Target.HP		Target HP
+Target.HP%		Target HP percentage
+Target.MP		Target MP
+Target.MP%		Target MP percentage
+Target.Range		Range between character and target
+Target.IsDead		Target alive status (Alive/Dead)
+Target.AbnormalStatus	Target abnormal status
+Target.IsPlayer		Target is player
+Target.IsMob		Target is monster
+Target.IsNPC		Target is none player character
+Target.IsTeam		Target is your team
+Target.IsEnemy		Target is enemy
+Target.IsClanWar	Target is member of your clan war
+
++------------------------+
+| Including other script |
++------------------------+
+
+You can insert the content of one script file into another script file, with the Include command.
+
+--- Example main.txt ---
+Include("mylib.txt")
+Msg(Console, "Hello 1")
+Msg(Console, "Hello 2")
+
+--- Example mylib.txt ---
+Msg(Console, "MyLib -> Hello 1")
+Msg(Console, "MyLib -> Hello 2")
+
+Note! The specified script must be in the same directory with the file that uses the command.
+
++--------------------+
+| Section 2: Command |
++--------------------+
+
+ActionSorrow()
+	Parameter	None
+	Return		None
+	Propose		Action sorrow Note: Can use SocialAction(35)
+	
+AddHuntingArea(x, y, z, radius)
+AddHuntingArea(radius)
+	Parameter	Location (x,y,z) and radius, radius (use current location)
+	Return		None
+	Propose		Add circle hunting area to current setting
+	Example		AddHuntingArea(115968, -174345, -760, 2500)
+
+AddRectHuntingArea(x, y, z, radius)
+AddRectHuntingArea(radius)
+	Parameter	Location (x,y,z) and radius, radius (use current location)
+	Return		None
+	Propose		Add rectangle hunting area to current setting
+	Example		AddRectHuntingArea(115968, -174345, -760, 2500)
+
+AddItem(Item ID, Count)
+AddItem(Item Name, Count)
+	Parameter	Item ID or Item Name, Quantity (Use * for all)
+	Return		None
+	Propose		Add item to buy, sell, withdraw and deposit list of 
+			opening trade dialog.
+	Example		AddItem("Scroll of Escape", 1)
+			AddItem(17, *)
+BattleStart()	
+	Parameter	None
+	Return		None
+	Propose		Activate character in battle mode (Same as press 
+			"Battle Start" button)
+	
+BattleStop()	
+	Parameter	None
+	Return		None
+	Propose		Deactivate character from battle mode (Same as press 
+			"Battle Stop" button)
+	
+Buy()	
+	Parameter	None
+	Return		None
+	Propose		Change NPC trade mode to buy (Gracia plus only)
+
+CancelAttackTarget()
+	Parameter	None
+	Return		None
+	Propose		Cancel action (melee attack/skill) on current target
+
+CharBuffLevel(Skill ID)
+CharBuffLevel(Skill Name)
+	Parameter	Skill ID or Skill Name
+	Return		Level of skill effected
+	Propose		Get level of skill effected of character (Use with If and While command)
+
+CheckNPCRange(NPC ID)
+	Parameter	NPC/Mob ID
+	Return		True/False
+	Propose		Check NPC/mob in specified range (Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start:
+			If (CheckNPCRange(33587) < 100)
+			{
+				Msg(Console, "In range!!!")
+			}
+			Else
+			{
+				Msg(Console, "Not in range ...")
+			}
+
+			Delay(1000)
+			Jump("Start")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ClearHuntingArea()	
+	Parameter	None
+	Return		None
+	Propose		Remove all hunting area from current setting
+	
+CloseDialog()
+	Parameter	None
+	Return		None
+	Propose		Close opening NPC dialog
+
+CloseWindow()
+	Parameter	None
+	Return		None
+	Propose		Close all opening window under current game account
+
+Confirm()
+	Parameter	None
+	Return		None
+	Propose		Confirm buy, sell, withdraw and deposit item with NPC
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Talk with Mr.CAT
+			NpcDialog(31756)
+			Delay(2000)
+
+			// Select list no. 6,1 to buy item
+			SelectDialog(6)
+			Delay(2000)
+			SelectDialog(1)
+			Delay(2000)
+
+			// Add Crystal D-Grade x 3 to trade list
+			AddItem(1458, 3)
+
+			// Confirm trade
+			Confirm()
+
+			// Close openning dialog
+			CloseDialog()
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CounterTargetPlayer()
+	Parameter	None
+	Return		None
+	Propose		Target back to player who targeting your character
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (Char.IsTargetByPlayer)
+			{
+				Msg(Console, "Targeting by player")
+				// Target back
+				CounterTargetPlayer()
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CountItem(Item ID)
+CountItem(Item Name)
+	Parameter	Item ID or Item Name
+	Return		Total quantity of item
+	Propose		Count item in inventory (Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Count no of Soulshot: D Grade
+			While (CountItem(1463) < 1000)
+			{
+				// Do something
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CountQuestDefeatNpc(NPC ID)
+	Parameter	NPC ID
+	Return		Number of defeated NPC
+	Propose		Count number of defeated NPC in quest (Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Count defeated Stalker of quest id 10362 (Certification of the Seeker)
+			If (CountQuestDefeatNpc(22992) == 10)
+			{
+				// Do something
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CraftItem(Receipt ID)
+	Parameter	Reciept ID
+	Return		None
+	Propose		Manufaturing item
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Create Soulshot: D Grade
+			CraftItem(20)
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CrystalizeItem(Item ID)
+CrystalizeItem(Item Name)
+	Parameter	Item ID or Item name
+	Return		None
+	Propose		Crystalize item	
+
+Delay(Millisecond)
+	Parameter	Time in millisecond
+	Return		None
+	Propose		Pause script execution
+
+DestroyItem(Item ID, count)
+DestroyItem(Item Name, count)
+	Parameter	Item ID/Name and count (Use * for all)
+	Return		None
+	Propose		Destroy item
+
+DialogContain(text)
+	Parameter	Text
+	Return		True/False
+	Propose		Check opening dialog contain whether specific text or not
+			(Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (DialogContain("2.4 km"))
+			{
+				SelectDialog("2.4 km")
+				Return
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dismiss(Name)
+	Parameter	Player name
+	Return		None
+	Propose		Dismiss player from party
+
+DropItem(Item ID, count)
+DropItem(Item Name, count)
+	Parameter	Item ID/Name and count (Use * for all)
+	Return		None
+	Propose		Drop item at current location
+
+EnchantItem(Item ID, Item ID)
+	Parameter	Weapon or Armor ID, Enchant Scroll ID
+	Return		None
+	Propose		Enchant weapon and armor with specific enchant scroll
+	Example		See@Enchant Item.txt
+
+EnchantLevel(Item ID)
+	Parameter	Item ID
+	Return		Level of enchantment
+	Propose		Get enchant level of specific item ID (Use with If and While command)		
+
+Exit
+	Parameter	None
+	Return		None
+	Propose		Exit script
+
+FishingStart()
+	Parameter	None
+	Return		None
+	Propose		Active character in fishing mode (Same as press 
+			"Fishing Start" button)
+
+FishingStop()
+	Parameter	None
+	Return		None
+	Propose		Deactive character from fishing mode (Same as press 
+			"Fishing Stop" button)
+
+FollowSelectTarget(Name)
+	Parameter	Name of object in map
+	Return		None
+	Propose		Target to target of specified object name
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Target to target of player name "dev"
+			FollowSelectTarget("dev")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ForceAttack(NPC ID)
+	Parameter	NPC ID
+	Return		None
+	Propose		Force attack to NPC
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Down Level:
+
+			// Attack until die
+			While (Char.HP > 0)
+			{
+				ForceAttack(30545)
+				Delay(2000)
+			}
+
+			// Return to nearest village
+			ReturnToVillage()
+			Delay(2000)
+			
+			// Down level until 25
+			If (Char.LV > 25)
+			{
+				Jump("Down Level")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ForceAttackTarget()
+	Parameter	None
+	Return		None
+	Propose		Force melee attack to current target
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Start:
+
+			// Check pvp condition every 1 sec
+			Delay(1000)
+			If (Char.IsAttackByPlayer)
+			{
+				Msg(Console, "Attack by Player!")
+				Jump("PVP")
+			}
+			Else 
+			{
+				Jump("Start")
+			}
+
+			PVP:
+
+			// Select player
+			CounterTargetPlayer()
+
+			// Move to target in range 100
+			If (Target.Range > 100)
+			{
+				MoveToTarget(100)	
+			}
+
+			Delay(500)
+			ForceAttackTarget()
+
+			// Attack until dead
+			If (!Target.IsDead)
+			{
+				Jump("PVP")		
+			}
+			Else 
+			{
+				Jump("Start")
+				CancelAttackTarget()
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+FoundEnemyInRange(Range)
+	Parameter	Range from current location
+	Return		True/False
+	Propose		Check enemy in specified range (Use with If and While command)
+
+FoundKarmaPlayer(Range)
+	Parameter	Range from current location
+	Return		True/False
+	Propose		Check karma player in specified range (Use with If and While command)
+
+FoundPlayerInRange(Range)
+	Parameter	Range from current location
+	Return		True/False
+	Propose		Check player in specified range (Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Check player in range 1000
+			If (FoundPlayerInRange(100))
+			{
+				Msg(Console, "Found!!!")
+			}
+			Else
+			{
+				Msg(Console, "Not Found")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If () {} Else {}
+	Parameter	Global property/function, comparator and value
+	Return		True/False
+	Propose		Compare your statement
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (CountItem(1835) == 0)
+			{
+				// Select list no. 1 to buy item
+				SelectDialog(1)	
+			}
+			Else
+			{
+				// Sell list no. 3 to sell item
+				SelectDialog(3)
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Include(filename)
+	Parameter	filename
+	Return		None
+	Propose		Include other script file
+
+Invite(Name)
+	Parameter	Player name
+	Return		None
+	Propose		Invite target to join party
+	Example		Invite("dev")
+
+IsMember(Name)
+	Parameter	Player name
+	Return		True/False
+	Propose		Check player whether in party or not
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (IsMember("dev"))
+			{
+				Msg(Console, "dev joined party")
+			}
+			Else
+			{
+				Msg(Console, "dev not in party")	
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Jump(Label)
+	Parameter	Address label
+	Return		None
+	Propose		Jump to specified label
+
+Label:
+	Parameter	None
+	Return		None
+	Propose		Define address
+	Example		Exit:
+
+LearnSkill(Skill ID)
+LearnSkill(Skill Name)
+	Parameter	Skill ID or Skill Name
+	Return		None
+	Propose		Learn skill
+	Example		LearnSkill(141)
+
+LeaveParty()
+	Parameter	None
+	Return		None
+	Propose		Leave from party		
+
+LocInRange(x, y, z, radius)
+	Parameter	location (x, y, z) and radius
+	Return		True/False
+	Propose		Check location whether in specified circle area or not
+			(Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (LocInRange(-59569, -56184, -2032, 500))
+			{
+				Msg(Console, "In range")
+			}
+			Else
+			{
+				Msg(Console, "Not in range")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Logout(Delay, Relogin Delay)
+	Parameter	Logout delay time and relogin delay time (In second)
+	Return		None
+	Propose		Force logout and relogin
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Logout now and reloing in next 10 second	
+			Logout(0, 10)
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MoveTo(x, y, z)
+	Parameter	location (x, y, z)
+	Return		None
+	Propose		Move your character to specified location. Use /loc command
+			to get your current location.
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Move to blackwolf spwan location
+			MoveTo(116633, -183771, -1568)
+			MoveTo(116504, -183755, -1560)
+			MoveTo(116548, -184397, -1568)
+			MoveTo(116633, -185163, -1744)
+			MoveTo(117115, -186064, -2088)
+			MoveTo(117678, -186667, -2384)
+			MoveTo(118566, -187339, -2776)
+			MoveTo(119119, -188103, -3096)
+			MoveTo(119674, -188351, -3264)
+			MoveTo(120054, -187729, -3304)
+			MoveTo(119537, -186438, -3248)	
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+MoveToTarget(range)
+	Parameter	Range between character and target
+	Return		None
+	Propose		Move your character to target location.
+
+Msg(Output, Message)
+Msg(Output, Message, Target)
+	Parameter	Output and message. Following are output type.
+			Console		Represent console message (Internal use in L2Divine)
+			General		Represent general message
+			Shout		Represent shout message
+			Trade		Represent trade message
+			Party		Represent party message
+			Clan		Represent clan message
+			Ally		Represent ally message
+			Friend		Represent friend message (Target required)
+			Whisper		Represent whisper message (Target required)
+
+	Return		None
+	Propose		Send message to target
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Msg(General, "Hello")
+			Msg(Whisper, "Hello", "Dev")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NoMobInHuntingArea()
+	Parameter	None
+	Return		True/False
+	Propose		Check the monster in current hunting area
+			(Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (NoMobInHuntingArea())
+			{
+				Msg(Console, "No Mob")
+			}
+			Else
+			{
+				Msg(Console, "Found Mob")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+NpcDialog(NPC ID)
+NpcDialog(NPC Name)
+	Parameter	NPC ID or NPC name
+	Return		None
+	Propose		Open NPC dialog 
+	Example		See@Revenge of the Redbonnet.txt
+
+PlayerBuffLevel(Name, Skill ID)
+	Parameter	Player name, Skill ID
+	Return		True/False
+	Propose		Check level of buff of specified player
+			(Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Check mentor buff
+			If (PlayerBuffLevel("Foo",9227) == 1)
+			{
+				Msg(Console, "BUFF!!!")
+			}
+			Else
+			{
+				Msg(Console, "NO BUFF")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+PlaySound(Sound File)
+	Parameter	Part of sound file
+	Return		None
+	Propose		Play sound
+			(Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			PlaySound("C:\temp\L2Divine\sound\Alert.wav")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Recommend(Player Name)
+	Parameter	Player name
+	Return		None
+	Propose		Give recommend to player
+
+Return
+	Parameter	None
+	Return		None
+	Propose		Return to next command of called Jump
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			Jump("Start")
+
+			MyProc1:
+			Msg(Console, "Proc1 Command 1")
+			Return
+
+			MyProc2:
+			Msg(Console, "Proc2 Command 1")
+			Msg(Console, "Proc2 Command 2")
+			Return
+
+			Start:
+			Msg(Console, "Command 1")
+			Jump("MyProc1")
+			Msg(Console, "Command 2")
+			Jump("MyProc2")
+			Msg(Console, "Command 3")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ReturnToVillage()
+	Parameter	None
+	Return		None
+	Propose		Return to nearest village after die
+	Example		See@Down Level.txt
+
+ReturnToClanHall()
+	Parameter	None
+	Return		None
+	Propose		Return to clan hall after die
+
+SelectDialog(Link Name)
+SelectDialog(Link Index)
+	Parameter	Link name or Link index
+	Return		None
+	Propose		Select link from opening NPC dialog
+
+SelectKarmaPlayer()
+	Parameter	None
+	Return		None
+	Propose		Select nearest karma player in range 10000 of your current location
+
+SelectNearestEnemy()
+	Parameter	None
+	Return		None
+	Propose		Select nearest enemy in range 10000 of your current location
+
+SelectNearestMob()
+	Parameter	None
+	Return		None
+	Propose		Select nearest mob in range 10000 of your current location
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Set battle area
+			SetBattleArea(135470, -47998, -3096, 3000)
+			
+			// Target to nearest mob
+			SelectNearestMob()
+
+			// Attack it!
+			While (!Target.IsDead)
+			{
+				Delay(500)
+				ForceAttackTarget()
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SelectNearestPlayer()
+	Parameter	None
+	Return		None
+	Propose		Select nearest player in range 10000 of your current location
+
+SelectPlayerByClass(Class ID)
+	Parameter	Class ID
+	Return		None
+	Propose		Select nearest player by class in range 10000 of your current location
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Select Wynn Summoner
+			SelectPlayerByClass(145)
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+SelectTarget(Name)
+SelectTarget(Name, Title)
+SelectTarget(NPC ID)
+	Parameter	Player name, NPC ID or name or name & title
+	Return		None
+	Propose		Target on Player/NPC/Mob (Synonym "Self" for your character)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Buff myself
+			SelectTarget("Self")
+			UseSkill(1059)
+			UseSkill(1068)
+			UseSkill(1077)
+			UseSkill(1040)
+			UseSkill(1204)
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Sell()	
+	Parameter	None
+	Return		None
+	Propose		Change NPC trade mode to sell (Gracia plus only)
+
+SetBattleArea(x, y, z, radius)
+SetBattleArea(radius)
+	Parameter	Location and radius, radius (use current location)
+	Return		None
+	Propose		Set battle area to current setting
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			SetBattleArea(115968, -174345, -760, 2500)
+
+			// Set battle area from current location with range 1000
+			SetBattleArea(1000)
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	
+SetRestArea(x, y, z)
+	Parameter	Location
+	Return		None
+	Propose		Set rest area to current setting 
+	Example		SetRestArea(115968, -174345, -760)
+	
+Sit()
+	Parameter	None
+	Return		None
+	Propose		Set character to sit
+
+Stand()
+	Parameter	None
+	Return		None
+	Propose		Set character to stand
+
+SocialAction(Action ID)
+	Parameter	Action ID (see@SocialAction.ActionID)
+	Return		None
+	Propose		Use social action command
+
+TargetInRange(Name)
+TargetInRange(NPC ID)
+	Parameter	Player name, NPC ID or name
+	Return		True/False
+	Propose		Check player/NPC whether in visible range or not
+			(Use with If and While command)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (TargetInRange(32378)) 
+			{
+				Msg(Console, "Found")
+			}
+			Else 
+			{
+				Msg(Console, "Not Found")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TradeStart()
+	Parameter	None
+	Return		None
+	Propose		Activate character in trading mode (Same as press "Trade Start" button)
+	Example		See@Craft Item.txt
+
+TradeStop()
+	Parameter	None
+	Return		None
+	Propose		Deactivate character from trading mode (Same as press "Trade Stop" button)
+
+UseItem(Item ID)
+UseItem(Item Name)
+	Parameter	Item ID or Item name
+	Return		None
+	Propose		Use item
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			UseItem(1830)
+			UseItem("Scroll of Escape")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+UseSkill(Skill ID)
+UseSkill(Skill Name)
+UseSkill(Skill ID, Target)
+UseSkill(Skill Name, Target)
+	Parameter	Skill ID or Skill Name and target
+	Return		None
+	Propose		Use skill on target
+	Example		See@Faverites_Buff.txt
+
+
+While() {}
+	Parameter	Global property/function, comparator and value
+	Return		True/False
+	Propose		Loop until result of your statement become to false
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Start battle
+			Battle:
+			BattleStart()
+
+			// Fight until Black Wolf Pelt == 40
+			While (CountItem(1482) < 40)
+			{
+				Delay(10000)
+			}
+
+			// Stop battle
+			BattleStop()
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
++-------------------------+
+| Section 3: Reference ID |
++-------------------------+
+
++-----------+
+| Char.Race |
++-----------+
+0=Human
+1=Elf
+2=Darkelf
+3=Orc
+4=Dwarf
+5=Kamael
+
++------------+
+| Char.Class |
++------------+
+0=Fighter
+1=Warrior
+2=Gladiator
+3=Warlord
+4=Knight
+5=Paladin
+6=Dark Avenger
+7=Rogue
+8=Treasure Hunter
+9=Hawkeye
+10=Mage
+11=Wizard
+12=Sorceror
+13=Necromancer
+14=Warlock
+15=Cleric
+16=Bishop
+17=Prophet
+18=Elven Fighter
+19=Elven Knight
+20=Temple Knight
+21=Sword Singer
+22=Elven Scout
+23=Plains Walker
+24=Silver Ranger
+25=Elven Mage
+26=Elven Wizard
+27=Spellsinger
+28=Elemental Summoner
+29=Oracle
+30=Elder
+31=Dark Fighter
+32=Palus Knight
+33=Shillien Knight
+34=Bladedancer
+35=Assassin
+36=Abyss Walker
+37=Phantom Ranger
+38=Dark Mage
+39=Dark Wizard
+40=Spellhowler
+41=Phantom Summoner
+42=Shillien Oracle
+43=Shillen Elder
+44=Orc Fighter
+45=Orc Raider
+46=Destroyer
+47=Orc Monk
+48=Tyrant
+49=Orc Mage
+50=Orc Shaman
+51=Overlord
+52=Warcryer
+53=Dwarven Fighter
+54=Scavenger
+55=Bounty Hunter
+56=Artisan
+57=Warsmith
+88=Duelist
+89=Dreadnought
+90=Phoenix Knight
+91=Hell Knight
+92=Sagittarius
+93=Adventurer
+94=Archmage
+95=Soultaker
+96=Arcana Lord
+97=Cardinal
+98=Hierophant
+99=Eva Templar
+100=Sword Muse
+101=Wind Rider
+102=Moonlight Sentinel
+103=Mystic Muse
+104=Elemental Master
+105=Eva Saint
+106=Shillien Templar
+107=Spectral Dancer
+108=Ghost Hunter
+109=Ghost Sentinel
+110=Storm Screamer
+111=Spectral Master
+112=Shillien Saint
+113=Titan
+114=Grand Khauatari
+115=Dominator
+116=Doom Cryer
+117=Fortune Seeker
+118=Maestro
+123=Kamael Soldier
+124=Kamael Soldier
+125=Dragoon
+126=Warder
+127=Berserker
+128=Soul Breaker
+129=Soul Breaker
+130=Arbalester
+131=Doom Bringer
+132=Soul Hound
+133=Soul Hound
+134=Trickster
+135=Inspector
+136=Judicator
+139=Sigel Knight
+140=Tyrr Warrior
+141=Othell Rogue
+142=Yul Archer
+143=Feoh Wizard
+144=Iss Enchanter
+145=Wynn Summoner
+146=Aeore Healer
+
++-----------------------+
+| Target.AbnormalStatus |
++-----------------------+
+1=Bleed
+2=Poison
+7=Stun
+8=Sleep
+9=Mute
+10=Root
+11=Hold
+12=Hold
+14=Big Head
+15=Flame
+18=Float & Root
+19=Dance & Stun
+20=Fire & Root & Stun
+21=Stealth
+22=Imprisioning
+23=Imprisioning
+24=Magic Circle
+28=Ultimate Defend
+
++-----------------------+
+| SocialAction.ActionID |
++-----------------------+
+12=Greeting
+13=Victory
+14=Advance
+24=Yes
+25=No
+26=Bow
+29=Unaware
+30=Waiting
+31=Laugh
+33=Applaud
+34=Dance
+35=Sorrow
+62=Charm
+66=Shyness

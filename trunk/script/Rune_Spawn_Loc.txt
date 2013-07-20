@@ -1,0 +1,58 @@
+If (LocInRange(73352, -75151, -3648, 4000))
+{
+	Jump("RSL_EXIT")
+}
+
+// In town
+If (LocInRange(38243, -48116, 8962, 2000))
+{
+	MoveTo(38747, -48252, 896)
+	MoveTo(38243, -48116, 896)
+
+	// Talk to GK
+	NpcDialog(31698)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()
+
+	MoveTo(39680, -48235, -768)
+	MoveTo(42437, -48247, -792)
+	MoveTo(43532, -47976, -792)
+
+	Jump("RSL_EXIT")
+}
+
+// Outside town#1
+If (LocInRange(45824, -49056, -792, 500))
+{
+	MoveTo(45920, -48240, -792)
+	MoveTo(44928, -47904, -792)
+	Jump("RSL_EXIT")
+}
+
+// Outside town#2
+If (LocInRange(44368, -50592, -792, 500))
+{
+	MoveTo(43872, -49056, -792)
+	MoveTo(44928, -47904, -792)
+	Jump("RSL_EXIT")
+}
+
+// Outside town#3
+If (LocInRange(43744, -47920, -792, 500))
+{
+	// Near GK
+}
+
+// Outside town#4
+If (LocInRange(45072, -49936, -792, 500))
+{
+	MoveTo(45920, -48240, -792)
+	MoveTo(44928, -47904, -792)
+	Jump("RSL_EXIT")
+}
+
+RSL_EXIT:

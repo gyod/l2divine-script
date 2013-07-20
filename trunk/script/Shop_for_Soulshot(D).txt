@@ -1,0 +1,123 @@
+// ------------------------------------------------------------
+// Propose	Craft SSD for sale
+// Required	1) Crystal D-Grade in Inventory or Warehouse
+//		2) Add SSD to sell list in Preference
+//		3) Adena for buy Soul Ore
+//		4) Learned Recipe: Soulshot: D Grade
+//		5) Set your character at Giran (Near Taurin)	
+// ------------------------------------------------------------
+
+Craft:
+
+// Create Soulshot: D Grade x 1000
+While (CountItem(1463) < 1000)
+{
+	// Count Crystal D-Grade in Inventory
+	// If not enough try to withdraw from private warehouse
+	If (CountItem(1458) < 3)
+	{
+		// Go to Warehouse Keeper Taurin
+		MoveTo(80740, 146508, -3528)
+
+		// Withdraw Crystal D-Grade
+		NpcDialog("Taurin")
+		Delay(2000)
+		// Select link#1,2 to open withdraw window
+		SelectDialog(1)
+		Delay(2000)
+		SelectDialog(2)
+		Delay(2000)
+
+		// AddCrystal D-Grade x 50 to withdraw list
+		AddItem(1458, 50)
+
+		// Confirm trade
+		Confirm()
+		Delay(2000)
+
+		// Close openning dialog
+		CloseDialog()
+		Delay(1000)
+
+		// Recheck again
+		If (CountItem(1458) < 3)
+		{
+			Msg(Console, "Not enough Crystal D-Grade")
+			Jump("Exit")
+		}
+	}
+
+	// Buy Soul Ore
+	If (CountItem("Soul Ore") < 9)
+	{
+		// Check Adena
+		If (CountItem("Adena") < 8000)
+		{
+			Msg(Console, "Not enough Adena")
+			Jump("Exit")
+		}
+
+		// Go to NPC 
+		MoveTo(80522, 146865, -3528)
+		MoveTo(80065, 147125, -3528)
+		MoveTo(79849, 147365, -3528)
+		MoveTo(79825, 147597, -3528)
+		MoveTo(80351, 147649, -3504)
+		MoveTo(80383, 147857, -3504)
+
+		// Talk with Trader Helvetia
+		NpcDialog("Helvetia")
+		Delay(2000)
+
+		// Select link#1 to buy item
+		SelectDialog(1)
+		Delay(2000)
+
+		// Add Soul Ore x 30 to trade list
+		AddItem(1785, 30)
+
+		// Confirm trade
+		Confirm()
+		Delay(2000)
+
+		// Close openning dialog
+		CloseDialog()
+		Delay(1000)
+	}
+
+	// Wait for MP
+	If (Char.MP < 200)
+	{
+		Sit()
+		Delay(10000)
+		Stand()
+	}
+
+	// Create Soulshot: D Grade
+	CraftItem(20)
+}
+
+// Move to shop location
+MoveTo(80351, 147649, -3504)
+MoveTo(79825, 147597, -3528)
+MoveTo(79849, 147365, -3528)
+MoveTo(80065, 147125, -3528)
+MoveTo(80522, 146865, -3528)
+MoveTo(80544, 146888, -3528)
+
+// Start to sell
+TradeStart()
+
+// Wait until soldout
+While (CountItem(1463) > 0)
+{
+	Delay(10000)
+}
+
+// Stop
+TradeStop()
+
+Jump("Craft")
+
+Exit:
+Logout(0,0)

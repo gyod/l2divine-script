@@ -1,0 +1,118 @@
+// ------------------------------------------------------------------
+// Quest:	Help The Son! (1 time)
+// LV:		26
+// Location:	Town of Gludio
+// NPC:		Lundy, Drikus
+// Target:	Maille Lizardman Guard (http://www.l2divine.com/divinedb/mobinfo.jsp?tid=20921)
+// Quest Item:	Work Hammer x 1
+//		Broken Gemstone Fragment x 30
+//		Gold Colored Gemstone x 1
+// Reward:	Pet Exchange Ticket: Kookaburra
+// ------------------------------------------------------------------
+
+// Talk with Lundy to accept quest
+NpcDialog(30827)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Buy 1 Work Hammer and give to Lundy
+MoveTo(-14387, 123458, -3112)
+MoveTo(-15067, 123466, -3104)
+MoveTo(-15215, 123379, -3104)
+
+NpcDialog(30321)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+AddItem(168,1)
+Delay(2000)
+Confirm()
+Delay(2000)
+CloseDialog()
+CloseWindow()
+
+MoveTo(-15067, 123466, -3104)
+MoveTo(-14387, 123458, -3112)
+MoveTo(-13949, 123383, -3112) 
+
+NpcDialog(30827)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Move to Maille Lizardman location
+MoveTo(-14253, 123742, -3112)
+MoveTo(-16399, 124200, -3112)
+MoveTo(-18097, 123953, -3152)
+
+// Prepare battle area
+ClearHuntingArea()
+AddHuntingArea(-20508, 122147, -3360, 3000)
+BattleStart()
+
+// Fight until Broken Gemstone Fragment = 30
+While (CountItem(7552) < 30)
+{
+	Delay(10000)
+}
+
+// Stop battle
+BattleStop()
+
+// Back to Lundy
+MoveTo(-20508, 122147, -3360)
+MoveTo(-18097, 123953, -3152)
+MoveTo(-16399, 124200, -3112)
+MoveTo(-14253, 123742, -3112)
+MoveTo(-13949, 123383, -3112) 
+MoveTo(-13980, 123693, -3112)
+
+// Talk with Lundy
+NpcDialog(30827)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Talk with Drikus
+MoveTo(-13553, 123704, -3112)
+MoveTo(-12193, 123760, -3088)
+MoveTo(-12249, 124304, -3096)
+MoveTo(-12665, 124920, -3120)
+
+NpcDialog(30505)
+Delay(2000)
+SelectDialog(6)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Talk with Lundy
+MoveTo(-12249, 124304, -3096)
+MoveTo(-12193, 123760, -3088)
+MoveTo(-13553, 123704, -3112)
+MoveTo(-13949, 123383, -3112) 
+
+NpcDialog(30827)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()

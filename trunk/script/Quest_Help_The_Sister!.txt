@@ -1,0 +1,188 @@
+// ------------------------------------------------------------------
+// Quest:	Help The Sister! (1 time)
+// LV:		26
+// Location:	Town of Girun
+// NPC:		Cooper, Galladucci
+// Target:	Specter, Sorrow Maiden (http://www.l2divine.com/divinedb/mobinfo.jsp?tid=20171)
+// Quest Item:	Craft Dagger x 1
+//		Map Piece x 30
+//		Ivory Colored Map x 1
+// Reward:	Pet Exchange Ticket: Cougar
+// ------------------------------------------------------------------
+
+// Talk with Cooper to accept quest
+NpcDialog(30829)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Buy 1 Craft Dagger and give to Cooper
+MoveTo(81076, 145791, -3528)
+MoveTo(81016, 145495, -3528)
+MoveTo(81536, 145535, -3528)
+MoveTo(81475, 146851, -3528) 
+MoveTo(81012, 146926, -3528)
+MoveTo(79996, 146926, -3528) 
+MoveTo(79844, 146622, -3520)
+
+NpcDialog(30084)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+AddItem(220,1)
+Delay(2000)
+Confirm()
+Delay(2000)
+CloseDialog()
+CloseWindow()
+
+MoveTo(79844, 146622, -3520)
+MoveTo(80078, 146925, -3528) 
+MoveTo(81012, 146926, -3528)
+MoveTo(81475, 146851, -3528) 
+MoveTo(81536, 145535, -3528)
+MoveTo(81016, 145495, -3528)
+MoveTo(81076, 145791, -3528)
+
+NpcDialog(30829)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog("[Help the Sister! (In Progress)]")
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Move to Specter location
+MoveTo(81076, 145791, -3528)
+MoveTo(81016, 145495, -3528)
+MoveTo(81536, 145535, -3528)
+MoveTo(81524, 147094, -3528) 
+MoveTo(81564, 147734, -3464)
+MoveTo(83092, 148214, -3464)
+MoveTo(83384, 147982, -3400)
+
+NpcDialog(30080)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(3)
+Delay(2000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(16664, 144296, -2984)
+MoveTo(17015, 145076, -3008)
+MoveTo(18215, 145828, -3096)
+MoveTo(19288, 145587, -3096)
+MoveTo(21407, 145893, -3144)
+MoveTo(21877, 145880, -3176)
+MoveTo(24549, 146232, -3304)
+MoveTo(27346, 145743, -3016)
+MoveTo(30114, 144159, -3104)
+MoveTo(30988, 143823, -3168) 
+MoveTo(32892, 144063, -3328) 
+MoveTo(34300, 147359, -3504)
+MoveTo(36764, 147967, -3640)
+MoveTo(37869, 148168, -3688)
+MoveTo(41511, 147931, -3680)
+MoveTo(45267, 148687, -3680)
+MoveTo(46692, 150797, -2832) 
+MoveTo(47777, 151176, -2808)
+MoveTo(48556, 151942, -2736)
+MoveTo(48880, 152855, -2800)
+MoveTo(50077, 152708, -2776)
+MoveTo(51237, 151975, -2416)
+
+// Prepare battle area
+ClearHuntingArea()
+AddHuntingArea(53457, 150734, -2480, 3000)
+BattleStart()
+
+// Fight until Map Piece = 30
+While (CountItem(7550) < 30)
+{
+	Delay(10000)
+}
+
+// Stop battle
+BattleStop()
+
+// Back to Cooper
+MoveTo(53457, 150734, -2480)
+Delay(2000)
+MoveTo(51237, 151975, -2416)
+Delay(5000)
+UseItem(736)
+Delay(25000)
+MoveTo(18353, 145709, -3104)
+MoveTo(17361, 145461, -3048)
+MoveTo(16713, 144349, -2984)
+MoveTo(15737, 142933, -2696)
+
+NpcDialog(30059)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+Delay(5000)
+
+MoveTo(83384, 147982, -3400)
+MoveTo(83092, 148214, -3464)
+MoveTo(81564, 147734, -3464)
+MoveTo(81524, 147094, -3528) 
+MoveTo(81536, 145535, -3528)
+MoveTo(81016, 145495, -3528)
+MoveTo(81076, 145791, -3528)
+
+// Talk with Cooper
+NpcDialog(30829)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog("[Help the Sister! (In Progress)]")
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Talk with Galladucci
+MoveTo(80426, 145813, -3528)
+MoveTo(79928, 145793, -3496)
+MoveTo(79800, 145601, -3496) 
+
+NpcDialog(30097)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(6)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Talk with Cooper
+MoveTo(79800, 145601, -3496) 
+MoveTo(79928, 145793, -3496)
+MoveTo(80426, 145813, -3528)
+MoveTo(81076, 145791, -3528)
+
+NpcDialog(30829)
+Delay(2000)
+SelectDialog(8)
+Delay(2000)
+SelectDialog("[Help the Sister! (In Progress)]")
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()

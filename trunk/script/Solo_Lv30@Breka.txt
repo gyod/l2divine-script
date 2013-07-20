@@ -1,0 +1,99 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// LV:		25-35
+// Start Loc:	Near Adventurers' Guide at Girun
+// Target:	Breka Orc
+// Setting:	Auto Counter - On
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's hunt some orc!")
+
+Begin:
+
+// Buy SSD
+If (CountItem(1463) < 1000)
+{
+	MoveTo(82881, 149340, -3464)
+	MoveTo(81421, 149264, -3464)
+	MoveTo(81017, 148627, -3464)
+	MoveTo(79793, 148611, -3528)
+	MoveTo(79737, 148019, -3528)
+	MoveTo(80451, 147964, -3504)
+
+	// Helvetia
+	NpcDialog(30081)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+
+	AddItem(1463, 4000)
+	Confirm()
+	Delay(2000)
+	CloseDialog()
+	CloseWindow()
+
+	MoveTo(80451, 147964, -3504)
+	MoveTo(79737, 148019, -3528)
+	MoveTo(79793, 148611, -3528)
+	MoveTo(81017, 148627, -3464)
+	MoveTo(81421, 149264, -3464)
+}
+
+// Get Adventurer buff
+MoveTo(82881, 149340, -3464)
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Teleport to Breka's Stronghold
+MoveTo(82783, 148160, -3464)
+MoveTo(83414, 147968, -3400)
+
+NpcDialog(30080)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(12)
+Delay(2000)
+CloseDialog()
+
+// Prepare battle area
+MoveTo(88922, 130887, -3688)
+ClearHuntingArea()
+AddRectHuntingArea(88922, 130887, -3688, 2500)
+BattleStart()
+
+// Fight until buff timeout
+While (BuffLevel(4322) > 0)
+{
+	Delay(5000)
+}
+
+BattleStop()
+
+// Back to girun
+MoveTo(88922, 130887, -3688)
+MoveTo(86251, 131262, -3648)
+MoveTo(84898, 132387, -3680)
+MoveTo(84404, 133023, -3656)
+MoveTo(84826, 134831, -3528)
+MoveTo(84650, 135791, -3536)
+MoveTo(83546, 137535, -3528)
+MoveTo(83418, 139119, -3552)
+MoveTo(83849, 141022, -3544)
+MoveTo(83865, 143550, -3400)
+MoveTo(83865, 146334, -3400)
+MoveTo(83897, 147438, -3400)
+MoveTo(83561, 148142, -3400) 
+MoveTo(82713, 148254, -3464)
+MoveTo(82777, 149166, -3464)
+
+Jump("Begin")
+
+Exit:

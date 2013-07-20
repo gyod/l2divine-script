@@ -1,0 +1,30 @@
+// Talk with Warehouse Keeper Airy
+NpcDialog("Airy")
+Delay(2000)
+
+// Open Private warehouse 
+SelectDialog(1)	
+Delay(2000)
+
+If (CountItem(1835) > 0)
+{
+	// Select link #1 to deposit item
+	SelectDialog(1)	
+}
+Else
+{
+	// Sell link #2 to withdraw item
+	SelectDialog(2)
+}
+
+Delay(2000)
+
+// Add Scroll of Escape x 20 and Soulshot: No Grade x 20 to trade list
+AddItem(1835, 20)
+AddItem(736, 20)
+
+// Confirm trade
+Confirm()
+
+// Close openning dialog
+CloseDialog()

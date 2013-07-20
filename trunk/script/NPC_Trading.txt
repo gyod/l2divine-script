@@ -1,0 +1,26 @@
+// Talk with Trader Mion
+NpcDialog("Mion")
+Delay(2000)
+
+If (CountItem(1835) == 0)
+{
+	// Select link #1 to buy item
+	SelectDialog(1)	
+}
+Else
+{
+	// Sell link #3 to sell item
+	SelectDialog(3)
+}
+
+Delay(2000)
+
+// Add Scroll of Escape x 1 and Soulshot: No Grade x 1 to trade list
+AddItem(1835, 1)
+AddItem(736, 1)
+
+// Confirm trade
+Confirm()
+
+// Close openning dialog
+CloseDialog()
