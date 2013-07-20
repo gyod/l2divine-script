@@ -46,26 +46,26 @@ SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
-// Get buff when level < 76
-If (Char.LV < 76)
+// Get buff when level < 91
+If (Char.LV < 91)
 {
 	// Get Adventurer buff
 	NpcDialog(32327)
 	Delay(2000)
-	SelectDialog(1)
+	SelectDialog(2)
 	Delay(2000)
-	SelectDialog(1)
+	SelectDialog(2)
 	Delay(2000)
 	CloseDialog()
 
 	// Servitor Buff
-	NpcDialog(32327)
-	Delay(2000)
-	SelectDialog(2)
-	Delay(2000)
-	SelectDialog(1)
-	Delay(2000)
-	CloseDialog()	
+	//NpcDialog(32327)
+	//Delay(2000)
+	//SelectDialog(2)
+	//Delay(2000)
+	//SelectDialog(1)
+	//Delay(2000)
+	//CloseDialog()
 }
 
 MoveTo(146810, 25790, -2008)
@@ -121,8 +121,8 @@ If (Char.LV > 75)
 	Jump("Check_HP")
 }
 
-// Fight until shield warn off
-If (BuffLevel(4323) == 0)
+// Fight until Horn Melody (Adventurer) warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")
