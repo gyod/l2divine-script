@@ -1,0 +1,156 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// LV:		70
+// Start Loc:	Rune's GK
+// Target:	Stakatos
+// Setting:	Auto Counter - On
+// Item:	SOE x 50
+// Quest Item:	Stakato Shells x 80
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's hunt some orc!")
+
+// At the battle area					
+If (LocInRange(71357, -52586, -3088, 4000))
+{
+	Jump("Battle")
+}
+
+Begin:
+
+// Spawn location
+Include("Rune_Spawn_Loc.txt")
+
+MoveTo(43566, -47683, -792)
+
+// Get free item
+NpcDialog(33463)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Get Quest
+NpcDialog(33463)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog("[Be Well]")
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Get Adventurer buff
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Servitor Buff
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+MoveTo(43722, -47839, -792)
+MoveTo(43826, -47687, -792)
+
+// Go to Swamp of Screams
+NpcDialog(31320)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(13)
+Delay(2000)
+CloseDialog()
+
+Delay(5000)
+
+MoveTo(69980, -49928, -3248)
+MoveTo(70532, -50080, -3240)
+MoveTo(70699, -52249, -3064)
+
+Battle:
+
+ClearHuntingArea()
+AddRectHuntingArea(71357, -52586, -3088, 1500)
+SetBattleArea(71357, -52586, -3088, 1500)
+
+BattleStart()
+
+// Use Miracle of Tree
+UseItem(22620)
+
+BattleLoop:
+
+// Quest Item
+If (CountItem(19498) == 80)
+{
+	BattleStop()
+	Msg(Console, "Done!!!")
+	Delay(5000)
+	MoveTo(70699, -52249, -3064)
+	MoveTo(70532, -50080, -3240)
+	MoveTo(69980, -49928, -3248)
+	Jump("Exit")
+}
+
+// Craft SSA
+//If (CountItem(1466) < 300)
+//{
+//	CraftItem(23)
+//}
+
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
+{
+	Msg(Console, "No Buff!!!")
+	Jump("BackTown")
+}
+
+// Die -*-
+If (Char.HP == 0)
+{
+	Jump("BackTown")
+}
+
+Delay(5000)
+Jump("BattleLoop")
+
+BackTown:
+
+BattleStop()
+
+// Back to nearest village
+If (Char.HP > 0)
+{
+	Msg(Console, "Delay 5 sec!")
+	Delay(5000)
+	Stand()
+	UseItem(736)
+	Delay(20000)
+}
+Else
+{
+	ReturnToVillage()
+	Delay(5000)
+}
+
+Jump("Begin")
+
+Exit:

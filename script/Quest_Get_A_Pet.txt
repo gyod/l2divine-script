@@ -1,0 +1,509 @@
+// ------------------------------------------------------------------
+// Auther:	Dev, Zariche
+// Quest:	Get A Pet
+// LV:		15+
+// Race:	Dwarven
+// Location:	Gludin village
+// NPC:		Martin (Gludin village)
+//		Bella (Gatekeeper of Gludio)
+//		Metty (Gaurd of Dion)
+//		Ellie (Jeweller of Giran)
+// Require:	Scroll of Escape x 1
+//		Adena x	100,000
+// Target:	Hunter taruntulas
+//		Plunder taruntulas
+// Quest Item:	Animal Slayer's 5th List x 1
+//		Bloody Tarantula Nail x 50
+//		Animal Lover's List x 1
+// Reward:	Wolf collar
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Quest: Get a pet!")
+
+// Accept Quest with NPC Martin
+NpcDialog(30731)
+Delay(2000)
+SelectDialog(9)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Talk to Gatekeeper Richlin (Gludin village)
+Msg(Console, "Quest accepted, Go to Dwarven village")
+Jump("MartinToRichlin")
+
+NpcDialog(30320)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(5)
+Delay(2000)
+
+// Talk to Gatekeeper Wirphy (Dwarven village)
+Msg(Console, "Go to Spine mountains mining zone")
+NpcDialog(30540)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(11)
+Delay(2000)
+
+// Hunt for Hunter taruntulas/Plunder taruntulas
+Msg(Console, "Let hunt some taruntulas!")
+MoveTo(137063, -204810, -3632)
+MoveTo(137792, -203634, -3720)
+MoveTo(138534, -204135, -3788)
+MoveTo(139222, -204311, -3640)
+MoveTo(139910, -204327, -3504) 
+
+// Prepare battle area
+ClearHuntingArea()
+AddHuntingArea(139591, -206336, -3672, 3000)
+BattleStart()
+
+// Collect 50 of Bloody Tarantula Nail
+While (CountItem(3427) < 50)
+{
+	Delay(20000)
+}
+Msg(Console, "Bloody Tarantula Nail x 50")
+BattleStop()
+Delay(10000)
+
+// Back to Dwarven village by Scroll of Escape
+UseItem(736)
+Delay(20000)
+
+// Talk to Gatekeeper Wirphy
+Msg(Console, "Go to Gludin village")
+Jump("ToWirphy")
+NpcDialog(30540)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(5000)
+
+// Talk to Gatekeeper Bella
+NpcDialog(30256)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(9)
+Delay(5000)
+
+Jump("RichlinToMartin")
+
+Msg(Console, "Talk with Martin")
+NpcDialog(30731)
+Delay(2000)
+SelectDialog(9)
+Delay(2000)
+SelectDialog(1)
+Delay(5000)
+CloseDialog()
+
+Jump("MartinToRichlin")
+
+// Go to Gludio 
+NpcDialog(30320)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+
+// Talk with Gatekeeper Bella
+Msg(Console, "Talk with Bella")
+NpcDialog(30256)
+Delay(2000)
+SelectDialog(6)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Go to Dion
+NpcDialog(30256)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(5)
+Delay(5000)
+
+// Talk with Guard Metty
+MoveTo(15696, 143064, -2696) 
+MoveTo(16240, 143400, -2792)
+MoveTo(16632, 144160, -2960)
+MoveTo(16851, 144788, -2992)
+MoveTo(17395, 145431, -3048)
+MoveTo(18019, 145831, -3104)
+MoveTo(17708, 146728, -3104)
+MoveTo(17452, 147576, -3120)
+
+Msg(Console, "Talk with Metty")
+NpcDialog(30072)
+Delay(2000)
+SelectDialog(3)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+MoveTo(17708, 146728, -3104)
+MoveTo(18019, 145831, -3104)
+MoveTo(17395, 145431, -3048)
+MoveTo(16851, 144788, -2992)
+MoveTo(16632, 144160, -2960)
+MoveTo(16240, 143400, -2792)
+MoveTo(15696, 143064, -2696) 
+
+// Go to Giran
+NpcDialog(30059)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(5000)
+
+MoveTo(83551, 147945, -3400)
+MoveTo(82710, 148211, -3464) 
+MoveTo(81558, 148131, -3464) 
+MoveTo(81046, 148563, -3464)
+MoveTo(79774, 148666, -3528) 
+MoveTo(79833, 149514, -3528)
+MoveTo(80409, 149418, -3504)
+
+// Talk with Jeweller Ellie
+Msg(Console, "Talk with Ellie")
+NpcDialog(30091)
+Delay(2000)
+SelectDialog(6)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+MoveTo(80409, 149418, -3504)
+MoveTo(79833, 149514, -3528)
+MoveTo(79774, 148666, -3528) 
+MoveTo(81046, 148563, -3464)
+MoveTo(81558, 148131, -3464)
+MoveTo(82710, 148211, -3464) 
+MoveTo(83551, 147945, -3400)
+
+// Back to gludin
+NpcDialog(30080)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(3)
+Delay(5000)
+
+NpcDialog(30059)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(3)
+Delay(5000)
+
+NpcDialog(30256)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(9)
+Delay(5000)
+
+Jump("RichlinToMartin")
+
+Msg(Console, "Answer Martin's question")
+NpcDialog(30731)
+Delay(2000)
+SelectDialog(9)
+Delay(2000)
+SelectDialog(1)
+Delay(5000)
+
+// Question 1
+Jump("Answer")
+Delay(2000)
+
+// Question 2
+Jump("Answer")
+Delay(2000)
+
+// Question 3
+Jump("Answer")
+Delay(2000)
+
+// Question 4
+Jump("Answer")
+Delay(2000)
+
+// Question 5
+Jump("Answer")
+Delay(2000)
+
+// Question 6
+Jump("Answer")
+Delay(2000)
+
+// Question 7
+Jump("Answer")
+Delay(2000)
+
+// Question 8
+Jump("Answer")
+Delay(2000)
+
+// Question 9
+Jump("Answer")
+Delay(2000)
+
+// Question 10
+Jump("Answer")
+Delay(2000)
+
+Msg(Console, "Quest end!")
+
+// ------------------------------------------------------------------
+// Function
+// ------------------------------------------------------------------
+Jump("Exit")
+
+// Move from NPC Martin to Richlin ----------------------------------
+MartinToRichlin:
+MoveTo(-84269, 150895, -3120)
+MoveTo(-83573, 150823, -3120)
+MoveTo(-82717, 150683, -3120)
+MoveTo(-81733, 150670, -3120)
+MoveTo(-80997, 150366, -3040)
+MoveTo(-80733, 149886, -3040)
+Return
+// ------------------------------------------------------------------
+
+
+// Move from NPC Richlin to Martin ----------------------------------
+RichlinToMartin:
+MoveTo(-80733, 149886, -3040)
+MoveTo(-80997, 150366, -3040)
+MoveTo(-81733, 150670, -3120)
+MoveTo(-82717, 150683, -3120)
+MoveTo(-83573, 150823, -3120)
+MoveTo(-84269, 150895, -3120)
+MoveTo(-84540, 150879, -3120)
+Return
+// ------------------------------------------------------------------
+
+
+// Move from spawn location of Dwarven village to NPC Wirphy --------
+ToWirphy:
+// Spawn location 1
+If (LocInRange(116352, -179264, -1080, 500))
+{
+	MoveTo(115606, -178988, -968) 
+	MoveTo(115237, -178539, -912)
+	MoveTo(115185, -178107, -880)
+	Return
+}
+
+// Spawn location 2
+If (LocInRange(115249, -177859, -912, 500))
+{
+	MoveTo(115185, -178107, -880)
+	Return
+}
+
+// Spawn location 3 (Default)
+MoveTo(116484, -182402, -1512)
+MoveTo(116644, -181273, -1376)
+MoveTo(116708, -180425, -1200)
+MoveTo(116759, -179667, -1128)
+MoveTo(115847, -179107, -992)
+MoveTo(115606, -178988, -968) 
+MoveTo(115237, -178539, -912)
+MoveTo(115185, -178107, -880)
+Return
+// ------------------------------------------------------------------
+
+
+// Answer NPC Martin question ---------------------------------------
+Answer:
+//Q: When the pet is killed it may be resurrected within a certain amount of time. What is the maximum delay allowed before resurrection becomes impossible? 
+//A: No Limit 
+//If (DialogContain("24 hours"))
+If (DialogContain("24 ชั่วโมง"))
+{
+	//SelectDialog("24 hours")
+	SelectDialog("24 ชั่วโมง")
+	Return
+}
+
+//Q: Pets are verry useful to their owners. Which of the following is not an appropriate use of a pet? 
+//A: Makes to go to the village and buy items rather than sending on an errand. 
+//If (DialogContain("Makes to go to the village and buy items rather than sending on an errand"))
+If (DialogContain("ใช้ให้ไปซื้อของที่หมู่บ้านมาให้แทน"))
+{
+	//SelectDialog("Makes to go to the village and buy items rather than sending on an errand")
+	SelectDialog("ใช้ให้ไปซื้อของที่หมู่บ้านมาให้แทน")
+	Return
+}
+
+//Q: Which of the following is not a part of the wolf’s diet? 
+//A: No answer 
+//If (DialogContain("Which of the following is not"))
+If (DialogContain("กินสิ่งใด"))
+{
+	// SelectDialog("No answer")
+	SelectDialog("ไม่มีข้อใดถูก")
+	Return
+}
+
+//Q: How is a wolf’s tail normally positioned? 
+//A: It’s tail is always pointing straight down. 
+//If (DialogContain("It’s tail is always pointing straight down"))
+If (DialogContain("หางตกอยู่ข้างล่างตลอดเวลา"))
+{
+	//SelectDialog("It’s tail is always pointing straight down")
+	SelectDialog("หางตกอยู่ข้างล่างตลอดเวลา")
+	Return
+}
+
+//Q: The wolf is a meat-eating mammal of the canine family. Which animal among the following is not a meat-eating mammal of the canine family? 
+//A: No answer. 
+//If (DialogContain("The wolf is a meat-eating mammal"))
+If (DialogContain("ในทางชีววิทยา"))
+{
+	// SelectDialog("No answer")
+	SelectDialog("ไม่มีข้อใดถูก")
+	Return
+}
+
+//Q: The following connections are made between the wolves in the Lineage world and their habitats. Which of the following is NOT connected properly? 
+//A: Orcs? black wolf. 
+//If (DialogContain("Orcs? black wolf"))
+If (DialogContain("ออร์ค - หมาป่าดำ"))
+{
+	//SelectDialog("Orcs? black wolf")
+	SelectDialog("ออร์ค - หมาป่าดำ")
+	Return
+}
+
+//Q: Which of the following is the correct description of a wolf? 
+//A: A grown wolf is still not as heavy as a fully-grown male adult human. 
+//If (DialogContain("A grown wolf is still not as heavy as a fully-grown male adult human"))
+If (DialogContain("น้ำหนักของหมาป่าที่โตเต็มที่แล้วน้อยกว่าน้ำหนักของมนุษย์ผู้ชายที่โตเต็มที่"))
+{
+	//SelectDialog("A grown wolf is still not as heavy as a fully-grown male adult human")
+	SelectDialog("น้ำหนักของหมาป่าที่โตเต็มที่แล้วน้อยกว่าน้ำหนักของมนุษย์ผู้ชายที่โตเต็มที่")
+	Return
+}
+
+//Q: What should you do to make a pet grow faster? 
+//A: When taking down a monster, always have a pet's company.
+//If (DialogContain("Makes the pet hit monster several times"))
+If (DialogContain("ทำให้สัตว์เลี้ยงไปด้วยกันเสมอเมื่อกำจัดมอนสเตอร์"))
+{
+	//SelectDialog("Makes the pet hit monster several times")
+	SelectDialog("ทำให้สัตว์เลี้ยงไปด้วยกันเสมอเมื่อกำจัดมอนสเตอร์")
+	Return
+}
+
+//Q: What is the best way to train your pet? 
+//A: Tell your pet to hit monsters multiple times. 
+If (DialogContain("Tell your pet to hit monsters multiple times"))
+{
+	SelectDialog("Tell your pet to hit monsters multiple times")
+	Return
+}
+
+//Q: What is the normal lifespan of a wolf in captivity? 
+//A: 12-15 years 
+//If (DialogContain("12-15 years"))
+If (DialogContain("12~15ปี"))
+{
+	//SelectDialog("12-15 years")
+	SelectDialog("12~15ปี")	
+	Return
+}
+
+//Q: The following are descriptions on the life of a wolf. Choose the WRONG description among the choices. 
+//A: A pregnant wolf makes shelter in a large vacant ground for her babies. 
+If (DialogContain("A pregnant wolf makes shelter in a large vacant ground for her babies"))
+{
+	SelectDialog("A pregnant wolf makes shelter in a large vacant ground for her babies")
+	Return
+}
+
+//Q: Which of the following do not describe the life of a wolf? 
+//A: A pregnant wolf makes its home in a wide open place to have its babies.
+//If (DialogContain("A pregnant wolf makes its home in a wide open place to have its babies"))
+If (DialogContain("หมาป่าที่ท้องจะสร้างอาณาเขตกว้างๆไว้เพื่อลูก"))
+{
+	//SelectDialog("A pregnant wolf makes its home in a wide open place to have its babies")
+	SelectDialog("หมาป่าที่ท้องจะสร้างอาณาเขตกว้างๆไว้เพื่อลูก")
+	Return
+}
+
+//Q: How far (in Kilometers) can a wolf's smell reach? 
+//A: 2.4 km 
+//If (DialogContain("2.4 km"))
+If (DialogContain("2.4 km"))
+{
+	SelectDialog("2.4 km")
+	Return
+}
+
+//Q: What kind of wolf leads the rest when hunting in a pack? 
+//A: Male 
+//If (DialogContain("Male"))
+If (DialogContain("ตัวผู้"))
+{
+	//SelectDialog("Male")
+	SelectDialog("ตัวผู้")
+	Return
+}
+
+//Q: Which is not a proper descripton of the breeding of wolves? 
+//A: Pregnancy is nine months. 
+//If (DialogContain("Pregnancy is nine months"))
+If (DialogContain("ตั้งท้องเป็นเวลา 9 เดือน"))
+{
+	//SelectDialog("Pregnancy is nine months")
+	SelectDialog("ตั้งท้องเป็นเวลา 9 เดือน")
+	Return
+}
+
+//Q: What are the oldest and most primitive type of wolf on Aden? 
+//A: Dire Wolf. 
+If (DialogContain("Dire Wolf"))
+{
+	SelectDialog("Dire Wolf")
+	Return
+}
+
+//Q: What wolf lives 2.5M-10K years ago? 
+//A: Dire Wolf.
+//If (DialogContain("Dire Wolf"))
+If (DialogContain("ไดร์วูลฟ์"))
+{
+	//SelectDialog("Dire Wolf")
+	SelectDialog("ไดร์วูลฟ์")
+	Return
+}
+
+Return
+// ------------------------------------------------------------------
+
+
+
+Exit:

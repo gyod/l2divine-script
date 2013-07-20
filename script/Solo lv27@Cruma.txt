@@ -1,0 +1,103 @@
+//----------------------------------------
+// Start -> Adventurers' Guide of Town of Dion
+// Recommend*
+// Auto Counter -> On
+// Z-Limit -> On at 500
+// When not found mob -> Change hunting area
+// Timeout -> On at 5 sec
+// Item: Top Grade Weapon & Armor
+// Item: SOE x 10 for lvling 10 hr
+//----------------------------------------
+
+
+
+// If already in hunting area
+If (LocInRange(7788, 122342, -3688, 5000))
+{
+	// Start battle
+	Jump("Battle")
+}
+If (LocInRange(7252, 116906, -3664, 5000))
+{
+	// Start battle
+	Jump("Battle")
+}
+
+RecieveBuff:
+
+// If not start at Adventurers' Guide
+If (!LocInRange(17093, 145010, -3008, 200))
+{
+	// Try to move to center of town
+	MoveTo(18569, 145429, -3120)
+	MoveTo(17830, 145699, -3088)
+	MoveTo(17397, 145482, -3048)
+	MoveTo(17093, 145010, -3008)
+}
+
+// Adventurers' buff
+NpcDialog(32327)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+
+// Blessing of Protection
+NpcDialog(32327)
+Delay(1500)
+SelectDialog(2)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+
+// Go to GK
+MoveTo(16768, 144591, -2992)
+MoveTo(15717, 143035, -2696)
+
+// Teleport to Cruma
+NpcDialog(30059)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+SelectDialog(9)
+Delay(1500)
+CloseDialog()
+
+// Move to lvl place
+MoveTo(6282, 125516, -3640)
+MoveTo(7210, 124582, -3664)
+MoveTo(8638, 123468, -3712)
+MoveTo(7788, 122342, -3688)
+
+Battle:
+
+ClearHuntingArea()
+AddHuntingArea(7788, 122342, -3688, 3000)
+AddHuntingArea(7252, 116906, -3664, 2500) 
+BattleStart()
+
+CheckBuff:
+
+// Check Adventurers's Buff (Every buff should disappear together so only check windwalk)
+If (BuffLevel(4322) == 0)
+{
+	// Stop battle
+	BattleStop()
+
+	// Make sure all of aggr mob was killed
+	Delay(30000)
+
+	// Back to Dion by SOE
+	UseItem(736)
+
+	// Delay time for use SOE
+	Delay(25000)
+
+	Jump("RecieveBuff")
+}
+
+Delay(10000)
+Jump("CheckBuff")
+
+End:

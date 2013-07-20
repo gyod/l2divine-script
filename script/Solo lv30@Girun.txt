@@ -1,0 +1,85 @@
+//----------------------------------------
+// Start -> Adventurers' Guide of Town of Girun
+// Recommend*
+// Auto Counter -> On
+// Z-Limit -> On at 500
+// When not found mob -> Change hunting area
+// Timeout -> On at 5 sec
+// Item: Top Grade Weapon & Armor
+// Item: SOE x 10 for lvling 10 hr
+//----------------------------------------
+
+// If already in hunting area
+If (LocInRange(86161, 130100, -3592, 5000))
+{
+	// Start battle
+	Jump("Battle")
+}
+
+RecieveBuff:
+
+// If not start at Adventurers' Guide
+If (!LocInRange(82850, 149316, -3464, 200))
+{
+	// Move to NPC
+	MoveTo(82850, 149316, -3464)
+}
+
+// Adventurers' buff
+NpcDialog(32327)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+
+// Blessing of Protection
+NpcDialog(32327)
+Delay(1500)
+SelectDialog(2)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
+
+// Go to lvl area
+MoveTo(82840, 148182, -3464)
+MoveTo(81547, 147924, -3464)
+MoveTo(81555, 146604, -3528)
+MoveTo(81579, 144668, -3528)
+MoveTo(80795, 141404, -3584)
+MoveTo(83611, 139676, -3544)
+MoveTo(83339, 137852, -3520)
+MoveTo(84875, 135260, -3528)
+MoveTo(84427, 133180, -3648)
+MoveTo(86171, 131372, -3656)
+
+Battle:
+
+ClearHuntingArea()
+AddHuntingArea(86161, 130100, -3592, 4000)
+BattleStart()
+
+CheckBuff:
+
+// Check Adventurers's Buff (Every buff should disappear together so only check windwalk)
+If (BuffLevel(4322) == 0)
+{
+	// Stop battle
+	BattleStop()
+
+	// Make sure all of aggr mob was killed
+	Delay(30000)
+
+	// Back to Dion by SOE
+	UseItem(736)
+
+	// Delay time for use SOE
+	Delay(25000)
+
+	Jump("RecieveBuff")
+}
+
+Delay(10000)
+Jump("CheckBuff")
+
+End:

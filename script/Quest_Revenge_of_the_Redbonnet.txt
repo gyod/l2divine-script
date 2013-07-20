@@ -1,0 +1,75 @@
+// ------------------------------------------------------------------
+// LV:		15
+// Location:	Dwarven village
+// NPC:		Redbonnet
+// Target:	Blackwolf
+// Quest Item:	Black Wolf Pelt x 40
+// Reward:	Scroll of Escape x 1
+//		Grandma's Hairpin x 1
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+
+// Move to NPC
+MoveTo(116633, -183771, -1568)
+MoveTo(116813, -183629, -1568)
+
+// Talk with Redbonnet to accept quest
+NpcDialog(30553)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+
+// Move to blackwolf location
+MoveTo(116633, -183771, -1568)
+MoveTo(116504, -183755, -1560)
+MoveTo(116548, -184397, -1568)
+MoveTo(116633, -185163, -1744)
+MoveTo(117115, -186064, -2088)
+MoveTo(117678, -186667, -2384)
+MoveTo(118566, -187339, -2776)
+MoveTo(119119, -188103, -3096)
+MoveTo(119674, -188351, -3264)
+MoveTo(120054, -187729, -3304)
+MoveTo(119537, -186438, -3248)
+
+// Start battle
+Battle:
+
+// Use default battle setting
+BattleStart()
+
+// Fight until Black Wolf Pelt == 40
+While (CountItem(1482) < 40)
+{
+	Delay(10000)
+}
+
+// Stop battle
+BattleStop()
+
+// Back to Redbonnet
+MoveTo(119537, -186438, -3248)
+MoveTo(120054, -187729, -3304)
+MoveTo(119674, -188351, -3264)
+MoveTo(119119, -188103, -3096)
+MoveTo(118566, -187339, -2776)
+MoveTo(117678, -186667, -2384)
+MoveTo(117115, -186064, -2088)
+MoveTo(116633, -185163, -1744)
+MoveTo(116548, -184397, -1568)
+MoveTo(116504, -183755, -1560)
+MoveTo(116633, -183771, -1568)
+MoveTo(116813, -183629, -1568)
+
+// Talk with Redbonnet
+NpcDialog(30553)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+
+Jump("Start")

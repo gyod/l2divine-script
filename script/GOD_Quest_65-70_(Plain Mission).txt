@@ -1,0 +1,146 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// LV:		65-70
+// Start Loc:	Goddard GK
+// Target:	Defeat Monster list:-
+//		Buffalo x 10
+//		Bandersnach x 10
+//		Grendel x 10
+//		Antelop	x 10
+// Setting:	Auto Counter - On
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's hunt some orc!")
+
+// At 1st the battle area					
+If (LocInRange(143485, -61393, -3168, 2500))
+{
+	Jump("Battle1")
+}
+
+If (LocInRange(137013, -47431, -3072, 3000))
+{
+	Jump("Battle2")
+}
+
+Begin:
+
+// Spawn location
+Include("Goddard_Spawn_Loc.txt")
+
+// Get Quest
+MoveTo(148030, -55297, -2728)
+NpcDialog(33463)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog("[Plain Mission]")
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Get Adventurer buff
+MoveTo(148030, -55297, -2728)
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Servitor Buff
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Go to outside town
+MoveTo(147797, -55496, -2728)
+MoveTo(147656, -56049, -2760)
+MoveTo(146352, -56249, -2776)
+MoveTo(145298, -56986, -2976)
+MoveTo(144802, -57530, -2976)
+MoveTo(143146, -58666, -3432)
+
+Battle1:
+
+ClearHuntingArea()
+AddRectHuntingArea(143485, -61393, -3168, 2500)
+SetBattleArea(143485, -61393, -3168, 2500)
+
+BattleStart()
+
+BattleLoop1:
+
+// Bandersnatch
+If (CountQuestDefeatNpc(21282) < 12)
+{
+	Delay(5000)
+	Jump("BattleLoop1")
+}
+
+// Antelop
+If (CountQuestDefeatNpc(21278) < 12)
+{
+	Delay(5000)
+	Jump("BattleLoop1")
+}
+
+// Buffalo
+If (CountQuestDefeatNpc(21286) < 12)
+{
+	Delay(5000)
+	Jump("BattleLoop1")
+}
+
+Msg(Console, "Done#1: Go to Grendel")
+BattleStop()
+
+// Move to 2nd location
+MoveTo(143026, -58751, -3440)
+MoveTo(142544, -58396, -3384)
+MoveTo(142176, -56188, -3472)
+MoveTo(141168, -55308, -3256)
+MoveTo(139712, -55596, -3272)
+MoveTo(139360, -55164, -3272)
+MoveTo(139120, -53996, -3144)
+MoveTo(139888, -52508, -2832)
+MoveTo(139312, -51380, -2696)
+MoveTo(137013, -47431, -3072)
+
+Battle2:
+
+ClearHuntingArea()
+AddRectHuntingArea(137013, -47431, -3072, 3000)
+SetBattleArea(137013, -47431, -3072, 3000)
+
+BattleStart()
+
+BattleLoop2:
+
+// Grendel
+If (CountQuestDefeatNpc(21290) < 12)
+{
+	Delay(5000)
+	Jump("BattleLoop2")
+}
+
+Msg(Console, "Done#2: Quest Complete")
+BattleStop()
+
+Delay(5000)
+UseItem(736)
+Delay(20000)
+
+Exit:

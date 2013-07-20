@@ -1,0 +1,36 @@
+Enchant:
+
+// Count Saber
+If (CountItem(123) <= 0)
+{
+	Msg(Console, "Saber run out")
+	Jump("Exit")
+}
+
+// Count Scroll: Enchant Weapon (D)
+If (CountItem(955) <= 0)
+{
+	Msg(Console, "Scroll: Enchant Weapon (D) run out")
+	Jump("Exit")
+}
+
+// Enchant until +16
+If (EnchantLevel(123) >= 16)
+{
+	Msg(Console, "Reach enchant level")
+	Jump("Exit")
+}
+
+// Count down for + or crystal!
+Msg(Console, "1!")
+Delay(1000)
+Msg(Console, "2!")
+Delay(1000)
+Msg(Console, "3!")
+
+// Enchant Saber
+EnchantItem(123, 955)
+
+Jump("Enchant")
+
+Exit:

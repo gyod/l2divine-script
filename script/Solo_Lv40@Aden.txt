@@ -1,0 +1,128 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// LV:		40-45
+// Start Loc:	Near Adventurers' Guide of Aden
+// Target:	Vanor Silenos
+// Setting:	Auto Counter - On
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's hunt some orc!")
+
+Begin:
+
+// At the battle area
+If (LocInRange(135394, 25264, -3720, 8000))
+{
+	Jump("Battle")
+}
+
+// Get Adventurer buff
+MoveTo(147081, 25866, -2008)
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Buy necessary item
+If (CountItem(1464) < 3000)
+{
+	MoveTo(147395, 25889, -2008)
+	MoveTo(147436, 26852, -2200)
+	MoveTo(146820, 27244, -2200) 
+	MoveTo(146756, 28236, -2264)
+	MoveTo(146060, 28268, -2248)
+	MoveTo(146076, 28068, -2248)
+
+	// Hally
+	NpcDialog(30839)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+
+	AddItem(1464, 4000)
+	Confirm()
+
+	Delay(2000)
+	CloseDialog()
+	CloseWindow()
+
+	MoveTo(146085, 28261, -2248)
+	MoveTo(146533, 28237, -2264)
+	MoveTo(146557, 27661, -2264)
+}
+Else 
+{
+	MoveTo(147395, 25889, -2008)
+	MoveTo(147436, 26852, -2200)
+	MoveTo(146820, 27244, -2200)
+}
+
+MoveTo(145013, 27605, -2264)
+MoveTo(145021, 26325, -2264)
+MoveTo(142445, 26357, -2392)
+MoveTo(141528, 26445, -2448)
+MoveTo(141307, 29331, -2328)
+MoveTo(139419, 29011, -2496)
+MoveTo(138779, 27763, -2800)
+MoveTo(137115, 26643, -3256)
+MoveTo(135394, 25264, -3720)
+
+Battle:
+
+ClearHuntingArea()
+AddHuntingArea(133518, 25343, -3760, 1500)
+AddRectHuntingArea(135394, 25264, -3720, 2000)
+AddRectHuntingArea(136246, 20881, -3552, 2500)
+BattleStart()
+
+BattleLoop:
+
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
+{
+	Jump("BackTown")
+}
+
+// Die -*-
+If (Char.HP == 0)
+{
+	Jump("BackTown")
+}
+
+Delay(5000)
+Jump("BattleLoop")
+
+BackTown:
+
+BattleStop()
+
+// Back to nearest village
+If (Char.HP > 0)
+{
+	Msg(Console, "Delay 30 sec!")
+	Delay(30000)
+	MoveTo(135394, 25264, -3720)
+	MoveTo(137115, 26643, -3256)
+	MoveTo(138779, 27763, -2800)
+	MoveTo(139419, 29011, -2496)
+	MoveTo(141307, 29331, -2328)
+	MoveTo(141528, 26445, -2448)
+	MoveTo(144944, 26304, -2264)
+	MoveTo(145061, 24239, -2136)
+	MoveTo(146228, 24261, -2008)
+	MoveTo(146356, 25733, -2008)
+}
+Else
+{
+	ReturnToVillage()
+	Delay(5000)
+}
+
+Jump("Begin")
+
+Exit:

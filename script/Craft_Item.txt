@@ -1,0 +1,71 @@
+Craft:
+
+// Create Soulshot: D Grade x 1000
+While (CountItem(1463) < 1000)
+{
+
+	// Buy Crystal D-Grade
+	If (CountItem(1458) < 3)
+	{
+		MoveTo(115015, -178066, -864 )
+
+		// Talk with Mr.CAT
+		NpcDialog(31756)
+		Delay(2000)
+
+		// Select list no. 6,1 to buy item
+		SelectDialog(6)
+		Delay(2000)
+		SelectDialog(1)
+		Delay(2000)
+
+		// Add Crystal D-Grade x 3 to trade list
+		AddItem(1458, 3)
+
+		// Confirm trade
+		Confirm()
+
+		// Close openning dialog
+		CloseDialog()
+	}
+
+	// Buy Soul Ore
+	If (CountItem("Soul Ore") < 9)
+	{
+		MoveTo(116217, -177555, -880)
+
+		// Talk with Trader Mion
+		NpcDialog("Mion")
+		Delay(2000)
+
+		// Select list no. 1 to buy item
+		SelectDialog(1)
+		Delay(2000)
+
+		// Add Soul Ore x 9 to trade list
+		AddItem(1785, 9)
+
+		// Confirm trade
+		Confirm()
+
+		// Close openning dialog
+		CloseDialog()
+	}
+
+	// Create Soulshot: D Grade
+	CraftItem(20)
+}
+
+// Start to sell
+TradeStart()
+
+// Wait until soldout
+While (CountItem(1463) > 0)
+{
+	Delay(10000)
+}
+
+// Stop
+TradeStop()
+
+Jump("Craft")

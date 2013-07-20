@@ -1,0 +1,31 @@
+// Talk with Trader Simplon
+NpcDialog(30253)
+Delay(500)
+
+// Select link#1
+SelectDialog(1)
+Delay(1500)
+
+// Select link#1
+SelectDialog(1)
+Delay(1000)
+
+// Start to buy/sell/repurchase item from/to NPC (G+ only)
+// Buy()
+// Sell()
+Repurchase()
+Delay(1000)
+
+// Add  Cotton Pants x 1 to purchase list
+AddItem(412, 1)
+Delay(1000)
+
+// Confirm trade
+Confirm()
+
+// Close openning dialog
+CloseDialog()
+
+// Close all opened window under current game account
+Delay(1000)
+CloseWindow()

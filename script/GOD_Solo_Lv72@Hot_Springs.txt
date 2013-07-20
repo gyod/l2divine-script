@@ -1,0 +1,196 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// LV:		72
+// Start Loc:	Goddard's GK
+// Target:	Hotspring
+// Setting:	Auto Counter - On
+// Item:	SOE x 50
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's hunt some orc!")
+
+// At the battle area					
+If (LocInRange(143700, -109054, -3496, 3500))
+{
+	Jump("Battle")
+}
+
+Begin:
+
+// Spawn location
+Include("Goddard_Spawn_Loc.txt")
+
+// Get free item
+NpcDialog(33463)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Get Quest
+MoveTo(148030, -55297, -2728)
+NpcDialog(33463)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog("[Hot Spring Water]")
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+Jump("Get_Buff")
+
+// Get Miracle of Tree (Aden)
+If (CountItem(22620) == 0)
+{
+	MoveTo(147961, -55256, -2728)
+	NpcDialog(31275)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	SelectDialog(7)
+	Delay(2000)
+	CloseDialog()
+	Delay(5000)
+
+	MoveTo(147327, 25790, -2008)
+	MoveTo(147589, 26602, -2200)
+	MoveTo(147761, 26966, -2200)
+	MoveTo(148001, 27050, -2200)
+
+	// Move around tree
+	MoveTo(147473, 28282, -2264)
+	MoveTo(147929, 27990, -2264)
+	MoveTo(147473, 28282, -2264)
+	MoveTo(147929, 27990, -2264)
+	
+	// Back to Goddard
+	MoveTo(147910, 27881, -2264)
+	MoveTo(147870, 27049, -2200)
+	MoveTo(147462, 26505, -2192)
+	MoveTo(147460, 25799, -2008)
+	MoveTo(146728, 25813, -2008)
+
+	NpcDialog(30848)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()
+	Delay(5000)
+}
+
+Get_Buff:
+
+// Get buff when level < 76
+If (Char.LV < 76)
+{
+	// Get Adventurer buff
+	MoveTo(148030, -55297, -2728)
+	NpcDialog(32327)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()
+
+	// Servitor Buff
+	NpcDialog(32327)
+	Delay(2000)
+	SelectDialog(2)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()
+}
+
+// Go to Hot Springs
+NpcDialog(31275)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(12)
+Delay(2000)
+CloseDialog()
+
+Delay(5000)
+
+MoveTo(145152, -113084, -2544)
+MoveTo(144512, -112508, -3256)
+MoveTo(144240, -111500, -3560)
+MoveTo(143888, -110588, -3560)
+
+Battle:
+
+ClearHuntingArea()
+AddRectHuntingArea(143700, -109054, -3496, 3500)
+SetBattleArea(143700, -109054, -3496, 3500)
+
+BattleStart()
+
+// Use Miracle of Tree
+UseItem(22620)
+
+BattleLoop:
+
+// Craft SSA
+//If (CountItem(1466) < 300)
+//{
+//	CraftItem(23)
+//}
+
+// Skip when level 76
+If (Char.LV > 75)
+{
+	Jump("Check_HP")
+}
+
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
+{
+	Msg(Console, "No Buff!!!")
+	Jump("BackTown")
+}
+
+Check_HP:
+
+// Die -*-
+If (Char.HP == 0)
+{
+	Jump("BackTown")
+}
+
+Delay(5000)
+Jump("BattleLoop")
+
+BackTown:
+
+BattleStop()
+
+// Back to nearest village
+If (Char.HP > 0)
+{
+	Msg(Console, "Delay 5 sec!")
+	Delay(5000)
+	Stand()
+	UseItem(736)
+	Delay(20000)
+}
+Else
+{
+	ReturnToVillage()
+	Delay(5000)
+}
+
+Jump("Begin")
+
+Exit:

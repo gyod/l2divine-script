@@ -1,0 +1,19 @@
+While (CountItem("Seed: Great Cobol") < 100)
+{
+	// Talk with Giran Manor Manager
+	NpcDialog(35187)
+	Delay(500)
+
+	// Select link "Buy Seed" (Link 1)
+	SelectDialog(1)
+	Delay(500)
+
+	// Add Great Cobol x 100 to trade list
+	AddItem("Seed: Great Cobol", 100)
+
+	// Confirm trade
+	Confirm()
+
+	// Close openning dialog
+	CloseDialog()
+}

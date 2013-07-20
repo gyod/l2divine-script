@@ -1,0 +1,194 @@
+// ------------------------------------------------------------------
+// Auther:	Zariche
+// Quest:	Path of the Orc Raider
+// LV:		18+
+// Race:	Orc
+// Start Loc:	Near Newbie Guide at Orc village
+// NPC:		Karukia
+//		Kasman
+//		Osborn
+// Require:	Scroll of Escape x 2
+// Target:	Goblin Tomb Raider Leader
+//		Kuruka Ratman Leader
+//		Umbar Orc
+// Quest Item:	Goblin Dwelling Map x 1
+//		Green Blood
+//		Kuruka Ratman Tooth x 10
+//		Head of Betrayer x 2
+// Reward:	Exp 320534
+//		SP 21312
+//		Shadow Item Exchange Coupon (D-Grade) x 15
+// ------------------------------------------------------------------
+
+// Start the quest
+Start:
+Msg(Console, "Let's RIDER!")
+
+// Get Adventurer buff
+MoveTo(-45107, -113546, -192)
+NpcDialog(30602)
+Delay(2000)
+SelectDialog(6)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Not accept quest (Goblin Dwelling Map x 1)
+If (CountItem(1579) == 0)
+{
+	// Move to NPC Karukia
+	MoveTo(-45107, -113546, -192)
+	MoveTo(-45566, -113543, -240)
+	MoveTo(-46150, -113551, -200)
+	MoveTo(-46182, -114383, -200)
+	MoveTo(-46006, -114455, -200)
+
+	// Accept Quest - Path of the Orc Raider
+	NpcDialog(30570)
+	Delay(2000)
+	SelectDialog(4)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()
+
+	MoveTo(-46006, -114455, -200)
+	MoveTo(-46182, -114383, -200)
+	MoveTo(-46150, -113551, -200)
+	MoveTo(-45566, -113543, -240)
+	MoveTo(-45107, -113546, -192)
+}
+
+// Teleport to The Immortal Plateau
+MoveTo(-45123, -112490, -240)
+NpcDialog(30576)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(10)
+Delay(2000)
+CloseDialog()
+
+// Prepare battle area
+MoveTo(-12656, -115983, -2192)
+ClearHuntingArea()
+AddHuntingArea(-12656, -115983, -2192, 2500)
+BattleStart()
+
+// Collect Kuruka Ratman Tooth x 10
+While (CountItem(1580) < 10)
+{
+	Delay(3000)
+}
+
+// Wait to clear engage mob
+BattleStop()
+Delay(5000)
+
+// Back to NPC Karukia
+UseItem(736)
+Delay(25000)
+
+MoveTo(-45107, -113546, -192)
+MoveTo(-45107, -113546, -192)
+MoveTo(-45566, -113543, -240)
+MoveTo(-46150, -113551, -200)
+MoveTo(-46182, -114383, -200)
+MoveTo(-46006, -114455, -200)
+
+// Talk to Karukia
+NpcDialog(30570)
+Delay(2000)
+SelectDialog(4)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Teleport to Gludio
+MoveTo(-46006, -114455, -200)
+MoveTo(-46182, -114383, -200)
+MoveTo(-46150, -113551, -200)
+MoveTo(-45566, -113543, -240)
+MoveTo(-45107, -113546, -192)
+MoveTo(-45123, -112490, -240)
+
+NpcDialog(30576)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
+
+// Teleport to Dark Elf village
+NpcDialog(30256)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(11)
+Delay(2000)
+CloseDialog()
+
+// Teleport to Spider Nest
+NpcDialog(30134)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(9)
+Delay(2000)
+CloseDialog()
+
+MoveTo(-61386, 76074, -3344)
+MoveTo(-64804, 76851, -3296)
+MoveTo(-65756, 78581, -3344)
+MoveTo(-65845, 81112, -3296)
+MoveTo(-67624, 80599, -3336)
+MoveTo(-71169, 83443, -3472)
+MoveTo(-73377, 83603, -3360)
+
+// Prepare battle area
+ClearHuntingArea()
+AddHuntingArea(-73377, 83603, -3360, 2500)
+BattleStart()
+
+While (CountItem(1591) < 2)
+{
+	Delay(3000)
+}
+
+// Wait to clear engage mob
+BattleStop()
+Delay(5000)
+
+// Back to Dark Elf village
+UseItem(736)
+Delay(25000)
+
+// Teleport to Gludin
+MoveTo(10227, 17050, -4584)
+MoveTo(9763, 15690, -4568)
+NpcDialog(30134)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+CloseDialog()
+
+// Move to Kasman
+MoveTo(-81564, 150506, -3120)
+MoveTo(-83052, 151162, -3120)
+MoveTo(-83068, 152730, -3168)
+MoveTo(-80765, 152749, -3168)
+MoveTo(-80684, 153374, -3168)
+
+// Talk to Kasman
+NpcDialog(30501)
+Delay(2000)
+SelectDialog(4)
+Delay(2000)
+CloseDialog()
+
+Msg(Console, "Talk to Osborn to completed a class transfer!")
