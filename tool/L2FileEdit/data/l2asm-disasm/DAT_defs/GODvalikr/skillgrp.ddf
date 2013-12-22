@@ -1,4 +1,4 @@
-//Sakaszli power
+//early version submitted by Allen (L2Sexi Server)
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -17,12 +17,9 @@ ORD_IGNORE = 0;
 	UINT UNK_1;
 	FLOAT hit_time[3];
 	INT is_magic;
-	UINT UNK_2[3];
-	INT newCounter;
-	INT newCounter2;
-
-	UNICODE ani_char[newCounter];
-	UNICODE desc[newCounter];
+	UINT UNK_2[5];
+	UNICODE ani_char;
+	UNICODE desc;
 	UNICODE icon_name;
 	UNICODE icon_name2;
 	UINT extra_eff;
