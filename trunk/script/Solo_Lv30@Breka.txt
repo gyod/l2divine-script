@@ -45,9 +45,9 @@ If (CountItem(1463) < 1000)
 MoveTo(82881, 149340, -3464)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
@@ -69,8 +69,8 @@ ClearHuntingArea()
 AddRectHuntingArea(88922, 130887, -3688, 2500)
 BattleStart()
 
-// Fight until Horn Melody (Adventurer) warn off
-While (CharBuffLevel(15642) > 0)
+// Fight until buff timeout
+While (BuffLevel(4322) > 0)
 {
 	Delay(5000)
 }

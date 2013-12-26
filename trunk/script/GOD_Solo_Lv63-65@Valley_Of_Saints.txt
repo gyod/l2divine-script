@@ -16,7 +16,7 @@ Msg(Console, "Let's hunt some orc!")
 //UseSkill(25)
 //Delay(15000)
 
-// At the battle area
+// At the battle area					
 If (LocInRange(73352, -75151, -3648, 4000))
 {
 	Jump("Battle")
@@ -31,20 +31,20 @@ Include("Rune_Spawn_Loc.txt")
 MoveTo(43566, -47683, -792)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
 // Servitor Buff
-//NpcDialog(32327)
-//Delay(2000)
-//SelectDialog(2)
-//Delay(2000)
-//SelectDialog(1)
-//Delay(2000)
-//CloseDialog()
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
 
 // Go to Valley of Saints
 MoveTo(43722, -47839, -792)
@@ -79,8 +79,8 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until Horn Melody (Adventurer) warn off
-If (CharBuffLevel(15642) == 0)
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")
@@ -89,7 +89,6 @@ If (CharBuffLevel(15642) == 0)
 // Die -*-
 If (Char.HP == 0)
 {
-	Msg(Console, "U Dead!!!")
 	Jump("BackTown")
 }
 

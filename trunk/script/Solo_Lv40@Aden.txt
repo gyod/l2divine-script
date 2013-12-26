@@ -22,9 +22,9 @@ If (LocInRange(135394, 25264, -3720, 8000))
 MoveTo(147081, 25866, -2008)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
@@ -82,8 +82,8 @@ BattleStart()
 
 BattleLoop:
 
-// Fight until Horn Melody (Adventurer) warn off
-If (CharBuffLevel(15642) == 0)
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
 {
 	Jump("BackTown")
 }

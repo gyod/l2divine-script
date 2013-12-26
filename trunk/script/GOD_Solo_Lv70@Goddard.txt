@@ -16,7 +16,7 @@ Msg(Console, "Let's hunt some orc!")
 //UseSkill(25)
 //Delay(15000)
 
-// At the battle area
+// At the battle area					
 If (LocInRange(137013, -47431, -3072, 3500))
 {
 	Jump("Battle")
@@ -69,14 +69,14 @@ Include("Goddard_Spawn_Loc.txt")
 //}
 
 // Get Adventurer buff
-MoveTo(148030, -55297, -2728)
-NpcDialog(32327)
-Delay(2000)
-SelectDialog(2)
-Delay(2000)
-SelectDialog(2)
-Delay(2000)
-CloseDialog()
+//MoveTo(148030, -55297, -2728)
+//NpcDialog(32327)
+//Delay(2000)
+//SelectDialog(1)
+//Delay(2000)
+//SelectDialog(1)
+//Delay(2000)
+//CloseDialog()
 
 // Servitor Buff
 //NpcDialog(32327)
@@ -125,12 +125,12 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until Horn Melody (Adventurer) warn off
-If (CharBuffLevel(15642) == 0)
-{
-	Msg(Console, "No Buff!!!")
-	Jump("BackTown")
-}
+// Fight until shield warn off
+//If (BuffLevel(4323) == 0)
+//{
+//	Msg(Console, "No Buff!!!")
+//	Jump("BackTown")
+//}
 
 // Die -*-
 If (Char.HP == 0)
