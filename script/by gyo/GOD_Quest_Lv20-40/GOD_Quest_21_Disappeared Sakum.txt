@@ -42,11 +42,6 @@ Delay(3000)
 CloseDialog()
 Delay(2000)
 
-// Get Buff
-10333_GetBuff:
-MoveTo(-14700, 123990, -3120)
-Include("Snippet_Lv20_Get_Adventurers_Buff.txt")
-
 // Talk to Bella
 10333_GoToWindmillHill:
 MoveTo(-14500, 124000, -3120)
