@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		55-60
 // Start Loc:	GK
 // Target:	Paliote, Hamrut, Yinzu, Kranrot
@@ -16,7 +16,7 @@ Msg(Console, "Let's hunt some orc!")
 //UseSkill(25)
 //Delay(15000)
 
-// At the battle area					
+// At the battle area
 If (LocInRange(173858, 42689, -4948, 3500))
 {
 	Jump("Battle")
@@ -31,18 +31,9 @@ Include("Aden_Spawn_Loc.txt")
 MoveTo(147081, 25866, -2008)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
-SelectDialog(1)
-Delay(2000)
-CloseDialog()
-
-// Servitor Buff
-NpcDialog(32327)
-Delay(2000)
 SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 
@@ -73,8 +64,8 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until shield warn off
-If (BuffLevel(4323) == 0)
+// Fight until buff warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")

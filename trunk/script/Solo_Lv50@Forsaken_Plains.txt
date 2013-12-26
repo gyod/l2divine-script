@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		50-60
 // Start Loc:	GK
 // Target:	Fallen Orc
@@ -31,17 +31,9 @@ Include("Aden_Spawn_Loc.txt")
 MoveTo(147081, 25866, -2008)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
-SelectDialog(1)
-Delay(2000)
-CloseDialog()
-
-NpcDialog(32327)
-Delay(2000)
 SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 
@@ -78,8 +70,8 @@ If (CountItem(1465) < 300)
 	CraftItem(22)
 }
 
-// Fight until shield warn off
-If (BuffLevel(4323) == 0)
+// Fight until buff warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Jump("BackTown")
 }

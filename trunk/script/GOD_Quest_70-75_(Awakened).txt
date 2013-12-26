@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		70
 // Start Loc:	Goddard's GK
 // Target:	Canyon Antelope Slave, Canyon Bandersnatch
@@ -12,7 +12,7 @@
 Start:
 Msg(Console, "Let's hunt some orc!")
 
-// At the battle area					
+// At the battle area
 If (LocInRange(177091, -62202, -3064, 2000))
 {
 	Jump("Battle")
@@ -95,18 +95,9 @@ If (CountItem(22620) == 0)
 MoveTo(148030, -55297, -2728)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
-SelectDialog(1)
-Delay(2000)
-CloseDialog()
-
-// Servitor Buff
-NpcDialog(32327)
-Delay(2000)
 SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 
@@ -152,8 +143,8 @@ If (CountItem(19496) == 45)
 //	CraftItem(23)
 //}
 
-// Fight until shield warn off
-If (BuffLevel(4323) == 0)
+// Fight until buff warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")

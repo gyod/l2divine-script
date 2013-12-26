@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		65-70
 // Start Loc:	Goddard GK
 // Target:	Defeat Monster list:-
@@ -14,7 +14,7 @@
 Start:
 Msg(Console, "Let's hunt some orc!")
 
-// At 1st the battle area					
+// At 1st the battle area
 If (LocInRange(143485, -61393, -3168, 2500))
 {
 	Jump("Battle1")
@@ -50,18 +50,9 @@ CloseDialog()
 MoveTo(148030, -55297, -2728)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
-SelectDialog(1)
-Delay(2000)
-CloseDialog()
-
-// Servitor Buff
-NpcDialog(32327)
-Delay(2000)
 SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 

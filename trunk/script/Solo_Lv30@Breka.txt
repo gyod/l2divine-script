@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		25-35
 // Start Loc:	Near Adventurers' Guide at Girun
 // Target:	Breka Orc
@@ -45,9 +45,9 @@ If (CountItem(1463) < 1000)
 MoveTo(82881, 149340, -3464)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 
@@ -70,7 +70,7 @@ AddRectHuntingArea(88922, 130887, -3688, 2500)
 BattleStart()
 
 // Fight until buff timeout
-While (BuffLevel(4322) > 0)
+While (CharBuffLevel(15642) > 0)
 {
 	Delay(5000)
 }
@@ -90,7 +90,7 @@ MoveTo(83849, 141022, -3544)
 MoveTo(83865, 143550, -3400)
 MoveTo(83865, 146334, -3400)
 MoveTo(83897, 147438, -3400)
-MoveTo(83561, 148142, -3400) 
+MoveTo(83561, 148142, -3400)
 MoveTo(82713, 148254, -3464)
 MoveTo(82777, 149166, -3464)
 

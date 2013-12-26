@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		70
 // Start Loc:	GK
 // Target:	Grendel
@@ -16,7 +16,7 @@ Msg(Console, "Let's hunt some orc!")
 //UseSkill(25)
 //Delay(15000)
 
-// At the battle area					
+// At the battle area
 If (LocInRange(137013, -47431, -3072, 3500))
 {
 	Jump("Battle")
@@ -125,8 +125,8 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until shield warn off
-//If (BuffLevel(4323) == 0)
+// Fight until buff warn off
+//If (CharBuffLevel(15642) == 0)
 //{
 //	Msg(Console, "No Buff!!!")
 //	Jump("BackTown")
