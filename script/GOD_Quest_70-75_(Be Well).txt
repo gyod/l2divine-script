@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		70
 // Start Loc:	Rune's GK
 // Target:	Stakatos
@@ -12,7 +12,7 @@
 Start:
 Msg(Console, "Let's hunt some orc!")
 
-// At the battle area					
+// At the battle area
 If (LocInRange(71357, -52586, -3088, 4000))
 {
 	Jump("Battle")
@@ -52,18 +52,9 @@ CloseDialog()
 // Get Adventurer buff
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
-SelectDialog(1)
-Delay(2000)
-CloseDialog()
-
-// Servitor Buff
-NpcDialog(32327)
-Delay(2000)
 SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 
@@ -116,8 +107,8 @@ If (CountItem(19498) == 80)
 //	CraftItem(23)
 //}
 
-// Fight until shield warn off
-If (BuffLevel(4323) == 0)
+// Fight until buff warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")

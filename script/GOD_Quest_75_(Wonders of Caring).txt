@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		75
 // Start Loc:	Aden's GK
 // Target:	Chimera Pieces, Solder of Ancient Times
@@ -12,7 +12,7 @@
 Start:
 Msg(Console, "Let's hunt some orc!")
 
-// At the battle area					
+// At the battle area
 If (LocInRange(173492, 57078, -5920, 2500))
 {
 	Jump("Battle")
@@ -46,26 +46,17 @@ SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
-// Get buff when level < 76
-If (Char.LV < 76)
+// Get buff when level < 86
+If (Char.LV < 86)
 {
 	// Get Adventurer buff
 	NpcDialog(32327)
 	Delay(2000)
-	SelectDialog(1)
-	Delay(2000)
-	SelectDialog(1)
-	Delay(2000)
-	CloseDialog()
-
-	// Servitor Buff
-	NpcDialog(32327)
+	SelectDialog(2)
 	Delay(2000)
 	SelectDialog(2)
 	Delay(2000)
-	SelectDialog(1)
-	Delay(2000)
-	CloseDialog()	
+	CloseDialog()
 }
 
 MoveTo(146810, 25790, -2008)
@@ -121,8 +112,8 @@ If (Char.LV > 75)
 	Jump("Check_HP")
 }
 
-// Fight until shield warn off
-If (BuffLevel(4323) == 0)
+// Fight until buff warn off
+If (CharBuffLevel(15642) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")

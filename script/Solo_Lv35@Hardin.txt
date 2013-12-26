@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		30-40
 // Start Loc:	Near Adventurers' Guide at Hunters Village
 // Target:	Windsus
@@ -21,7 +21,7 @@ Begin:
 // If teleport back to Girun
 If (LocInRange(82881, 149340, -3464, 5000))
 {
-	Jump("Girun")	
+	Jump("Girun")
 }
 
 // Buy item in Hunters Village
@@ -29,7 +29,7 @@ If (CountItem(1463) < 3000)
 {
 	MoveTo(116746, 76412, -2728)
 	MoveTo(115889, 75337, -2592)
-	MoveTo(116105, 75249, -2592) 
+	MoveTo(116105, 75249, -2592)
 	MoveTo(116417, 75217, -2592)
 	MoveTo(116609, 74865, -2584)
 
@@ -51,7 +51,7 @@ If (CountItem(1463) < 3000)
 
 	MoveTo(116609, 74865, -2584)
 	MoveTo(116417, 75217, -2592)
-	MoveTo(116105, 75249, -2592) 
+	MoveTo(116105, 75249, -2592)
 	MoveTo(115889, 75337, -2592)
 	MoveTo(116746, 76412, -2728)
 }
@@ -118,9 +118,9 @@ If (CountItem(1463) < 3000)
 MoveTo(82881, 149340, -3464)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 
@@ -156,7 +156,7 @@ BattleStart()
 BattleLoop:
 
 // Fight until buff timeout
-If (BuffLevel(4322) == 0)
+If (CharBuffLevel(15642) == 0)
 {
 	Jump("BackTown")
 }

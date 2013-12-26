@@ -1,5 +1,5 @@
 //----------------------------------------
-// Start -> Adventurers' Guide of Town of Girun
+// Start -> Adventurers' Guide of Town of Girun (fixed for Valiance by gyo)
 // Recommend*
 // Auto Counter -> On
 // Z-Limit -> On at 500
@@ -28,15 +28,15 @@ If (!LocInRange(82850, 149316, -3464, 200))
 // Adventurers' buff
 NpcDialog(32327)
 Delay(1500)
-SelectDialog(1)
+SelectDialog(2)
 Delay(1500)
-SelectDialog(1)
+SelectDialog(2)
 Delay(1500)
 
 // Blessing of Protection
 NpcDialog(32327)
 Delay(1500)
-SelectDialog(2)
+SelectDialog(3)
 Delay(1500)
 SelectDialog(1)
 Delay(1500)
@@ -61,8 +61,8 @@ BattleStart()
 
 CheckBuff:
 
-// Check Adventurers's Buff (Every buff should disappear together so only check windwalk)
-If (BuffLevel(4322) == 0)
+// Check Adventurers's Buff (Every buff should disappear together so only check 'Horn Melody (Adventurer)')
+If (CharBuffLevel(15642) == 0)
 {
 	// Stop battle
 	BattleStop()

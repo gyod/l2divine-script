@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// Auther:	Zariche
+// Auther:	Zariche (fixed for Valiance by gyo)
 // LV:		65-75
 // Start Loc:	GK
 // Target:	Buffalo, Bandersnatch
@@ -16,7 +16,7 @@ Msg(Console, "Let's hunt some orc!")
 //UseSkill(25)
 //Delay(15000)
 
-// At the battle area					
+// At the battle area
 If (LocInRange(141482, -58583, -3224, 2800))
 {
 	Jump("Battle")
@@ -72,18 +72,9 @@ Include("Goddard_Spawn_Loc.txt")
 MoveTo(148030, -55297, -2728)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(1)
-Delay(2000)
-SelectDialog(1)
-Delay(2000)
-CloseDialog()
-
-// Servitor Buff
-NpcDialog(32327)
-Delay(2000)
 SelectDialog(2)
 Delay(2000)
-SelectDialog(1)
+SelectDialog(2)
 Delay(2000)
 CloseDialog()
 
@@ -114,8 +105,8 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until shield warn off
-//If (CharBuffLevel(4323) == 0)
+// Fight until buff warn off
+//If (CharBuffLevel(15642) == 0)
 //{
 //	Msg(Console, "No Buff!!!")
 //	Jump("BackTown")
