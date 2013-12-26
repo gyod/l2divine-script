@@ -1,7 +1,3 @@
-1.4.1
-	updated to Freya (ct2.5)
-	version bump
-	chargrp.ddf from ct2.5 have been backported a bit too
 1.4.0
 	updated to Gracia Final (ct2.4)
 	rebuilt with fresh toolchain and more modern flex -
