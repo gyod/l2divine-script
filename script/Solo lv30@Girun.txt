@@ -28,18 +28,18 @@ If (!LocInRange(82850, 149316, -3464, 200))
 // Adventurers' buff
 NpcDialog(32327)
 Delay(1500)
-SelectDialog(2)
+SelectDialog(1)
 Delay(1500)
-SelectDialog(2)
+SelectDialog(1)
 Delay(1500)
 
 // Blessing of Protection
-//NpcDialog(32327)
-//Delay(1500)
-//SelectDialog(2)
-//Delay(1500)
-//SelectDialog(1)
-//Delay(1500)
+NpcDialog(32327)
+Delay(1500)
+SelectDialog(2)
+Delay(1500)
+SelectDialog(1)
+Delay(1500)
 
 // Go to lvl area
 MoveTo(82840, 148182, -3464)
@@ -61,8 +61,8 @@ BattleStart()
 
 CheckBuff:
 
-// Check Adventurers's Buff (Every buff should disappear together so only check Horn Melody (Adventurer))
-If (CharBuffLevel(15642) == 0)
+// Check Adventurers's Buff (Every buff should disappear together so only check windwalk)
+If (BuffLevel(4322) == 0)
 {
 	// Stop battle
 	BattleStop()

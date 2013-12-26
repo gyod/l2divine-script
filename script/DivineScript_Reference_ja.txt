@@ -2,9 +2,9 @@
 | DivineScript リファレンス |
 +---------------------------+
 
-バージョン：	2.0
-最終更新日：	Jan 13, 2013
-著者：		Dev
+バージョン：	2.2
+最終更新日：	2013年10月10日
+著者：		Dev, Zariche
 訳者：		gyo
 
 ------+
@@ -31,6 +31,7 @@
 - Buy
 - CancelAttackTarget
 - CharBuffLevel
+- CharBuffTime
 - CheckNPCRange
 - ClearHuntingArea
 - CloseDialog
@@ -38,6 +39,7 @@
 - Confirm
 - CounterTargetPlayer
 - CountItem
+- CountNPCInRange
 - CountQuestDefeatNpc
 - CraftItem
 - CrystalizeItem
@@ -72,8 +74,13 @@
 - Msg
 - NoMobInHuntingArea
 - NpcDialog
+- NPCInRange
+- PetAction
 - PlayerBuffLevel
+- PlayerBuffTime
+- PlayerInRange
 - PlaySound
+- QuestAccepted
 - Recommend
 - Return
 - ReturnToVillage
@@ -217,13 +224,14 @@ Char.MP		キャラクタのMPの値
 Char.MP%	キャラクタのMPのパーセンテージ
 Char.CP		キャラクタのCPの値
 Char.CP%	キャラクタのCPのパーセンテージ
-Char.Soul	キャラクタのキャラクタの魂の値（カマエルのみ）
+Char.Soul	キャラクタの魂の値（カマエルのみ）
 Char.LV		キャラクタのレベルの値
 Char.Load%	キャラクタの重量のパーセンテージ
 Char.InParty	キャラクタがパーティーに参加しているか否か
 Char.Vitality	キャラクタのバイタリティーの値
 Char.Race	キャラクタの種族
 Char.Class	キャラクタのジョブクラス
+Char.EXP%		キャラクタの現在のレベルでの経験値のパーセンテージ
 Char.IsSelectTarget	キャラクタがターゲットを選択しているか否か
 Char.IsTargetByPlayer	キャラクタが他プレイヤーからターゲットされているか否か
 Char.IsAttackByPlayer	キャラクタが他プレイヤーから攻撃されているか否か
@@ -285,7 +293,8 @@ AddRectHuntingArea(radius)
 
 AddItem(Item ID, Count)
 AddItem(Item Name, Count)
-	引数	アイテムIDまたはアイテム名、数量（「*」で全て対象）
+	引数	アイテムIDまたはアイテム名（「*」でインベントリ内の全アイテムが対象）、
+		数量（「*」で全て対象）
 	返値	なし
 	目的	開いているトレードダイアログに購入、販売、預ける、取り出す
 		アイテムを追加
@@ -320,6 +329,13 @@ CharBuffLevel(Skill Name)
 	目的	キャラクタにかかっているスキルのレベル数を取得
 		（IfまたはWhileコマンドで使用）
 		※訳注：旧BuffLevelと同等というか名称変更
+
+CharBuffTime(Skill ID)
+CharBuffTime(Skill Name)
+	引数	スキルIDまたはスキル名
+	返値	スキル適用の残時間
+	目的	キャラクタに適用されているスキルの残り時間
+		（IfまたはWhileコマンドで使用）
 
 CheckNPCRange(NPC ID)
 	引数	NPC（MOB）ID
@@ -411,7 +427,7 @@ CountItem(Item Name)
 CountQuestDefeatNpc(NPC ID)
 	引数	NPC ID
 	返値	倒したNPC数
-	目的	クエストで倒したNPC数を取得 （ifまたはwhileコマンドで使用）
+	目的	クエストで倒したNPC数を取得 （IfまたはWhileコマンドで使用）
 	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		// クエストID 10362（捜索隊の証明）で倒したハスク ストーカーの数を調べる
 		If (CountQuestDefeatNpc(22992) == 10)
@@ -419,6 +435,13 @@ CountQuestDefeatNpc(NPC ID)
 			// 何もしない
 		}
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+CountNPCInRange(NPC ID, x, y, z, radius)
+CountNPCInRange(NPC Name, x, y, z, radius)
+	引数	NPC IDまたはNPC名、x、y、z、半径
+	返値	指定範囲内の特定NPCの数
+	目的	指定範囲内の特定NPCの数を取得（IfまたはWhileコマンドで使用）
+	
 
 CraftItem(Receipt ID)
 	引数	製作図ID（動作設定>アイテム製作画面で確認可能）
@@ -535,7 +558,7 @@ ForceAttack(NPC ID)
 ForceAttackTarget()
 	引数	なし
 	返値	なし
-	目的	現在のターゲットを攻撃（melee attack）
+	目的	現在のターゲットを強制攻撃（melee attack）
 	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		Start:
 
@@ -576,6 +599,13 @@ ForceAttackTarget()
 			CancelAttackTarget()
 		}
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ForcePetAction(Action ID)
+ForcePetAction(Action Name)
+	引数	アクションIDまたはアクション名
+	返値	なし
+	目的	ペットのアクションを強制使用
+	使用例	ForcePetAction("Attack")
 
 FoundEnemyInRange(Range)
 	引数	現在地からの範囲（半径）
@@ -762,6 +792,20 @@ NpcDialog(NPC Name)
 	目的	NPCとのチャットダイアログを開く
 	使用例	Revenge of the Redbonnet.txt をご覧ください
 
+NPCInRange(NPC ID, x, y, z, radius)
+NPCInRange(NPC Name, x, y, z, radius)
+	引数	NPC IDまたはNPC名、x、y、z、半径
+	返値	True/False（ブール（真偽）値）
+	目的	指定NPCが指定範囲内に存在するか確認
+		（If またはWhile コマンドで使用）
+
+PetAction(Action ID)
+PetAction(Action Name)
+	引数	アクションIDまたはアクション名
+	返値	なし
+	目的	ペットのアクションを使用
+	使用例	PetAction("Attack")
+
 PlayerBuffLevel(Name, Skill ID)
 	引数	プレイヤー名、スキルID
 	返値	True/False（ブール（真偽）値）
@@ -779,6 +823,18 @@ PlayerBuffLevel(Name, Skill ID)
 		}
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+PlayerInRange(Name, x, y, z, radius)
+	引数	プレイヤー名、x、y、z、半径
+	返値	True/False（ブール（真偽）値）
+	目的	特定のプレイヤーが指定範囲内に存在するか確認
+		（If またはWhile コマンドで使用）
+
+PlayerBuffTime(Name, Skill ID)
+	引数	プレイヤー名、スキルID
+	返値	True/False（ブール（真偽）値）
+	目的	特定キャラクタのバフの残り時間
+		（If またはWhile コマンドで使用）
+
 PlaySound(Sound File)
 	引数	サウンドファイル（WAV）ファイルのパス
 	返値	なし
@@ -788,6 +844,17 @@ PlaySound(Sound File)
 	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		PlaySound("C:\temp\L2Divine\sound\Alert.wav")
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+QuestAccepted(Quest Id)
+	引数	クエストID
+	返値	True/False（ブール（真偽）値）
+	目的	クエストを受諾しているか確認する
+		（If またはWhile コマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		If (QuestAccepted(10324))
+		{
+			// 何かやればいいと思う ...
+		}
 
 Recommend(Player Name)
 	引数	プレイヤー名

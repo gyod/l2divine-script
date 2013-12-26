@@ -10,6 +10,18 @@
 // Reward:	Pet Exchange Ticket: Kookaburra
 // ------------------------------------------------------------------
 
+// Detect quest step
+If (CountItem(7552) > 0) 
+{
+	Jump("FIND_GEMSTONE")
+}
+
+// Detect quest step
+If (CountItem(7553) == 1) 
+{
+	Jump("TALK_DRIKUS")
+}
+
 // Talk with Lundy to accept quest
 NpcDialog(30827)
 Delay(2000)
@@ -56,6 +68,8 @@ MoveTo(-14253, 123742, -3112)
 MoveTo(-16399, 124200, -3112)
 MoveTo(-18097, 123953, -3152)
 
+FIND_GEMSTONE:
+
 // Prepare battle area
 ClearHuntingArea()
 AddHuntingArea(-20508, 122147, -3360, 3000)
@@ -88,6 +102,8 @@ Delay(2000)
 SelectDialog(1)
 Delay(2000)
 CloseDialog()
+
+TALK_DRIKUS:
 
 // Talk with Drikus
 MoveTo(-13553, 123704, -3112)

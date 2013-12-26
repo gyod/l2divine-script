@@ -61,9 +61,9 @@ MoveTo(116746, 76412, -2728)
 MoveTo(116908, 77220, -2688)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
@@ -118,9 +118,9 @@ If (CountItem(1463) < 3000)
 MoveTo(82881, 149340, -3464)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
@@ -155,8 +155,8 @@ BattleStart()
 
 BattleLoop:
 
-// Fight until Horn Melody (Adventurer) warn off
-If (CharBuffLevel(15642) == 0)
+// Fight until buff timeout
+If (BuffLevel(4322) == 0)
 {
 	Jump("BackTown")
 }

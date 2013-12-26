@@ -72,20 +72,20 @@ Include("Goddard_Spawn_Loc.txt")
 MoveTo(148030, -55297, -2728)
 NpcDialog(32327)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
-SelectDialog(2)
+SelectDialog(1)
 Delay(2000)
 CloseDialog()
 
 // Servitor Buff
-//NpcDialog(32327)
-//Delay(2000)
-//SelectDialog(2)
-//Delay(2000)
-//SelectDialog(1)
-//Delay(2000)
-//CloseDialog()
+NpcDialog(32327)
+Delay(2000)
+SelectDialog(2)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+CloseDialog()
 
 // Go to outside town
 MoveTo(147797, -55496, -2728)
@@ -114,17 +114,16 @@ BattleLoop:
 //	CraftItem(22)
 //}
 
-// Fight until Horn Melody (Adventurer) warn off
-If (CharBuffLevel(15642) == 0)
-{
-	Msg(Console, "No Buff!!!")
-	Jump("BackTown")
-}
+// Fight until shield warn off
+//If (CharBuffLevel(4323) == 0)
+//{
+//	Msg(Console, "No Buff!!!")
+//	Jump("BackTown")
+//}
 
 // Die -*-
 If (Char.HP == 0)
 {
-	Msg(Console, "U Dead!!!")
 	Jump("BackTown")
 }
 

@@ -1,0 +1,47 @@
+Down Level:
+
+If (LocInRange(145264, -57176, -2976, 1000)) 
+{
+	MoveTo(145264, -57176, -2976)
+	MoveTo(145264, -57512, -2976)
+	MoveTo(144763, -57527, -2976)
+	MoveTo(143323, -58519, -3368)
+	Jump("ATTACK")
+}
+
+If (LocInRange(143187, -58637, -3432,300)) 
+{
+	Jump("ATTACK")
+}
+
+// Check spawn location
+Include("Goddard_Spawn_Loc.txt")
+
+// Go to outside town
+MoveTo(147797, -55496, -2728)
+MoveTo(147656, -56049, -2760)
+MoveTo(146352, -56249, -2776)
+MoveTo(145298, -56986, -2976)
+MoveTo(144802, -57530, -2976)
+MoveTo(143146, -58666, -3432)
+
+ATTACK:
+
+// Attack until die
+While (Char.HP > 0)
+{
+	ForceAttack(31673)
+	Delay(2000)
+}
+
+// Return to nearest village
+ReturnToVillage()
+Delay(2000)
+
+// Until level = 68
+If (Char.LV > 68)
+{
+	Jump("Down Level")
+}
+
+EXIT:

@@ -93,27 +93,27 @@ If (CountItem(22620) == 0)
 
 Get_Buff:
 
-// Get buff when level < 91
-If (Char.LV < 91)
+// Get buff when level < 76
+If (Char.LV < 76)
 {
 	// Get Adventurer buff
 	MoveTo(148030, -55297, -2728)
 	NpcDialog(32327)
 	Delay(2000)
-	SelectDialog(2)
+	SelectDialog(1)
 	Delay(2000)
-	SelectDialog(2)
+	SelectDialog(1)
 	Delay(2000)
 	CloseDialog()
 
 	// Servitor Buff
-	//NpcDialog(32327)
-	//Delay(2000)
-	//SelectDialog(2)
-	//Delay(2000)
-	//SelectDialog(1)
-	//Delay(2000)
-	//CloseDialog()
+	NpcDialog(32327)
+	Delay(2000)
+	SelectDialog(2)
+	Delay(2000)
+	SelectDialog(1)
+	Delay(2000)
+	CloseDialog()
 }
 
 // Go to Wall of Argos 
@@ -174,8 +174,8 @@ If (Char.LV > 75)
 	Jump("Check_HP")
 }
 
-// Fight until Horn Melody (Adventurer) warn off
-If (CharBuffLevel(15642) == 0)
+// Fight until shield warn off
+If (BuffLevel(4323) == 0)
 {
 	Msg(Console, "No Buff!!!")
 	Jump("BackTown")
