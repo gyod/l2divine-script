@@ -1,0 +1,158 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed
+//
+// Quest:		Traces of Evil
+// LV:			20+ (after completed the quest "Divided Sakum, Poslof")
+// Location:	Front of Adventure Guildsman at Gludio Town
+// Reward:		1080 adena, 900000 XP and 216 SP
+//
+// Note: Don't forget set preference and attack command
+//
+// ------------------------------------------------------------------
+
+10339_Start:
+Delay(2000)
+
+//Talk to Adventure Guildsman
+NpcDialog(31795)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(3)
+Delay(3000)
+//SelectDialog("Traces of Evil")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("I know about Sakum.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("I will join you!")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-15348, 123915, -3128)
+
+// Get Buff
+10339_GetBuff:
+MoveTo(-14700, 123990, -3120)
+Jump("AdventurersGuide")
+
+// Talk to Bella
+10339_GoToWasteland:
+MoveTo(-14500, 124000, -3120)
+NpcDialog(30256)
+Delay(3000)
+//SelectDialog("Teleport")
+SelectDialog(2)
+Delay(3000)
+//SelectDialog("Wasteland")
+SelectDialog(20)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+If (CountItem(17586) == 20)
+{
+	Jump("10339_GotAll")
+}
+
+//Talk to Fred
+MoveTo(-16326, 208792, -3656)
+NpcDialog(33179)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("What's going on with the monsters?")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Say you will help.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-16811, 207217, -3664)
+Delay(2000)
+MoveTo(-18367, 203979, -3736)
+Delay(2000)
+MoveTo(-19571, 199838, -4128)
+Delay(2000)
+
+// Lets start killing mobs!
+ClearHuntingArea()
+AddHuntingArea(-18568, 198076, -4176, 2500)
+10339_Start Battle:
+// Start battle
+BattleStart()
+Msg(Console, "Killing mobs!")
+
+// Until 20 items
+While (CountItem(17586) < 20)
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		ClearHuntingArea()
+		ReturnToVillage()
+		Delay(8000)
+		Jump("10339_GetBuff")
+	}
+}
+Msg(Console, "Got all Items!")
+
+BattleStop()
+ClearHuntingArea()
+
+// Go back to Town
+If (CountItem(10650) > 0)
+{
+	// Use Adventures Scroll of Escape
+	Delay(2000)
+	UseItem(10650)
+	Delay(40000)
+}
+Else
+{
+	// Use Scroll of Escape
+	Delay(2000)
+	UseItem(736)
+	Delay(40000)
+}
+
+Jump("10339_GetBuff")
+
+10339_GotAll:
+//Talk to Fred
+MoveTo(-16326, 208792, -3656)
+NpcDialog(33179)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+// Talk to teleport Device
+MoveTo(-16377, 208870, -3656)
+NpcDialog(33088)
+Delay(3000)
+//SelectDialog("Go to the Town of Gludio")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+// Load Race specific End
+Include("Snippet_Traces of Evil.txt")
+
+10339_End:

@@ -1,0 +1,359 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed
+//
+// Quest:		Classchange
+// LV:			38
+// Location:	Gludio in front of your Class Master
+// Reward:		Classchange
+//
+// Note: Don't forget set preference and attack command
+//
+// ------------------------------------------------------------------
+
+If (Char.LV < 38)
+{
+	Msg(Console, "You are not level 38 or above.")
+	Jump("ClasschangeEnd")
+}
+
+// Human
+If (Char.Race == 0)
+{
+	Msg(Console, "Talking to Human Class Master")
+	// Talk to Rains
+	NpcDialog(30288)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("What is it?")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("Sounds like a deal.")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'm ready.")
+	SelectDialog(1)
+	Delay(3000)
+	CloseDialog()
+	Delay(2000)
+	
+	Jump("QC40")
+}
+
+// Elf
+If (Char.Race == 1)
+{
+	Msg(Console, "Talking to Elf Class Master")
+	// Talk to Ellenia
+	NpcDialog(30155)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(2)
+	Delay(3000)
+	//SelectDialog("Certification of Fate")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("What is it exactly?")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'd like that...")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'm ready.")
+	SelectDialog(1)
+	Delay(3000)
+	CloseDialog()
+	Delay(2000)
+	
+	Jump("QC40")
+}
+
+// Darkelf
+If (Char.Race == 2)
+{
+	Msg(Console, "Talking to DarkElf Class Master")
+	// Talk to Tobias
+	NpcDialog(30297)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("What are the details?")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'll do it.")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("Here we go!")
+	SelectDialog(1)
+	Delay(3000)
+	CloseDialog()
+	Delay(2000)
+	
+	Jump("QC40")
+}
+
+// Orc
+If (Char.Race == 3)
+{
+	Msg(Console, "Talking to Orc Class Master")
+	// Talk to Drikus
+	NpcDialog(30505)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("Uh huh.")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'm in!")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'm ready now!")
+	SelectDialog(1)
+	Delay(3000)
+	CloseDialog()
+	Delay(2000)
+	
+	Jump("QC40")
+}
+
+// Dwarf
+If (Char.Race == 4)
+{
+	Msg(Console, "Talking to Dwarf Class Master")
+	// Talk to Mendio
+	NpcDialog(30504)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("What is it?")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("Sounds like a deal.")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'm ready.")
+	SelectDialog(1)
+	Delay(3000)
+	CloseDialog()
+	Delay(2000)
+	
+	Jump("QC40")
+}
+
+// Kamael
+If (Char.Race == 5)
+{
+	Msg(Console, "Talking to Kamael Class Master")
+	// Talk to Gershwin
+	NpcDialog(32196)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("What is it?")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("Sounds like a deal.")
+	SelectDialog(1)
+	Delay(3000)
+	//SelectDialog("I'm ready.")
+	SelectDialog(1)
+	Delay(3000)
+	CloseDialog()
+	Delay(2000)
+	
+	Jump("QC40")
+}
+
+//---------------------------------------------------------
+QC40:
+Include("QC40.txt")
+
+// Human
+If (Char.Race == 0)
+{	
+	Jump("SOE")
+	
+	MoveTo(-14583, 123471, -3104)
+	Delay(2000)
+	MoveTo(-14231, 122815, -3112)
+	Delay(2000)
+	MoveTo(-13583, 122770, -3104)
+	Delay(2000)
+	MoveTo(-13575, 122996, -3104)
+	Delay(2000)
+	
+	// Talk to Rains
+	NpcDialog(30288)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate (In Progress)")
+	SelectDialog(1)
+	Delay(3000)
+	Msg(Console, "Choose your Class and be happy")
+	Jump("ClasschangeEnd")
+}
+
+// Elf
+If (Char.Race == 1)
+{
+	Jump("SOE")
+	
+	MoveTo(-14583, 123471, -3104)
+	Delay(2000)
+	MoveTo(-14231, 122815, -3112)
+	Delay(2000)
+	MoveTo(-13583, 122770, -3104)
+	Delay(2000)
+	MoveTo(-13555, 122637, -3104)
+	Delay(2000)
+	
+	// Talk to Ellenia
+	NpcDialog(30155)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(2)
+	Delay(3000)
+	//SelectDialog("Certification of Fate (In Progress)")
+	SelectDialog(1)
+	Delay(3000)
+	Msg(Console, "Choose your Class and be happy")
+	Jump("ClasschangeEnd")
+}
+
+// Darkelf
+If (Char.Race == 2)
+{
+	Jump("SOE")
+	
+	MoveTo(-14519, 123519, -3104)
+	Delay(2000)
+	MoveTo(-12672, 123701, -3120)
+	Delay(2000)
+	MoveTo(-12707, 123146, -3096)
+	Delay(2000)
+	MoveTo(-12876, 123146, -3096)
+	Delay(2000)
+	
+	// Talk to Tobias
+	NpcDialog(30297)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate (In Progress)")
+	SelectDialog(1)
+	Delay(3000)
+	Msg(Console, "Choose your Class and be happy")
+	Jump("ClasschangeEnd")
+}
+
+// Orc
+If (Char.Race == 3)
+{
+	Jump("SOE")
+	
+	MoveTo(-14513, 123514, -3104)
+	Delay(2000)
+	MoveTo(-12174, 123770, -3104)
+	Delay(2000)
+	MoveTo(-12236, 124361, -3112)
+	Delay(2000)
+	MoveTo(-12797, 124885, -3120)
+	Delay(2000)
+	
+	// Talk to Drikus
+	NpcDialog(30505)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate (In Progress)")
+	SelectDialog(1)
+	Delay(3000)
+	Msg(Console, "Choose your Class and be happy")
+	Jump("ClasschangeEnd")
+}
+
+// Dwarf
+If (Char.Race == 4)
+{	
+	Jump("SOE")
+	
+	MoveTo(-15332, 124166, -3120)
+	Delay(2000)
+	MoveTo(-15301, 124659, -3112)
+	Delay(2000)
+	MoveTo(-15209, 124732, -3112)
+	Delay(2000)
+	
+	// Talk to Mendio
+	NpcDialog(30504)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate (In Progress)")
+	SelectDialog(1)
+	Delay(3000)
+	Msg(Console, "Choose your Class and be happy")
+	Jump("ClasschangeEnd")
+}
+
+// Kamael
+If (Char.Race == 5)
+{
+	Jump("SOE")
+	
+	MoveTo(-14460, 123747, -3104)
+	Delay(2000)
+	MoveTo(-14296, 124902, -3128)
+	Delay(2000)
+	MoveTo(-13555, 125001, -3120)
+	Delay(2000)
+	MoveTo(-13525, 125571, -3128)
+	Delay(2000)
+	
+	// Talk to Gershwin
+	NpcDialog(32196)
+	Delay(3000)
+	//SelectDialog("Quest")
+	SelectDialog(6)
+	Delay(3000)
+	//SelectDialog("Certification of Fate (In Progress)")
+	SelectDialog(1)
+	Delay(3000)
+	Msg(Console, "Choose your Class and be happy")
+	Jump("ClasschangeEnd")
+}
+
+SOE:
+// Use Scroll of Escape
+Delay(2000)
+UseItem(736)
+Delay(40000)
+MoveTo(-14482, 123781, -3104)
+Return
+
+ClasschangeEnd:

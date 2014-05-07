@@ -1,0 +1,227 @@
+// Snippet Script: Traces of Evil Race specific end
+// Author:	everRed
+
+If (Char.Race == 0)
+{
+	Jump("Human")
+}
+
+If (Char.Race == 1)
+{
+	Jump("Elf")
+}
+
+If (Char.Race == 2)
+{
+	Jump("Darkelf")
+}
+
+If (Char.Race == 3)
+{
+	Jump("Orc")
+}
+
+If (Char.Race == 4)
+{
+	Jump("Dwarf")
+}
+
+If (Char.Race == 5)
+{
+	Jump("Kamael")
+}
+Else
+{
+	Msg(Console, "You are a new Race, gz! Script abort")
+	Jump("TracesEnd_Fail")
+}
+
+
+Human:
+Msg(Console, "You are a Human")
+// For Human Only
+MoveTo(-14583, 123471, -3104)
+Delay(2000)
+MoveTo(-14231, 122815, -3112)
+Delay(2000)
+MoveTo(-13583, 122770, -3104)
+Delay(2000)
+MoveTo(-13575, 122996, -3104)
+Delay(2000)
+
+// Talk to Rains
+NpcDialog(30288)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(6)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Sakum's scale was found in the Wasteland.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("He wants a warrior to defeat Sakum.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("TracesEnd")
+
+Elf:
+Msg(Console, "You are a Elf")
+// For Elf Only
+MoveTo(-14583, 123471, -3104)
+Delay(2000)
+MoveTo(-14231, 122815, -3112)
+Delay(2000)
+MoveTo(-13583, 122770, -3104)
+Delay(2000)
+MoveTo(-13555, 122637, -3104)
+Delay(2000)
+
+// Talk to Ellenia
+NpcDialog(30155)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(2)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Sakum's scale was found there.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Fred needs someone now...")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("TracesEnd")
+
+Darkelf:
+Msg(Console, "You are a Darkelf")
+// For Darkelf Only
+MoveTo(-14519, 123519, -3104)
+Delay(2000)
+MoveTo(-12672, 123701, -3120)
+Delay(2000)
+MoveTo(-12707, 123146, -3096)
+Delay(2000)
+MoveTo(-12876, 123146, -3096)
+Delay(2000)
+
+// Talk to Tobias
+NpcDialog(30297)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(6)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Sakum's scale was found in the Wasteland.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("He wanted someone to fight Sakum.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("TracesEnd")
+
+Orc:
+Msg(Console, "You are a Orc")
+// For Orc Only
+MoveTo(-14513, 123514, -3104)
+Delay(2000)
+MoveTo(-12174, 123770, -3104)
+Delay(2000)
+MoveTo(-12236, 124361, -3112)
+Delay(2000)
+MoveTo(-12797, 124885, -3120)
+Delay(2000)
+
+// Talk to Drikus
+NpcDialog(30505)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(6)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Tell him that Sakum's Scale has been found in the Wasteland.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("He wanted a warrior strong enough to fight Sakum.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("TracesEnd")
+
+Dwarf:
+Msg(Console, "You are a dwarf")
+// For Dwarf Only
+MoveTo(-15332, 124166, -3120)
+Delay(2000)
+MoveTo(-15301, 124659, -3112)
+Delay(2000)
+MoveTo(-15209, 124732, -3112)
+Delay(2000)
+
+// Talk to Mendio
+NpcDialog(30504)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(6)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("We found Sakum's Scale in the Wasteland.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("He wants a warrior to defeat Sakum.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("TracesEnd")
+
+Kamael:
+Msg(Console, "You are a Kamael")
+// For Kamael Only
+MoveTo(-14460, 123747, -3104)
+Delay(2000)
+MoveTo(-14296, 124902, -3128)
+Delay(2000)
+MoveTo(-13555, 125001, -3120)
+Delay(2000)
+MoveTo(-13525, 125571, -3128)
+Delay(2000)
+
+// Talk to Gershwin
+NpcDialog(32196)
+Delay(3000)
+//SelectDialog("Quest")
+SelectDialog(6)
+Delay(3000)
+//SelectDialog("Traces of Evil (In Progress)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("We found Sakum's Scale in the Wasteland.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("He wants a warrior to defeat Sakum.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("TracesEnd")
+
+TracesEnd_Fail:
+Exit
+
+TracesEnd:

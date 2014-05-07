@@ -1,0 +1,133 @@
+Start:
+If (LocInRange(-24900, 188698, -3976, 500))
+{
+ Msg(Console, "Teleported and ready!")
+ Delay(1000)
+ Jump("PortedIn")
+}
+ Else
+{
+ Msg(Console, "Script stop: You are not in the quest area!")
+ Jump("DeadEnd1")
+}
+
+If (Char.LV > 37)
+{
+ Delay(1000)
+ Jump("PortedIn")
+}
+ Else
+{
+ Msg(Console, "Script stop: You are not the right level yet!")
+ Jump("DeadEnd1")
+}
+
+PortedIn:
+MoveTo(-24630, 188773, -3944)
+Delay(1000)
+NpcDialog(33524)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+CloseDialog()
+CloseWindow()
+Delay(2000)
+
+MoveArea1:
+MoveTo(-25581, 186599, -4024)
+MoveTo(-25708, 184759, -3624)
+MoveTo(-25703, 183753, -3600)
+
+AttackQuestMob1:
+SelectTarget(27459)
+While (!Target.IsDead) 
+{
+Delay(500)
+ForceAttack(27459)
+}
+
+QuestMob1Killed:
+Delay(5000)
+MoveTo(-25815, 183365, -3600)
+Delay(1000)
+NpcDialog(33516)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+CloseDialog()
+CloseWindow()
+Delay(2000)
+
+MoveArea2:
+MoveTo(-28275, 183360, -3704)
+MoveTo(-29265, 184917, -4120)
+MoveTo(-30313, 185378, -4064)
+MoveTo(-29643, 186831, -3928)
+
+AttackQuestMob2:
+SelectTarget(27460)
+While (!Target.IsDead) 
+{
+Delay(500)
+ForceAttack(27460)
+}
+
+QuestMob2Killed:
+Delay(5000)
+MoveTo(-29615, 186885, -3928)
+Delay(1000)
+NpcDialog(33517)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+CloseDialog()
+CloseWindow()
+Delay(2000)
+
+MoveArea3:
+MoveTo(-28196, 188301, -3912)
+MoveTo(-28917, 188997, -3808)
+MoveTo(-31245, 190879, -3600)
+MoveTo(-35623, 191649, -3640)
+
+AttackQuestMob3:
+SelectTarget(27453)
+While (!Target.IsDead) 
+{
+Delay(500)
+ForceAttack(27453)
+}
+
+QuestMob3Killed:
+MoveTo(-37059, 192052, -3592)
+Delay(1000)
+NpcDialog(33518)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+SelectDialog(1)
+CloseDialog()
+CloseWindow()
+Delay(2000)
+Jump("QC40_End")
+
+
+DeadEnd1:
+Exit
+
+QC40_End:
