@@ -1,7 +1,7 @@
 //early version submitted by Allen (L2Sexi Server) Fixed by Sakaszli
 FS = "\t";
 HEADER = 1;
-RECCNT = OFF;
+RECCNT = -1;
 MTXCNT_OUT = 1;
 MATCNT_OUT = 1;
 ORD_IGNORE = 0;
@@ -19,7 +19,7 @@ ORD_IGNORE = 0;
 	INT is_magic;
 	UINT UNK_2[3];
 	INT newCounter;
-	INT newCounter2;
+	UNICODE UNK_3;
 	UNICODE ani_char[newCounter];
 	UNICODE desc[newCounter];
 	UNICODE icon_name;
@@ -29,6 +29,6 @@ ORD_IGNORE = 0;
 	UINT ench_skill_id;
 	UINT hp_consume;
 	ASCF nonetext1;
-	INT UNK_3[4];
+	INT UNK_4[4];
 	ASCF nonetext2;
 }

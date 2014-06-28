@@ -7,8 +7,7 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0; 
 { 
    UINT cnt;
-   UINT id;
-   INT list[9];
+   INT list[cnt];
    UNICODE Name[2];
    UINT id_a;
    UNICODE Name2[id_a];
