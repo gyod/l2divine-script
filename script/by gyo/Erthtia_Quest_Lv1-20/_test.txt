@@ -1,0 +1,25 @@
+If (Char.Race == 6)
+{
+	Msg(Console, "6:Erthtia")
+	// Erthtia Fighter
+	If (Char.Class == 182)
+	{
+		Msg(Console, "182:Erthtia Fighter")
+	}
+	Else
+	{
+		// Erthtia Wizard
+		If (Char.Class == 183)
+		{
+			Msg(Console, "183:Erthtia Wizard")
+		}
+		Else
+		{
+			Msg(Console, "Unknown Erthtia class ID")
+		}
+	}
+}
+Else
+{
+	Msg(Console, "Not Erthtia")
+}
