@@ -777,15 +777,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 20942	a,Nightmare Guide\0	a,	9C	E8	A9	-1
 20943	a,Nightmare Watchman\0	a,	9C	E8	A9	-1
 20944	a,Nightmare Lord\0	a,	9C	E8	A9	-1
-20945	a,Cadeine\0	a,	9C	E8	A9	-1
-20946	a,Sanhidro\0	a,	9C	E8	A9	-1
-20947	a,Connabi\0	a,	9C	E8	A9	-1
-20948	a,Bartal\0	a,	9C	E8	A9	-1
-20949	a,Luminun\0	a,	9C	E8	A9	-1
-20950	a,Innersen\0	a,	9C	E8	A9	-1
-20951	a,Pobby's Maid\0	a,	9C	E8	A9	-1
-20952	a,Pobby's Escort\0	a,	9C	E8	A9	-1
-20953	a,Pobby\0	a,	9C	E8	A9	-1
 20954	a,Starving Corpse\0	a,	9C	E8	A9	-1
 20955	a,Ghostly Warrior\0	a,	9C	E8	A9	-1
 20956	a,Knight of the Past\0	a,	9C	E8	A9	-1
@@ -1199,48 +1190,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 21393	a,Magma Drake\0	a,	9C	E8	A9	-1
 21394	a,Lavasaurus\0	a,	9C	E8	A9	-1
 21395	a,Elder Lavasaurus\0	a,	9C	E8	A9	-1
-21396	a,Carrion Scarab\0	a,	9C	E8	A9	-1
-21397	a,Carrion Scarab\0	a,	9C	E8	A9	-1
-21398	a,Soldier Scarab\0	a,	9C	E8	A9	-1
-21399	a,Soldier Scarab\0	a,	9C	E8	A9	-1
-21400	a,Hexa Beetle\0	a,	9C	E8	A9	-1
-21401	a,Hexa Beetle\0	a,	9C	E8	A9	-1
-21402	a,Katraxis\0	a,	9C	E8	A9	-1
-21403	a,Katraxis\0	a,	9C	E8	A9	-1
-21404	a,Tera Beetle\0	a,	9C	E8	A9	-1
-21405	a,Tera Beetle\0	a,	9C	E8	A9	-1
-21406	a,Knight of Empire\0	a,	9C	E8	A9	-1
-21407	a,Knight of Empire\0	a,	9C	E8	A9	-1
-21408	a,Royal Guard of Empire\0	a,	9C	E8	A9	-1
-21409	a,Royal Guard of Empire\0	a,	9C	E8	A9	-1
-21410	a,Guardian Scarab\0	a,	9C	E8	A9	-1
-21411	a,Guardian Scarab\0	a,	9C	E8	A9	-1
-21412	a,Ustralith\0	a,	9C	E8	A9	-1
-21413	a,Ustralith\0	a,	9C	E8	A9	-1
-21414	a,Assassin of Empire\0	a,	9C	E8	A9	-1
-21415	a,Assassin of Empire\0	a,	9C	E8	A9	-1
-21416	a,Imperial Commander\0	a,	9C	E8	A9	-1
-21417	a,Imperial Commander\0	a,	9C	E8	A9	-1
-21418	a,Imperial Royal Guard\0	a,	9C	E8	A9	-1
-21419	a,Imperial Royal Guard\0	a,	9C	E8	A9	-1
-21420	a,Ashuras\0	a,	9C	E8	A9	-1
-21421	a,Ashuras\0	a,	9C	E8	A9	-1
-21422	a,Dancer of Empire\0	a,	9C	E8	A9	-1
-21423	a,Dancer of Empire\0	a,	9C	E8	A9	-1
-21424	a,Ashkenas\0	a,	9C	E8	A9	-1
-21425	a,Ashkenas\0	a,	9C	E8	A9	-1
-21426	a,Abraxion\0	a,	9C	E8	A9	-1
-21427	a,Abraxion\0	a,	9C	E8	A9	-1
-21428	a,Hasturan\0	a,	9C	E8	A9	-1
-21429	a,Hasturan\0	a,	9C	E8	A9	-1
-21430	a,Arimanes\0	a,	9C	E8	A9	-1
-21431	a,Arimanes\0	a,	9C	E8	A9	-1
-21432	a,Chakram Beetle\0	a,	9C	E8	A9	-1
-21433	a,Jamadar Beetle\0	a,	9C	E8	A9	-1
-21434	a,Priest of Blood \0	a,	9C	E8	A9	-1
-21435	a,Guide of Offering\0	a,	9C	E8	A9	-1
-21436	a,Leader of Offering\0	a,	9C	E8	A9	-1
-21437	a,Offering Bug\0	a,	9C	E8	A9	-1
 21438	a,Heathen Warrior\0	a,	9C	E8	A9	-1
 21439	a,Heathen Inmate\0	a,	9C	E8	A9	-1
 21440	a,Heathen Archer\0	a,	9C	E8	A9	-1
@@ -1462,148 +1411,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 21656	a,Ashuras of Destruction\0	a,	9C	E8	A9	-1
 21657	a,Magma Drake\0	a,	9C	E8	A9	-1
 21658	a,Punishment of Splendor\0	a,	9C	E8	A9	-1
-21659	a,Otherworldly Invader Soldier\0	a,	9C	E8	A9	-1
-21660	a,Otherworldly Invader Soldier\0	a,	9C	E8	A9	-1
-21661	a,Otherworldly Invader Archer\0	a,	9C	E8	A9	-1
-21662	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21663	a,Otherworldly Invader Shaman\0	a,	9C	E8	A9	-1
-21664	a,Otherworldly Invader Priest\0	a,	9C	E8	A9	-1
-21665	a,Otherworldly Invader Magus\0	a,	9C	E8	A9	-1
-21666	a,Otherworldly Invader Martyrs\0	a,	9C	E8	A9	-1
-21667	a,Otherworldly Invader Warrior\0	a,	9C	E8	A9	-1
-21668	a,Otherworldly Invader Soldier\0	a,	9C	E8	A9	-1
-21669	a,Otherworldly Invader Discipline\0	a,	9C	E8	A9	-1
-21670	a,Otherworldly Invader Berserker\0	a,	9C	E8	A9	-1
-21671	a,Otherworldly Invader Food\0	a,	9C	E8	A9	-1
-21672	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21673	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21674	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21675	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21676	a,Otherworldly Invader Warrior\0	a,	9C	E8	A9	-1
-21677	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21678	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21679	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21680	a,Otherworldly Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21681	a,Otherworldly Invader Magus\0	a,	9C	E8	A9	-1
-21682	a,Dimension Invader Soldier\0	a,	9C	E8	A9	-1
-21683	a,Dimension Invader Soldier\0	a,	9C	E8	A9	-1
-21684	a,Dimension Invader Archer\0	a,	9C	E8	A9	-1
-21685	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21686	a,Dimension Invader Shaman\0	a,	9C	E8	A9	-1
-21687	a,Dimension Invader Priest\0	a,	9C	E8	A9	-1
-21688	a,Dimension Invader Magus\0	a,	9C	E8	A9	-1
-21689	a,Dimension Invader Martyrs\0	a,	9C	E8	A9	-1
-21690	a,Dimension Invader Warrior\0	a,	9C	E8	A9	-1
-21691	a,Dimension Invader Soldier\0	a,	9C	E8	A9	-1
-21692	a,Dimension Invader Discipline\0	a,	9C	E8	A9	-1
-21693	a,Dimension Invader Berserker \0	a,	9C	E8	A9	-1
-21694	a,Dimension Invader Food\0	a,	9C	E8	A9	-1
-21695	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21696	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21697	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21698	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21699	a,Dimension Invader Warrior\0	a,	9C	E8	A9	-1
-21700	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21701	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21702	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21703	a,Dimension Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21704	a,Dimension Invader Magus\0	a,	9C	E8	A9	-1
-21705	a,Purgatory Invader Soldier\0	a,	9C	E8	A9	-1
-21706	a,Purgatory Invader Soldier\0	a,	9C	E8	A9	-1
-21707	a,Purgatory Invader Archer\0	a,	9C	E8	A9	-1
-21708	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21709	a,Purgatory Invader Shaman\0	a,	9C	E8	A9	-1
-21710	a,Purgatory Invader Priest\0	a,	9C	E8	A9	-1
-21711	a,Purgatory Invader Magus\0	a,	9C	E8	A9	-1
-21712	a,Purgatory Invader Martyrs\0	a,	9C	E8	A9	-1
-21713	a,Purgatory Invader Warrior\0	a,	9C	E8	A9	-1
-21714	a,Purgatory Invader Soldier\0	a,	9C	E8	A9	-1
-21715	a,Purgatory Invader Disciples\0	a,	9C	E8	A9	-1
-21716	a,Purgatory Invader Berserker\0	a,	9C	E8	A9	-1
-21717	a,Purgatory Invader Food\0	a,	9C	E8	A9	-1
-21718	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21719	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21720	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21721	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21722	a,Purgatory Invader Warrior\0	a,	9C	E8	A9	-1
-21723	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21724	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21725	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21726	a,Purgatory Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21727	a,Purgatory Invader Magus\0	a,	9C	E8	A9	-1
-21728	a,Forbidden Path Invader Soldier\0	a,	9C	E8	A9	-1
-21729	a,Forbidden Path Invader Soldier\0	a,	9C	E8	A9	-1
-21730	a,Forbidden Path Invader Archer\0	a,	9C	E8	A9	-1
-21731	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21732	a,Forbidden Path Invader Shaman\0	a,	9C	E8	A9	-1
-21733	a,Forbidden Path Invader Priest\0	a,	9C	E8	A9	-1
-21734	a,Forbidden Path Invader Magus\0	a,	9C	E8	A9	-1
-21735	a,Forbidden Path Invader Martyr\0	a,	9C	E8	A9	-1
-21736	a,Forbidden Path Invader Warrior\0	a,	9C	E8	A9	-1
-21737	a,Forbidden Path Invader Soldier\0	a,	9C	E8	A9	-1
-21738	a,Forbidden Path Invader Disciple\0	a,	9C	E8	A9	-1
-21739	a,Forbidden Path Invader Berserker\0	a,	9C	E8	A9	-1
-21740	a,Forbidden Path Invader Food\0	a,	9C	E8	A9	-1
-21741	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21742	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21743	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21744	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21745	a,Forbidden Path Invader Warrior\0	a,	9C	E8	A9	-1
-21746	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21747	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21748	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21749	a,Forbidden Path Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21750	a,Forbidden Path Invader Magus\0	a,	9C	E8	A9	-1
-21751	a,Dark Omen Invader Soldier\0	a,	9C	E8	A9	-1
-21752	a,Dark Omen Invader Soldier\0	a,	9C	E8	A9	-1
-21753	a,Dark Omen Invader Archer\0	a,	9C	E8	A9	-1
-21754	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21755	a,Dark Omen Invader Shaman\0	a,	9C	E8	A9	-1
-21756	a,Dark Omen Invader Priest\0	a,	9C	E8	A9	-1
-21757	a,Dark Omen Invader Magus\0	a,	9C	E8	A9	-1
-21758	a,Dark Omen Invader Martyrs\0	a,	9C	E8	A9	-1
-21759	a,Dark Omen Invader Warrior\0	a,	9C	E8	A9	-1
-21760	a,Dark Omen Invader Soldier\0	a,	9C	E8	A9	-1
-21761	a,Dark Omen Invader Disciple\0	a,	9C	E8	A9	-1
-21762	a,Dark Omen Invader Berserker\0	a,	9C	E8	A9	-1
-21763	a,Dark Omen Invader Food\0	a,	9C	E8	A9	-1
-21764	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21765	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21766	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21767	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21768	a,Dark Omen Invader Warrior\0	a,	9C	E8	A9	-1
-21769	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21770	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21771	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21772	a,Dark Omen Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21773	a,Dark Omen Invader Magus\0	a,	9C	E8	A9	-1
-21774	a,Messenger Invader Soldier\0	a,	9C	E8	A9	-1
-21775	a,Messenger Invader Soldier\0	a,	9C	E8	A9	-1
-21776	a,Messenger Invader Archer\0	a,	9C	E8	A9	-1
-21777	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21778	a,Messenger Invader Shaman\0	a,	9C	E8	A9	-1
-21779	a,Messenger Invader Priest\0	a,	9C	E8	A9	-1
-21780	a,Messenger Invader Magus\0	a,	9C	E8	A9	-1
-21781	a,Messenger Invader Martyrs\0	a,	9C	E8	A9	-1
-21782	a,Messenger Invader Warrior\0	a,	9C	E8	A9	-1
-21783	a,Messenger Invader Soldier\0	a,	9C	E8	A9	-1
-21784	a,Messenger Invader Disciple\0	a,	9C	E8	A9	-1
-21785	a,Messenger Invader Berserker\0	a,	9C	E8	A9	-1
-21786	a,Messenger Invader Food\0	a,	9C	E8	A9	-1
-21787	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21788	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21789	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21790	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21791	a,Messenger Invader Warrior\0	a,	9C	E8	A9	-1
-21792	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21793	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21794	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21795	a,Messenger Invader Elite Soldier\0	a,	9C	E8	A9	-1
-21796	a,Messenger Invader Magus\0	a,	9C	E8	A9	-1
 21797	a,Timiniel's Spirit\0	a,	9C	E8	A9	-1
-21798	a,Gatekeeper's Ghost\0	a,	9C	E8	A9	-1
-21799	a,Gatekeeper's Ghost\0	a,	9C	E8	A9	-1
-21800	a,Vassal Ghost\0	a,	9C	E8	A9	-1
 21801	a,Treasure Chest\0	a,	9C	E8	A9	-1
 21802	a,Treasure Chest\0	a,	9C	E8	A9	-1
 21803	a,Treasure Chest\0	a,	9C	E8	A9	-1
@@ -1626,7 +1434,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 21820	a,Treasure Chest\0	a,	9C	E8	A9	-1
 21821	a,Treasure Chest\0	a,	9C	E8	A9	-1
 21822	a,Treasure Chest\0	a,	9C	E8	A9	-1
-21823	a,Executor of Offerings\0	a,	9C	E8	A9	-1
 21824	a,Alpine Kookaburra\0	a,	9C	E8	A9	-1
 21825	a,Alpine Kookaburra\0	a,	9C	E8	A9	-1
 21826	a,Alpine Buffalo\0	a,	9C	E8	A9	-1
@@ -1937,131 +1744,19 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 22315	a,Garden Guard \0	a,	9C	E8	A9	-1
 22316	a,Garden Guardian Tree\0	a,	9C	E8	A9	-1
 22317	a,Garden Castalia\0	a,	9C	E8	A9	-1
-22320	a,Junior Watchman\0	a,	9C	E8	A9	-1
-22321	a,Junior Summoner\0	a,	9C	E8	A9	-1
-22322	a,Subjugated Native\0	a,	9C	E8	A9	-1
-22323	a,Charmed Native\0	a,	9C	E8	A9	-1
-22324	a,Blind Huntsman\0	a,	9C	E8	A9	-1
-22325	a,Blind Watchman\0	a,	9C	E8	A9	-1
-22326	a,Hellinark\0	a,Naia's Guardian\0	9C	E8	A9	-1
-22327	a,Arcane Scout\0	a,	9C	E8	A9	-1
-22328	a,Arcane Guard\0	a,	9C	E8	A9	-1
-22329	a,Arcane Watchman\0	a,	9C	E8	A9	-1
-22330	a,Remnant Wraith\0	a,	9C	E8	A9	-1
-22334	a,Sand Scorpion\0	a,	9C	E8	A9	-1
-22335	a,Desert Scorpion\0	a,	9C	E8	A9	-1
-22336	a,Sand Devil\0	a,	9C	E8	A9	-1
-22337	a,Soul Exploiter\0	a,	9C	E8	A9	-1
-22339	a,Wandering Caravan\0	a,	9C	E8	A9	-1
-22340	a,Sandstorm\0	a,	9C	E8	A9	-1
-22341	a,Keltas\0	a,	9C	E8	A9	-1
-22342	a,Darion's Enforcer\0	a,	9C	E8	A9	-1
-22343	a,Darion's Executioner\0	a,	9C	E8	A9	-1
-22344	a,Quarry Supervisor\0	a,	9C	E8	A9	-1
-22345	a,Quarry Supervisor\0	a,	9C	E8	A9	-1
-22346	a,Quarry Patrol Captain\0	a,	9C	E8	A9	-1
-22347	a,Quarry Patrol\0	a,	9C	E8	A9	-1
-22349	a,Chimera of Earth\0	a,	9C	E8	A9	-1
-22350	a,Chimera of Darkness\0	a,	9C	E8	A9	-1
-22351	a,Chimera of Wind\0	a,	9C	E8	A9	-1
-22352	a,Chimera of Fire\0	a,	9C	E8	A9	-1
-22353	a,Celtus\0	a,Chimera\0	9C	E8	A9	-1
-22355	a,Enceinte Guard\0	a,	9C	E8	A9	-1
-22356	a,Enceinte Guard\0	a,	9C	E8	A9	-1
-22357	a,Enceinte Guard\0	a,	9C	E8	A9	-1
-22358	a,Enceinte Guard\0	a,	9C	E8	A9	-1
-22359	a,Town Guard\0	a,	9C	E8	A9	-1
-22360	a,Town Patrolman\0	a,	9C	E8	A9	-1
-22361	a,Steel Citadel Keymaster\0	a,	9C	E8	A9	-1
-22362	a,Guzen\0	a,	9C	E8	A9	-1
-22363	a,Body Destroyer\0	a,	9C	E8	A9	-1
-22364	a,Soul Dominator\0	a,	9C	E8	A9	-1
-22365	a,Labyrinth Guard\0	a,	9C	E8	A9	-1
-22366	a,Labyrinth Guard\0	a,	9C	E8	A9	-1
-22367	a,Labyrinth Wizard\0	a,	9C	E8	A9	-1
-22368	a,Labyrinth Guard Captain\0	a,	9C	E8	A9	-1
-22369	a,Labyrinth Priest\0	a,	9C	E8	A9	-1
-22370	a,Passageway Guard Captain\0	a,	9C	E8	A9	-1
-22371	a,Passageway Guards\0	a,	9C	E8	A9	-1
-22372	a,Passageway Wizard\0	a,	9C	E8	A9	-1
-22373	a,Cosmic Scout\0	a,	9C	E8	A9	-1
-22374	a,Cosmic Watcher\0	a,	9C	E8	A9	-1
-22375	a,Cosmic Priest\0	a,	9C	E8	A9	-1
-22376	a,Cosmic Lord\0	a,	9C	E8	A9	-1
-22377	a,Master Zelos\0	a,	9C	E8	A9	-1
-22378	a,Master's Subordinate\0	a,	9C	E8	A9	-1
-22379	a,Master's Subordinate\0	a,	9C	E8	A9	-1
-22380	a,Master Festina\0	a,	9C	E8	A9	-1
-22381	a,Master's Escort\0	a,	9C	E8	A9	-1
-22382	a,Master's Escort\0	a,	9C	E8	A9	-1
-22383	a,Tully's Toy\0	a,	9C	E8	A9	-1
-22384	a,Wizard's Toy\0	a,	9C	E8	A9	-1
-22385	a,Tully's Golem Guard\0	a,	9C	E8	A9	-1
-22386	a,Foundry Wizard\0	a,	9C	E8	A9	-1
-22387	a,Foundry Wizard\0	a,	9C	E8	A9	-1
-22388	a,Foundry Spirit Guard\0	a,	9C	E8	A9	-1
-22389	a,Foundry Spirit Guard\0	a,	9C	E8	A9	-1
-22390	a,Foundry Foreman\0	a,	9C	E8	A9	-1
-22391	a,Foundry Foreman Assistant\0	a,	9C	E8	A9	-1
-22392	a,Failed Experimental Timetwister Golem\0	a,	9C	E8	A9	-1
-22393	a,Beleth' Follower\0	a,	9C	E8	A9	-1
-22394	a,Beleth' Devotee\0	a,	9C	E8	A9	-1
-22395	a,Beleth' Projection\0	a,	9C	E8	A9	-1
-22396	a,Foundry Laborer\0	a,	9C	E8	A9	-1
-22397	a,Foundry Foreman  \0	a,	9C	E8	A9	-1
-22398	a,Lesser Evil\0	a,	9C	E8	A9	-1
-22399	a,Greater Evil\0	a,	9C	E8	A9	-1
 22400	a,Parme's Healer\0	a,	9C	E8	A9	-1
 22401	a,Parme's Healer\0	a,	9C	E8	A9	-1
 22402	a,Shadow Column\0	a,	9C	E8	A9	-1
-22403	a,Foundry Foreman  \0	a,	9C	E8	A9	-1
-22404	a,Arcane Guard Captain\0	a,	9C	E8	A9	-1
-22405	a,Darion's Faithful Servant\0	a,	9C	E8	A9	-1
-22406	a,Darion's Faithful Servant\0	a,	9C	E8	A9	-1
-22407	a,Darion's Faithful Servant\0	a,	9C	E8	A9	-1
-22408	a,Darion's Faithful Servant\0	a,	9C	E8	A9	-1
-22409	a,Darion's Faithful Servant\0	a,	9C	E8	A9	-1
-22410	a,Darion's Faithful Servant\0	a,	9C	E8	A9	-1
-22411	a,Beleth' Confidant\0	a,	9C	E8	A9	-1
-22412	a,Beleth' Fighter\0	a,	9C	E8	A9	-1
-22413	a,Beleth' Minion\0	a,	9C	E8	A9	-1
-22414	a,Beleth' Follower\0	a,	9C	E8	A9	-1
-22415	a,Beleth' Devotee\0	a,	9C	E8	A9	-1
 22416	a,Kechi's Guard Captain\0	a,	9C	E8	A9	-1
 22417	a,Kechi's Guard\0	a,	9C	E8	A9	-1
 22418	a,Burning Illith\0	a,	9C	E8	A9	-1
 22419	a,Flame Illith\0	a,	9C	E8	A9	-1
 22420	a,Brimstone Illith\0	a,	9C	E8	A9	-1
-22422	a,Failan's Guard\0	a,	9C	E8	A9	-1
-22423	a,Original Sin Warden\0	a,	9C	E8	A9	-1
-22424	a,Slave of Greed\0	a,	9C	E8	A9	-1
-22425	a,Slave of Lust\0	a,	9C	E8	A9	-1
-22426	a,Slave of Wrath\0	a,	9C	E8	A9	-1
-22427	a,Slave of Sloth\0	a,	9C	E8	A9	-1
-22428	a,Slave of Envy\0	a,	9C	E8	A9	-1
-22429	a,Slave of Pride\0	a,	9C	E8	A9	-1
-22430	a,Slave of Gluttony\0	a,	9C	E8	A9	-1
-22431	a,Original Sin Warden\0	a,	9C	E8	A9	-1
-22432	a,Slave of Greed\0	a,	9C	E8	A9	-1
-22433	a,Slave of Lust\0	a,	9C	E8	A9	-1
-22434	a,Slave of Wrath\0	a,	9C	E8	A9	-1
-22435	a,Slave of Sloth\0	a,	9C	E8	A9	-1
-22436	a,Slave of Envy\0	a,	9C	E8	A9	-1
-22437	a,Slave of Pride\0	a,	9C	E8	A9	-1
-22438	a,Slave of Gluttony\0	a,	9C	E8	A9	-1
-22439	a,Beleth' Assassin\0	a,	9C	E8	A9	-1
-22440	a,Beleth' Assassin\0	a,	9C	E8	A9	-1
-22441	a,Beleth' Subordinate\0	a,	9C	E8	A9	-1
-22442	a,Beleth' Subordinate\0	a,	9C	E8	A9	-1
 22443	a,Kertang's Messenger\0	a,	9C	E8	A9	-1
 22444	a,Kertang's Messenger\0	a,	9C	E8	A9	-1
 22445	a,Kertang's Messenger\0	a,	9C	E8	A9	-1
 22446	a,Kertang's Messenger\0	a,	9C	E8	A9	-1
 22447	a,Kertang's Messenger\0	a,	9C	E8	A9	-1
-22448	a,Leodas\0	a,Resistance Commander\0	9C	E8	A9	-1
-22449	a,Amaskari\0	a,Torture Expert\0	9C	E8	A9	-1
-22450	a,Tortured Native\0	a,	9C	E8	A9	-1
-22451	a,Native Elite Soldier\0	a,	9C	E8	A9	-1
 22452	a,White Skull Kanabion\0	a,	9C	E8	A9	-1
 22453	a,White Skull Kanabion\0	a,Doppler\0	9C	E8	A9	-1
 22454	a,White Skull Kanabion\0	a,Void\0	9C	E8	A9	-1
@@ -2119,33 +1814,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 22506	a,Boom - Child\0	a,	9C	E8	A9	-1
 22507	a,Boom - Child\0	a,	9C	E8	A9	-1
 22508	a,Boom - Child\0	a,	9C	E8	A9	-1
-22509	a,Fanatic of Infinity\0	a,	9C	E8	A9	-1
-22510	a,Rotten Messenger\0	a,	9C	E8	A9	-1
-22511	a,Zealot of Infinity\0	a,	9C	E8	A9	-1
-22512	a,Body Severer\0	a,	9C	E8	A9	-1
-22513	a,Body Harvester\0	a,	9C	E8	A9	-1
-22514	a,Soul Exploiter\0	a,	9C	E8	A9	-1
-22515	a,Soul Devourer\0	a,	9C	E8	A9	-1
-22516	a,Butcher of Infinity\0	a,	9C	E8	A9	-1
-22517	a,Disciple of Infinity\0	a,	9C	E8	A9	-1
-22518	a,Rotten Messenger\0	a,	9C	E8	A9	-1
-22519	a,Body Harvester\0	a,	9C	E8	A9	-1
-22520	a,Body Severer\0	a,	9C	E8	A9	-1
-22521	a,Soul Exploiter\0	a,	9C	E8	A9	-1
-22522	a,Soul Devourer\0	a,	9C	E8	A9	-1
-22523	a,Soul Devourer\0	a,Food of Ekimus\0	9C	E8	A9	-1
-22524	a,Emissary of Death\0	a,	9C	E8	A9	-1
-22525	a,Emissary of Death\0	a,	9C	E8	A9	-1
-22526	a,Emissary of Death\0	a,	9C	E8	A9	-1
-22527	a,Emissary of Death\0	a,	9C	E8	A9	-1
-22528	a,Cursed Prefect\0	a,	9C	E8	A9	-1
-22529	a,Cursed Prefect\0	a,	9C	E8	A9	-1
-22530	a,Cursed Prefect\0	a,	9C	E8	A9	-1
-22531	a,Cursed Prefect\0	a,	9C	E8	A9	-1
-22532	a,Law Scholar of Conclusions\0	a,	9C	E8	A9	-1
-22533	a,Law Scholar of Conclusions\0	a,	9C	E8	A9	-1
-22534	a,Law Scholar of Conclusions\0	a,	9C	E8	A9	-1
-22535	a,Law Scholar of Conclusions\0	a,	9C	E8	A9	-1
 22536	a,Royal Guard Captain\0	a,	9C	E8	A9	-1
 22537	a,Dragontroop Spellshifter\0	a,	9C	E8	A9	-1
 22538	a,Dragontroop Commander\0	a,	9C	E8	A9	-1
@@ -2169,49 +1837,9 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 22556	a,Small Crystal Core\0	a,	9C	E8	A9	-1
 22557	a,Defense Mechanism\0	a,	9C	E8	A9	-1
 22558	a,Defense Battery\0	a,	9C	E8	A9	-1
-22559	a,Defeated Commander\0	a,	9C	E8	A9	-1
-22560	a,Defeated Commando\0	a,	9C	E8	A9	-1
-22561	a,Defeated Centurion\0	a,	9C	E8	A9	-1
-22562	a,Defeated Infantry\0	a,	9C	E8	A9	-1
-22563	a,Defeated Archmage\0	a,	9C	E8	A9	-1
-22564	a,Defeated Wizard\0	a,	9C	E8	A9	-1
-22565	a,Defeated Magic Blader\0	a,	9C	E8	A9	-1
-22566	a,Defeated Healer\0	a,	9C	E8	A9	-1
-22567	a,Defeated Lancer\0	a,	9C	E8	A9	-1
-22568	a,Defeated Lancer\0	a,	9C	E8	A9	-1
-22569	a,Dragontroop Cavalry\0	a,Tiat's Escort\0	9C	E8	A9	-1
-22570	a,Royal Guard Captain\0	a,	9C	E8	A9	-1
-22571	a,Dragontroop Spellshifter\0	a,	9C	E8	A9	-1
-22572	a,Dragontroop Commander\0	a,	9C	E8	A9	-1
-22573	a,Dragontroop Commando\0	a,	9C	E8	A9	-1
-22574	a,Dragontroop Centurion\0	a,	9C	E8	A9	-1
-22575	a,Dragontroop Infantry\0	a,	9C	E8	A9	-1
-22576	a,Dragontroop Archmage\0	a,	9C	E8	A9	-1
-22577	a,Dragontroop Wizard\0	a,	9C	E8	A9	-1
-22578	a,Dragontroop Magic Blader\0	a,	9C	E8	A9	-1
-22579	a,Berserker\0	a,	9C	E8	A9	-1
-22580	a,Dragontroop Healer\0	a,	9C	E8	A9	-1
-22581	a,Dragontroop Lancer\0	a,	9C	E8	A9	-1
-22582	a,Dragontroop Lancer\0	a,	9C	E8	A9	-1
-22583	a,Dragontroop Archmage\0	a,	9C	E8	A9	-1
-22584	a,Dragontroop Wizard\0	a,	9C	E8	A9	-1
-22585	a,Dragontroop Magic Blader\0	a,	9C	E8	A9	-1
-22586	a,Dragontroop Commander\0	a,	9C	E8	A9	-1
-22587	a,Dragontroop Commando\0	a,	9C	E8	A9	-1
-22588	a,Dragontroop Centurion\0	a,	9C	E8	A9	-1
-22589	a,Dragontroop Infantry\0	a,	9C	E8	A9	-1
-22590	a,	a,	9C	E8	A9	-1
-22591	a,Dragontroop Archmage\0	a,	9C	E8	A9	-1
-22592	a,Dragontroop Wizard\0	a,	9C	E8	A9	-1
 22593	a,Dragontroop Magic Blader\0	a,	9C	E8	A9	-1
-22594	a,Dragontroop Commander\0	a,	9C	E8	A9	-1
-22595	a,Dragontroop Commando\0	a,	9C	E8	A9	-1
 22596	a,Dragontroop Centurion\0	a,	9C	E8	A9	-1
 22597	a,Dragontroop Infantry\0	a,	9C	E8	A9	-1
-22598	a,Obelisk\0	a,	9C	E8	A9	-1
-22599	a,Central Barrier Device\0	a,	9C	E8	A9	-1
-22600	a,Throne of Destruction Barrier Device\0	a,	9C	E8	A9	-1
-22601	a,Heart Protection Device\0	a,	9C	E8	A9	-1
 22602	a,Mutant Bird\0	a,	9C	E8	A9	-1
 22603	a,Mutant Bird\0	a,	9C	E8	A9	-1
 22604	a,Dra Hawk\0	a,	9C	E8	A9	-1
@@ -2423,31 +2051,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 22810	a,Micro Scout Golem\0	a,	9C	E8	A9	-1
 22811	a,Great Chaos Golem\0	a,	9C	E8	A9	-1
 22812	a,Boom Golem\0	a,	9C	E8	A9	-1
-22813	a,Demon's Banquet\0	a,	9C	E8	A9	-1
-22814	a,Demon's Banquet\0	a,	9C	E8	A9	-1
-22815	a,Drakos\0	a,	9C	E8	A9	-1
-22816	a,Maluk Maiden of the Valley\0	a,	9C	E8	A9	-1
-22817	a,Maluk Summoner of the Valley\0	a,	9C	E8	A9	-1
-22818	a,Exploding Orc Ghost\0	a,	9C	E8	A9	-1
-22819	a,Wrathful Orc Ghost\0	a,	9C	E8	A9	-1
-22820	a,Mesmer Drake\0	a,Scout\0	9C	E8	A9	-1
-22821	a,Immortal Necromancer\0	a,Scout\0	9C	E8	A9	-1
-22822	a,Drakos Warrior\0	a,	9C	E8	A9	-1
-22823	a,Drakos Assassin\0	a,	9C	E8	A9	-1
-22824	a,Drakos Guardian\0	a,	9C	E8	A9	-1
-22825	a,Giant Noxious Scorpion\0	a,	9C	E8	A9	-1
-22826	a,Noxious Scorpion\0	a,	9C	E8	A9	-1
-22827	a,Batwing Drake\0	a,	9C	E8	A9	-1
-22828	a,Parasitic Leech\0	a,	9C	E8	A9	-1
-22829	a,Emerald Drake\0	a,	9C	E8	A9	-1
-22830	a,Gem Dragon\0	a,	9C	E8	A9	-1
-22831	a,Dragon Tracker of the Valley\0	a,Tracker\0	9C	E8	A9	-1
-22832	a,Dragon Scout of the Valley\0	a,Scout\0	9C	E8	A9	-1
-22833	a,Sand Drake Tracker\0	a,Tracker\0	9C	E8	A9	-1
-22834	a,Dust Dragon Tracker\0	a,Tracker\0	9C	E8	A9	-1
-22835	a,Magma Drake Mother\0	a,	9C	E8	A9	-1
-22836	a,Magma Drake Hatchling\0	a,	9C	E8	A9	-1
-22837	a,Gem Dragon Hatchling\0	a,	9C	E8	A9	-1
 22838	a,Maluk Leader\0	a,	9C	E8	A9	-1
 22839	a,Maluk Warlord\0	a,	9C	E8	A9	-1
 22840	a,Maluk Hunter\0	a,	9C	E8	A9	-1
@@ -2468,11 +2071,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 22855	a,Bloody Berserker\0	a,	9C	E8	A9	-1
 22856	a,Bloody Karinness\0	a,	9C	E8	A9	-1
 22857	a,Knoriks\0	a,Land Dragon's Patrol\0	9C	E8	A9	-1
-22858	a,Necromancer of the Valley\0	a,	9C	E8	A9	-1
-22859	a,Howl\0	a,Tracker\0	9C	E8	A9	-1
-22860	a,Hungry Parasitic Leech\0	a,	9C	E8	A9	-1
-22861	a,Hard Noxious Scorpion\0	a,	9C	E8	A9	-1
-22862	a,Drakos Hunter\0	a,	9C	E8	A9	-1
 22863	a,Fairy Warrior\0	a,	9C	E8	A9	-1
 22864	a,Fairy Warrior\0	a,Wicked\0	9C	E8	A9	-1
 22865	a,Fairy Warrior\0	a,Mature\0	9C	E8	A9	-1
@@ -2609,17 +2207,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 22996	a,Krapher\0	a,Husk\0	9C	E8	A9	-1
 22997	a,Handyman\0	a,Embryo\0	9C	E8	A9	-1
 22998	a,Operative\0	a,Embryo\0	9C	E8	A9	-1
-22999	a,Kanilov\0	a,	9C	E8	A9	-1
-23000	a,Poslof\0	a,	9C	E8	A9	-1
-23001	a,Sakum\0	a,	9C	E8	A9	-1
-23002	a,Male Lachikion \0	a,	9C	E8	A9	-1
-23003	a,Male Lachikion \0	a,	9C	E8	A9	-1
-23004	a,Male Lachikion \0	a,Successor's Escort\0	9C	E8	A9	-1
-23005	a,Male Lachikion \0	a,Successor's Escort\0	9C	E8	A9	-1
-23006	a,Female Lachikion\0	a,	9C	E8	A9	-1
-23007	a,Female Lachikion\0	a,	9C	E8	A9	-1
-23008	a,Female Lachikion\0	a,Queen's Escort\0	9C	E8	A9	-1
-23009	a,Female Lachikion\0	a,Queen's Escort\0	9C	E8	A9	-1
 23010	a,Square Intruder\0	a,	9C	E8	A9	-1
 23011	a,Square Attacker\0	a,	9C	E8	A9	-1
 23012	a,Stronghold Protector\0	a,	9C	E8	A9	-1
@@ -2652,8 +2239,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 23039	a,Fountain Keeper\0	a,	9C	E8	A9	-1
 23040	a,Goddess Statue Keeper\0	a,	9C	E8	A9	-1
 23041	a,Pan Direm\0	a,	9C	E8	A9	-1
-23042	a,Female Lachikion\0	a,	9C	E8	A9	-1
-23043	a,Female Lachikion\0	a,	9C	E8	A9	-1
 23044	a,Exhausted Vengeful Spirit \0	a,	9C	E8	A9	-1
 23045	a,Wings of Viciousness\0	a,	9C	E8	A9	-1
 23046	a,Byron's Knight\0	a,	9C	E8	A9	-1
@@ -2941,23 +2526,12 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 23328	a,Assassin\0	a,Nerva Bloodlust\0	9C	E8	A9	-1
 23329	a,Nerva Kaiser\0	a,	9C	E8	A9	-1
 23330	a,Rubble\0	a,	9C	E8	A9	-1
-23331	a,Legah\0	a,One-armed Zombie's Arm\0	9C	E8	A9	-1
 23332	a,One-armed Zombie\0	a,	9C	E8	A9	-1
 23333	a,Putrefied Zombie\0	a,	9C	E8	A9	-1
 23334	a,Shelop\0	a,	9C	E8	A9	-1
 23335	a,Poras\0	a,	9C	E8	A9	-1
 23336	a,Death Worm\0	a,	9C	E8	A9	-1
 23337	a,Large Rubble\0	a,	9C	E8	A9	-1
-23338	a,Swamp of Screams Scout\0	a,Embryo\0	9C	E8	A9	-1
-23339	a,Forest of the Dead Scout\0	a,Embryo\0	9C	E8	A9	-1
-23340	a,Ceremony Executor\0	a,Embryo\0	9C	E8	A9	-1
-23341	a,Ketra Backup Shooter\0	a,Embryo\0	9C	E8	A9	-1
-23342	a,Ketra Backup Wizard\0	a,Embryo\0	9C	E8	A9	-1
-23343	a,Belos\0	a,Sakum's Clone\0	9C	E8	A9	-1
-23344	a,Varka Backup Shooter\0	a,Embryo\0	9C	E8	A9	-1
-23345	a,Varka Backup Wizard\0	a,Embryo\0	9C	E8	A9	-1
-23346	a,Kampf\0	a,Sakum's Clone\0	9C	E8	A9	-1
-23347	a,Armed Assault\0	a,Embryo\0	9C	E8	A9	-1
 23348	a,Chaos Horn\0	a,	9C	E8	A9	-1
 23349	a,Noctum\0	a,Gravekeeper\0	9C	E8	A9	-1
 23350	a,Demonic Noctum\0	a,Gravekeeper\0	9C	E8	A9	-1
@@ -3024,6 +2598,79 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 23411	a,Erosion Mutant\0	a,	9C	E8	A9	-1
 23412	a,Erosion Hacker\0	a,	9C	E8	A9	-1
 23413	a,Erosion Ark\0	a,	9C	E8	A9	-1
+23414	a,Windima\0	a,	9C	E8	A9	-1
+23415	a,Windima Feri\0	a,	9C	E8	A9	-1
+23416	a,Windima Resh\0	a,	9C	E8	A9	-1
+23417	a,Wind Vortex\0	a,Cyclone\0	9C	E8	A9	-1
+23418	a,Marionette Spirit\0	a,	9C	E8	A9	-1
+23419	a,Giant Windima\0	a,	9C	E8	A9	-1
+23420	a,Immense Windima\0	a,	9C	E8	A9	-1
+23421	a,Chertuba Mirage\0	a,	9C	E8	A9	-1
+23422	a,Chertuba Illusion\0	a,	9C	E8	A9	-1
+23423	a,Mesmer Dragon\0	a,	9C	E8	A9	-1
+23424	a,Gargoyle Dragon\0	a,	9C	E8	A9	-1
+23425	a,Black Dragon\0	a,	9C	E8	A9	-1
+23426	a,Emerald Dragon\0	a,	9C	E8	A9	-1
+23427	a,Sand Dragon\0	a,	9C	E8	A9	-1
+23428	a,Captain\0	a,Dragonblood\0	9C	E8	A9	-1
+23429	a,Minion\0	a,Dragonblood\0	9C	E8	A9	-1
+23430	a,Prey Drake\0	a,	9C	E8	A9	-1
+23431	a,Beast Drake\0	a,	9C	E8	A9	-1
+23432	a,Dust Drake\0	a,	9C	E8	A9	-1
+23433	a,Vampiric Drake\0	a,	9C	E8	A9	-1
+23434	a,Dragon Hatchling\0	a,	9C	E8	A9	-1
+23435	a,Leopard Dragon\0	a,	9C	E8	A9	-1
+23436	a,Cave Servant Archer\0	a,	9C	E8	A9	-1
+23437	a,Cave Servant Warrior\0	a,	9C	E8	A9	-1
+23438	a,Metallic Cave Servant\0	a,	9C	E8	A9	-1
+23439	a,Iron Cave Servant\0	a,	9C	E8	A9	-1
+23440	a,Headless Knight\0	a,	9C	E8	A9	-1
+23441	a,Bloody Grave Warrior\0	a,	9C	E8	A9	-1
+23442	a,Dark Grave Warrior\0	a,	9C	E8	A9	-1
+23443	a,Dark Grave Wizard\0	a,	9C	E8	A9	-1
+23444	a,Dark Grave Knight\0	a,	9C	E8	A9	-1
+23445	a,Chaos Dragon\0	a,	9C	E8	A9	-1
+23446	a,Crag Dragon\0	a,	9C	E8	A9	-1
+23447	a,Gust Spiral\0	a,	9C	E8	A9	-1
+23448	a,Floato\0	a,	9C	E8	A9	-1
+23449	a,Keen Floato\0	a,	9C	E8	A9	-1
+23450	a,Ratel\0	a,	9C	E8	A9	-1
+23451	a,Robust Ratel\0	a,	9C	E8	A9	-1
+23452	a,Honeybee\0	a,	9C	E8	A9	-1
+23453	a,Kiku\0	a,	9C	E8	A9	-1
+23454	a,Robust Kiku\0	a,	9C	E8	A9	-1
+23455	a,Growler\0	a,	9C	E8	A9	-1
+23456	a,Evolved Growler\0	a,Quest Monster\0	0	80	FF	-1
+23457	a,Treant\0	a,	9C	E8	A9	-1
+23458	a,Leafie\0	a,	9C	E8	A9	-1
+23459	a,Karaphon\0	a,Earth Spirit\0	9C	E8	A9	-1
+23460	a,Keen Honeybee\0	a,	9C	E8	A9	-1
+23461	a,Keen Growler\0	a,	9C	E8	A9	-1
+23462	a,Dimensional Orc Butcher\0	a,	9C	E8	A9	-1
+23463	a,Dimensional Orc Hunter\0	a,Scout\0	9C	E8	A9	-1
+23464	a,Dimensional Shaman\0	a,Watcher\0	9C	E8	A9	-1
+23465	a,Dimensional Bugbear\0	a,	9C	E8	A9	-1
+23466	a,Dimensional Salamander\0	a,Hunter\0	9C	E8	A9	-1
+23467	a,Dimensional Binder\0	a,	9C	E8	A9	-1
+23468	a,Dimensional Demon\0	a,	9C	E8	A9	-1
+23469	a,Dimensional Archon\0	a,Slaughterer\0	9C	E8	A9	-1
+23470	a,Unworldly Demon\0	a,	9C	E8	A9	-1
+23471	a,Unworldly Etin\0	a,	9C	E8	A9	-1
+23472	a,Unworldly Shaman\0	a,Watcher\0	9C	E8	A9	-1
+23473	a,Unworldly Salamander\0	a,Hunter\0	9C	E8	A9	-1
+23474	a,Unworldly Golem\0	a,	9C	E8	A9	-1
+23475	a,Unworldly Archon\0	a,Slaughterer\0	9C	E8	A9	-1
+23476	a,Unworldly Harpy\0	a,Avenger\0	9C	E8	A9	-1
+23477	a,Abyssal Shaman\0	a,Watcher\0	9C	E8	A9	-1
+23478	a,Abyssal Berserker\0	a,	9C	E8	A9	-1
+23479	a,Abyssal Salamander\0	a,Hunter\0	9C	E8	A9	-1
+23480	a,Abyssal Harpy\0	a,Avenger\0	9C	E8	A9	-1
+23481	a,Abyssal Binder\0	a,	9C	E8	A9	-1
+23482	a,Abyssal Archon\0	a,Slaughterer\0	9C	E8	A9	-1
+23483	a,Abyssal Golem\0	a,	9C	E8	A9	-1
+23484	a,Robust Honeybee\0	a,	9C	E8	A9	-1
+23485	a,Evolved Kiku\0	a,	9C	E8	A9	-1
+23486	a,Robust Growler\0	a,	9C	E8	A9	-1
 25001	a,Greyclaw Kutus\0	a,Raid Boss\0	3F	8B	FE	-1
 25002	a,Kutus' Escort\0	a,Raid Fighter\0	3F	8B	FE	-1
 25003	a,Kutus' Pawn\0	a,Raid Fighter\0	3F	8B	FE	-1
@@ -4001,8 +3648,8 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 25987	a,Vinoshe\0	a,Raid Minion\0	3F	8B	FE	-1
 25988	a,Varkaron's Minion Karnon\0	a,Raid Minion\0	3F	8B	FE	-1
 25989	a,Harp's Clone\0	a,Raid Boss\0	3F	8B	FE	-1
-25990	a,Isadora's Clone\0	a,Raid Boss\0	3F	8B	FE	-1
-25991	a,Maliss' Clone\0	a,Raid Boss\0	3F	8B	FE	-1
+25990	a,Isadora's Avatar\0	a,Raid Boss\0	3F	8B	FE	-1
+25991	a,Maliss' Avatar\0	a,Raid Boss\0	3F	8B	FE	-1
 25992	a,Embryo Garron\0	a,Raid Boss\0	3F	8B	FE	-1
 25993	a,Embryo Nigel\0	a,Raid Boss\0	3F	8B	FE	-1
 25994	a,Embryo Dabos\0	a,Raid Boss\0	3F	8B	FE	-1
@@ -4101,6 +3748,9 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 26087	a,Centaur's Minion Dantaros\0	a,Raid Minion\0	3F	8B	FE	-1
 26088	a,Undine\0	a,Time-defying\0	3F	8B	FE	-1
 26089	a,Frederick the Destroyer\0	a,	3F	8B	FE	-1
+26090	a,Abyssal Makkum\0	a,Raid Boss\0	3F	8B	FE	-1
+26091	a,Aspiring Orc Ruler of Aden\0	a,	3F	8B	FE	-1
+26092	a,Gigantic Golden Pig\0	a,Raid Boss\0	3F	8B	FE	-1
 29001	a,Queen Ant\0	a,	9C	E8	A9	-1
 29002	a,Queen Ant Larva\0	a,	9C	E8	A9	-1
 29003	a,Nurse Ant\0	a,	9C	E8	A9	-1
@@ -5892,6 +5542,51 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 15940	a,	a,	9C	E8	A9	-1
 15941	a,	a,	9C	E8	A9	-1
 15942	a,	a,	9C	E8	A9	-1
+19543	a,Invisible Kekropus NPC\0	a,	9C	E8	A9	-1
+19544	a,Invisible Anghel Waterfall NPC\0	a,	9C	E8	A9	-1
+19545	a,Warming Fire\0	a,	9C	E8	A9	-1
+19546	a,Dummy\0	a,Training\0	9C	E8	A9	-1
+19547	a,Dummy\0	a,Magical\0	9C	E8	A9	-1
+19548	a,Dark Grave\0	a,	9C	E8	A9	-1
+19549	a,Whirling Vortex\0	a,	9C	E8	A9	-1
+19550	a,Whirling Vortex\0	a,	9C	E8	A9	-1
+19551	a,Fire Bolt\0	a,	9C	E8	A9	-1
+19552	a,Ricky\0	a,	9C	E8	A9	-1
+19553	a,Dimensional Imp\0	a,Treasure Guard\0	9C	E8	A9	-1
+19554	a,Unworldly Imp\0	a,Treasure Guard\0	9C	E8	A9	-1
+19555	a,Abyssal Imp\0	a,Treasure Guard\0	9C	E8	A9	-1
+19556	a,Dimensional Trap\0	a,	9C	E8	A9	-1
+19557	a,Dimensional Trap\0	a,	9C	E8	A9	-1
+19558	a,Dimensional Trap\0	a,	9C	E8	A9	-1
+19559	a,Dimensional Trap\0	a,	9C	E8	A9	-1
+19560	a,Dimensional Trap\0	a,	9C	E8	A9	-1
+19561	a,Dimensional Trap\0	a,	9C	E8	A9	-1
+19562	a,Dimensional Light\0	a,	9C	E8	A9	-1
+19563	a,	a,	9C	E8	A9	-1
+19564	a,Invisible Dimensional Fragment NPC\0	a,	9C	E8	A9	-1
+19565	a,Invisible Turek Orc Quest NPC\0	a,	9C	E8	A9	-1
+19566	a,Von Hellmann\0	a,	9C	E8	A9	-1
+19567	a,Vampiric Soldier\0	a,	9C	E8	A9	-1
+19568	a,Sacred Wizard\0	a,	9C	E8	A9	-1
+19569	a,Sacred Soldier\0	a,	9C	E8	A9	-1
+19570	a,Sacred Slayer\0	a,	9C	E8	A9	-1
+19571	a,Makkum\0	a,	9C	E8	A9	-1
+19572	a,Abyssal Shadow\0	a,	9C	E8	A9	-1
+19573	a,Secluded Shadow\0	a,	9C	E8	A9	-1
+19574	a,Cowing\0	a,	9C	E8	A9	-1
+19575	a,	a,	9C	E8	A9	-1
+19576	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19577	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19578	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19579	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19580	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19581	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19582	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19583	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19584	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19585	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19586	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
+19587	a,Tainted Dimensional Treasure Chest\0	a,	9C	E8	A9	-1
 27001	a,Orc Sniper\0	a,	9C	E8	A9	-1
 27002	a,Orc Captain\0	a,	9C	E8	A9	-1
 27003	a,Spirit Of Mirrors\0	a,Quest Monster\0	0	80	FF	-1
@@ -6315,9 +6010,9 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 27448	a,Demonic Rakzan\0	a,Watchman of the Seal\0	9C	E8	A9	-1
 27449	a,Demonic Weiss Khan\0	a,Watchman of the Seal\0	9C	E8	A9	-1
 27450	a,Demonic Bamonti\0	a,Watchman of the Seal\0	9C	E8	A9	-1
-27451	a,Kanilov\0	a,Quest Monster\0	9C	E8	A9	-1
-27452	a,Poslof\0	a,Quest Monster\0	9C	E8	A9	-1
-27453	a,Sakum\0	a,Quest Monster\0	9C	E8	A9	-1
+27451	a,Kanilov\0	a,Quest Monster\0	0	80	FF	-1
+27452	a,Poslof\0	a,Quest Monster\0	0	80	FF	-1
+27453	a,Sakum\0	a,Quest Monster\0	0	80	FF	-1
 27454	a,Weiss Ele\0	a,Aeore Healer\0	9C	E8	A9	-1
 27456	a,Wisp\0	a,	9C	E8	A9	-1
 27457	a,Scarecrow\0	a,Training\0	9C	E8	A9	-1
@@ -6381,6 +6076,35 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 27515	a,Varka Backup Wizard\0	a,Embryo\0	9C	E8	A9	-1
 27516	a,Kampf\0	a,Sakum's Clone\0	9C	E8	A9	-1
 27517	a,Armed Assault\0	a,Embryo\0	9C	E8	A9	-1
+27518	a,Mahum's Vengeful Spirit\0	a,Quest Monster\0	0	80	FF	-1
+27519	a,Lesser Laikel\0	a,Quest Monster\0	0	80	FF	-1
+27520	a,Cursed Giant Akum\0	a,Quest Monster\0	0	80	FF	-1
+27521	a,Embryo\0	a,Quest Monster\0	0	80	FF	-1
+27522	a,Windima\0	a,Clone\0	9C	E8	A9	-1
+27523	a,Sealbreaker\0	a,Quest Monster\0	0	80	FF	-1
+27524	a,Remembered Giant Akum\0	a,	9C	E8	A9	-1
+27525	a,Remembered Embryo\0	a,	9C	E8	A9	-1
+27526	a,Floato\0	a,Quest Monster\0	0	80	FF	-1
+27527	a,Ratel\0	a,Quest Monster\0	0	80	FF	-1
+27528	a,Skeleton Warrior\0	a,Quest Monster\0	0	80	FF	-1
+27529	a,Skeleton Archer\0	a,Quest Monster\0	0	80	FF	-1
+27530	a,Vampiric Berise\0	a,Quest Monster\0	0	80	FF	-1
+27531	a,Floato\0	a,Quest Monster\0	0	80	FF	-1
+27532	a,Training Golem\0	a,	9C	E8	A9	-1
+27533	a,Fragment Eater\0	a,Quest Monster\0	0	80	FF	-1
+27534	a,Enraged Giant Narsides\0	a,Quest Monster\0	0	80	FF	-1
+27535	a,Giant's Minion\0	a,Quest Monster\0	0	80	FF	-1
+27536	a,Suspicious Cocoon\0	a,Quest Monster\0	0	80	FF	-1
+27537	a,Suspicious Cocoon\0	a,Quest Monster\0	0	80	FF	-1
+27538	a,Suspicious Cocoon\0	a,Quest Monster\0	0	80	FF	-1
+27539	a,Embryo Predator\0	a,Quest Monster\0	0	80	FF	-1
+27540	a,Embryo Purifier\0	a,Quest Monster\0	0	80	FF	-1
+27541	a,Embryo Purifier\0	a,Quest Monster\0	0	80	FF	-1
+27542	a,Needle Stakato Captain\0	a,Quest Monster\0	0	80	FF	-1
+27543	a,Needle Stakato\0	a,Quest Monster\0	0	80	FF	-1
+27544	a,Nebulite Eye\0	a,Quest Monster\0	0	80	FF	-1
+27545	a,Nebulite Watch\0	a,Quest Monster\0	0	80	FF	-1
+27546	a,Nebulite Golem\0	a,Quest Monster\0	0	80	FF	-1
 30001	a,Lector\0	a,Weapon Merchant\0	9C	E8	A9	-1
 30002	a,Jackson\0	a,Armor Merchant\0	9C	E8	A9	-1
 30003	a,Silvia\0	a,Accessory Merchant\0	9C	E8	A9	-1
@@ -7881,25 +7605,25 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 31784	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31785	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31786	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31787	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31787	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31788	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31789	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31790	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31791	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31792	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31792	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31793	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31794	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31795	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31796	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31797	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31797	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31798	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31799	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31800	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31801	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31802	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31803	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31804	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31805	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31804	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
+31805	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31806	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31807	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31808	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
@@ -7908,7 +7632,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 31811	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31812	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31813	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31814	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31814	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31815	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31816	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31817	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
@@ -7916,22 +7640,22 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 31819	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31820	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31821	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31822	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31823	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31822	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
+31823	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31824	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31825	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31826	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31827	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31827	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31828	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31829	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31829	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31830	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31831	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31832	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31832	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31833	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31834	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31835	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31836	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31837	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31837	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31838	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31839	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31840	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
@@ -8087,7 +7811,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 31990	a,Siger\0	a,Blacksmith\0	9C	E8	A9	-1
 31991	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31992	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
-31993	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
+31993	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
 31994	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31995	a,Adventure Guildsman\0	a,	9C	E8	A9	-1
 31996	a,Javier\0	a,Grand Magister\0	9C	E8	A9	-1
@@ -8408,7 +8132,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 32324	a,Black Stone Monolith\0	a,	9C	E8	A9	-1
 32325	a,Yin\0	a,Attribute Master\0	9C	E8	A9	-1
 32326	a,Yang\0	a,Attribute Master\0	9C	E8	A9	-1
-32327	a,Adventurers' Guide\0	a,	9C	E8	A9	-1
+32327	a,Adventurers' Guide\0	a,Newbie Buff Manager\0	9C	E8	A9	-1
 32328	a,Crystalline Golem\0	a,	9C	E8	A9	-1
 32330	a,Garden Guard\0	a,	9C	E8	A9	-1
 32331	a,	a,	9C	E8	A9	-1
@@ -9653,7 +9377,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 33584	a,Moe\0	a,Aden Reconstruction Society Leader\0	9C	E8	A9	-1
 33585	a,Conrad\0	a,Kingdom Mark Manager\0	9C	E8	A9	-1
 33586	a,	a,	9C	E8	A9	-1
-33587	a,Mentor Guide\0	a,	9C	E8	A9	-1
+33587	a,Mentor Guide\0	a,Mentoring Manager\0	9C	E8	A9	-1
 33588	a,Cellphine\0	a,	9C	E8	A9	-1
 33589	a,Cellphine\0	a,	9C	E8	A9	-1
 33590	a,Priest of Fate\0	a,Choice Returner\0	9C	E8	A9	-1
@@ -9990,12 +9714,95 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 33921	a,Allenos\0	a,Sergeant\0	9C	E8	A9	-1
 33922	a,Lara the Cat, Disguised from her Superiors\0	a,Event Manager\0	9C	E8	A9	-1
 33923	a,Lara the Cat's Boss\0	a,Event Manager\0	9C	E8	A9	-1
+33924	a,Lara the Cat's Buff Test\0	a,	9C	E8	A9	-1
 33925	a,Chaotic Chronicle\0	a,Memory Fragment Manager\0	9C	E8	A9	-1
 33926	a,Chaotic Throne\0	a,Squash Manager\0	9C	E8	A9	-1
 33927	a,Goddess of Destruction\0	a,Yogi's Staff Manager\0	9C	E8	A9	-1
 33928	a,Victory\0	a,Congratulations\0	9C	E8	A9	-1
 33929	a,Defeat\0	a,Close Call\0	9C	E8	A9	-1
 33930	a,Dandy\0	a,Assisted\0	9C	E8	A9	-1
+33931	a,Navari\0	a,Queen\0	9C	E8	A9	-1
+33932	a,Gereth\0	a,High Priest\0	9C	E8	A9	-1
+33933	a,Karla\0	a,	9C	E8	A9	-1
+33934	a,Denya\0	a,Armor Merchant\0	9C	E8	A9	-1
+33935	a,Evna\0	a,Weapon Merchant\0	9C	E8	A9	-1
+33936	a,Pelu\0	a,Grocer\0	9C	E8	A9	-1
+33937	a,Ceri\0	a,Accessory Merchant\0	9C	E8	A9	-1
+33938	a,Taoren\0	a,Priestess\0	9C	E8	A9	-1
+33939	a,Zaoren\0	a,Priestess\0	9C	E8	A9	-1
+33940	a,Vinath\0	a,	9C	E8	A9	-1
+33941	a,Senath\0	a,	9C	E8	A9	-1
+33942	a,Ayanthe\0	a,Magister\0	9C	E8	A9	-1
+33943	a,Katalin\0	a,Master\0	9C	E8	A9	-1
+33944	a,Ayanthe\0	a,Magister\0	9C	E8	A9	-1
+33945	a,Katalin\0	a,Master\0	9C	E8	A9	-1
+33946	a,Adventure Guildsman\0	a,PC Manager\0	9C	E8	A9	-1
+33947	a,Grakon\0	a,Warehouse Keeper\0	9C	E8	A9	-1
+33948	a,Astiel\0	a,Gatekeeper\0	9C	E8	A9	-1
+33949	a,Anita\0	a,Auction House Manager\0	9C	E8	A9	-1
+33950	a,Adventurer's Guide\0	a,Apprentice\0	9C	E8	A9	-1
+33951	a,Sivanthe\0	a,Forest Patrol\0	9C	E8	A9	-1
+33952	a,Leira\0	a,Forest Patrol\0	9C	E8	A9	-1
+33953	a,Milone\0	a,Forest Patrol\0	9C	E8	A9	-1
+33954	a,Dolkin\0	a,Maestro\0	9C	E8	A9	-1
+33955	a,Liberatto\0	a,Bard\0	9C	E8	A9	-1
+33956	a,Miso\0	a,Bard\0	9C	E8	A9	-1
+33957	a,Marmie\0	a,Bard\0	9C	E8	A9	-1
+33958	a,Tulesir\0	a,Bard\0	9C	E8	A9	-1
+33959	a,Mahum's Spirit\0	a,	9C	E8	A9	-1
+33960	a,Barrier Enforcer\0	a,	9C	E8	A9	-1
+33961	a,Magic Circle Control Device\0	a,	9C	E8	A9	-1
+33962	a,Life Energy Repository\0	a,	9C	E8	A9	-1
+33963	a,Pio\0	a,Researcher\0	9C	E8	A9	-1
+33964	a,Captured Tree Spirit\0	a,	9C	E8	A9	-1
+33965	a,Captured Wind Spirit\0	a,	9C	E8	A9	-1
+33966	a,Vorbos\0	a,Smitten\0	9C	E8	A9	-1
+33967	a,Sylph\0	a,Wind Spirit\0	9C	E8	A9	-1
+33968	a,Liberated Wind Spirit\0	a,	9C	E8	A9	-1
+33969	a,Liberated Tree Spirit\0	a,	9C	E8	A9	-1
+33970	a,Mercenary Captain\0	a,	9C	E8	A9	-1
+33971	a,Mercenary\0	a,	9C	E8	A9	-1
+33972	a,Rakun\0	a,	9C	E8	A9	-1
+33973	a,Namo\0	a,	9C	E8	A9	-1
+33974	a,Resed\0	a,Dimensional Warp Expeditioner\0	9C	E8	A9	-1
+33975	a,Einster\0	a,Dimensional Warp Expedition Lead\0	9C	E8	A9	-1
+33976	a,Chross\0	a,	9C	E8	A9	-1
+33977	a,Veruti\0	a,Alchemist\0	9C	E8	A9	-1
+33978	a,Zephyra\0	a,Alchemist\0	9C	E8	A9	-1
+33979	a,Kain van Halter\0	a,	9C	E8	A9	-1
+33980	a,Mysterious Wizard\0	a,	9C	E8	A9	-1
+33981	a,Telesha\0	a,	9C	E8	A9	-1
+33982	a,Tahlia\0	a,Guard\0	9C	E8	A9	-1
+33983	a,Lenoa\0	a,Guard\0	9C	E8	A9	-1
+33984	a,Nairu\0	a,Guard\0	9C	E8	A9	-1
+33985	a,Namee\0	a,Guard\0	9C	E8	A9	-1
+33986	a,Tauresia\0	a,Bard\0	9C	E8	A9	-1
+33987	a,Mortania\0	a,Bard\0	9C	E8	A9	-1
+33988	a,Severin\0	a,Bard\0	9C	E8	A9	-1
+33989	a,Remembrance Tower\0	a,	9C	E8	A9	-1
+33990	a,Hidden Crusher\0	a,Magic Device\0	9C	E8	A9	-1
+33991	a,Magic Owl\0	a,	9C	E8	A9	-1
+33992	a,Narsides\0	a,Cruma Tower Giant\0	9C	E8	A9	-1
+33993	a,Kain van Halter\0	a,Mysterious Man\0	9C	E8	A9	-1
+33994	a,Suspicious Box\0	a,	9C	E8	A9	-1
+33995	a,Kiku's Cave\0	a,	9C	E8	A9	-1
+33996	a,Grail\0	a,	9C	E8	A9	-1
+33997	a,Ritasha's Box\0	a,	9C	E8	A9	-1
+33998	a,Momet\0	a,Blacksmith\0	9C	E8	A9	-1
+33999	a,Kain van Halter\0	a,	9C	E8	A9	-1
+34000	a,Ferin\0	a,	9C	E8	A9	-1
+34001	a,Ferin\0	a,	9C	E8	A9	-1
+34002	a,Dolkin\0	a,Maestro\0	9C	E8	A9	-1
+34003	a,Victri\0	a,	9C	E8	A9	-1
+34004	a,Sayha's Herald\0	a,Victorious\0	9C	E8	A9	-1
+34005	a,Dia\0	a,	9C	E8	A9	-1
+34006	a,	a,	9C	E8	A9	-1
+34007	a,Nomi\0	a,Unlicensed Buff Manager\0	9C	E8	A9	-1
+34008	a,Noeler\0	a,Event Manager\0	9C	E8	A9	-1
+34009	a,Holiday Tree\0	a,Holiday Spirit\0	9C	E8	A9	-1
+34010	a,Galup\0	a,High Horse\0	9C	E8	A9	-1
+34011	a,Dandy\0	a,Dreaming\0	9C	E8	A9	-1
+34012	a,Dandy\0	a,Dreaming\0	9C	E8	A9	-1
 35010	a,Mercenary\0	a,	9C	E8	A9	-1
 35011	a,Mercenary\0	a,	9C	E8	A9	-1
 35012	a,Mercenary\0	a,	9C	E8	A9	-1
@@ -13931,7 +13738,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 13409	a,Cancer\0	a,	9C	E8	A9	-1
 13410	a,Virgo\0	a,	9C	E8	A9	-1
 13411	a,Aries\0	a,	9C	E8	A9	-1
-13412	a,Capris\0	a,	9C	E8	A9	-1
+13412	a,Capricorn\0	a,	9C	E8	A9	-1
 13413	a,Gemini\0	a,	9C	E8	A9	-1
 13414	a,Leo\0	a,	9C	E8	A9	-1
 13415	a,Libra\0	a,	9C	E8	A9	-1
@@ -13943,6 +13750,35 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 13420	a,Defective Squash\0	a,	9C	E8	A9	-1
 13421	a,High Quality Large Squash\0	a,	9C	E8	A9	-1
 13422	a,Defective Large Squash\0	a,	9C	E8	A9	-1
+13423	a,Protection Stone\0	a,	9C	E8	A9	-1
+13424	a,Protection Stone\0	a,	9C	E8	A9	-1
+13425	a,Protection Stone\0	a,	9C	E8	A9	-1
+13426	a,Instant Portal\0	a,	9C	E8	A9	-1
+13427	a,Instant Portal\0	a,	9C	E8	A9	-1
+13428	a,Instant Portal\0	a,	9C	E8	A9	-1
+13429	a,Flag of Life\0	a,	9C	E8	A9	-1
+13430	a,Flag of Life\0	a,	9C	E8	A9	-1
+13431	a,Flag of Life\0	a,	9C	E8	A9	-1
+13432	a,Gravity Core\0	a,	9C	E8	A9	-1
+13433	a,Gravity Core\0	a,	9C	E8	A9	-1
+13434	a,Gravity Core\0	a,	9C	E8	A9	-1
+13435	a,Gravity Core\0	a,	9C	E8	A9	-1
+13436	a,Decoy\0	a,	9C	E8	A9	-1
+13437	a,Decoy\0	a,	9C	E8	A9	-1
+13438	a,Decoy\0	a,	9C	E8	A9	-1
+13439	a,Decoy\0	a,	9C	E8	A9	-1
+13440	a,Warrior Fox\0	a,	9C	E8	A9	-1
+13441	a,Wizard Fox\0	a,	9C	E8	A9	-1
+13442	a,Freya\0	a,	9C	E8	A9	-1
+13443	a,Sirra\0	a,	9C	E8	A9	-1
+13444	a,Snowman\0	a,	9C	E8	A9	-1
+13445	a,Freya\0	a,Event Manager\0	9C	E8	A9	-1
+13446	a,Freya Agathion\0	a,	9C	E8	A9	-1
+13447	a,Joon\0	a,	9C	E8	A9	-1
+13448	a,Hungry Galup\0	a,Event Monster\0	9C	E8	A9	-1
+13449	a,Aggressive Stalker\0	a,Event Monster\0	9C	E8	A9	-1
+13450	a,L2B2\0	a,Alien Spy\0	9C	E8	A9	-1
+13451	a,L2B2\0	a,	9C	E8	A9	-1
 8550	a,Anakim Agathion\0	a,	9C	E8	A9	-1
 8551	a,Katura Queen\0	a,Raid Boss\0	3F	8B	FE	-1
 8552	a,Fire Katura\0	a,Raid Minion\0	3F	8B	FE	-1
@@ -14009,3 +13845,6 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 8613	a,Scorpio\0	a,	9C	E8	A9	-1
 8614	a,Taurus\0	a,	9C	E8	A9	-1
 8615	a,Toy Knight\0	a,	9C	E8	A9	-1
+8616	a,Tsubaki\0	a,Priestess\0	9C	E8	A9	-1
+8617	a,Gaudi\0	a,	9C	E8	A9	-1
+8618	a,Minion Eye\0	a,	9C	E8	A9	-1
