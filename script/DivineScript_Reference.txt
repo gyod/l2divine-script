@@ -2,8 +2,8 @@
 | DivineScript Reference |
 +------------------------+
 
-Version:	2.2
-Last updated:	Oct 10, 2013
+Version:	2.4
+Last updated:	May 10, 2014
 Author:		Dev, Zariche
 
 +-------------------+
@@ -20,7 +20,9 @@ Section 1: The Basics
 -- Represent string with ""
 - Global Property
 - Including other script
+- Encrypt script file
 Section 2: Commands
+- Action
 - ActionSorrow
 - AddHuntingArea
 - AddRectHuntingArea
@@ -62,6 +64,7 @@ Section 2: Commands
 - Include
 - Invite
 - IsMember
+- ItemInRange
 - Jump
 - Label
 - LearnSkill
@@ -75,6 +78,7 @@ Section 2: Commands
 - NpcDialog
 - NPCInRange
 - PetAction
+- Pickup
 - PlayerBuffLevel
 - PlayerBuffTime
 - PlayerInRange
@@ -217,8 +221,8 @@ Char.Race		Character race
 Char.Class		Character class
 Char.EXP%		Character percenrage of current level	
 Char.IsSelectTarget	Character is selected target
-Char.IsTargetByPlayer	Character is targeted by player
-Char.IsAttackByPlayer	Character is under attack by player
+Char.IsTargetByPlayer	Character is targeted by other player
+Char.IsAttackByPlayer	Character is under attack by other player
 Target.HP		Target HP
 Target.HP%		Target HP percentage
 Target.MP		Target MP
@@ -250,14 +254,43 @@ Msg(Console, "MyLib -> Hello 2")
 
 Note! The specified script must be in the same directory with the file that uses the command.
 
++------------------------+
+| Encrypt script file |
++------------------------+
+
+You can encrypt your script file to make it unable to read and edit by 
+text editor program but still can run with L2Divine.
+
+To enable this feature, do following step:
+1. Open L2Divine.ini
+2. Add "EnableScriptEncryption=1" under the "Option" section
+3. Save and restart L2Divine
+
+-- Example --
+[Option]
+EnableScriptEncryption=1
+
+The script file will automatic encrypt when it run.
+The encrypted script file will save in same folder with the running script
+but the file extension will change to .dys instead. 
+
 +--------------------+
 | Section 2: Command |
 +--------------------+
 
+Action(Action Id)
+	Parameter	Action id (See@ActionID)
+	Return		None
+	Propose		Do action by specified action id
+			Note: Some action required parameter(s) that not supported by the script engine
+			and you will be possible to disconnect from server. 
+			Please use it as your own risk.
+
 ActionSorrow()
 	Parameter	None
 	Return		None
-	Propose		Action sorrow Note: Can use SocialAction(35)
+	Propose		Action sorrow 
+			Note: This is alias for Action(35)
 	
 AddHuntingArea(x, y, z, radius)
 AddHuntingArea(radius)
@@ -417,6 +450,7 @@ CountNPCInRange(NPC Name, x, y, z, radius)
 	Parameter	NPC ID/Name, x, y, z, radius
 	Return		Number of NPC in specified area
 	Propose		Count number of NPC in specified area (Use with If and While command)
+			Note: You can use x,y,z=0 to represent your current location
 
 CraftItem(Receipt ID)
 	Parameter	Reciept ID
@@ -533,7 +567,7 @@ ForceAttack(NPC ID)
 ForceAttackTarget()
 	Parameter	None
 	Return		None
-	Propose		Force melee attack to current target
+	Propose		Force melee attack to selected target
 	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			Start:
 
@@ -595,7 +629,7 @@ FoundKarmaPlayer(Range)
 FoundPlayerInRange(Range)
 	Parameter	Range from current location
 	Return		True/False
-	Propose		Check player in specified range (Use with If and While command)
+	Propose		Check other player in specified range (Use with If and While command)
 	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			// Check player in range 1000
 			If (FoundPlayerInRange(100))
@@ -651,6 +685,21 @@ IsMember(Name)
 			}
 			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+ItemInRange(Item ID, x, y, z, radius)
+	Parameter	Item ID, x, y, z, radius
+	Return		True/False
+	Propose		Check item in specified area
+			(Use with If and While command)
+			Note: You can use x,y,z=0 to represent your current location
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Pickup adena
+			While (ItemInRange(57,0,0,0,1000))
+			{
+				Msg(Console, "Picking ...")
+				Pickup()
+				Delay(2000)
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Jump(Label)
 	Parameter	Address label
 	Return		None
@@ -772,6 +821,7 @@ NPCInRange(NPC Name, x, y, z, radius)
 	Parameter	NPC ID or NPC name, x, y, z, radius
 	Return		True/False
 	Propose		Check NPC in specified area
+			Note: You can use x,y,z=0 to represent your current location
 
 PetAction(Action ID)
 PetAction(Action Name)
@@ -779,6 +829,11 @@ PetAction(Action Name)
 	Return		None
 	Propose		Use pet action
 	Example		PetAction("Attack")
+
+Pickup()
+	Parameter	None
+	Return		None
+	Propose		Pickup 1 nearest item (Only item that belong to you or your team).
 
 PlayerBuffLevel(Name, Skill ID)
 	Parameter	Player name, Skill ID
@@ -808,6 +863,8 @@ PlayerInRange(Name, x, y, z, radius)
 	Return		True/False
 	Propose		Check player in specified area
 			(Use with If and While command)
+			Note: You can use x,y,z=0 to represent your current location
+
 PlaySound(Sound File)
 	Parameter	Part of sound file
 	Return		None
@@ -959,16 +1016,19 @@ Sit()
 	Parameter	None
 	Return		None
 	Propose		Set character to sit
+			Note: This is alias for Action(0). Toggle between Sit/Stand
 
 Stand()
 	Parameter	None
 	Return		None
 	Propose		Set character to stand
+			Note: This is alias for Action(0). Toggle between Sit/Stand
 
 SocialAction(Action ID)
-	Parameter	Action ID (see@SocialAction.ActionID)
+	Parameter	Action ID (see@ActionID)
 	Return		None
 	Propose		Use social action command
+			Note: This command was deprecated with Action() since L2Divine 10.6.10
 
 TargetInRange(Name)
 TargetInRange(NPC ID)
@@ -1165,6 +1225,40 @@ While() {}
 144=Iss Enchanter
 145=Wynn Summoner
 146=Aeore Healer
+148=Sigel Phoenix Knight
+149=Sigel Hell Knight
+150=Sigel Eva's Templar
+151=Sigel Shillien Templar
+152=Tyrr Duelist
+153=Tyrr Dreadnought
+154=Tyrr Titan
+155=Tyrr Grand Khavatari
+156=156Tyrr Maestro
+157=Tyrr Doombringer
+158=Othell Adventurer
+159=Othel Wind Rider
+160=Othell Ghost Hunter
+161=Othell Fortune Seeker
+162=Yul Sagittarius
+163=Yul Moonlight Sentinel
+164=Yul Ghost Sentinel
+165=Yul Trickster
+166=Feoh Archmage
+167=Feoh Soultaker
+168=Feoh Mystic Muse
+169=Feoh Storm Screamer
+170=Feoh Soul Hound
+171=Iss Hierophant
+172=Iss Sword Muse
+173=Iss Spectral Dancer
+174=Iss Dominator
+175=Iss Doomcryer
+176=Wynn Arcana Lord
+177=Wynn Elemental Master
+178=Wynn Spectral Master
+179=Aeore Cardinal
+180=Aeore Eva's Saint
+181=Aeore Shillien Saint
 
 +-----------------------+
 | Target.AbnormalStatus |
@@ -1188,20 +1282,253 @@ While() {}
 24=Magic Circle
 28=Ultimate Defend
 
-+-----------------------+
-| SocialAction.ActionID |
-+-----------------------+
++----------+
+| ActionID |
++----------+
+0=Sit/Stand
+1=Walk/Run
+2=Attack
+3=Exchange
+4=Next Target
+5=Pick Up (Not work)
+6=Assist
+7=Invite
+8=Leave Party
+9=Dismiss Party Member
+10=Private Store - Sell
+11=Party Matching
 12=Greeting
 13=Victory
 14=Advance
+15=Change Movement Mode
+16=Attack
+17=Stop
+18=Pickup (Pet)
+19=Unsummon Pet
+20=Special skill
+21=Change Movement Mode
+22=Attack
+23=Stop
 24=Yes
 25=No
 26=Bow
+27=Special skill
+28=Private Store - Buy
 29=Unaware
-30=Waiting
+30=Social Waiting
 31=Laugh
+32=Switch Mode
 33=Applaud
 34=Dance
 35=Sorrow
+36=Toxic Smoke
+37=Dwarven Workshop
+38=Mount/Dismount
+39=Parasite Burst
+40=Recommend
+41=Wild Cannon
+42=Self Damage Shield
+43=Hydro Screw
+44=Boom Attack
+45=Master Recharge
+46=Mega Storm Strike
+47=Steal Blood
+48=Mech. Cannon
+49=Wield Temper
+50=Change Party Leader
+51=General Workshop
+52=Unsummon
+53=Move
+54=Move
+55=Start/End Recording Replay
+56=Command Channel Invite
+57=Find Store
+58=Duel
+59=Withdraw
+60=Party Duel
+61=Package Sale
 62=Charm
+63=Mini-Game
+64=My Teleports
+65=Bot Report Button
 66=Shyness
+67=Steer
+68=Cancel Control
+69=Destination Map
+70=Exit Airship
+71=Exchange Bows
+72=High Five
+73=Couple Dance
+74=Turn On/Off the Status Information
+76=Invite Friends
+77=Start/End Recording
+78=Use Token 1
+79=Use Token 2
+80=Use Token 3
+81=Use Token 4
+82=Token 1 Targeting
+83=Token 2 Targeting
+84=Token 3 Targeting
+85=Token 4 Targeting
+86=Start/Stop Automatic Party Search
+87=Propose
+88=Provoke
+89=Show Off
+90=Instanced Zone
+1000=Siege Hammer
+1001=Ultimate Bombastic Buster
+1002=Hostile Feeling
+1003=Wild Stun
+1004=Wild Defense
+1005=Bright Burst
+1006=Bright Heal
+1007=Blessing of Queen
+1008=Gift of Queen
+1009=Cure of Queen
+1010=Blessing of Seraphim
+1011=Gift of Seraphim
+1012=Cure of Seraphim
+1013=Curse of Shade
+1014=Mass Curse of Shade
+1015=Shade Sacrifice
+1016=Cursed Blow
+1017=Cursed Strike
+1018=Cursed Drain Energy
+1019=Kat the Cat Skill 2
+1020=Mew the Cat Skill 2
+1021=Kai the Cat Skill 2
+1022=Boxer the Unicorn Skill 2
+1023=Mirage the Unicorn Skill 2
+1024=Merrow the Unicorn Skill 2
+1025=Shadow Skill 1
+1026=Shadow Skill 2
+1027=Silhouette Skill 2
+1028=Reanimated Man Skill 1
+1029=Reanimated Man Skill 2
+1030=Corrupted Man Skill 2
+1031=Slash
+1032=Spin Slash
+1033=Grip of the Cat
+1034=Whiplash
+1035=Tidal Wave
+1036=Corpse Burst
+1037=Dicing Death
+1038=Dark Curse
+1039=Cannon Fodder
+1040=Big Bang
+1041=Bite Attack
+1042=Maul
+1043=Cry of the Wolf
+1044=Awakening
+1045=Wolf Howl
+1046=Strider Roar
+1047=Divine Beast Bite
+1048=Divine Beast Stun Attack
+1049=Divine Beast Fire Breath
+1050=Divine Beast Roar
+1051=Blessed Body
+1052=Blessed Soul
+1053=Haste
+1054=Acumen
+1055=Clarity
+1056=Empower
+1057=Wild Magic
+1058=Death Whisper
+1059=Focus
+1060=Guidance
+1061=Death Blow
+1062=Double Attack
+1063=Spin Attack
+1064=Meteor Shower
+1065=Awakening
+1066=Thunder Bolt
+1067=Flash
+1068=Lightning Wave
+1069=Flare
+1070=Buff Control
+1071=Power Striker
+1072=Piercing Attack
+1073=Whirlwind
+1074=Lance Smash
+1075=Battle Cry
+1076=Power Smash
+1077=Energy Burst
+1078=Shock Wave
+1079=Howl
+1080=Phoenix Rush
+1081=Phoenix Cleanse
+1082=Phoenix Flame Feather
+1083=Phoenix Flame Beak
+1084=Switch State
+1086=Panther Cancel
+1087=Panther Dark Claw
+1088=Panther Fatal Claw
+1089=Tail Strike
+1090=Strider Bite
+1091=Strider Fear
+1092=Strider Dash
+1093=Maguen Strike
+1094=Maguen Wind Walk
+1095=Maguen Power Strike
+1096=Elite Maguen Wind Walk
+1097=Maguen Return
+1098=Maguen Party Return
+1099=Attack
+1100=Move
+1101=Stop
+1102=Unsummon
+1103=Passive
+1104=Defend
+1106=Bear Claw
+1107=Bear Tumbling
+1108=Cougar Bite
+1109=Cougar Pounce
+1110=Reaper Touch
+1111=Reaper Power
+1113=Lion Roar
+1114=Lion Claw
+1115=Lion Dash
+1116=Lion Flame
+1117=Thunder Flight
+1118=Thunder Purity
+1120=Thunder Feather
+1121=Thunder Sharp Claw
+1122=Blessing of Life
+1123=Siege Punch
+1124=Feline Aggression
+1125=Feline Stun
+1126=Feline Bite
+1127=Feline Pounce
+1128=Feline Touch
+1129=Feline Power
+1130=Unicorn's Aggression
+1131=Unicorn's Stun
+1132=Unicorn's Bite
+1133=Unicorn's Pounce
+1134=Unicorn's Touch
+1135=Unicorn's Power
+1136=Phantom Aggression
+1137=Phantom Stun
+1138=Phantom Bite
+1139=Phantom Pounce
+1140=Phantom Touch
+1141=Phantom Power
+1142=Panther Roar
+1143=Panther Rush
+5000=Hand of Warmth
+5001=Rosy Seduction
+5002=Art of Seduction
+5003=Thunder Bolt
+5004=Flash
+5005=Lightning Wave
+5006=Buff Control
+5007=Piercing Attack
+5008=Spin Attack
+5009=Impale
+5010=Battle Cry
+5011=Power Smash
+5012=Energy Burst
+5013=Shock Wave
+5014=Burst
+5015=Switch Tactics
+5016=Cat the Ranger Boost
