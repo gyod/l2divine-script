@@ -2,8 +2,8 @@
 | DivineScript リファレンス |
 +---------------------------+
 
-バージョン：	2.2
-最終更新日：	2013年10月10日
+バージョン：	2.4
+最終更新日：	2014年05月10日
 著者：		Dev, Zariche
 訳者：		gyo
 
@@ -21,7 +21,9 @@
 -- 文字列はダブルクォーテーション（"）で囲む
 - グローバルプロパティ
 - 他のスクリプトを取り込む
+- スクリプトファイルの暗号化
 セクション２：コマンド
+- Action
 - ActionSorrow
 - AddHuntingArea
 - AddRectHuntingArea
@@ -63,6 +65,7 @@
 - Include
 - Invite
 - IsMember
+- ItemInRange
 - Jump
 - Label
 - LearnSkill
@@ -76,6 +79,7 @@
 - NpcDialog
 - NPCInRange
 - PetAction
+- Pickup
 - PlayerBuffLevel
 - PlayerBuffTime
 - PlayerInRange
@@ -269,13 +273,42 @@ Msg(Console, "MyLibからこんにちは2")
 と同じディレクトリ（フォルダ）に置いておく必要があります。
 
 +------------------------+
+| スクリプトファイルの暗号化
++------------------------+
+
+スクリプトファイルをテキストエディタで読み込んだり編集したりはできないが、
+L2Divineでは実行可能となるように、暗号化することができます。
+
+この機能を有効化するには、以下の手順を実行します：
+1. L2Divine.iniを開きます。
+2. 「Option」セクションの下に「EnableScriptEncryption=1」という行を追加します。
+3. 保存してL2Divineを再起動します。
+
+-- 例 --
+[Option]
+EnableScriptEncryption=1
+
+スクリプトファイルを実行すると、自動的に暗号化されます。
+暗号化されたスクリプトファイルは、実行しているスクリプトと同じフォルダに
+「.dys」という拡張子に変更されて保存されます。
+
++------------------------+
 | セクション２：コマンド |
 +------------------------+
+
+Action(Action Id)
+	引数	アクションID (下記 ActionID 参照)
+	返値	なし
+	目的	アクションIDで指定したアクションを実行する
+			※注：パラメータが必要ないくつかのアクションはスクリプトエンジンでは
+			サポートしておらず、サーバから切断されてしまいます。
+			自己責任で使用してください。
 
 ActionSorrow()
 	引数	なし
 	返値	なし
-	目的	悲哀アクション　※注：「SocialAction(35)」と同等
+	目的	悲哀アクション
+			※注：「Action(35)」と同等
 
 AddHuntingArea(x, y, z, radius)
 AddHuntingArea(radius)
@@ -441,7 +474,7 @@ CountNPCInRange(NPC Name, x, y, z, radius)
 	引数	NPC IDまたはNPC名、x、y、z、半径
 	返値	指定範囲内の特定NPCの数
 	目的	指定範囲内の特定NPCの数を取得（IfまたはWhileコマンドで使用）
-	
+			※注：現在地を起点とするには、x、y、zを全て0にします
 
 CraftItem(Receipt ID)
 	引数	製作図ID（動作設定>アイテム製作画面で確認可能）
@@ -558,7 +591,7 @@ ForceAttack(NPC ID)
 ForceAttackTarget()
 	引数	なし
 	返値	なし
-	目的	現在のターゲットを強制攻撃（melee attack）
+	目的	選択しているターゲットを強制攻撃
 	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		Start:
 
@@ -676,6 +709,22 @@ IsMember(Name)
 			Msg(Console, "dev 参加してねぇ")
 		}
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ItemInRange(Item ID, x, y, z, radius)
+	引数	アイテムID、x、y、z、半径
+	返値	True/False（ブール（真偽）値）
+	目的	指定したエリア内のアイテムを確認する
+			（IfまたはWhileコマンドで使用）
+			※注：現在地を起点とするには、x、y、zを全て0にします
+	使用例		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// アデナを拾っちゃう
+			While (ItemInRange(57,0,0,0,1000))
+			{
+				Msg(Console, "ゲットだぜっ...")
+				Pickup()
+				Delay(2000)
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Jump(Label)
 	引数	アドレスラベル（文字列でダブルクォーテーション必須。日本語可）
@@ -797,6 +846,7 @@ NPCInRange(NPC Name, x, y, z, radius)
 	引数	NPC IDまたはNPC名、x、y、z、半径
 	返値	True/False（ブール（真偽）値）
 	目的	指定NPCが指定範囲内に存在するか確認
+			※注：現在地を起点とするには、x、y、zを全て0にします
 		（If またはWhile コマンドで使用）
 
 PetAction(Action ID)
@@ -805,6 +855,11 @@ PetAction(Action Name)
 	返値	なし
 	目的	ペットのアクションを使用
 	使用例	PetAction("Attack")
+
+Pickup()
+	引数	なし
+	返値	なし
+	目的	最も近いアイテムを1つ拾う（自分か自分のチームのアイテムのみ）
 
 PlayerBuffLevel(Name, Skill ID)
 	引数	プレイヤー名、スキルID
@@ -827,20 +882,21 @@ PlayerInRange(Name, x, y, z, radius)
 	引数	プレイヤー名、x、y、z、半径
 	返値	True/False（ブール（真偽）値）
 	目的	特定のプレイヤーが指定範囲内に存在するか確認
-		（If またはWhile コマンドで使用）
+			（If またはWhile コマンドで使用）
+			※注：現在地を起点とするには、x、y、zを全て0にします
 
 PlayerBuffTime(Name, Skill ID)
 	引数	プレイヤー名、スキルID
 	返値	True/False（ブール（真偽）値）
 	目的	特定キャラクタのバフの残り時間
-		（If またはWhile コマンドで使用）
+			（If またはWhile コマンドで使用）
 
 PlaySound(Sound File)
 	引数	サウンドファイル（WAV）ファイルのパス
 	返値	なし
 	目的	サウンドを鳴らす
-		（If またはWhile コマンドで使用）※訳注：この記述があったが
-		おそらく間違い
+			（If またはWhile コマンドで使用）※訳注：この記述があったが
+			おそらく間違い
 	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		PlaySound("C:\temp\L2Divine\sound\Alert.wav")
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -994,16 +1050,19 @@ Sit()
 	引数	なし
 	返値	なし
 	目的	キャラクターを座らせる
+			※注：Action(0)と同等。SitとStandを交互に行う
 
 Stand()
 	引数	なし
 	返値	なし
 	目的	キャラクターを立たせる
+			※注：Action(0)と同等。SitとStandを交互に行う
 
 SocialAction(Action ID)
-	引数	アクションID (下記 SocialAction.ActionID 参照)
+	引数	アクションID (下記 ActionID 参照)
 	返値	なし
 	目的	ソーシャルアクションコマンドを使用する
+			※注：このコマンドはL2Divine 10.6.10からAction()に置き換えられました
 
 TargetInRange(Name)
 TargetInRange(NPC ID)
@@ -1199,6 +1258,40 @@ While() {}
 144=イース エンチャンター(Iss Enchanter)
 145=ウィン サマナー(Wynn Summoner)
 146=エアロ ヒーラー(Aeore Healer)
+148=シーゲル フェニックス ナイト(Sigel Phoenix Knight)
+149=シーゲル ヘル ナイト(Sigel Hell Knight)
+150=シーゲル エヴァス テンプラー(Sigel Eva's Templar)
+151=シーゲル シリエン テンプラー(Sigel Shillien Templar)
+152=ティール デュエリスト(Tyrr Duelist)
+153=ティール ドレッドノート(Tyrr Dreadnought)
+154=ティール タイタン(Tyrr Titan)
+155=ティール グランド カバタリ(Tyrr Grand Khavatari)
+156=ティール マエストロ(Tyrr Maestro)
+157=ティール ドゥーム ブリンガー(Tyrr Doombringer)
+158=オーセル アドベンチャラー(Othell Adventurer)
+159=オーセル ウィンド ライダー(Othel Wind Rider)
+160=オーセル ゴースト ハンター(Othell Ghost Hunter)
+161=オーセル フォーチュン シーカー(Othell Fortune Seeker)
+162=ユール サジタリウス(Yul Sagittarius)
+163=ユール ムーンライト センティネル(Yul Moonlight Sentinel)
+164=ユール ゴースト センティネル(Yul Ghost Sentinel)
+165=ユール トリックスター(Yul Trickster)
+166=フェオ アークメイジ(Feoh Archmage)
+167=フェオ ソウルテイカー(Feoh Soultaker)
+168=フェオ ミスティック ミューズ(Feoh Mystic Muse)
+169=フェオ ストーム スクリーマー(Feoh Storm Screamer)
+170=フェオ ソウル ハウンド(Feoh Soul Hound)
+171=イース ハイエロファント(Iss Hierophant)
+172=イース ソード ミューズ(Iss Sword Muse)
+173=イース スペクトラル ダンサー(Iss Spectral Dancer)
+174=イース ドミネーター(Iss Dominator)
+175=イース ドゥーム クライヤー(Iss Doomcryer)
+176=ウィン アルカナ ロード(Wynn Arcana Lord)
+177=ウィン エレメンタル マスター(Wynn Elemental Master)
+178=ウィン スペクトラル マスター(Wynn Spectral Master)
+179=エアロ カーディナル(Aeore Cardinal)
+180=エアロ エヴァス セイント(Aeore Eva's Saint)
+181=エアロ シリエン セイント(Aeore Shillien Saint)
 
 +-----------------------------------+
 | Target.AbnormalStatus（異常状態） |
@@ -1222,20 +1315,253 @@ While() {}
 24=マジックサークル？(Magic Circle)
 28=アルティメット ディフェンス(Ultimate Defend)
 
-+---------------------------------------+
-| SocialAction.ActionID（アクションID） |
-+---------------------------------------+
++--------------------------+
+| ActionID（アクションID） |
++--------------------------+
+0=(Sit/Stand)
+1=(Walk/Run)
+2=(Attack)
+3=(Exchange)
+4=(Next Target)
+5=(Pick Up (Not work))
+6=(Assist)
+7=(Invite)
+8=(Leave Party)
+9=(Dismiss Party Member)
+10=(Private Store - Sell)
+11=(Party Matching)
 12=挨拶(Greeting)
 13=勝利(Victory)
 14=突撃(Advance)
+15=(Change Movement Mode)
+16=(Attack)
+17=(Stop)
+18=(Pickup (Pet))
+19=(Unsummon Pet)
+20=(Special skill)
+21=(Change Movement Mode)
+22=(Attack)
+23=(Stop)
 24=同意する(Yes)
 25=同意しない(No)
 26=丁寧な挨拶(Bow)
+27=(Special skill)
+28=(Private Store - Buy)
 29=そうですね(Unaware)
-30=待機(Waiting)
+30=待機(Social Waiting)
 31=笑い(Laugh)
+32=(Switch Mode)
 33=拍手(Applaud)
 34=ダンス(Dance)
 35=悲哀(Sorrow)
+36=Toxic Smoke)
+37=Dwarven Workshop)
+38=Mount/Dismount)
+39=Parasite Burst)
+40=Recommend)
+41=Wild Cannon)
+42=Self Damage Shield)
+43=Hydro Screw)
+44=Boom Attack)
+45=Master Recharge)
+46=Mega Storm Strike)
+47=Steal Blood)
+48=Mech. Cannon)
+49=Wield Temper)
+50=Change Party Leader)
+51=General Workshop)
+52=Unsummon)
+53=Move)
+54=Move)
+55=Start/End Recording Replay)
+56=Command Channel Invite)
+57=Find Store)
+58=Duel)
+59=Withdraw)
+60=Party Duel)
+61=Package Sale)
 62=誘惑(Charm)
+63=Mini-Game)
+64=My Teleports)
+65=Bot Report Button)
 66=恥ずかしい(Shyness)
+67=Steer)
+68=Cancel Control)
+69=Destination Map)
+70=Exit Airship)
+71=Exchange Bows)
+72=High Five)
+73=Couple Dance)
+74=Turn On/Off the Status Information)
+76=Invite Friends)
+77=Start/End Recording)
+78=Use Token 1)
+79=Use Token 2)
+80=Use Token 3)
+81=Use Token 4)
+82=Token 1 Targeting)
+83=Token 2 Targeting)
+84=Token 3 Targeting)
+85=Token 4 Targeting)
+86=Start/Stop Automatic Party Search)
+87=Propose)
+88=Provoke)
+89=Show Off)
+90=Instanced Zone)
+1000=Siege Hammer)
+1001=Ultimate Bombastic Buster)
+1002=Hostile Feeling)
+1003=Wild Stun)
+1004=Wild Defense)
+1005=Bright Burst)
+1006=Bright Heal)
+1007=Blessing of Queen)
+1008=Gift of Queen)
+1009=Cure of Queen)
+1010=Blessing of Seraphim)
+1011=Gift of Seraphim)
+1012=Cure of Seraphim)
+1013=Curse of Shade)
+1014=Mass Curse of Shade)
+1015=Shade Sacrifice)
+1016=Cursed Blow)
+1017=Cursed Strike)
+1018=Cursed Drain Energy)
+1019=Kat the Cat Skill 2)
+1020=Mew the Cat Skill 2)
+1021=Kai the Cat Skill 2)
+1022=Boxer the Unicorn Skill 2)
+1023=Mirage the Unicorn Skill 2)
+1024=Merrow the Unicorn Skill 2)
+1025=Shadow Skill 1)
+1026=Shadow Skill 2)
+1027=Silhouette Skill 2)
+1028=Reanimated Man Skill 1)
+1029=Reanimated Man Skill 2)
+1030=Corrupted Man Skill 2)
+1031=Slash)
+1032=Spin Slash)
+1033=Grip of the Cat)
+1034=Whiplash)
+1035=Tidal Wave)
+1036=Corpse Burst)
+1037=Dicing Death)
+1038=Dark Curse)
+1039=Cannon Fodder)
+1040=Big Bang)
+1041=Bite Attack)
+1042=Maul)
+1043=Cry of the Wolf)
+1044=Awakening)
+1045=Wolf Howl)
+1046=Strider Roar)
+1047=Divine Beast Bite)
+1048=Divine Beast Stun Attack)
+1049=Divine Beast Fire Breath)
+1050=Divine Beast Roar)
+1051=Blessed Body)
+1052=Blessed Soul)
+1053=Haste)
+1054=Acumen)
+1055=Clarity)
+1056=Empower)
+1057=Wild Magic)
+1058=Death Whisper)
+1059=Focus)
+1060=Guidance)
+1061=Death Blow)
+1062=Double Attack)
+1063=Spin Attack)
+1064=Meteor Shower)
+1065=Awakening)
+1066=Thunder Bolt)
+1067=Flash)
+1068=Lightning Wave)
+1069=Flare)
+1070=Buff Control)
+1071=Power Striker)
+1072=Piercing Attack)
+1073=Whirlwind)
+1074=Lance Smash)
+1075=Battle Cry)
+1076=Power Smash)
+1077=Energy Burst)
+1078=Shock Wave)
+1079=Howl)
+1080=Phoenix Rush)
+1081=Phoenix Cleanse)
+1082=Phoenix Flame Feather)
+1083=Phoenix Flame Beak)
+1084=Switch State)
+1086=Panther Cancel)
+1087=Panther Dark Claw)
+1088=Panther Fatal Claw)
+1089=Tail Strike)
+1090=Strider Bite)
+1091=Strider Fear)
+1092=Strider Dash)
+1093=Maguen Strike)
+1094=Maguen Wind Walk)
+1095=Maguen Power Strike)
+1096=Elite Maguen Wind Walk)
+1097=Maguen Return)
+1098=Maguen Party Return)
+1099=Attack)
+1100=Move)
+1101=Stop)
+1102=Unsummon)
+1103=Passive)
+1104=Defend)
+1106=Bear Claw)
+1107=Bear Tumbling)
+1108=Cougar Bite)
+1109=Cougar Pounce)
+1110=Reaper Touch)
+1111=Reaper Power)
+1113=Lion Roar)
+1114=Lion Claw)
+1115=Lion Dash)
+1116=Lion Flame)
+1117=Thunder Flight)
+1118=Thunder Purity)
+1120=Thunder Feather)
+1121=Thunder Sharp Claw)
+1122=Blessing of Life)
+1123=Siege Punch)
+1124=Feline Aggression)
+1125=Feline Stun)
+1126=Feline Bite)
+1127=Feline Pounce)
+1128=Feline Touch)
+1129=Feline Power)
+1130=Unicorn's Aggression)
+1131=Unicorn's Stun)
+1132=Unicorn's Bite)
+1133=Unicorn's Pounce)
+1134=Unicorn's Touch)
+1135=Unicorn's Power)
+1136=Phantom Aggression)
+1137=Phantom Stun)
+1138=Phantom Bite)
+1139=Phantom Pounce)
+1140=Phantom Touch)
+1141=Phantom Power)
+1142=Panther Roar)
+1143=Panther Rush)
+5000=Hand of Warmth)
+5001=Rosy Seduction)
+5002=Art of Seduction)
+5003=Thunder Bolt)
+5004=Flash)
+5005=Lightning Wave)
+5006=Buff Control)
+5007=Piercing Attack)
+5008=Spin Attack)
+5009=Impale)
+5010=Battle Cry)
+5011=Power Smash)
+5012=Energy Burst)
+5013=Shock Wave)
+5014=Burst)
+5015=Switch Tactics)
+5016=Cat the Ranger Boost)
