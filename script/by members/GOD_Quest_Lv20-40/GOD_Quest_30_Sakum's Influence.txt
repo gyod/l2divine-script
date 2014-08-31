@@ -80,7 +80,7 @@ Delay(2000)
 
 // Lets start killing mobs!
 ClearHuntingArea()
-AddHuntingArea(-16593, 140235, -3872, 2000)
+AddHuntingArea(-16593, 140235, -3872, 2500)
 AddHuntingArea(-14436, 140885, -3840, 1000)
 // Start battle
 BattleStart()
