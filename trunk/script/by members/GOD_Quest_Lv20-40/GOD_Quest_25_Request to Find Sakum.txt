@@ -137,7 +137,7 @@ Delay(2000)
 
 // Lets start killing mobs!
 ClearHuntingArea()
-AddHuntingArea(-52562, 118321, -2936, 3000)
+AddHuntingArea(-52562, 118321, -2936, 5000)
 // Start battle
 BattleStart()
 Msg(Console, "Killing mobs!")
@@ -192,7 +192,7 @@ MoveTo(-49117, 108397, -3720)
 Delay(2000)
 
 ClearHuntingArea()
-AddHuntingArea(-49117, 108397, -3720, 1800)
+AddHuntingArea(-49117, 108397, -3720, 2000)
 BattleStart()
 
 // Ruin Spartoi
