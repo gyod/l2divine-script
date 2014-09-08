@@ -2,8 +2,8 @@
 | DivineScript Reference |
 +------------------------+
 
-Version:	2.4
-Last updated:	May 10, 2014
+Version:	2.5
+Last updated:	September 5, 2014
 Author:		Dev, Zariche
 
 +-------------------+
@@ -35,6 +35,8 @@ Section 2: Commands
 - CharBuffTime
 - CheckNPCRange
 - ClearHuntingArea
+- ClearItemList
+- ClearMonsterList
 - CloseDialog
 - CloseWindow
 - Confirm
@@ -98,6 +100,8 @@ Section 2: Commands
 - Sell
 - SetBattleArea	
 - SetRestArea
+- SetPickup
+- SetAttack
 - Sit
 - Stand
 - SocialAction
@@ -372,6 +376,16 @@ ClearHuntingArea()
 	Return		None
 	Propose		Remove all hunting area from current setting
 	
+ClearItemList()	
+	Parameter	None
+	Return		None
+	Propose		Remove all items in setting list
+
+ClearMonsterList()	
+	Parameter	None
+	Return		None
+	Propose		Remove all monsters in setting list
+
 CloseDialog()
 	Parameter	None
 	Return		None
@@ -386,6 +400,7 @@ Confirm()
 	Parameter	None
 	Return		None
 	Propose		Confirm buy, sell, withdraw and deposit item with NPC
+	Tip		Right click on button to copy it content (NEW in L2Divine 11.1.0)
 	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 			// Talk with Mr.CAT
 			NpcDialog(31756)
@@ -1011,7 +1026,19 @@ SetRestArea(x, y, z)
 	Return		None
 	Propose		Set rest area to current setting 
 	Example		SetRestArea(115968, -174345, -760)
-	
+
+SetPickup(Item Id, true/false)
+	Parameter	Item Id, true/false
+	Return		None
+	Propose		Set to pick specified item or not 
+	Example		SetPickup(57, false) // Set to not pick adena
+
+SetAttack(NPC Id, true/false)
+	Parameter	NPC Id, true/false
+	Return		None
+	Propose		Set to attack specified monster or not 
+	Example		SetAttack(23113, true) // Set to attack crawler
+
 Sit()
 	Parameter	None
 	Return		None
@@ -1259,6 +1286,14 @@ While() {}
 179=Aeore Cardinal
 180=Aeore Eva's Saint
 181=Aeore Shillien Saint
+182=Ertheia Fighter
+183=Ertheia Wizard
+184=Marauder
+185=Cloud Breaker
+186=Ripper
+187=Stratomancer
+188=Eviscerator
+189=Sayha's Seer
 
 +-----------------------+
 | Target.AbnormalStatus |
