@@ -11,6 +11,7 @@
 97,Char.Vitality
 97,Char.Race
 97,Char.Class
+97,Char.EXP%
 97,Char.IsSelectTarget
 97,Char.IsTargetByPlayer
 97,Char.IsAttackByPlayer
@@ -32,6 +33,7 @@
 99,If
 99,Return
 99,While
+17,Action
 17,ActionSorrow
 17,AddHuntingArea
 17,AddRectHuntingArea
@@ -41,13 +43,17 @@
 17,Buy
 17,CancelAttackTarget
 17,CharBuffLevel
+17,CharBuffTime
 17,CheckNPCRange
 17,ClearHuntingArea
+17,ClearItemList
+17,ClearMonsterList
 17,CloseDialog
 17,CloseWindow
 17,Confirm
 17,CounterTargetPlayer
 17,CountItem
+17,CountNPCInRange
 17,CountQuestDefeatNpc
 17,CraftItem
 17,CrystalizeItem
@@ -70,6 +76,7 @@
 17,Include
 17,Invite
 17,IsMember
+17,ItemInRange
 17,Jump
 17,LearnSkill
 17,LeaveParty
@@ -80,8 +87,14 @@
 17,Msg
 17,NoMobInHuntingArea
 17,NpcDialog
+17,NPCInRange
+17,PetAction
+17,Pickup
 17,PlayerBuffLevel
+17,PlayerBuffTime
+17,PlayerInRange
 17,PlaySound
+17,QuestAccepted
 17,Recommend
 17,ReturnToVillage
 17,ReturnToClanHall
@@ -95,6 +108,8 @@
 17,Sell
 17,SetBattleArea
 17,SetRestArea
+17,SetPickup
+17,SetAttack
 17,Sit
 17,Stand
 17,SocialAction
