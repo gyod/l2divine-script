@@ -13848,3 +13848,4 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 8616	a,Tsubaki\0	a,Priestess\0	9C	E8	A9	-1
 8617	a,Gaudi\0	a,	9C	E8	A9	-1
 8618	a,Minion Eye\0	a,	9C	E8	A9	-1
+8619	a,br_aga_threehead2\0	a,	0	0	0	0
