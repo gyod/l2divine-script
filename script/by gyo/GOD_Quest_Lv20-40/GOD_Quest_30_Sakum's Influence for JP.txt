@@ -1,0 +1,187 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed. Modified for Ertheia by gyo
+//
+// Quest:		Sakum's Influence (サクムの影響)(10337)
+// LV:			28+ (after completed the quest "Divided Sakum, Kaniloy")
+// Location:	Front of Adventure Guildsman in Gludio
+// Reward:		1030 adena, 650000 XP and 156 SP
+//
+// Note: Don't forget set preference and attack command
+//
+// ------------------------------------------------------------------
+
+10337_Start:
+Delay(2000)
+
+//Talk to Adventure Guildsman
+NpcDialog(31795)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(3)
+Delay(3000)
+//SelectDialog("Sakum's Influence (Lv. 28-40)")
+//SelectDialog("|Lv.28～40| サクムの影響")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Can it be captured?")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Agree to help.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-15348, 123915, -3128)
+
+// Get Buff
+10337_GetBuff:
+MoveTo(-14700, 123990, -3120)
+Jump("AdventurersGuide")
+
+// Talk to Bella
+10337_GoToDespair:
+MoveTo(-14500, 124000, -3120)
+NpcDialog(30256)
+Delay(3000)
+//SelectDialog(""Teleport me, please"")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Ruins of Despair (Lv. 30)")
+SelectDialog("絶望の廃墟(レベル30)")
+//SelectDialog(18)
+//SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+//Talk to Silvan
+MoveTo(-19281, 136863, -3760)
+NpcDialog(33178)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("A sketch of Sakum.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Don't worry about it.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-19345, 137225, -3768)
+Delay(1000)
+MoveTo(-19837, 137907, -3856)
+Delay(1000)
+MoveTo(-19201, 139318, -3888)
+Delay(1000)
+
+// Lets start killing mobs!
+ClearHuntingArea()
+AddHuntingArea(-16593, 140235, -3872, 2500)
+AddHuntingArea(-14436, 140885, -3840, 1000)
+// Start battle
+BattleStart()
+Msg(Console, "Killing mobs!")
+
+10337_Start Battle:
+// Ruin Imp
+If (CountQuestDefeatNpc(20506) == 20)
+{
+	SetAttack(20506, false)
+	Msg(Console, "Ruin Imp done!")
+	// Scavenger Bat 20411
+	If (CountQuestDefeatNpc(27458) == 25)
+	{
+		SetAttack(23023, false)
+		SetAttack(20411, false)
+		Msg(Console, "Bat done!")
+		// Skeleton Warrior
+		If (CountQuestDefeatNpc(23022) == 15)
+		{
+			SetAttack(23022, false)
+			Jump("10337_Done")
+		}
+		Delay(5000)
+		Jump("10337_Start Battle")
+	}
+	Else
+	{
+		Delay(5000)
+		If (Char.HP == 0)
+		{
+			Msg(Console, "u dead!")
+			BattleStop()
+			Delay(1000)
+			ClearHuntingArea()
+			Delay(1000)
+			ReturnToVillage()
+			Delay(8000)
+			Jump("10337_GetBuff")
+		}
+		Delay(5000)
+		Jump("10337_Start Battle")
+	}
+}
+Else
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		Delay(1000)
+		ClearHuntingArea()
+		Delay(1000)
+		ReturnToVillage()
+		Delay(8000)
+		Jump("10337_GetBuff")
+	}
+	Jump("10337_Start Battle")
+}
+10337_Done:
+Msg(Console, "Skeleton Warrior done!")
+
+BattleStop()
+Delay(1000)
+ClearHuntingArea()
+Delay(1000)
+
+MoveTo(-16294, 140681, -3872)
+Delay(1000)
+MoveTo(-15703, 141793, -3872)
+Delay(1000)
+MoveTo(-12306, 141775, -3696)
+Delay(1000)
+MoveTo(-9680, 143027, -3576)
+Delay(1000)
+MoveTo(-8310, 142873, -3424)
+Delay(1000)
+
+//Talk to Lef
+MoveTo(-8147, 143177, -3424)
+Delay(2000)
+NpcDialog(33178)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Sakum's Influence (Lv. 28-40) (In Progress)")
+//SelectDialog("|Lv.28～40| サクムの影響(進行中)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("A sketch of Sakum.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+10337_End:

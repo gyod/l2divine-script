@@ -1,0 +1,40 @@
+// Snippet Script: Traces of Evil Race specific end
+// Author:	everRed
+
+
+If (CountItem(736) > 10)
+{
+	Msg(Console, "You got enough SoE.")
+	Jump("SoEEnd")
+}
+
+Msg(Console, "Buying SoE.")
+MoveTo(-14615, 124630, -3112)
+MoveTo(-14860, 124500, -3112)
+
+If (CountItem(57) < 10000)
+{
+	Msg(Console, "You need more adena to buy Scroll of Escape, please buy them by hand or get more adena.")
+	Exit
+}
+
+// Talk to Harmony
+NpcDialog(30254)
+Delay(3000)
+//SelectDialog("Buy supplies and minerals")
+SelectDialog(1)
+Delay(3000)
+AddItem(736, 20)
+Delay(2000)
+Confirm()
+Delay(2000)
+CloseDialog()
+CloseWindow()
+Delay(2000)
+
+MoveTo(-14936, 123934, -3120)
+Delay(2000)
+MoveTo(-14355, 123778, -3104)
+Delay(2000)
+
+SoEEnd:

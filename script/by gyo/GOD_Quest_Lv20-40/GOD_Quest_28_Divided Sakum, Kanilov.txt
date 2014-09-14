@@ -1,0 +1,158 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed. Modified for Ertheia by gyo
+//
+// Quest:		Divided Sakum, Kanilov (分化したサクム、カニロフ)(10336)
+// LV:			27+ (after completed the quest "Request to Find Sakum")
+// Location:	Front of Zenath at Ruins of Agony
+// Reward:		3 EWD, 1000 adena, 500000 XP and 120 SP
+//
+// Note: Don't forget set preference and attack command
+//
+// ------------------------------------------------------------------
+
+10336_Start:
+Delay(2000)
+
+Talk to Zenath:
+MoveTo(-46131, 109439, -3808)
+NpcDialog(33509)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Divided Sakum, Kanilov (Lv. 27-40)")
+//SelectDialog("|Lv.27～40| 分化したサクム、カニロフ")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("What about him?")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("I will try.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-46254, 109742, -3808)
+Delay(2000)
+MoveTo(-46156, 112209, -3808)
+Delay(2000)
+MoveTo(-46060, 113605, -3592)
+Delay(2000)
+MoveTo(-46503, 114746, -3672)
+Delay(2000)
+MoveTo(-46243, 115533, -3536)
+Delay(2000)
+
+// Lets start killing Kanilov!
+ClearHuntingArea()
+AddHuntingArea(-46243, 115533, -3536, 500)
+10336_Start Battle:
+// Start battle
+BattleStart()
+Msg(Console, "Killing Kanilov!")
+
+// Kanilov
+While (CountQuestDefeatNpc(27451) < 1)
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		Delay(1000)
+		ClearHuntingArea()
+		Delay(1000)
+		ReturnToVillage()
+		Delay(8000)
+		Msg(Console, "Restart Quest or do it by Hand")
+		Jump("10336_End_Fail")
+	}
+}
+Msg(Console, "Kanilov done!")
+
+BattleStop()
+Delay(1000)
+ClearHuntingArea()
+Delay(1000)
+
+MoveTo(-46243, 115533, -3536)
+Delay(2000)
+MoveTo(-46503, 114746, -3672)
+Delay(2000)
+MoveTo(-46060, 113605, -3592)
+Delay(2000)
+MoveTo(-46156, 112209, -3808)
+Delay(2000)
+MoveTo(-46254, 109742, -3808)
+Delay(2000)
+
+10336_Talk to Zenath:
+MoveTo(-46131, 109439, -3808)
+NpcDialog(33509)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Divided Sakum, Kanilov (In Progress)")
+//SelectDialog("|Lv.27～40| 分化したサクム、カニロフ(進行中)")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+// Go back to Town
+If (CountItem(10650) > 0)
+{
+	// Use Adventures Scroll of Escape
+	Delay(2000)
+	UseItem(10650)
+	Delay(40000)
+}
+Else
+{
+	// Use Scroll of Escape
+	Delay(2000)
+	UseItem(736)
+	Delay(40000)
+}
+
+MoveTo(-14545, 123541, -3104)
+Delay(2000)
+MoveTo(-15488, 124276, -3120)
+Delay(2000)
+
+
+//Talk to Adventure Guildsman
+NpcDialog(31795)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(3)
+Delay(3000)
+//SelectDialog("Divided Sakum, Kanilov (In Progress)")
+//SelectDialog("|Lv.27～40| 分化したサクム、カニロフ(進行中)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Report.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Here's a sketch of Sakum.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("10336_End")
+
+10336_End_Fail:
+Exit
+
+10336_End:

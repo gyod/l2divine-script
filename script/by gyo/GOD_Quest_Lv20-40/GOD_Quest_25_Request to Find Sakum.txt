@@ -1,0 +1,271 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed. Modified for Ertheia by gyo
+//
+// Quest:		Request to Find Sakum (サクム追跡依頼)(10335)
+// LV:			23+ (after completed the quest "Disappeared Sakum")
+// Location:	Front of Bathis in Gludio Town
+// Reward:		900 adena, 350000 XP and 84 SP
+//
+// Note: Don't forget set preference and attack command
+//
+// ------------------------------------------------------------------
+
+10335_Start:
+Delay(2000)
+
+10335_TalkToBathis:
+MoveTo(-13940, 123770, -3112)
+Delay(2000)
+
+// Talk to Bathis
+NpcDialog(30332)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(5)
+Delay(3000)
+//SelectDialog("Request to Find Sakum (Lv. 23-40)")
+//SelectDialog("|Lv.23～40| サクム追跡依頼")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Can I help?")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Yes, I'll go now.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+// Get Buff
+10335_GetBuff:
+//MoveTo(-14700, 123990, -3120)
+Jump("AdventurersGuide")
+
+// Talk to Bella
+Msg(Console, "Teleport to Agony")
+10335_GoToAgony:
+MoveTo(-14500, 124000, -3120)
+NpcDialog(30256)
+Delay(3000)
+//SelectDialog(""Teleport me, please"")
+SelectDialog(1)
+Delay(3000)
+// npcstring(1010097)
+SelectDialog("Ruins of Agony (Lv. 25)")
+//SelectDialog("悲嘆の廃墟(レベル25)")
+//SelectDialog(17)
+//SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+// To Guard Kallesin
+MoveTo(-41266, 123009, -2904)
+NpcDialog(33177)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Yeah, they shouldn't be too hard to take out.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-41402, 122585, -2968)
+Delay(2000)
+MoveTo(-42057, 121879, -3128)
+Delay(2000)
+MoveTo(-42639, 119790, -3552)
+Delay(2000)
+MoveTo(-43089, 118757, -3560)
+Delay(2000)
+MoveTo(-43664, 117776, -3552)
+Delay(2000)
+MoveTo(-44363, 114977, -3656)
+Delay(2000)
+MoveTo(-45273, 115869, -3522)
+Delay(2000)
+MoveTo(-45505, 117945, -3560)
+Delay(2000)
+
+// Lets start killing mobs!
+ClearHuntingArea()
+AddHuntingArea(-45878, 118939, -3456, 1200)
+10335_Start Battle:
+// Start battle
+BattleStart()
+Msg(Console, "Killing mobs!")
+
+// Zombie
+10335_Zombie:
+If (CountQuestDefeatNpc(20026) == 15)
+{
+	SetAttack(20026, false)
+	Jump("10335_Zombie_done")
+}
+Else
+{
+	// Test if this is unused
+	//If (CountQuestDefeatNpc(20029) == 15)
+	//{
+	//	Jump("10335_Zombie_done")
+	//}
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		Delay(1000)
+		ClearHuntingArea()
+		Delay(1000)
+		ReturnToVillage()
+		Delay(8000)
+		Msg(Console, "You are dead: Restarted :)")
+		Jump("10335_GetBuff")
+	}
+	Delay(5000)
+	Jump("10335_Zombie")
+}
+
+10335_Zombie_done:
+Msg(Console, "Zombie done!")
+
+BattleStop()
+Delay(1000)
+ClearHuntingArea()
+Delay(1000)
+
+Delay(2000)
+
+MoveTo(-45505, 117945, -3560)
+Delay(2000)
+MoveTo(-47228, 118467, -3160)
+Delay(2000)
+MoveTo(-51590, 117755, -2960)
+Delay(2000)
+
+// Lets start killing mobs!
+ClearHuntingArea()
+AddHuntingArea(-52562, 118321, -2936, 5000)
+// Start battle
+BattleStart()
+Msg(Console, "Killing mobs!")
+
+// Skeleton Tracker
+10335_Start_Battle:
+If (CountQuestDefeatNpc(20035) == 10)
+{
+	SetAttack(20035, false)
+	// Skeleton Bowman
+	If (CountQuestDefeatNpc(20051) == 10)
+	{
+		SetAttack(20051, false)
+		Jump("10335_Done")
+	}
+	Jump("10335_Start_Battle")
+}
+Else
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		Delay(1000)
+		ClearHuntingArea()
+		Delay(1000)
+		ReturnToVillage()
+		Delay(8000)
+		Msg(Console, "You are dead: Restarted :)")
+		Jump("10335_GetBuff")
+	}
+	Jump("10335_Start_Battle")
+}
+
+10335_Done:
+Msg(Console, "Skeleton Tracker done!")
+Msg(Console, "Skeleton Bowman done!")
+
+BattleStop()
+Delay(1000)
+ClearHuntingArea()
+Delay(2000)
+
+MoveTo(-53169, 116456, -3176)
+Delay(2000)
+MoveTo(-51772, 113751, -3560)
+Delay(2000)
+MoveTo(-49873, 112976, -3592)
+Delay(2000)
+MoveTo(-48790, 111412, -3568)
+Delay(2000)
+MoveTo(-48193, 109793, -3568)
+Delay(2000)
+MoveTo(-49117, 108397, -3720)
+Delay(2000)
+
+ClearHuntingArea()
+AddHuntingArea(-49117, 108397, -3720, 2000)
+BattleStart()
+
+// Ruin Spartoi
+10335_Spartoi:
+If (CountQuestDefeatNpc(20054) == 15)
+{
+	SetAttack(20054, false)
+	Jump("10335_Done2")
+}
+Else
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		Delay(1000)
+		ClearHuntingArea()
+		Delay(1000)
+		ReturnToVillage()
+		Delay(8000)
+		Msg(Console, "You are dead: Restarted :)")
+		Jump("10335_GetBuff")
+	}
+	Jump("10335_Spartoi")
+}
+10335_Done2:
+Msg(Console, "Ruin Spartoi done!")
+
+BattleStop()
+Delay(1000)
+ClearHuntingArea()
+Delay(1000)
+
+MoveTo(-48846, 109233, -3568)
+Delay(2000)
+MoveTo(-46365, 109479, -3808)
+Delay(2000)
+
+// Talk to Zenath
+MoveTo(-46131, 109439, -3808)
+NpcDialog(33509)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Request to Find Sakum (Lv. 23-40) (In Progress)")
+//SelectDialog("|Lv.23～40| サクム追跡依頼(進行中)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Well...")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Oh?")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+10335_End:
