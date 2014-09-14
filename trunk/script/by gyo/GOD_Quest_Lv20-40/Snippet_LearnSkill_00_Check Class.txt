@@ -96,6 +96,13 @@ If (Char.Class == 42)
 	Jump("LEARN_SKILL_ShillienOracle")
 	//Jump("CheckClassEnd")
 }
+// Orc Shaman
+If (Char.Class == 50)
+{
+	Msg(Console, "Learning Orc Shaman Skills.")
+	Jump("LEARN_SKILL_OrcShaman:")
+	//Jump("CheckClassEnd")
+}
 // Scavenger
 If (Char.Class == 54)
 {
