@@ -1,0 +1,147 @@
+// Snippet Script: Learn Skills 20-40
+// Author:	everRed
+
+//-------------------------------------------------------------------
+ClassStart:
+Msg(Console, "Learning Skills - Start")
+
+// Warrior
+If (Char.Class == 1)
+{
+	Msg(Console, "Learning Warrior Skills.")
+	Jump("LEARN_SKILL_Warrior")
+	//Jump("CheckClassEnd")
+}
+// Knight
+If (Char.Class == 4)
+{
+	Msg(Console, "Learning Knight Skills.")
+	Jump("LEARN_SKILL_Knight")
+	//Jump("CheckClassEnd")
+}
+// Rogue
+If (Char.Class == 7)
+{
+	Msg(Console, "Learning Rogue Skills.")
+	Jump("LEARN_SKILL_Rogue")
+	//Jump("CheckClassEnd")
+}
+// Wizard
+If (Char.Class == 11)
+{
+	Msg(Console, "Learning Wizard Skills.")
+	Jump("LEARN_SKILL_Wizard")
+	//Jump("CheckClassEnd")
+}
+// Cleric
+If (Char.Class == 15)
+{
+	Msg(Console, "Learning Cleric Skills.")
+	Jump("LEARN_SKILL_Cleric")
+	//Jump("CheckClassEnd")
+}
+// Elven Knight
+If (Char.Class == 19)
+{
+	Msg(Console, "Learning Elven Knight Skills.")
+	Jump("LEARN_SKILL_ElvenKnight")
+	//Jump("CheckClassEnd")
+}
+// Elven Scout
+If (Char.Class == 22)
+{
+	Msg(Console, "Learning Elven Scout Skills.")
+	Jump("LEARN_SKILL_ElvenScout")
+	//Jump("CheckClassEnd")
+}
+// Elven Wizard
+If (Char.Class == 26)
+{
+	Msg(Console, "Learning Elven Wizard Skills.")
+	Jump("LEARN_SKILL_Elven_Wizard")
+	//Jump("CheckClassEnd")
+}
+// Oracle
+If (Char.Class == 29)
+{
+	Msg(Console, "Learning Oracle Skills.")
+	Jump("LEARN_SKILL_Oracle")
+	//Jump("CheckClassEnd")
+}
+// Palus Knight
+If (Char.Class == 32)
+{
+	Msg(Console, "Learning Palus Knight Skills.")
+	Jump("LEARN_SKILL_PalusKnight")
+	//Jump("CheckClassEnd")
+}
+// Assassin
+If (Char.Class == 35)
+{
+	Msg(Console, "Learning Assassin Skills.")
+	Jump("LEARN_SKILL_Assassin")
+	//Jump("CheckClassEnd")
+}
+// Dark Wizard
+If (Char.Class == 39)
+{
+	Msg(Console, "Learning Dark Wizard Skills.")
+	Jump("LEARN_SKILL_DarkWizard")
+	//Jump("CheckClassEnd")
+}
+// Shillien Oracle
+If (Char.Class == 42)
+{
+	Msg(Console, "Learning Shillien Oracle Skills.")
+	Jump("LEARN_SKILL_ShillienOracle")
+	//Jump("CheckClassEnd")
+}
+// Scavenger
+If (Char.Class == 54)
+{
+	Msg(Console, "Learning Scavenger Skills.")
+	Jump("LEARN_SKILL_Scavenger")
+	//Jump("CheckClassEnd")
+}
+// Artisan
+If (Char.Class == 56)
+{
+	Msg(Console, "Learning Artisan Skills.")
+	Jump("LEARN_SKILL_Artisan")
+	//Jump("CheckClassEnd")
+}
+
+Include("Snippet_LearnSkill_Warrior.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Knight.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Rogue.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Wizard.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Cleric.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Elven Knight.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Elven Scout.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Elven Wizard.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Oracle.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Palus Knight.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Assassin.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Dark Wizard.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Shillien Oracle.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Scavenger.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Artisan.txt")
+Jump("CheckClassEnd")
+
+CheckClassEnd:
+Msg(Console, "ClassEnd")
+Delay(1000)

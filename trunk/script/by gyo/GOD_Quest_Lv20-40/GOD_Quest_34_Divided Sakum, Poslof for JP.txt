@@ -1,0 +1,239 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed. Modified for Ertheia by gyo
+//
+// Quest:		Divided Sakum, Poslof (分化したサクム、フォースロフ)(10338)
+// LV:			20+ (after completed the quest "Sakum's Influence")
+// Location:	Front of Guard Lef at Ruins of Despair
+// Reward:		1050 adena, 750000 XP and 180SP
+//
+// Note: Don't forget set preference and attack command
+//
+// ------------------------------------------------------------------
+
+10338_Start:
+Delay(2000)
+
+//Talk to Lef
+MoveTo(-8147, 143177, -3424)
+NpcDialog(33510)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Divided Sakum, Poslof (Lv. 33-40)")
+//SelectDialog("|Lv.33～40| 分化したサクム、フォースロフ")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("What is a Poslof?")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("It sounds like fun.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-5856, 143868, -3584)
+Delay(3000)
+
+// Lets start killing mobs!
+ClearHuntingArea()
+AddHuntingArea(-5142, 144900, -3625, 4000)
+// Start battle
+BattleStart()
+Msg(Console, "Killing mobs!")
+10338_Start Battle:
+// Venoam Bugbear Warrior
+If (CountQuestDefeatNpc(20402) == 23)
+{
+	SetAttack(20402, false)
+	Msg(Console, "Bugbear done")
+	// Zombie Warrior
+	If (CountQuestDefeatNpc(20458) == 20)
+	{
+		SetAttack(20458, false)
+		Msg(Console, "Zombie done")
+		Jump("10338_Done")
+	}
+	Delay(3000)
+	Jump("10338_Start Battle")
+}
+Else
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		Delay(1000)
+		ClearHuntingArea()
+		Delay(1000)
+		ReturnToVillage()
+		Delay(8000)
+		Msg(Console, "You are dead: Restart Quest or finish by hand!")
+		Jump("10338_End_Fail")
+	}
+	Jump("10338_Start Battle")
+}
+10338_Done:
+Msg(Console, "Bugbear done!")
+Msg(Console, "Zombie Warrior done!")
+
+BattleStop()
+Delay(1000)
+ClearHuntingArea()
+Delay(1000)
+
+MoveTo(-5856, 143868, -3584)
+Delay(3000)
+MoveTo(-7402, 143430, -3432)
+Delay(3000)
+
+//Talk to Lef
+MoveTo(-8147, 143177, -3424)
+NpcDialog(33510)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Divided Sakum, Poslof (Lv. 33-40) (In Progress")
+//SelectDialog("|Lv.33～40| 分化したサクム、フォースロフ(進行中)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("It sounds like fun.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+// Go back to Town
+If (CountItem(10650) > 0)
+{
+	// Use Adventures Scroll of Escape
+	Delay(2000)
+	UseItem(10650)
+	Delay(40000)
+}
+Else
+{
+	// Use Scroll of Escape
+	Delay(2000)
+	UseItem(736)
+	Delay(40000)
+}
+
+// Get Buff
+10338_GetBuff:
+//MoveTo(-14700, 123990, -3120)
+Jump("AdventurersGuide")
+
+// Talk to Bella
+10338_GoToDespair:
+MoveTo(-14500, 124000, -3120)
+NpcDialog(30256)
+Delay(3000)
+//SelectDialog(""Teleport me, please"")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Ruins of Despair (Lv. 30)")
+SelectDialog("絶望の廃墟(レベル30)")
+//SelectDialog(18)
+//SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+MoveTo(-19345, 137225, -3768)
+Delay(2000)
+MoveTo(-19837, 137907, -3856)
+Delay(2000)
+MoveTo(-19201, 139318, -3888)
+Delay(2000)
+MoveTo(-18149, 142389, -3904)
+Delay(2000)
+MoveTo(-17570, 142979, -3888)
+Delay(2000)
+
+// Lets start killing Poslof!
+ClearHuntingArea()
+AddHuntingArea(-17570, 142979, -3888, 800)
+10338_Start_Battle:
+// Start battle
+BattleStart()
+Msg(Console, "Killing Poslof!")
+
+// Kanilov
+While (CountQuestDefeatNpc(27452) < 1)
+{
+	Delay(5000)
+	If (Char.HP == 0)
+	{
+		Msg(Console, "u dead!")
+		BattleStop()
+		Delay(1000)
+		ClearHuntingArea()
+		Delay(1000)
+		ReturnToVillage()
+		Delay(8000)
+		Jump("10338_GetBuff")
+	}
+}
+Msg(Console, "Poslof done!")
+
+BattleStop()
+Delay(1000)
+ClearHuntingArea()
+Delay(1000)
+
+// Go back to Town
+If (CountItem(10650) > 0)
+{
+	// Use Adventures Scroll of Escape
+	Delay(2000)
+	UseItem(10650)
+	Delay(40000)
+}
+Else
+{
+	// Use Scroll of Escape
+	Delay(2000)
+	UseItem(736)
+	Delay(40000)
+}
+
+MoveTo(-14545, 123541, -3104)
+Delay(2000)
+MoveTo(-15488, 124276, -3120)
+Delay(2000)
+
+
+//Talk to Adventure Guildsman
+NpcDialog(31795)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(3)
+Delay(3000)
+//SelectDialog("Divided Sakum, Poslof (Lv. 33-40) (In Progress")
+//SelectDialog("|Lv.33～40| 分化したサクム、フォースロフ(進行中)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Fine, defeated Poslof, here is your picture.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Here.")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+Jump("10338_End")
+
+10338_End_Fail:
+Exit
+
+10338_End:

@@ -1,0 +1,79 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed. Modified for Ertheia by gyo
+//
+// Quest:		Windmill Hill Status Report (風車の丘の状況報告)(10334)
+// LV:			22+ (after completed the quest "Disappeared Sakum")
+// Location:	Front of Schunain at Windmill Hill
+// Reward:		850 Adena, 200.000 XP and 48 SP
+//
+// Note: Don't forget set preference and attack command
+//
+// ------------------------------------------------------------------
+
+10334_Start:
+MoveTo(-69491, 170851, -3456)
+Delay(2000)
+
+// Talk to Schunain
+NpcDialog(33508)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Reporting the Status of the Windmill Hill (Lv. 22-40)")
+//SelectDialog("|Lv.22～40| 風車の丘の状況報告")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("No, nobody expects you to fight him")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("What do you need in Gludio?")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+// Go back to Town
+If (CountItem(10650) > 0)
+{
+	// Use Adventures Scroll of Escape
+	Delay(2000)
+	UseItem(10650)
+	Delay(40000)
+}
+Else
+{
+	// Use Scroll of Escape
+	Delay(2000)
+	UseItem(736)
+	Delay(40000)
+}
+
+// Go to Bathis
+MoveTo(-14413, 123385, -3120)
+Delay(2000)
+MoveTo(-13940, 123770, -3112)
+Delay(2000)
+
+// Talk to Bathis
+NpcDialog(30332)
+Delay(3000)
+//SelectDialog("Quest")
+//SelectDialog("クエスト")
+SelectDialog(5)
+Delay(3000)
+//SelectDialog("Reporting the Status of the Windmill Hill (Lv. 22-40) (In Progress)")
+//SelectDialog("|Lv.22～40| 風車の丘の状況報告(進行中)")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("Describe what happened.")
+SelectDialog(1)
+Delay(3000)
+//SelectDialog("What will you do?")
+SelectDialog(1)
+Delay(3000)
+CloseDialog()
+Delay(2000)
+
+10334_End:

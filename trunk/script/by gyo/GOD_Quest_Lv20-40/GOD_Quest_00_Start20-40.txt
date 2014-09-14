@@ -1,0 +1,270 @@
+// ------------------------------------------------------------------
+// L2Divine script for Epeisodion by everRed
+//
+// Quest:		Too many...
+// LV:			20-40
+// Location:	Talking Island Villige near Kakai
+// Reward:		You will be level 40 with your Class Change Quest
+//
+// Note: Don't forget set preference and attack command
+// Note: Be sure to own more than 15 Scroll of Escape
+// ------------------------------------------------------------------
+
+CheckCondition:
+Msg(Console, "Condition")
+If (Char.LV < 20)
+{
+	Msg(Console, "You are below level 20")
+	Jump("MainEnd")
+}
+If (Char.LV > 39)
+{
+	Msg(Console, "You are above level 39")
+	Jump("MainEnd")
+}
+
+// Get Equip
+Msg(Console, "Equip")
+If (CountItem(12312) == 0)
+{
+	Msg(Console, "Let's delete the old weapons.")
+	Include("Snippet_Lv20_Destroy Apprentice Adventures Weapon.txt")
+	Msg(Console, "Let's buy equipment.")
+	Include("Snippet_Lv20_Get_Equipments.txt")
+}
+
+MainStart:
+Msg(Console, "Main Script started")
+If (Char.LV < 21)
+{
+	If (LocInRange(-117960, 255840, -1320, 300))
+	{
+		Msg(Console, "Hello, you are lvl 20, lets start questing!")
+		Jump("CHARLEVEL20")
+	}
+	Else
+	{
+		Msg(Console, "Move to Kakai")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 24)
+{
+	If (LocInRange(-13940, 123770, -3112, 300))
+	{
+		Msg(Console, "Hello, you are lvl 21, lets start questing!")
+		Jump("CHARLEVEL21")
+	}
+	Else
+	{
+		Msg(Console, "Move to Bathis")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 25)
+{
+	If (LocInRange(-69491, 170851, -3456, 300))
+	{
+		Msg(Console, "Hello, you are lvl 24, lets start questing!")
+		Jump("CHARLEVEL24")
+	}
+	Else
+	{
+		Msg(Console, "Move to Schunain")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 28)
+{
+	If (LocInRange(-13940, 123770, -3112, 300))
+	{
+		Msg(Console, "Hello, you are lvl 25, lets start questing!")
+		Jump("CHARLEVEL25")
+	}
+	Else
+	{
+		Msg(Console, "Move to Bathis")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 30)
+{
+	If (LocInRange(-46131, 109439, -3808, 300))
+	{
+		Msg(Console, "Hello, you are lvl 28, lets start questing!")
+		Jump("CHARLEVEL28")
+	}
+	Else
+	{
+		Msg(Console, "Move to Zenath")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 34)
+{
+	If (LocInRange(-15488, 124276, -3120, 300))
+	{
+		Msg(Console, "Hello, you are lvl 30, lets start questing!")
+		Jump("CHARLEVEL30")
+	}
+	Else
+	{
+		Msg(Console, "Move to Adventure Guildsman")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 35)
+{
+	If (LocInRange(-8147, 143177, -3424, 300))
+	{
+		Msg(Console, "Hello, you are lvl 34, lets start questing!")
+		Jump("CHARLEVEL34")
+	}
+	Else
+	{
+		Msg(Console, "Move to Lef")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 38)
+{
+	If (LocInRange(-15488, 124276, -3120, 300))
+	{
+		Msg(Console, "Hello, you are lvl 35, lets start questing!")
+		Jump("CHARLEVEL35")
+	}
+	Else
+	{
+		Msg(Console, "Move to Adventure Guildsman")
+		Jump("MainEnd")
+	}
+}
+
+If (Char.LV < 40)
+{
+	Msg(Console, "Hello, you are lvl 39, lets start questing!")
+	Jump("CHARLEVEL38")
+}
+
+// ------------------------------------------------------------------
+// Jumppoints Charlevel
+
+// Level 20
+CHARLEVEL20:
+// Let's start questing
+Msg(Console, "Though Road")
+Include("GOD_Quest_20_Tough Road.txt")
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 21
+CHARLEVEL21:
+Include("Snippet_BuySoE.txt")
+// Let's start questing
+Msg(Console, "Disappeared Sakum")
+Include("GOD_Quest_21_Disappeared Sakum.txt")
+
+// Level 24
+CHARLEVEL24:
+// Let's start questing
+Msg(Console, "Windmill Hill")
+Include("GOD_Quest_24_Windmill Hill Status Report.txt")
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 25
+CHARLEVEL25:
+// Let's start questing
+Msg(Console, "Request Find Sakum")
+Include("GOD_Quest_25_Request to Find Sakum.txt")
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 28
+CHARLEVEL28:
+// Let's start questing
+Msg(Console, "Kanilov")
+Include("GOD_Quest_28_Divided Sakum, Kanilov.txt")
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 30
+CHARLEVEL30:
+// Let's start questing
+Msg(Console, "Sakum Influence")
+Include("GOD_Quest_30_Sakum's Influence.txt")
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 32
+CHARLEVEL32:
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 34
+CHARLEVEL34:
+// Let's start questing
+Msg(Console, "Poslof")
+Include("GOD_Quest_34_Divided Sakum, Poslof.txt")
+
+// Level 35
+CHARLEVEL35:
+// Let's start questing
+Msg(Console, "Traces of Evil")
+Include("GOD_Quest_35_Traces of Evil.txt")
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 36
+CHARLEVEL36:
+// This is used to avoid errors. Learn Skills
+Jump("ClassStart")
+
+// Level 38
+CHARLEVEL38:
+// Let's start questing
+Msg(Console, "ClassChangeQuest")
+Include("GOD_Quest_Classchange.txt")
+Jump("MainEnd")
+
+Include("Snippet_LearnSkill_00_Check Class.txt")
+If (Char.LV > 35)
+{
+	Jump("CHARLEVEL38")
+}
+If (Char.LV >  32)
+{
+	Jump("CHARLEVEL35")
+}
+If (Char.LV > 30)
+{
+	Jump("CHARLEVEL32")
+}
+If (Char.LV > 28)
+{
+	Jump("CHARLEVEL30")
+}
+If (Char.LV > 25)
+{
+	Jump("CHARLEVEL28")
+}
+If (Char.LV > 23)
+{
+	Jump("CHARLEVEL25")
+}
+If (Char.LV > 20)
+{
+	Jump("CHARLEVEL21")
+}
+Include("Snippet_Get_Adventurers_Buff.txt")
+Msg(Console, "If you ever reach this point, smth went wrong! Report back pls")
+
+MainEnd:
+Exit
