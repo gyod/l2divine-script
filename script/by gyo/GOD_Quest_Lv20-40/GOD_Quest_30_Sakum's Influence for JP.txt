@@ -13,6 +13,9 @@
 10337_Start:
 Delay(2000)
 
+If (! QuestAccepted(10337))
+{
+
 //Talk to Adventure Guildsman
 NpcDialog(31795)
 Delay(3000)
@@ -36,11 +39,13 @@ Delay(3000)
 CloseDialog()
 Delay(2000)
 
+}
+
 MoveTo(-15348, 123915, -3128)
 
 // Get Buff
 10337_GetBuff:
-MoveTo(-14700, 123990, -3120)
+//MoveTo(-14700, 123990, -3120)
 Jump("AdventurersGuide")
 
 // Talk to Bella
@@ -168,7 +173,7 @@ Delay(1000)
 //Talk to Lef
 MoveTo(-8147, 143177, -3424)
 Delay(2000)
-NpcDialog(33178)
+NpcDialog(33510)
 Delay(3000)
 //SelectDialog("Quest")
 //SelectDialog("クエスト")
