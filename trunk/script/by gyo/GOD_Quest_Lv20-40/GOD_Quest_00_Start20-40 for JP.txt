@@ -27,10 +27,10 @@ If (Char.LV > 39)
 Msg(Console, "Equip")
 If (CountItem(12312) == 0)
 {
-	Msg(Console, "Let's delete the old weapons.")
-	Include("Snippet_Lv20_Destroy Apprentice Adventures Weapon.txt")
 	Msg(Console, "Let's buy equipment.")
 	Include("Snippet_Lv20_Get_Equipments.txt")
+	Msg(Console, "Let's delete the old weapons.")
+	Include("Snippet_Lv20_Destroy Apprentice Adventures Weapon.txt")
 }
 
 MainStart:
