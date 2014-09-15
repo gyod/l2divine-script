@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-// L2Divine script for Epeisodion by everRed
+// L2Divine script for Epeisodion by everRed. Modified for Ertheia by gyo
 //
 // Quest:		Too many...
 // LV:			20-40
@@ -49,7 +49,7 @@ If (Char.LV < 21)
 	}
 }
 
-If (Char.LV < 24)
+If (Char.LV < 22)
 {
 	If (LocInRange(-13940, 123770, -3112, 300))
 	{
@@ -63,12 +63,12 @@ If (Char.LV < 24)
 	}
 }
 
-If (Char.LV < 25)
+If (Char.LV < 23)
 {
 	If (LocInRange(-69491, 170851, -3456, 300))
 	{
-		Msg(Console, "Hello, you are lvl 24, lets start questing!")
-		Jump("CHARLEVEL24")
+		Msg(Console, "Hello, you are lvl 22, lets start questing!")
+		Jump("CHARLEVEL22")
 	}
 	Else
 	{
@@ -77,12 +77,12 @@ If (Char.LV < 25)
 	}
 }
 
-If (Char.LV < 28)
+If (Char.LV < 24)
 {
 	If (LocInRange(-13940, 123770, -3112, 300))
 	{
-		Msg(Console, "Hello, you are lvl 25, lets start questing!")
-		Jump("CHARLEVEL25")
+		Msg(Console, "Hello, you are lvl 23, lets start questing!")
+		Jump("CHARLEVEL23")
 	}
 	Else
 	{
@@ -91,12 +91,12 @@ If (Char.LV < 28)
 	}
 }
 
-If (Char.LV < 30)
+If (Char.LV < 28)
 {
 	If (LocInRange(-46131, 109439, -3808, 300))
 	{
-		Msg(Console, "Hello, you are lvl 28, lets start questing!")
-		Jump("CHARLEVEL28")
+		Msg(Console, "Hello, you are lvl 27, lets start questing!")
+		Jump("CHARLEVEL27")
 	}
 	Else
 	{
@@ -105,12 +105,12 @@ If (Char.LV < 30)
 	}
 }
 
-If (Char.LV < 34)
+If (Char.LV < 29)
 {
 	If (LocInRange(-15488, 124276, -3120, 300))
 	{
-		Msg(Console, "Hello, you are lvl 30, lets start questing!")
-		Jump("CHARLEVEL30")
+		Msg(Console, "Hello, you are lvl 28, lets start questing!")
+		Jump("CHARLEVEL28")
 	}
 	Else
 	{
@@ -119,12 +119,12 @@ If (Char.LV < 34)
 	}
 }
 
-If (Char.LV < 35)
+If (Char.LV < 34)
 {
 	If (LocInRange(-8147, 143177, -3424, 300))
 	{
-		Msg(Console, "Hello, you are lvl 34, lets start questing!")
-		Jump("CHARLEVEL34")
+		Msg(Console, "Hello, you are lvl 33, lets start questing!")
+		Jump("CHARLEVEL33")
 	}
 	Else
 	{
@@ -137,8 +137,8 @@ If (Char.LV < 38)
 {
 	If (LocInRange(-15488, 124276, -3120, 300))
 	{
-		Msg(Console, "Hello, you are lvl 35, lets start questing!")
-		Jump("CHARLEVEL35")
+		Msg(Console, "Hello, you are lvl 34, lets start questing!")
+		Jump("CHARLEVEL34")
 	}
 	Else
 	{
@@ -171,32 +171,32 @@ Include("Snippet_BuySoE.txt")
 Msg(Console, "Disappeared Sakum")
 Include("GOD_Quest_21_Disappeared Sakum.txt")
 
-// Level 24
-CHARLEVEL24:
+// Level 22
+CHARLEVEL22:
 // Let's start questing
 Msg(Console, "Windmill Hill")
 Include("GOD_Quest_24_Windmill Hill Status Report.txt")
 // This is used to avoid errors. Learn Skills
 Jump("ClassStart")
 
-// Level 25
-CHARLEVEL25:
+// Level 23
+CHARLEVEL23:
 // Let's start questing
 Msg(Console, "Request Find Sakum")
 Include("GOD_Quest_25_Request to Find Sakum.txt")
 // This is used to avoid errors. Learn Skills
 Jump("ClassStart")
 
-// Level 28
-CHARLEVEL28:
+// Level 27
+CHARLEVEL27:
 // Let's start questing
 Msg(Console, "Kanilov")
 Include("GOD_Quest_28_Divided Sakum, Kanilov.txt")
 // This is used to avoid errors. Learn Skills
 Jump("ClassStart")
 
-// Level 30
-CHARLEVEL30:
+// Level 28
+CHARLEVEL28:
 // Let's start questing
 Msg(Console, "Sakum Influence")
 Include("GOD_Quest_30_Sakum's Influence.txt")
@@ -208,14 +208,14 @@ CHARLEVEL32:
 // This is used to avoid errors. Learn Skills
 Jump("ClassStart")
 
-// Level 34
-CHARLEVEL34:
+// Level 33
+CHARLEVEL33:
 // Let's start questing
 Msg(Console, "Poslof")
 Include("GOD_Quest_34_Divided Sakum, Poslof.txt")
 
-// Level 35
-CHARLEVEL35:
+// Level 34
+CHARLEVEL34:
 // Let's start questing
 Msg(Console, "Traces of Evil")
 Include("GOD_Quest_35_Traces of Evil.txt")
@@ -235,34 +235,39 @@ Include("GOD_Quest_Classchange.txt")
 Jump("MainEnd")
 
 Include("Snippet_LearnSkill_00_Check Class.txt")
-If (Char.LV > 35)
+If (Char.LV > 37)
 {
 	Jump("CHARLEVEL38")
 }
-If (Char.LV >  32)
+If (Char.LV >  33)
 {
-	Jump("CHARLEVEL35")
+	Jump("CHARLEVEL34")
 }
-If (Char.LV > 30)
+If (Char.LV > 32)
 {
-	Jump("CHARLEVEL32")
+	Jump("CHARLEVEL33")
 }
-If (Char.LV > 28)
-{
-	Jump("CHARLEVEL30")
-}
-If (Char.LV > 25)
+If (Char.LV > 27)
 {
 	Jump("CHARLEVEL28")
 }
-If (Char.LV > 23)
+If (Char.LV > 26)
 {
-	Jump("CHARLEVEL25")
+	Jump("CHARLEVEL27")
+}
+If (Char.LV > 22)
+{
+	Jump("CHARLEVEL23")
+}
+If (Char.LV > 21)
+{
+	Jump("CHARLEVEL22")
 }
 If (Char.LV > 20)
 {
 	Jump("CHARLEVEL21")
 }
+
 Include("Snippet_Get_Adventurers_Buff.txt")
 Msg(Console, "If you ever reach this point, smth went wrong! Report back pls")
 
