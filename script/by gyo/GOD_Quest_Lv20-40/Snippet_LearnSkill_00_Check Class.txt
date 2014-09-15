@@ -96,11 +96,18 @@ If (Char.Class == 42)
 	Jump("LEARN_SKILL_ShillienOracle")
 	//Jump("CheckClassEnd")
 }
+// Orc Raider
+If (Char.Class == 45)
+{
+	Msg(Console, "Learning Orc Raider Skills.")
+	Jump("LEARN_SKILL_OrcRaider")
+	//Jump("CheckClassEnd")
+}
 // Orc Shaman
 If (Char.Class == 50)
 {
 	Msg(Console, "Learning Orc Shaman Skills.")
-	Jump("LEARN_SKILL_OrcShaman:")
+	Jump("LEARN_SKILL_OrcShaman")
 	//Jump("CheckClassEnd")
 }
 // Scavenger
@@ -143,6 +150,10 @@ Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Dark Wizard.txt")
 Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Shillien Oracle.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Orc Raider.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Orc Shaman.txt")
 Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Scavenger.txt")
 Jump("CheckClassEnd")
