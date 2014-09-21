@@ -44,16 +44,16 @@ AddHuntingArea(-5142, 144900, -3625, 4000)
 BattleStart()
 Msg(Console, "Killing mobs!")
 10338_Start Battle:
-// Venoam Bugbear Warrior
-If (CountQuestDefeatNpc(20402) == 23)
+// Zombie Warrior
+If (CountQuestDefeatNpc(20458) == 20)
 {
-	SetAttack(20402, false)
-	Msg(Console, "Bugbear done")
-	// Zombie Warrior
-	If (CountQuestDefeatNpc(20458) == 20)
+	SetAttack(20458, false)
+	Msg(Console, "Zombie done")
+	// Venoam Bugbear Warrior
+	If (CountQuestDefeatNpc(20402) == 23)
 	{
-		SetAttack(20458, false)
-		Msg(Console, "Zombie done")
+		SetAttack(20402, false)
+		Msg(Console, "Bugbear done")
 		Jump("10338_Done")
 	}
 	Delay(3000)
@@ -77,8 +77,7 @@ Else
 	Jump("10338_Start Battle")
 }
 10338_Done:
-Msg(Console, "Bugbear done!")
-Msg(Console, "Zombie Warrior done!")
+Msg(Console, "DefeatNpc done!")
 
 BattleStop()
 Delay(1000)
