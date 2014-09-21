@@ -276,31 +276,63 @@ If (Char.LV > 37)
 }
 If (Char.LV >  33)
 {
+	If (LocInRange(-8147, 143177, -3424, 300))
+	{
+		Jump("CHARLEVEL33")
+	}
 	Jump("CHARLEVEL34")
 }
 If (Char.LV >  32)
 {
+	If (LocInRange(-15488, 124276, -3120, 300))
+	{
+		Jump("CHARLEVEL28")
+	}
 	Jump("CHARLEVEL33")
 }
 If (Char.LV > 27)
 {
+	If (LocInRange(-46131, 109439, -3808, 300))
+	{
+		Jump("CHARLEVEL27")
+	}
 	Jump("CHARLEVEL28")
 }
 If (Char.LV > 26)
 {
+	If (LocInRange(-13940, 123770, -3112, 300))
+	{
+		Jump("CHARLEVEL23")
+	}
 	Jump("CHARLEVEL27")
 }
 If (Char.LV > 22)
 {
+	If (LocInRange(-69491, 170851, -3456, 300))
+	{
+		Jump("CHARLEVEL22")
+	}
 	Jump("CHARLEVEL23")
 }
 If (Char.LV > 21)
 {
+	If (LocInRange(-13940, 123770, -3112, 300))
+	{
+		Jump("CHARLEVEL21")
+	}
 	Jump("CHARLEVEL22")
 }
 If (Char.LV > 20)
 {
+	If (LocInRange(-117960, 255840, -1320, 300))
+	{
+		Jump("CHARLEVEL20")
+	}
 	Jump("CHARLEVEL21")
+}
+If (Char.LV == 20)
+{
+	Jump("CHARLEVEL20")
 }
 
 Include("Snippet_Get_Adventurers_Buff.txt")
