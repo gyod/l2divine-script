@@ -51,6 +51,11 @@ If (Char.LV < 21)
 
 If (Char.LV < 22)
 {
+	If (LocInRange(-117960, 255840, -1320, 300))
+	{
+		Msg(Console, "Hello, you are lvl 21 at TI, lets start questing!")
+		Jump("CHARLEVEL20")
+	}
 	If (LocInRange(-13940, 123770, -3112, 300))
 	{
 		Msg(Console, "Hello, you are lvl 21, lets start questing!")
@@ -65,6 +70,11 @@ If (Char.LV < 22)
 
 If (Char.LV < 23)
 {
+	If (LocInRange(-13940, 123770, -3112, 300))
+	{
+		Msg(Console, "Hello, you are lvl 22 at Gludio, lets start questing!")
+		Jump("CHARLEVEL21")
+	}
 	If (LocInRange(-69491, 170851, -3456, 300))
 	{
 		Msg(Console, "Hello, you are lvl 22, lets start questing!")
@@ -79,6 +89,11 @@ If (Char.LV < 23)
 
 If (Char.LV < 24)
 {
+	If (LocInRange(-69491, 170851, -3456, 300))
+	{
+		Msg(Console, "Hello, you are lvl 23 at Windmill Hill, lets start questing!")
+		Jump("CHARLEVEL22")
+	}
 	If (LocInRange(-13940, 123770, -3112, 300))
 	{
 		Msg(Console, "Hello, you are lvl 23, lets start questing!")
@@ -93,6 +108,11 @@ If (Char.LV < 24)
 
 If (Char.LV < 28)
 {
+	If (LocInRange(-13940, 123770, -3112, 300))
+	{
+		Msg(Console, "Hello, you are lvl 24 at front of Bathis, lets start questing!")
+		Jump("CHARLEVEL23")
+	}
 	If (LocInRange(-46131, 109439, -3808, 300))
 	{
 		Msg(Console, "Hello, you are lvl 27, lets start questing!")
@@ -107,6 +127,11 @@ If (Char.LV < 28)
 
 If (Char.LV < 29)
 {
+	If (LocInRange(-46131, 109439, -3808, 300))
+	{
+		Msg(Console, "Hello, you are lvl 28 at Ruins of Agony, lets start questing!")
+		Jump("CHARLEVEL27")
+	}
 	If (LocInRange(-15488, 124276, -3120, 300))
 	{
 		Msg(Console, "Hello, you are lvl 28, lets start questing!")
@@ -121,6 +146,11 @@ If (Char.LV < 29)
 
 If (Char.LV < 34)
 {
+	If (LocInRange(-15488, 124276, -3120, 300))
+	{
+		Msg(Console, "Hello, you are lvl 29 at front of Adventure Guildsman, lets start questing!")
+		Jump("CHARLEVEL28")
+	}
 	If (LocInRange(-8147, 143177, -3424, 300))
 	{
 		Msg(Console, "Hello, you are lvl 33, lets start questing!")
@@ -135,6 +165,11 @@ If (Char.LV < 34)
 
 If (Char.LV < 38)
 {
+	If (LocInRange(-8147, 143177, -3424, 300))
+	{
+		Msg(Console, "Hello, you are lvl 34 at Ruins of Despair, lets start questing!")
+		Jump("CHARLEVEL33")
+	}
 	If (LocInRange(-15488, 124276, -3120, 300))
 	{
 		Msg(Console, "Hello, you are lvl 34, lets start questing!")
@@ -147,7 +182,7 @@ If (Char.LV < 38)
 	}
 }
 
-If (Char.LV < 40)
+If (Char.LV < 41)
 {
 	Msg(Console, "Hello, you are lvl 39, lets start questing!")
 	Jump("CHARLEVEL38")
