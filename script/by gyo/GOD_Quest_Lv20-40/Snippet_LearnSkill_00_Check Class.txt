@@ -1,5 +1,6 @@
 // Snippet Script: Learn Skills 20-40
 // Author:	everRed
+// Modified by gyo
 
 //-------------------------------------------------------------------
 ClassStart:
@@ -103,6 +104,13 @@ If (Char.Class == 45)
 	Jump("LEARN_SKILL_OrcRaider")
 	//Jump("CheckClassEnd")
 }
+// Orc Monk
+If (Char.Class == 47)
+{
+	Msg(Console, "Learning Orc Monk Skills.")
+	Jump("LEARN_SKILL_OrcMonk")
+	//Jump("CheckClassEnd")
+}
 // Orc Shaman
 If (Char.Class == 50)
 {
@@ -152,6 +160,8 @@ Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Shillien Oracle.txt")
 Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Orc Raider.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Orc Monk.txt")
 Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Orc Shaman.txt")
 Jump("CheckClassEnd")
