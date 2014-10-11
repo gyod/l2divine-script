@@ -132,6 +132,20 @@ If (Char.Class == 56)
 	Jump("LEARN_SKILL_Artisan")
 	//Jump("CheckClassEnd")
 }
+// Dragoon
+If (Char.Class == 125)
+{
+	Msg(Console, "Learning Dragoon Skills.")
+	Jump("LEARN_SKILL_Dragoon")
+	//Jump("CheckClassEnd")
+}
+// Warder
+If (Char.Class == 126)
+{
+	Msg(Console, "Learning Warder Skills.")
+	Jump("LEARN_SKILL_Warder")
+	//Jump("CheckClassEnd")
+}
 
 Include("Snippet_LearnSkill_Warrior.txt")
 Jump("CheckClassEnd")
@@ -168,6 +182,10 @@ Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Scavenger.txt")
 Jump("CheckClassEnd")
 Include("Snippet_LearnSkill_Artisan.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Dragoon.txt")
+Jump("CheckClassEnd")
+Include("Snippet_LearnSkill_Warder.txt")
 Jump("CheckClassEnd")
 
 CheckClassEnd:

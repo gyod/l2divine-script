@@ -96,6 +96,7 @@ AddHuntingArea(-18568, 198076, -4176, 4000)
 // Start battle
 BattleStart()
 Msg(Console, "Killing mobs!")
+SetAttack(23024, false)
 
 // Until 20 items
 While (CountItem(17586) < 20)
