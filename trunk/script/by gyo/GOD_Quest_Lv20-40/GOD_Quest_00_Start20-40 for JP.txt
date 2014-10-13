@@ -29,6 +29,10 @@ If (CountItem(12312) == 0)
 {
 	Msg(Console, "Let's buy equipment.")
 	Include("Snippet_Lv20_Get_Equipments.txt")
+}
+// Destroy Equip
+If (CountItem(7817) == 1)
+{
 	Msg(Console, "Let's delete the old weapons.")
 	Include("Snippet_Lv20_Destroy Apprentice Adventures Weapon.txt")
 }

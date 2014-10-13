@@ -53,7 +53,7 @@ If (Char.LV < 21)
 	}
 }
 
-If (Char.LV < 22)
+If (Char.LV < 23)
 {
 	If (LocInRange(-117960, 255840, -1320, 300))
 	{
@@ -72,7 +72,7 @@ If (Char.LV < 22)
 	}
 }
 
-If (Char.LV < 23)
+If (Char.LV < 24)
 {
 	If (LocInRange(-13940, 123770, -3112, 300))
 	{
@@ -91,7 +91,7 @@ If (Char.LV < 23)
 	}
 }
 
-If (Char.LV < 24)
+If (Char.LV < 25)
 {
 	If (LocInRange(-69491, 170851, -3456, 300))
 	{
