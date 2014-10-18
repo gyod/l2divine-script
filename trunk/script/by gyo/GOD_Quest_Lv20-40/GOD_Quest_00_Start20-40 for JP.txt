@@ -339,7 +339,7 @@ If (Char.LV == 20)
 	Jump("CHARLEVEL20")
 }
 
-Include("Snippet_Get_Adventurers_Buff.txt")
+Include("Snippet_Get_Adventurers_Buff for JP.txt")
 Msg(Console, "If you ever reach this point, smth went wrong! Report back pls")
 
 MainEnd:
