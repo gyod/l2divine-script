@@ -581,7 +581,7 @@ id	string
 1010057	a,Ancient Battleground (Lv. 64)\0
 1010058	a,Entrance to Enchanted Valley\0
 1010059	a,Entrance to the Tower of Insolence\0
-1010060	a,Blazing Swamp (Lv. 65)\0
+1010060	a,Blazing Swamp (Lv. 97)\0
 1010061	a,Entrance to the Cemetary (Lv. 97)\0
 1010062	a,Entrance to the Giant's Cave\0
 1010063	a,Entrance to the Forest of Mirrors\0
@@ -6319,8 +6319,8 @@ id	string
 1900066	a,I've never met someone so good before.\0
 1900067	a,13 wins in a row. You're pretty lucky today, huh?\0
 1900068	a,I never thought I would see 13 wins in a row.\0
-1900069	a,This is the highest record in my life! Next time, I'll give you my treasure -- the Halloween Pumpkin Hat!\0
-1900070	a,Even pros can't do 14 wins in a row...! Next time, I'll give you my treasure, the Halloween Pumpkin Hat.\0
+1900069	a,This is the highest record in my life! Next time, I'll give you my treasure -- the Golden Jack O'Lantern!\0
+1900070	a,Even pros can't do 14 wins in a row...! Next time, I'll give you my treasure, the Golden Jack O'Lantern\0
 1900071	a,I can't do this anymore! You win! In all my 583 years, you're the best that I've seen!\0
 1900072	a,Playing any more is meaningless. You were my greatest opponent.\0
 1900073	a,I won this round...! It was fun.\0
@@ -10161,10 +10161,10 @@ id	string
 572711	a,Talk to Tulesir\0
 572712	a,Talk to Aden Vanguard Member\0
 572713	a,Talk to Aden Vanguard Member\0
-572801	a,The Hero's Journey: Cemetary (Lv. 95-99)\0
-572802	a,The Hero's Journey: Cemetary (Lv. 95-99) (In Progress)\0
-572803	a,The Hero's Journey: Cemetary (Lv. 95-99) (Done)\0
-572804	a,The Hero's Journey: Cemetary (Lv. 95-99)\0
+572801	a,The Hero's Journey: Cemetary (Lv. 97-99)\0
+572802	a,The Hero's Journey: Cemetary (Lv. 97-99) (In Progress)\0
+572803	a,The Hero's Journey: Cemetary (Lv. 97-99) (Done)\0
+572804	a,The Hero's Journey: Cemetary (Lv. 97-99)\0
 572811	a,Talk to Tulesir\0
 572812	a,Talk to Aden Vanguard Member\0
 572813	a,Talk to Aden Vanguard Member\0
@@ -10287,7 +10287,7 @@ id	string
 576003	a,Letters from the Queen: Orc Barracks (Lv. 30-39) (Done)\0
 576004	a,Letters from the Queen: Orc Barracks (Lv. 30-39)\0
 576011	a,Talk to Levian\0
-576012	a,Talk to Piotour\0
+576012	a,Talk to Piotur\0
 577201	a,Reports from Cruma Tower, Part 1 (Lv. 45-99)\0
 577202	a,Reports from Cruma Tower, Part 1 (Lv. 45-99) (In Progress)\0
 577203	a,Reports from Cruma Tower, Part 1 (Lv. 45-99) (Done)\0
@@ -10650,8 +10650,8 @@ id	string
 575314	a,Combine the Ingredients\0
 575315	a,Talk to Hardin\0
 575316	a,Talk to Icarus\0
-575317	a,Talk to Ritasha\0
-575318	a,Check Ritasha's Box\0
+575317	a,Talk to Athrea\0
+575318	a,Check Athrea's Box\0
 575319	a,Talk to Gereth\0
 575320	a,Takl to Navari\0
 575112	a,Talk to Raymond\0
@@ -10946,3 +10946,75 @@ id	string
 1802710	a,Just wait a minute! I'm almost done getting all the Vitality!\0
 1802711	a,Hey, stop the violence and I'll give you the Vitality I got!\0
 1802712	a,Argh, you got me with your laser gun - or not! Haha, sucker!\0
+580901	a,The Hero's Journey: Blazing Swamp (Lv. 97-99)\0
+580902	a,The Hero's Journey: Blazing Swamp (Lv. 97-99) (In Progress)\0
+580903	a,The Hero's Journey: Blazing Swamp (Lv. 97-99) (Done)\0
+580904	a,The Hero's Journey: Blazing Swamp (Lv. 97-99)\0
+580905	a,Talk to Harp Zu Hestui\0
+1802713	a,STABILIZING BLAZING SWAMP\0
+1802714	a,Defense Reduction\0
+1802715	a,Ifrit's Wrath\0
+1802716	a,The monsters' defense has been reduced.\0
+1802717	a,A strong monster has appeared.\0
+1802718	a,$s1, Blazing Seal!\0
+1802719	a,$s1, dangerous figure recognized / Type - High\0
+1802720	a,$s1, dangerous figure recognized / Type - Normal\0
+1802721	a,$s1, dangerous figure recognized / Type - Low\0
+1802722	a,We are the strongest! How dare you challenge us!\0
+1802723	a,It won't be easy to pull us apart!\0
+1802724	a,You measly creatures are so bothersome!\0
+1802725	a,We are two in one! We won't lose to you! \0
+1802726	a,How did this happen? Please avenge me!\0
+1802727	a,Ugh, I couldn't avenge my other half!\0
+1802728	a,We will never be separated!\0
+1802729	a,We have the power to do anything, you lowly creatures!\0
+1802730	a,Those weak attacks can't even scratch my armor! \0
+1802731	a,I would never lose to some weaklings who can't even invest this much!\0
+1802732	a,My dear other half, please avenge me.\0
+1802733	a,I lost? Do I have to invest even more? \0
+1802734	a,You dare challenge me? How foolish!\0
+1802735	a,You dare challenge me? You know no fear, indeed.\0
+1802736	a,Your arrogance will lead to even more pain.\0
+1802737	a,How foolish. Not knowing is a sin! \0
+1802738	a,How did I lose to these worthless creatures?\0
+1802739	u,This pains me. I couldn’t even get my revenge!\0
+1802740	a,I will show you what true strength is.\0
+1802741	a,Is this it?\0
+1802742	a,Ha, ha, ha! Be afraid! \0
+1802743	a,Ugh! I can't believe I was defeated like this.\0
+1802744	a,Wealth makes me stronger!\0
+1802745	a,It feels like an ant is trying to bite me. \0
+1802746	a,It doesn't hurt! Not at all!\0
+1802747	a,I won't just disappear like this!\0
+1802748	a,You dare challenge me? Are you ready for this?\0
+1802749	a,Strength alone will not help you against me.\0
+1802750	a,With that kind of brain, you won't be able to surpass me! \0
+1802751	a,How did this happen!\0
+1802752	a,Learn what it is to fear! \0
+1802753	a,Ha, ha, ha! That won't be enough to defeat me! \0
+1802754	a,Bow down to my power!\0
+1802755	a,I lost to this? This can't be happening!\0
+1802756	a,You see how my wallet expanded tenfold?\0
+1802757	a,How much did your weapon cost?\0
+1802758	a,Your equipment looks so cheap. \0
+1802759	a,Don't even think for a second that I'll let this go easily!\0
+1802760	a,No matter how much you use your brains, you won't be able to find me!\0
+1802761	a,You will never be at my level with those brains!\0
+1802762	a,This is our difference!\0
+1802763	a,You think this will be enough to defeat me? Not a chance!\0
+78901	a,Waiting for Pa'agrio (Lv. 97-99)\0
+78902	a,Waiting for Pa'agrio (Lv. 97-99) (In Progress)\0
+78903	a,Waiting for Pa'agrio (Lv. 97-99) (Done)\0
+78904	a,Waiting for Pa'agrio (Lv. 97-99)\0
+550601	a,Paddy's Request\0
+550602	a,Paddy's Request (In Progress)\0
+550603	a,Paddy's Request (Done)\0
+550604	a,Paddy's Request\0
+550701	a,Paddy's Request\0
+550702	a,Paddy's Request (In Progress)\0
+550703	a,Paddy's Request (Done)\0
+550704	a,Paddy's Request\0
+550801	a,Paddy's Request\0
+550802	a,Paddy's Request (In Progress)\0
+550803	a,Paddy's Request (Done)\0
+550804	a,Paddy's Request\0
