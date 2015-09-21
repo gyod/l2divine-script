@@ -2,8 +2,8 @@
 | DivineScript リファレンス |
 +---------------------------+
 
-バージョン：	2.5
-最終更新日：	2014年09月05日
+バージョン：	2.6
+最終更新日：	2015年02月20日
 著者：		Dev, Zariche
 訳者：		gyo
 
@@ -38,6 +38,7 @@
 - ClearHuntingArea
 - ClearItemList
 - ClearMonsterList
+- ClickQuestionMarkIcon
 - CloseDialog
 - CloseWindow
 - Confirm
@@ -87,6 +88,7 @@
 - PlayerInRange
 - PlaySound
 - QuestAccepted
+- QuestionMarkIconAppear
 - Recommend
 - Return
 - ReturnToVillage
@@ -408,6 +410,11 @@ ClearMonsterList()
 	引数	なし
 	返値	なし
 	目的	設定リストから全てのモンスターを削除
+
+ClickQuestionMarkIcon()
+	引数	なし
+	返値	なし
+	目的	一定のレベルでクエストを受諾するためにクエスチョンマークをクリックする
 
 CloseDialog()
 	引数	なし
@@ -920,12 +927,24 @@ QuestAccepted(Quest Id)
 	引数	クエストID
 	返値	True/False（ブール（真偽）値）
 	目的	クエストを受諾しているか確認する
-		（If またはWhile コマンドで使用）
+			（If または While コマンドで使用）
 	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		If (QuestAccepted(10324))
 		{
 			// 何かやればいいと思う ...
 		}
+
+QuestionMarkIconAppear()
+	引数	なし
+	返値	True/False（ブール（真偽）値）
+	目的	クエスチョンマークアイコンが表示されているか確認する
+			（If または While コマンドで使用）
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (QuestionMarkIconAppear())
+			{
+				// クエストを受諾する
+				ClickQuestionMarkIcon()
+			}
 
 Recommend(Player Name)
 	引数	プレイヤー名

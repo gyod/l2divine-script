@@ -2,8 +2,8 @@
 | DivineScript Reference |
 +------------------------+
 
-Version:	2.5
-Last updated:	September 5, 2014
+Version:	2.6
+Last updated:	Feb 20, 2015
 Author:		Dev, Zariche
 
 +-------------------+
@@ -37,6 +37,7 @@ Section 2: Commands
 - ClearHuntingArea
 - ClearItemList
 - ClearMonsterList
+- ClickQuestionMarkIcon
 - CloseDialog
 - CloseWindow
 - Confirm
@@ -86,6 +87,7 @@ Section 2: Commands
 - PlayerInRange
 - PlaySound
 - QuestAccepted
+- QuestionMarkIconAppear
 - Recommend
 - Return
 - ReturnToVillage
@@ -385,6 +387,11 @@ ClearMonsterList()
 	Parameter	None
 	Return		None
 	Propose		Remove all monsters in setting list
+
+ClickQuestionMarkIcon()
+	Parameter	None
+	Return		None
+	Propose		Click question mark icon to accept quest at certain level
 
 CloseDialog()
 	Parameter	None
@@ -902,6 +909,17 @@ QuestAccepted(Quest Id)
 			If (QuestAccepted(10324))
 			{
 				// Do something ...
+			}
+
+QuestionMarkIconAppear()
+	Parameter	None
+	Return		True/False
+	Propose		Check the question mark icon is appeared or not 
+			(Use with If and While command)
+			If (QuestionMarkIconAppear())
+			{
+				// Accept quest
+				ClickQuestionMarkIcon()
 			}
 
 Return
