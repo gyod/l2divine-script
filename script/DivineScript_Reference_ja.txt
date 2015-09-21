@@ -2,8 +2,8 @@
 | DivineScript リファレンス |
 +---------------------------+
 
-バージョン：	2.6
-最終更新日：	2015年02月20日
+バージョン：	2.7
+最終更新日：	2015年09月01日
 著者：		Dev, Zariche
 訳者：		gyo
 
@@ -73,6 +73,7 @@
 - Label
 - LearnSkill
 - LeaveParty
+- LoadSetting
 - LocInRange
 - Logout
 - MoveTo
@@ -101,6 +102,7 @@
 - SelectPlayerByClass
 - SelectTarget
 - Sell
+- SendMail
 - SetBattleArea
 - SetRestArea
 - SetPickup
@@ -401,12 +403,12 @@ ClearHuntingArea()
 	返値	なし
 	目的	現在の設定から全てのハンティングエリアを削除
 
-ClearItemList()	
+ClearItemList()
 	引数	なし
 	返値	なし
 	目的	設定リストから全てのアイテムを削除
 
-ClearMonsterList()	
+ClearMonsterList()
 	引数	なし
 	返値	なし
 	目的	設定リストから全てのモンスターを削除
@@ -624,7 +626,7 @@ ForceAttackTarget()
 			Msg(Console, "誰かに攻撃されてる～！")
 			Jump("PVP")
 		}
-		Else 
+		Else
 		{
 			Jump("Start")
 		}
@@ -648,7 +650,7 @@ ForceAttackTarget()
 		{
 			Jump("PVP")
 		}
-		Else 
+		Else
 		{
 			Jump("Start")
 			CancelAttackTarget()
@@ -770,6 +772,18 @@ LeaveParty()
 	引数	なし
 	返値	なし
 	目的	パーティーから脱退する
+
+LoadSetting(*.ini)
+	引数	ファイルの場所
+	返値	なし
+	目的	設定ファイルの読み込み (*.ini)
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// 相対パスで設定ファイルを読み込む
+			LoadSetting("./setting/default.ini")
+
+			// 絶対パスで設定ファイルを読み込む
+			LoadSetting("c:/l2divine/setting/default.ini")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 LocInRange(x, y, z, radius)
 	引数	位置(x, y, z)、半径
@@ -1013,7 +1027,7 @@ SelectNearestMob()
 	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		// バトルエリアをセット
 		SetBattleArea(135470, -47998, -3096, 3000)
-		
+
 		// 一番近いMOBをタゲる
 		SelectNearestMob()
 
@@ -1061,6 +1075,25 @@ Sell()
 	引数	なし
 	返値	なし
 	目的	NPCとの取引モードを販売に変更（2ndスローンPlusのみ）
+
+SendMail(宛先, 題名, 本文)
+	引数	受信者のEmailアドレス, 題名, 本文
+	返値	なし
+	目的	メッセージをEmailで送信する
+			*** この機能を使うにはL2Divine.iniへのSMTPサーバ接続情報の設定が必須です ***
+			[Option]
+			SMTPHost=smtp.gmail.com
+			SMTPEnableSSL=1
+			SMTPPort=587
+			SMTPUseCredentials=1
+			SMTPUser=johndoe@somemail.com
+			SMTPPWD=password
+	使用例	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (Char.LV > 85)
+			{
+				SendMail("johndoe@somemail.com","うｐった！","おめっ！")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SetBattleArea(x, y, z, radius)
 SetBattleArea(radius)

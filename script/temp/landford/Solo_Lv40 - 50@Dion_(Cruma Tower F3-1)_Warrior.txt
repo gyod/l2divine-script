@@ -1,0 +1,425 @@
+// ------------------------------------------------------------------
+// Author:	Landford - FE
+// LV:	40-50
+// Class:	Warrior
+// Buff:	Warrior(15649 , 1-2)
+// Start Loc:	Town Of Dion
+// Target:	Cruma Tower ( Floor 3 )
+// No Mob:	Go To Center
+// Relative Z:	300
+// Setting:	Auto Counter - On
+// Version:	2.10 Update 2
+// Support Divine:	11.1.1 or higher
+// Special Thanks:	shevnall , zutsu , Zariche
+// ------------------------------------------------------------------
+
+// Start Lv.
+Start:
+  Msg(Console, "Let's go to Cruma Tower ( Floor 3 )!")
+  Msg(Console, "No Mob : Go To Center")
+  Msg(Console, "Relative Z : 300")
+  Msg(Console, "Version 2.10 Update 2")
+  Msg(Console, "Warrior Type")
+  Msg(Console, "For 11.1.1 or higher")
+
+  If (LocInRange(14600, 117400, -12088, 1000))
+  {
+    Jump("SetLocation")
+  }
+
+
+Begin:
+  If (Char.HP == 0)
+  {
+    BattleStop()
+    ReturnToVillage()
+    Delay(5000)    
+    Jump("Begin")
+  }
+
+  If (Char.HP > 0)
+  {
+    BattleStop()
+
+    If (Char.LV >= 50)
+    {
+      Msg(Console, "Maximum Lv. for this script!")
+      Exit
+    }
+
+    If (Char.LV >= 40)
+    {
+      Jump("ReceiveBuff")    
+    }
+
+    If (Char.LV < 40)
+    {
+      Msg(Console, "Lv. not enough for this script!")
+      Exit
+    }
+  }
+
+  Delay(3000)
+  Jump("Begin")
+
+
+ReceiveBuff:
+  If (LocInRange(15800, 143100, -2696, 1600))
+  {
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(18650, 143450, -3024, 1250))
+  {
+    MoveTo(18841, 144739, -3104)
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(20700, 143000, -3064, 800))
+  {
+    MoveTo(19622, 142599, -3032)
+    MoveTo(18841, 144739, -3104)
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(20700, 144600, -3080, 800))
+  {
+    MoveTo(19722, 144070, -3056)
+    MoveTo(18841, 144739, -3104)
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(21000, 145900, -3136, 500))
+  {
+    MoveTo(19281, 145569, -3104)
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(20000, 145900, -3120, 500))
+  {
+    MoveTo(19281, 145569, -3104)
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(19000, 145900, -3088, 500))
+  {
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(19550, 145050, -3096, 350))
+  {
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(18850, 145050, -3120, 350))
+  {
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  If (LocInRange(17100, 146100, -3072, 1400))
+  {
+    MoveTo(16733, 144525, -3000)
+    MoveTo(16675, 142945, -2712)
+  }
+
+  NpcDialog(32327)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(2)
+  Delay(3000)
+  CloseDialog()
+
+  If (CheckNPCRange(36610) < 1000)
+  {
+    MoveTo(15869, 142905, -2696)
+    NpcDialog(36610)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+  }
+
+  If (CountItem(736) < 6)
+  {
+    MoveTo(16733, 144525, -3000)
+    MoveTo(17853, 145757, -3088)    
+    MoveTo(19250, 146131, -3064)
+    NpcDialog(30063)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    AddItem(736, 10)
+    Delay(3000)
+    Confirm()
+    Delay(3000)
+    CloseWindow()
+    MoveTo(17853, 145757, -3088)
+    MoveTo(16733, 144525, -3000)
+  }
+
+  If (CountItem(6387) > 0)
+  {
+    If (CountItem(10515) > 0)
+    {
+      If (CountItem(10515) < 10)
+      {
+        MoveTo(16733, 144525, -3000)
+        MoveTo(17853, 145757, -3088)
+        MoveTo(18841, 144739, -3104)
+        MoveTo(19196, 142924, -3032)
+        NpcDialog(30828)
+        Delay(3000)
+        SelectDialog(2)
+        Delay(3000)
+        AddItem(10515, 20)
+        Delay(3000)
+        Confirm()
+        Delay(3000)
+        CloseWindow()
+        MoveTo(18841, 144739, -3104)
+        MoveTo(17853, 145757, -3088)
+        MoveTo(16733, 144525, -3000)
+      }
+    }
+
+    If (CountItem(10515) == 0)
+    {
+      If (CountItem(6645) < 5000)
+      {
+        MoveTo(16733, 144525, -3000)
+        MoveTo(17853, 145757, -3088)
+        MoveTo(18841, 144739, -3104)
+        MoveTo(19196, 142924, -3032)
+        NpcDialog(30828)
+        Delay(3000)
+        SelectDialog(2)
+        Delay(3000)
+        AddItem(6645, 10000)
+        Delay(3000)
+        Confirm()
+        Delay(3000)
+        CloseWindow()
+        MoveTo(18841, 144739, -3104)
+        MoveTo(17853, 145757, -3088)
+        MoveTo(16733, 144525, -3000)
+      }
+    }
+  }
+
+  MoveTo(15672, 142931, -2696)
+
+  If (CharBuffTime(15649) < 3300)
+  {
+    Jump("ReceiveBuff")
+  }
+
+
+GateKeeper:
+  NpcDialog(30059)
+  Delay(3000)
+
+  If (DialogContain("Teleport"))
+  {
+    SelectDialog("Teleport")
+    Delay(3000)
+
+    If (DialogContain("Cruma Tower (Lv. 40) - 2300 Adena"))
+    {
+      SelectDialog("Cruma Tower (Lv. 40) - 2300 Adena")
+      Delay(3000)
+      CloseDialog()
+      Delay(3000)
+      Jump("Teleport")
+    }
+
+    If (DialogContain("Cruma Tower (Lv. 40) - 1200 Adena"))
+    {
+      SelectDialog("Cruma Tower (Lv. 40) - 1200 Adena")
+      Delay(3000)
+      CloseDialog()
+      Delay(3000)
+      Jump("Teleport")
+    }
+
+    If (DialogContain("Cruma Tower (Lv. 40)"))
+    {
+      SelectDialog("Cruma Tower (Lv. 40)")
+      Delay(3000)
+      CloseDialog()
+      Delay(3000)
+      Jump("Teleport")
+    }
+  }
+
+  Delay(3000)
+  Jump("GateKeeper")
+
+
+Teleport:
+  If (LocInRange(17225, 114173, -3440, 500))
+  {
+    MoveTo(17260, 114147, -3440)
+    NpcDialog(30483)
+    Delay(3000)
+
+    If (DialogContain(""Let me go to the 3rd basement floor.""))
+    {
+      SelectDialog(""Let me go to the 3rd basement floor."")
+      Delay(3000)
+      CloseDialog()
+      Jump("Battle")
+    }    
+  }
+
+  If (LocInRange(15672, 142931, -2696, 1000))
+  {
+    Jump("GateKeeper")
+  }
+
+  Delay(3000)
+  Jump("Teleport")
+
+
+Battle:
+  If (LocInRange(17729, 114808, -11696, 500))
+  {
+    MoveTo(17718, 117303, -12064)
+    MoveTo(16471, 117331, -12160)
+    MoveTo(16445, 117008, -12160)
+    MoveTo(15343, 117029, -12080)
+    Jump("SetLocation")
+  }
+
+  If (LocInRange(17225, 114173, -3440, 500))
+  {
+    Jump("Teleport")
+  }
+
+  Delay(3000)
+  Jump("Battle")
+
+
+SetLocation:
+  ClearHuntingArea()
+  AddRectHuntingArea(14600, 117400, -12088, 1000)
+  BattleStart()
+
+
+BattleLoop:
+  If (Char.HP == 0)
+  {
+    BattleStop()
+    ReturnToVillage()
+    Delay(5000)
+    Jump("Begin")
+  }
+
+  If (CharBuffTime(15649) < 60)
+  {
+    Jump("BackToTown")
+  }
+
+  Delay(5000)
+  Jump("BattleLoop")
+
+
+BackToTown:
+  Jump("CheckTownLocation")
+
+  If (Char.HP > 0)
+  {
+    BattleStop()
+    Delay(5000)
+
+    If (CountItem(736) >= 1)
+    {
+      UseItem(736)
+      Msg(Console, "Delay 30 sec!")
+      Delay(30000)
+    }
+  }
+
+  If (Char.HP == 0)
+  {
+    BattleStop()
+    ReturnToVillage()
+    Delay(5000)
+    Jump("Begin")
+  }
+
+  Delay(5000)
+  Jump("BackToTown")
+
+
+CheckTownLocation:
+  If (LocInRange(15800, 143100, -2696, 1600))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(18650, 143450, -3024, 1250))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(20700, 143000, -3064, 800))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(20700, 144600, -3080, 800))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(21000, 145900, -3136, 500))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(20000, 145900, -3120, 500))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(19000, 145900, -3088, 500))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(19550, 145050, -3096, 350))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(18850, 145050, -3120, 350))
+  {
+    Jump("Begin")
+  }
+
+  If (LocInRange(17100, 146100, -3072, 1400))
+  {
+    Jump("Begin")
+  }
+
+  Return
+
+
+Exit:

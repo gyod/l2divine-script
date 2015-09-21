@@ -2,8 +2,8 @@
 | DivineScript Reference |
 +------------------------+
 
-Version:	2.6
-Last updated:	Feb 20, 2015
+Version:	2.7
+Last updated:	Sep 1, 2015
 Author:		Dev, Zariche
 
 +-------------------+
@@ -72,6 +72,7 @@ Section 2: Commands
 - Label
 - LearnSkill
 - LeaveParty
+- LoadSetting
 - LocInRange
 - Logout
 - MoveTo
@@ -100,6 +101,7 @@ Section 2: Commands
 - SelectPlayerByClass
 - SelectTarget
 - Sell
+- SendMail
 - SetBattleArea	
 - SetRestArea
 - SetPickup
@@ -745,6 +747,18 @@ LeaveParty()
 	Return		None
 	Propose		Leave from party		
 
+LoadSetting(*.ini)
+	Parameter	File location
+	Return		None
+	Propose		Load setting file (*.ini)
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			// Load setting file with relative path
+			LoadSetting("./setting/default.ini")
+
+			// Load setting file with absolute path
+			LoadSetting("c:/l2divine/setting/default.ini")
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 LocInRange(x, y, z, radius)
 	Parameter	location (x, y, z) and radius
 	Return		True/False
@@ -1026,6 +1040,25 @@ Sell()
 	Parameter	None
 	Return		None
 	Propose		Change NPC trade mode to sell (Gracia plus only)
+
+SendMail(to, subject, body)
+	Parameter	Email address of reciever, subject and email body
+	Return		None
+	Propose		To send email message.
+			*** SMTP information is required in L2Divine.ini ***
+			[Option]
+			SMTPHost=smtp.gmail.com
+			SMTPEnableSSL=1
+			SMTPPort=587
+			SMTPUseCredentials=1
+			SMTPUser=johndoe@somemail.com
+			SMTPPWD=password
+	Example		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+			If (Char.LV > 85)
+			{
+				SendMail("johndoe@somemail.com","Level Up!","Greeting!")
+			}
+			~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SetBattleArea(x, y, z, radius)
 SetBattleArea(radius)

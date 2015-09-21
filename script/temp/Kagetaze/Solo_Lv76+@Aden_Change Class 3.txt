@@ -1,0 +1,2287 @@
+// ------------------------------------------------------------------
+// Author:	Landford - FE
+// LV:	76+
+// Start Loc:	Town Of Aden
+// Target:	Seal Of Shillen
+// No Mob:	Go To Center
+// Relative Z:	-
+// Setting:	Auto Counter - On
+// Version:	1.0
+// Support Divine:	10.5.3 or higher
+// Special Thanks:	shevnall , zutsu , Zariche
+// ------------------------------------------------------------------
+
+// Start Script.
+Start:
+  Msg(Console, "Let's go to Change Class 3!")
+  Msg(Console, "No Mob : Go To Center")
+  Msg(Console, "Relative Z : -")
+  Msg(Console, "Version 1.0")
+  Msg(Console, "For 10.5.3 or higher")
+
+
+Begin:
+  If (Char.HP == 0)
+  {
+    BattleStop()
+    ReturnToVillage()
+    Delay(5000)    
+    Jump("Begin")
+  }
+
+  If (Char.HP > 0)
+  {
+    BattleStop()
+
+    If (Char.LV >= 76)
+    {
+      If (Char.Class == 2)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 3)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 5)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 6)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 8)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 9)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 12)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 13)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 14)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 16)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 17)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 20)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 21)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 23)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 24)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 27)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 28)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 30)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 33)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 34)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 36)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 37)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 40)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 41)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 43)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 46)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 48)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 51)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 52)
+      {
+        Jump("ReceiveBuffWizard")
+      }
+
+      If (Char.Class == 55)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 57)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 127)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 128)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 129)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      If (Char.Class == 130)
+      {
+        Jump("ReceiveBuffWarrior")
+      }
+
+      Exit
+    }  
+
+    If (Char.LV < 76)
+    {
+      Msg(Console, "Lv. not enough for this script!")
+      Exit
+    }
+  }
+
+  Delay(2000)
+  Jump("Begin")
+
+
+ReceiveBuffWarrior:
+  If (LocInRange(147360, 30519, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(146038,    30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144627, 28650, -2456, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144635, 26664, -2264, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144526, 24661, -2136, 1000))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144559, 22835, -2136, 800))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(145686, 21114, -2136, 1000))
+  {
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147331, 20750, -2096, 700))
+  {
+    MoveTo(146246, 21161, -2136)
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(148946, 21121, -2136, 1000))
+  {
+    MoveTo(149853, 22529, -2136)
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150312, 22835, -2136, 800))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150345, 24661, -2136, 1000))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150236, 26664, -2264, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150227, 28650, -2456, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(148700, 30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147360, 29720, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147405, 24000, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147405, 27600, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  NpcDialog(32327)
+  Delay(3000)
+  SelectDialog(2)
+  Delay(3000)
+  SelectDialog(2)
+  Delay(3000)
+  CloseDialog()
+
+  If (CheckNPCRange(36613) < 800)
+  {
+    MoveTo(146780, 25888, -2008)
+    NpcDialog(36613)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+  }
+
+  If (CountItem(736) < 6)
+  {
+    MoveTo(147428, 26736, -2200)
+    MoveTo(146383, 28230, -2264)
+    MoveTo(146063, 28094, -2248)
+    NpcDialog(30839)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    AddItem(736, 10)
+    Delay(3000)
+    Confirm()
+    Delay(3000)
+    CloseWindow()
+    MoveTo(146383, 28230, -2264)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+  }
+
+  If (CharBuffTime(15649) < 60)
+  {
+    Jump("ReceiveBuffWarrior")
+  }
+
+  Jump("CheckReceiveQuest")
+
+
+ReceiveBuffWizard:
+  If (LocInRange(147360, 30519, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(146038,    30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144627, 28650, -2456, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144635, 26664, -2264, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144526, 24661, -2136, 1000))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144559, 22835, -2136, 800))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(145686, 21114, -2136, 1000))
+  {
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147331, 20750, -2096, 700))
+  {
+    MoveTo(146246, 21161, -2136)
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(148946, 21121, -2136, 1000))
+  {
+    MoveTo(149853, 22529, -2136)
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150312, 22835, -2136, 800))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150345, 24661, -2136, 1000))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150236, 26664, -2264, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150227, 28650, -2456, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(148700, 30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147360, 29720, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147405, 24000, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147405, 27600, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  NpcDialog(32327)
+  Delay(3000)
+  SelectDialog(2)
+  Delay(3000)
+  SelectDialog(3)
+  Delay(3000)
+  CloseDialog()
+
+  If (CheckNPCRange(36613) < 800)
+  {
+    MoveTo(146780, 25888, -2008)
+    NpcDialog(36613)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+  }
+
+  If (CountItem(736) < 6)
+  {
+    MoveTo(147428, 26736, -2200)
+    MoveTo(146383, 28230, -2264)
+    MoveTo(146063, 28094, -2248)
+    NpcDialog(30839)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    AddItem(736, 10)
+    Delay(3000)
+    Confirm()
+    Delay(3000)
+    CloseWindow()
+    MoveTo(146383, 28230, -2264)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+  }
+
+  If (CharBuffTime(15650) < 60)
+  {
+    Jump("ReceiveBuffWizard")
+  }
+
+  Jump("CheckReceiveQuest")
+
+
+CheckReceiveQuest:
+  If (Char.Class == 2)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 3)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 5)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 6)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 8)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 9)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 12)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 13)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 14)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 16)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 17)
+  {
+    Jump("ReceiveHumanQuest")
+  }
+
+  If (Char.Class == 20)
+  {
+    Jump("ReceiveElfQuest")
+  }
+
+  If (Char.Class == 21)
+  {
+    Jump("ReceiveElfQuest")
+  }
+
+  If (Char.Class == 23)
+  {
+    Jump("ReceiveElfQuest")
+  }
+
+  If (Char.Class == 24)
+  {
+    Jump("ReceiveElfQuest")
+  }
+
+  If (Char.Class == 27)
+  {
+    Jump("ReceiveElfQuest")
+  }
+
+  If (Char.Class == 28)
+  {
+    Jump("ReceiveElfQuest")
+  }
+
+  If (Char.Class == 30)
+  {
+    Jump("ReceiveElfQuest")
+  }
+
+  If (Char.Class == 33)
+  {
+    Jump("ReceiveDarkElfQuest")
+  }
+
+  If (Char.Class == 34)
+  {
+    Jump("ReceiveDarkElfQuest")
+  }
+
+  If (Char.Class == 36)
+  {
+    Jump("ReceiveDarkElfQuest")
+  }
+
+  If (Char.Class == 37)
+  {
+    Jump("ReceiveDarkElfQuest")
+  }
+
+  If (Char.Class == 40)
+  {
+    Jump("ReceiveDarkElfQuest")
+  }
+
+  If (Char.Class == 41)
+  {
+    Jump("ReceiveDarkElfQuest")
+  }
+
+  If (Char.Class == 43)
+  {
+    Jump("ReceiveDarkElfQuest")
+  }
+
+  If (Char.Class == 46)
+  {
+    Jump("ReceiveOrcQuest")
+  }
+
+  If (Char.Class == 48)
+  {
+    Jump("ReceiveOrcQuest")
+  }
+
+  If (Char.Class == 51)
+  {
+    Jump("ReceiveOrcQuest")
+  }
+
+  If (Char.Class == 52)
+  {
+    Jump("ReceiveOrcQuest")
+  }
+
+  If (Char.Class == 55)
+  {
+    Jump("ReceiveDwarfQuest")
+  }
+
+  If (Char.Class == 57)
+  {
+    Jump("ReceiveDwarfQuest")
+  }
+
+  If (Char.Class == 127)
+  {
+    Jump("ReceiveKamaelQuest")
+  }
+
+  If (Char.Class == 128)
+  {
+    Jump("ReceiveKamaelQuest")
+  }
+
+  If (Char.Class == 129)
+  {
+    Jump("ReceiveKamaelQuest")
+  }
+
+  If (Char.Class == 130)
+  {
+    Jump("ReceiveKamaelQuest")
+  }
+
+  Delay(2000)
+  Jump("CheckReceiveQuest")
+
+
+ReceiveHumanQuest:
+  MoveTo(147459, 25502, -1992)
+  MoveTo(147459, 22653, -1992)
+  NpcDialog(30857)
+  Delay(3000)
+  SelectDialog(5)
+  Delay(3000)
+  SelectDialog("[Day of Fate - Human Fate]")
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  MoveTo(147459, 25502, -1992)
+  MoveTo(146827, 25823, -2008)
+  Jump("GateKeeper")
+
+
+ReceiveElfQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(145974, 23117, -2136)
+  MoveTo(145644, 23509, -2112)
+  NpcDialog(30856)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog("[Day of Fate - Elven Fate]")
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  MoveTo(145974, 23117, -2136)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146827, 25823, -2008)
+  Jump("GateKeeper")
+
+
+ReceiveDarkElfQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(143849, 23938, -2120)
+  NpcDialog(30862)
+  Delay(3000)
+  SelectDialog(5)
+  Delay(3000)
+  SelectDialog("[Day of Fate - Dark Elven Fate]")
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146827, 25823, -2008)
+  Jump("GateKeeper")
+
+
+ReceiveOrcQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(144144, 25032, -2136)
+  MoveTo(144454, 25614, -2120)
+  NpcDialog(30865)
+  Delay(3000)
+  SelectDialog(5)
+  Delay(3000)
+  SelectDialog("[Day of Fate - Orc's Fate]")
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  MoveTo(144144, 25032, -2136)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146827, 25823, -2008)
+  Jump("GateKeeper")
+
+
+ReceiveDwarfQuest:
+  MoveTo(147422, 25864, -2008)
+  MoveTo(147450, 26756, -2200)
+  MoveTo(148466, 27676, -2264)
+  MoveTo(150530, 27740, -2264)
+  MoveTo(150410, 28356, -2248)
+  NpcDialog(30847)
+  Delay(3000)
+  SelectDialog(5)
+  Delay(3000)
+  SelectDialog("[Day of Fate - Dwarf's Fate]")
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  MoveTo(150530, 27740, -2264)
+  MoveTo(148466, 27676, -2264)
+  MoveTo(147450, 26756, -2200)
+  MoveTo(147422, 25864, -2008)
+  MoveTo(146827, 25823, -2008)
+  Jump("GateKeeper")
+
+
+ReceiveKamaelQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(144001, 22707, -2120)
+  NpcDialog(32221)
+  Delay(3000)
+  SelectDialog(5)
+  Delay(3000)
+  SelectDialog("[Day of Fate - Kamael's Fate]")
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146827, 25823, -2008)
+  Jump("GateKeeper")
+
+
+GateKeeper:
+  NpcDialog(30848)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(15)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+
+
+QuestStep1:
+  If (LocInRange(184742, 19745, -3168, 100))
+  {
+    MoveTo(186086, 20337, -3344)
+    NpcDialog(33407)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    MoveTo(185569, 19690, -3288)
+    MoveTo(183473, 19626, -3168)
+    MoveTo(183737, 17394, -3168)
+    Jump("QuestStep1_1")
+  }
+
+  If (LocInRange(146827, 25823, -2008, 1000))
+  {
+    Jump("GateKeeper")
+  }
+
+  Delay(2000)
+  Jump("QuestStep1")
+
+
+QuestStep1_1: 
+  NpcDialog(33166)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+
+  If (CountItem(17748) == 1)
+  {
+    MoveTo(182969, 15389, -3168)
+    MoveTo(181266, 15185, -3168)
+    Jump("QuestStep1_2")
+  }
+
+  If (CountItem(17749) == 1)
+  {
+    MoveTo(182969, 15389, -3168)
+    MoveTo(181266, 15185, -3168)
+    Jump("QuestStep1_2")
+  }
+
+  If (CountItem(17750) == 1)
+  {
+    MoveTo(182969, 15389, -3168)
+    MoveTo(181266, 15185, -3168)
+    Jump("QuestStep1_2")
+  }
+
+  If (CountItem(17751) == 1)
+  {
+    MoveTo(182969, 15389, -3168)
+    MoveTo(181266, 15185, -3168)
+    Jump("QuestStep1_2")
+  }
+
+  If (CountItem(17752) == 1)
+  {
+    MoveTo(182969, 15389, -3168)
+    MoveTo(181266, 15185, -3168)
+    Jump("QuestStep1_2")
+  }
+
+  If (CountItem(17753) == 1)
+  {
+    MoveTo(182969, 15389, -3168)
+    MoveTo(181266, 15185, -3168)
+    Jump("QuestStep1_2")
+  }
+
+  Delay(2000)
+  Jump("QuestStep1_1")
+
+
+QuestStep1_2: 
+  NpcDialog(33167)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+
+  If (CountItem(17748) == 2)
+  {
+    MoveTo(181339, 18532, -3168)
+    MoveTo(181579, 21396, -3168)
+    MoveTo(180547, 25485, -3168)
+    Jump("QuestStep1_3")
+  }
+
+  If (CountItem(17749) == 2)
+  {
+    MoveTo(181339, 18532, -3168)
+    MoveTo(181579, 21396, -3168)
+    MoveTo(180547, 25485, -3168)
+    Jump("QuestStep1_3")
+  }
+
+  If (CountItem(17750) == 2)
+  {
+    MoveTo(181339, 18532, -3168)
+    MoveTo(181579, 21396, -3168)
+    MoveTo(180547, 25485, -3168)
+    Jump("QuestStep1_3")
+  }
+
+  If (CountItem(17751) == 2)
+  {
+    MoveTo(181339, 18532, -3168)
+    MoveTo(181579, 21396, -3168)
+    MoveTo(180547, 25485, -3168)
+    Jump("QuestStep1_3")
+  }
+
+  If (CountItem(17752) == 2)
+  {
+    MoveTo(181339, 18532, -3168)
+    MoveTo(181579, 21396, -3168)
+    MoveTo(180547, 25485, -3168)
+    Jump("QuestStep1_3")
+  }
+
+  If (CountItem(17753) == 2)
+  {
+    MoveTo(181339, 18532, -3168)
+    MoveTo(181579, 21396, -3168)
+    MoveTo(180547, 25485, -3168)
+    Jump("QuestStep1_3")
+  }
+
+  Delay(2000)
+  Jump("QuestStep1_2")
+
+
+QuestStep1_3: 
+  NpcDialog(33168)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+
+  If (CountItem(17748) == 3)
+  {
+    MoveTo(182624, 25598, -3168)
+    Jump("QuestStep1_4")
+  }
+
+  If (CountItem(17749) == 3)
+  {
+    MoveTo(182624, 25598, -3168)
+    Jump("QuestStep1_4")
+  }
+
+  If (CountItem(17750) == 3)
+  {
+    MoveTo(182624, 25598, -3168)
+    Jump("QuestStep1_4")
+  }
+
+  If (CountItem(17751) == 3)
+  {
+    MoveTo(182624, 25598, -3168)
+    Jump("QuestStep1_4")
+  }
+
+  If (CountItem(17752) == 3)
+  {
+    MoveTo(182624, 25598, -3168)
+    Jump("QuestStep1_4")
+  }
+
+  If (CountItem(17753) == 3)
+  {
+    MoveTo(182624, 25598, -3168)
+    Jump("QuestStep1_4")
+  }
+
+  Delay(2000)
+  Jump("QuestStep1_3")
+
+
+QuestStep1_4: 
+  NpcDialog(33169)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+
+  If (CountItem(17748) == 4)
+  {
+    MoveTo(183287, 22670, -3168)
+    MoveTo(184006, 20709, -3160)
+    MoveTo(185278, 20677, -3256)
+    MoveTo(186086, 20337, -3344)
+    NpcDialog(33407)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("QuestStep2")
+  }
+
+  If (CountItem(17749) == 4)
+  {
+    MoveTo(183287, 22670, -3168)
+    MoveTo(184006, 20709, -3160)
+    MoveTo(185278, 20677, -3256)
+    MoveTo(186086, 20337, -3344)
+    NpcDialog(33407)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("QuestStep2")
+  }
+
+  If (CountItem(17750) == 4)
+  {
+    MoveTo(183287, 22670, -3168)
+    MoveTo(184006, 20709, -3160)
+    MoveTo(185278, 20677, -3256)
+    MoveTo(186086, 20337, -3344)
+    NpcDialog(33407)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("QuestStep2")
+  }
+
+  If (CountItem(17751) == 4)
+  {
+    MoveTo(183287, 22670, -3168)
+    MoveTo(184006, 20709, -3160)
+    MoveTo(185278, 20677, -3256)
+    MoveTo(186086, 20337, -3344)
+    NpcDialog(33407)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("QuestStep2")
+  }
+
+  If (CountItem(17752) == 4)
+  {
+    MoveTo(183287, 22670, -3168)
+    MoveTo(184006, 20709, -3160)
+    MoveTo(185278, 20677, -3256)
+    MoveTo(186086, 20337, -3344)
+    NpcDialog(33407)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("QuestStep2")
+  }
+
+  If (CountItem(17753) == 4)
+  {
+    MoveTo(183287, 22670, -3168)
+    MoveTo(184006, 20709, -3160)
+    MoveTo(185278, 20677, -3256)
+    MoveTo(186086, 20337, -3344)
+    NpcDialog(33407)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("QuestStep2")
+  }
+
+  Delay(2000)
+  Jump("QuestStep1_4")
+
+
+QuestStep2:
+  MoveTo(185764, 20403, -3336)
+  NpcDialog(33165)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  Jump("Battle")
+
+
+Battle:
+  If (LocInRange(56190, -172915, -7952, 100))
+  {
+    MoveTo(56202, -172775, -7952)
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+
+    MoveTo(56140, -172718, -7952)
+    NpcDialog(33173)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+
+    MoveTo(56349, -172668, -7952)
+    NpcDialog(33172)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+
+    MoveTo(56202, -172775, -7952)
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("SetLocation")
+  }
+
+  If (LocInRange(185764, 20403, -3336, 500))
+  {
+    Jump("QuestStep2")
+  }
+
+  Delay(2000)
+  Jump("Battle")
+
+
+SetLocation:
+  If (LocInRange(56167, -175615, -7944, 100))
+  {
+    ClearHuntingArea()
+    AddRectHuntingArea(56100, -176700, -7952, 1500)
+  }
+
+
+BattleLoop1:
+  If (NoMobInHuntingArea())
+  {
+    SelectTarget(33170)
+    MoveToTarget(100)
+    Delay(3000)
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+  }
+
+  If (CountItem(17484) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17485) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17486) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17487) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17488) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17489) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17490) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17491) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17492) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17493) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17494) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17495) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17496) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17497) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17498) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17499) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17500) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17501) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17502) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17503) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17504) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17505) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17506) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17507) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17508) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17509) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17510) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17511) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17512) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17513) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17514) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17515) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17516) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  If (CountItem(17517) == 1)
+  {
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    BattleStart()
+    Jump("BattleLoop2")
+  }
+
+  Delay(5000)
+  Jump("BattleLoop1")
+
+
+BattleLoop2:
+  Delay(300000)
+
+  If (NoMobInHuntingArea())
+  {
+    BattleStop()
+    SelectTarget(33170)
+    MoveToTarget(100)
+    Delay(3000)
+    NpcDialog(33170)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    UseItem(736)
+    Msg(Console, "Delay 30 sec!")
+    Delay(30000)
+
+    If (LocInRange(185813, 20395, -3336, 500))
+    {
+      UseItem(736)
+      Msg(Console, "Delay 30 sec!")
+      Delay(30000)
+      Jump("CheckTownLocation")
+    }  
+  }
+
+  Jump("BattleLoop2")
+
+
+CheckTownLocation:
+  If (LocInRange(147360, 30519, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(146038,    30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(144627, 28650, -2456, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(144635, 26664, -2264, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(144526, 24661, -2136, 1000))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(144559, 22835, -2136, 800))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(145686, 21114, -2136, 1000))
+  {
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(147331, 20750, -2096, 700))
+  {
+    MoveTo(146246, 21161, -2136)
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(148946, 21121, -2136, 1000))
+  {
+    MoveTo(149853, 22529, -2136)
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(150312, 22835, -2136, 800))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(150345, 24661, -2136, 1000))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(150236, 26664, -2264, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(150227, 28650, -2456, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(148700, 30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(147360, 29720, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(147405, 24000, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  If (LocInRange(147405, 27600, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+    Jump("CheckSendQuest")
+  }
+
+  Delay(2000)
+  Jump("CheckTownLocation")
+
+
+CheckSendQuest:
+  If (Char.Class == 2)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 3)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 5)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 6)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 8)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 9)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 12)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 13)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 14)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 16)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 17)
+  {
+    Jump("SendHumanQuest")
+  }
+
+  If (Char.Class == 20)
+  {
+    Jump("SendElfQuest")
+  }
+
+  If (Char.Class == 21)
+  {
+    Jump("SendElfQuest")
+  }
+
+  If (Char.Class == 23)
+  {
+    Jump("SendElfQuest")
+  }
+
+  If (Char.Class == 24)
+  {
+    Jump("SendElfQuest")
+  }
+
+  If (Char.Class == 27)
+  {
+    Jump("SendElfQuest")
+  }
+
+  If (Char.Class == 28)
+  {
+    Jump("SendElfQuest")
+  }
+
+  If (Char.Class == 30)
+  {
+    Jump("SendElfQuest")
+  }
+
+  If (Char.Class == 33)
+  {
+    Jump("SendDarkElfQuest")
+  }
+
+  If (Char.Class == 34)
+  {
+    Jump("SendDarkElfQuest")
+  }
+
+  If (Char.Class == 36)
+  {
+    Jump("SendDarkElfQuest")
+  }
+
+  If (Char.Class == 37)
+  {
+    Jump("SendDarkElfQuest")
+  }
+
+  If (Char.Class == 40)
+  {
+    Jump("SendDarkElfQuest")
+  }
+
+  If (Char.Class == 41)
+  {
+    Jump("SendDarkElfQuest")
+  }
+
+  If (Char.Class == 43)
+  {
+    Jump("SendDarkElfQuest")
+  }
+
+  If (Char.Class == 46)
+  {
+    Jump("SendOrcQuest")
+  }
+
+  If (Char.Class == 48)
+  {
+    Jump("SendOrcQuest")
+  }
+
+  If (Char.Class == 51)
+  {
+    Jump("SendOrcQuest")
+  }
+
+  If (Char.Class == 52)
+  {
+    Jump("SendOrcQuest")
+  }
+
+  If (Char.Class == 55)
+  {
+    Jump("SendDwarfQuest")
+  }
+
+  If (Char.Class == 57)
+  {
+    Jump("SendDwarfQuest")
+  }
+
+  If (Char.Class == 127)
+  {
+    Jump("SendKamaelQuest")
+  }
+
+  If (Char.Class == 128)
+  {
+    Jump("SendKamaelQuest")
+  }
+
+  If (Char.Class == 129)
+  {
+    Jump("SendKamaelQuest")
+  }
+
+  If (Char.Class == 130)
+  {
+    Jump("SendKamaelQuest")
+  }
+
+  Delay(2000)
+  Jump("CheckSendQuest")
+
+
+SendHumanQuest:
+  MoveTo(147459, 25502, -1992)
+  MoveTo(147459, 22653, -1992)
+  Msg(Console, "Please talk at NPC for end quest!")
+  Exit
+
+
+SendElfQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(145974, 23117, -2136)
+  MoveTo(145644, 23509, -2112)
+  Msg(Console, "Please talk at NPC for end quest!")
+  Exit
+
+
+SendDarkElfQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(143849, 23938, -2120)
+  Msg(Console, "Please talk at NPC for end quest!")
+  Exit
+
+
+SendOrcQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(144144, 25032, -2136)
+  MoveTo(144454, 25614, -2120)
+  Msg(Console, "Please talk at NPC for end quest!")
+  Exit
+
+
+SendDwarfQuest:
+  MoveTo(147422, 25864, -2008)
+  MoveTo(147450, 26756, -2200)
+  MoveTo(148466, 27676, -2264)
+  MoveTo(150530, 27740, -2264)
+  MoveTo(150410, 28356, -2248)
+  Msg(Console, "Please talk at NPC for end quest!")
+  Exit
+
+
+SendKamaelQuest:
+  MoveTo(146358, 25738, -2008)
+  MoveTo(146230, 24237, -2008)
+  MoveTo(144974, 24237, -2136)
+  MoveTo(144001, 22707, -2120)
+  Msg(Console, "Please talk at NPC for end quest!")
+  Exit
+
+
+Exit:

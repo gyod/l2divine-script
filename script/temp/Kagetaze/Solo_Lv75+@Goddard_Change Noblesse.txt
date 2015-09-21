@@ -1,0 +1,2464 @@
+// ------------------------------------------------------------------
+// Author:	Landford - FE
+// LV:	75+
+// Start Loc:	Town Of Goddard
+// Target:	-
+// No Mob:	Go To Center
+// Relative Z:	-
+// Setting:	Auto Counter - On
+// Version:	1.0
+// Support Divine:	10.5.3 or higher
+// Special Thanks:	shevnall , zutsu , Zariche
+// ------------------------------------------------------------------
+
+// Start Script.
+Start:
+  Msg(Console, "Let's go to Change Noblesse!")
+  Msg(Console, "No Mob : Go To Center")
+  Msg(Console, "Relative Z : -")
+  Msg(Console, "Version 1.0")
+  Msg(Console, "For 10.5.3 or higher")
+
+
+Begin:
+  If (Char.HP == 0)
+  {
+    BattleStop()
+    ReturnToVillage()
+    Delay(5000)    
+    Jump("Begin")
+  }
+
+  If (Char.HP > 0)
+  {
+    BattleStop()
+
+    If (Char.LV >= 75)
+    {
+      If (Char.LV < 91)
+      {
+        // Class 2
+
+        If (Char.Class == 2)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 3)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 5)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 6)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 8)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 9)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 12)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 13)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 14)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 16)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 17)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 20)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 21)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 23)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 24)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 27)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 28)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 30)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 33)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 34)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 36)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 37)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 40)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 41)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 43)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 46)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 48)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 51)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 52)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 55)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 57)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 127)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 128)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 129)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 130)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 135)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        // Class 3
+
+        If (Char.Class == 88)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 89)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 90)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 91)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 92)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 93)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 94)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 95)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 96)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 97)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 98)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 99)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 100)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 101)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 102)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 103)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 104)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 105)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 106)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 107)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 108)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 109)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 110)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 111)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 112)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 113)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 114)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 115)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 116)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 117)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 118)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 132)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 132)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 133)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 134)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 136)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        // Class 4 Awakening
+
+        If (Char.Class == 139)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 140)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 141)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 142)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 143)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 144)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 145)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 146)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        // Class 4 Re - Awakening
+
+        If (Char.Class == 148)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 149)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 150)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 151)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 152)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 153)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 154)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 155)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 156)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 157)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 158)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 159)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 160)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 161)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 162)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 163)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 164)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 165)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 166)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 167)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 168)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 169)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 170)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 171)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 172)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 173)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 174)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 175)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 176)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 177)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 178)
+        {
+          Jump("ReceiveBuffWarrior")
+        }
+
+        If (Char.Class == 179)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 180)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+
+        If (Char.Class == 181)
+        {
+          Jump("ReceiveBuffWizard")
+        }
+      }
+
+      Jump("ReceiveQuest")
+    }
+
+    If (Char.LV < 75)
+    {
+      Msg(Console, "Lv. not enough for this script!")
+      Exit
+    }
+  }
+
+  Delay(2000)
+  Jump("Begin")
+
+
+ReceiveBuffWarrior:
+  If (LocInRange(146400, -53050, -2728, 600))
+  {
+    MoveTo(147700, -53021, -2728)    
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -53021, -2728, 700))
+  {
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149000, -53050, -2728, 600))
+  {
+    MoveTo(147700, -53021, -2728)    
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147670, -54320, -2728, 600))
+  {
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147680, -55400, -2728, 475))
+  {
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146200, -54480, -2776, 600))
+  {
+    MoveTo(146801, -55475, -2776)
+    MoveTo(147244, -56193, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146800, -55475, -2776, 400))
+  {
+    MoveTo(147244, -56193, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -56375, -2776, 500))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147000, -56278, -2776, 400))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -56170, -2776, 300))
+  {
+    MoveTo(147684, -55866, -2752)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147500, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147900, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147678, -57275, -2776, 600))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148400, -56278, -2776, 400))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148550, -55475, -2776, 400))
+  {
+    MoveTo(148258, -56187, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149150, -54460, -2776, 600))
+  {
+    MoveTo(148550, -55475, -2776)
+    MoveTo(148258, -56187, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -56375, -2776, 500))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150600, -55571, -2976, 800))
+  {
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150400, -56970, -2968, 600))
+  {
+    MoveTo(149684, -56786, -2912)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150100, -57875, -2976, 300))
+  {
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -57375, -2968, 500))
+  {
+    MoveTo(149860, -57756, -2976)
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -58380, -2976, 500))
+  {
+    MoveTo(148555, -58328, -2976)
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148250, -58420, -2976, 550))
+  {
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147150, -58420, -2976, 550))
+  {
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -58380, -2976, 500))
+  {
+    MoveTo(146883, -58409, -2976)
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -57375, -2976, 500))
+  {
+    MoveTo(145424, -57521, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145300, -57875, -2968, 300))
+  {
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145000, -56970, -2976, 600))
+  {
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(144790, -55571, -2976, 800))
+  {
+    MoveTo(144908, -56520, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145190, -54370, -2976, 400))
+  {
+    MoveTo(144772, -55584, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(144390, -54370, -2976, 400))
+  {
+    MoveTo(144772, -55584, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  NpcDialog(32327)
+  Delay(3000)
+  SelectDialog(2)
+  Delay(3000)
+  SelectDialog(2)
+  Delay(3000)
+  CloseDialog()
+
+  If (CheckNPCRange(36615) < 550)
+  {
+    MoveTo(147924, -55183, -2728)
+    NpcDialog(36615)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+  }
+
+  If (CountItem(736) < 6)
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149212, -57978, -2976)
+    MoveTo(149264, -57374, -2968)
+    NpcDialog(31263)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    AddItem(736, 10)
+    Delay(3000)
+    Confirm()
+    Delay(3000)
+    CloseWindow()
+    MoveTo(149212, -57978, -2976)
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (CharBuffTime(15649) < 60)
+  {
+    Jump("ReceiveBuffWarrior")
+  }
+
+  Jump("ReceiveQuest")
+
+
+ReceiveBuffWizard:
+  If (LocInRange(146400, -53050, -2728, 600))
+  {
+    MoveTo(147700, -53021, -2728)    
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -53021, -2728, 700))
+  {
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149000, -53050, -2728, 600))
+  {
+    MoveTo(147700, -53021, -2728)    
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147670, -54320, -2728, 600))
+  {
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147680, -55400, -2728, 475))
+  {
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146200, -54480, -2776, 600))
+  {
+    MoveTo(146801, -55475, -2776)
+    MoveTo(147244, -56193, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146800, -55475, -2776, 400))
+  {
+    MoveTo(147244, -56193, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -56375, -2776, 500))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147000, -56278, -2776, 400))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -56170, -2776, 300))
+  {
+    MoveTo(147684, -55866, -2752)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147500, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147900, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147678, -57275, -2776, 600))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148400, -56278, -2776, 400))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148550, -55475, -2776, 400))
+  {
+    MoveTo(148258, -56187, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149150, -54460, -2776, 600))
+  {
+    MoveTo(148550, -55475, -2776)
+    MoveTo(148258, -56187, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -56375, -2776, 500))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150600, -55571, -2976, 800))
+  {
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150400, -56970, -2968, 600))
+  {
+    MoveTo(149684, -56786, -2912)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150100, -57875, -2976, 300))
+  {
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -57375, -2968, 500))
+  {
+    MoveTo(149860, -57756, -2976)
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -58380, -2976, 500))
+  {
+    MoveTo(148555, -58328, -2976)
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148250, -58420, -2976, 550))
+  {
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147150, -58420, -2976, 550))
+  {
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -58380, -2976, 500))
+  {
+    MoveTo(146883, -58409, -2976)
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -57375, -2976, 500))
+  {
+    MoveTo(145424, -57521, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145300, -57875, -2968, 300))
+  {
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145000, -56970, -2976, 600))
+  {
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(144790, -55571, -2976, 800))
+  {
+    MoveTo(144908, -56520, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145190, -54370, -2976, 400))
+  {
+    MoveTo(144772, -55584, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(144390, -54370, -2976, 400))
+  {
+    MoveTo(144772, -55584, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  NpcDialog(32327)
+  Delay(3000)
+  SelectDialog(2)
+  Delay(3000)
+  SelectDialog(3)
+  Delay(3000)
+  CloseDialog()
+
+  If (CheckNPCRange(36615) < 550)
+  {
+    MoveTo(147924, -55183, -2728)
+    NpcDialog(36615)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+  }
+
+  If (CountItem(736) < 6)
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149212, -57978, -2976)
+    MoveTo(149264, -57374, -2968)
+    NpcDialog(31263)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    AddItem(736, 10)
+    Delay(3000)
+    Confirm()
+    Delay(3000)
+    CloseWindow()
+    MoveTo(149212, -57978, -2976)
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (CharBuffTime(15650) < 60)
+  {
+    Jump("ReceiveBuffWizard")
+  }
+
+  Jump("ReceiveQuest")
+
+
+ReceiveQuest:
+  MoveTo(147723, -54937, -2728)
+  MoveTo(147723, -53257, -2728)
+  MoveTo(147385, -52438, -2728)
+  NpcDialog(31281)
+  Delay(3000)
+  SelectDialog(4)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+
+  NpcDialog(31281)
+  Delay(3000)
+  SelectDialog(4)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+
+  If (QuestAccepted(10369))
+  {
+    MoveTo(147723, -53257, -2728)
+    MoveTo(147723, -54937, -2728)
+    MoveTo(147993, -55340, -2728)
+    Jump("GateKeeper")
+  }
+
+  If (!QuestAccepted(10369))
+  {
+    Msg(Console, "Can't receive quest - Noblesse, Soul Testing")
+    Exit
+  }
+
+
+GateKeeper:
+  NpcDialog(31275)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(12)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+
+
+QuestStep_1:
+  If (LocInRange(144880, -113468, -2560, 100))
+  {
+    MoveTo(145854, -112396, -2448)
+    MoveTo(146574, -111644, -2400)
+    MoveTo(148542, -111964, -2152)
+    MoveTo(149854, -111708, -2192)
+    MoveTo(150733, -112677, -2176)
+    Jump("SetLocation_1")
+  }
+
+  If (LocInRange(147993, -55340, -2728, 1000))
+  {
+    Jump("GateKeeper")
+  }
+
+  Delay(2000)
+  Jump("QuestStep_1")
+
+
+SetLocation_1:
+  If (CountNPCInRange(27482, 150750, -112650, -2176, 300) > 0)
+  {
+    ClearHuntingArea()
+    AddRectHuntingArea(150750, -112650, -2176, 300)
+    Jump("BattleLoop_1")
+  }
+
+  Delay(2000)
+  Jump("SetLocation_1")
+
+
+BattleLoop_1:
+  BattleStart()
+
+  If (CountItem(34886) > 0)
+  {
+    BattleStop()
+    UseItem(736)
+    Msg(Console, "Delay 30 sec!")
+    Delay(30000)
+    Jump("QuestStep_2")
+  }
+
+  Delay(2000)
+  Jump("BattleLoop_1")
+
+
+QuestStep_2:
+  If (LocInRange(150750, -112650, -2176, 100))
+  {
+    Jump("BattleLoop_1")
+  }
+
+  If (LocInRange(146400, -53050, -2728, 600))
+  {
+    MoveTo(147700, -53021, -2728)    
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -53021, -2728, 700))
+  {
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149000, -53050, -2728, 600))
+  {
+    MoveTo(147700, -53021, -2728)    
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147670, -54320, -2728, 600))
+  {
+    MoveTo(147705, -54908, -2728)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147680, -55400, -2728, 475))
+  {
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146200, -54480, -2776, 600))
+  {
+    MoveTo(146801, -55475, -2776)
+    MoveTo(147244, -56193, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146800, -55475, -2776, 400))
+  {
+    MoveTo(147244, -56193, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -56375, -2776, 500))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147000, -56278, -2776, 400))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -56170, -2776, 300))
+  {
+    MoveTo(147684, -55866, -2752)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147500, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147700, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147900, -56570, -2776, 100))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147678, -57275, -2776, 600))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148400, -56278, -2776, 400))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148550, -55475, -2776, 400))
+  {
+    MoveTo(148258, -56187, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149150, -54460, -2776, 600))
+  {
+    MoveTo(148550, -55475, -2776)
+    MoveTo(148258, -56187, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -56375, -2776, 500))
+  {
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150600, -55571, -2976, 800))
+  {
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150400, -56970, -2968, 600))
+  {
+    MoveTo(149684, -56786, -2912)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(150100, -57875, -2976, 300))
+  {
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -57375, -2968, 500))
+  {
+    MoveTo(149860, -57756, -2976)
+    MoveTo(150284, -57090, -2976)
+    MoveTo(149012, -56306, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(149300, -58380, -2976, 500))
+  {
+    MoveTo(148555, -58328, -2976)
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(148250, -58420, -2976, 550))
+  {
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(147150, -58420, -2976, 550))
+  {
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -58380, -2976, 500))
+  {
+    MoveTo(146883, -58409, -2976)
+    MoveTo(147715, -58128, -2976)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(146100, -57375, -2976, 500))
+  {
+    MoveTo(145424, -57521, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145300, -57875, -2968, 300))
+  {
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145000, -56970, -2976, 600))
+  {
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(144790, -55571, -2976, 800))
+  {
+    MoveTo(144908, -56520, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(145190, -54370, -2976, 400))
+  {
+    MoveTo(144772, -55584, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  If (LocInRange(144390, -54370, -2976, 400))
+  {
+    MoveTo(144772, -55584, -2976)
+    MoveTo(145492, -56920, -2976)
+    MoveTo(146242, -56316, -2776)
+    MoveTo(147660, -56054, -2760)
+    MoveTo(147993, -55340, -2728)
+  }
+
+  MoveTo(147723, -54937, -2728)
+  MoveTo(147723, -53257, -2728)
+  MoveTo(147385, -52438, -2728)
+  NpcDialog(31281)
+  Delay(3000)
+  SelectDialog(4)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  NpcDialog(31281)
+  Delay(3000)
+  SelectDialog(4)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  Jump("QuestStep_3")
+
+
+QuestStep_3:
+  If (CheckNPCRange(33686) < 700)
+  {
+    SelectTarget(33686)
+    MoveToTarget(50)
+    Delay(3000)
+    NpcDialog(33686)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+
+    If (CountItem(34978) > 0)
+    {
+      UseItem(34978)
+      Msg(Console, "Delay 30 sec!")
+      Delay(30000)
+      Jump("QuestStep_4")
+    }
+  }
+
+  Delay(2000)
+  Jump("QuestStep_3")
+
+
+QuestStep_4:
+  If (LocInRange(155908, -105696, -2744, 500))
+  {
+    UseItem(34887)
+    Delay(5000)
+    UseItem(34912)
+    Delay(3000)
+    NpcDialog(33696)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Jump("SetLocation_2")
+  }
+
+  Delay(2000)
+  Jump("QuestStep_4")
+
+
+SetLocation_2:
+  MoveTo(156712, -106224, -2736)
+  ClearHuntingArea()
+  AddRectHuntingArea(158120, -105800, -2728, 1800)
+  BattleStart()
+
+
+BattleLoop_2:
+  If (CountItem(34889) == 10)
+  {
+    BattleStop()
+    UseItem(34912)
+    Delay(3000)
+    NpcDialog(33696)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+
+    If (CountItem(34979) > 0)
+    {
+      UseItem(34979)
+      Msg(Console, "Delay 30 sec!")
+      Delay(30000)
+      Jump("QuestStep_5")
+    }
+  }
+
+  Delay(2000)
+  Jump("BattleLoop_2")
+
+
+QuestStep_5:
+  If (LocInRange(176206, -116025, -3784, 500))
+  {
+    Jump("BattleLoop_3")
+  }
+
+  Delay(2000)
+  Jump("QuestStep_5")
+
+
+BattleLoop_3:
+  If (CountItem(34891) < 5)
+  {
+    SelectTarget(33735)
+    MoveToTarget(50)
+    UseItem(34890)
+    Delay(6000)
+  }
+
+  If (CountItem(34891) == 5)
+  {
+    UseItem(34912)
+    Delay(3000)
+    NpcDialog(33696)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+
+    If (CountItem(34980) > 0)
+    {
+      UseItem(34980)
+      Msg(Console, "Delay 30 sec!")
+      Delay(30000)
+      Jump("QuestStep_6")
+    }
+  }
+
+  Delay(2000)
+  Jump("BattleLoop_3")
+
+
+QuestStep_6:
+  If (LocInRange(159171, 169261, -3712, 500))
+  {
+    MoveTo(157347, 169837, -3520)
+    Jump("SetLocation_4")
+  }
+
+  Delay(2000)
+  Jump("QuestStep_6")
+
+
+SetLocation_4:
+  ClearHuntingArea()
+  AddRectHuntingArea(156500, 169900, -3536, 1800)
+  BattleStart()
+
+
+BattleLoop_4:
+  If (CountItem(34892) == 10)
+  {
+    BattleStop()
+    UseItem(34912)
+    Delay(3000)
+    NpcDialog(33696)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    UseItem(736)
+    Msg(Console, "Delay 30 sec!")
+    Delay(30000)
+    Jump("QuestStep_7")
+  }
+
+  Delay(2000)
+  Jump("BattleLoop_4")
+
+
+QuestStep_7:
+  If (LocInRange(159171, 169261, -3712, 500))
+  {
+    Jump("BattleLoop_4")
+  }
+
+  If (LocInRange(107685, 217240, -3672, 700))
+  {
+    MoveTo(108277, 217382, -3672)
+    MoveTo(108990, 217350, -3704)
+    MoveTo(109532, 217214, -3744)
+    MoveTo(110036, 217206, -3744)
+    MoveTo(110036, 219110, -3472)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(107640, 218690, -3672, 750))
+  {
+    MoveTo(107729, 217870, -3672)
+    MoveTo(108990, 217350, -3704)
+    MoveTo(109532, 217214, -3744)
+    MoveTo(110036, 217206, -3744)
+    MoveTo(110036, 219110, -3472)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(108640, 219190, -3672, 250))
+  {
+    MoveTo(107729, 217870, -3672)
+    MoveTo(108990, 217350, -3704)
+    MoveTo(109532, 217214, -3744)
+    MoveTo(110036, 217206, -3744)
+    MoveTo(110036, 219110, -3472)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(108640, 218690, -3672, 250))
+  {
+    MoveTo(107729, 217870, -3672)
+    MoveTo(108990, 217350, -3704)
+    MoveTo(109532, 217214, -3744)
+    MoveTo(110036, 217206, -3744)
+    MoveTo(110036, 219110, -3472)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(108640, 218200, -3656, 250))
+  {
+    MoveTo(107729, 217870, -3672)
+    MoveTo(108990, 217350, -3704)
+    MoveTo(109532, 217214, -3744)
+    MoveTo(110036, 217206, -3744)
+    MoveTo(110036, 219110, -3472)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(108990, 217350, -3704, 600))
+  {
+    MoveTo(109532, 217214, -3744)
+    MoveTo(110036, 217206, -3744)
+    MoveTo(110036, 219110, -3472)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(110000, 219330, -3472, 400))
+  {
+    MoveTo(110359, 219110, -3504)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(110000, 220620, -3472, 400))
+  {
+    MoveTo(110000, 219330, -3472)
+    MoveTo(110359, 219110, -3504)
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(110480, 221470, -3608, 450))
+  {
+    MoveTo(111524, 221347, -3608)
+    MoveTo(111524, 219184, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(111360, 221390, -3608, 425))
+  {
+    MoveTo(111524, 221347, -3608)
+    MoveTo(111524, 219184, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(112230, 221470, -3608, 450))
+  {
+    MoveTo(111524, 221347, -3608)
+    MoveTo(111524, 219184, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(111370, 220075, -3664, 900))
+  {
+    MoveTo(111524, 219704, -3664)
+    MoveTo(111524, 219184, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(111360, 218720, -3464, 450))
+  {
+    MoveTo(111413, 219194, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(113960, 217880, -3664, 800))
+  {
+    MoveTo(113133, 217774, -3736)
+    MoveTo(112650, 217774, -3736)
+    MoveTo(112650, 219110, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(115160, 218280, -3656, 400))
+  {
+    MoveTo(113960, 217880, -3664)
+    MoveTo(113133, 217774, -3736)
+    MoveTo(112650, 217774, -3736)
+    MoveTo(112650, 219110, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(115370, 219284, -3680, 600))
+  {
+    MoveTo(115160, 218280, -3656)
+    MoveTo(113960, 217880, -3664)
+    MoveTo(113133, 217774, -3736)
+    MoveTo(112650, 217774, -3736)
+    MoveTo(112650, 219110, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(115060, 220190, -3728, 300))
+  {
+    MoveTo(115370, 219284, -3680)
+    MoveTo(115160, 218280, -3656)
+    MoveTo(113960, 217880, -3664)
+    MoveTo(113133, 217774, -3736)
+    MoveTo(112650, 217774, -3736)
+    MoveTo(112650, 219110, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(114306, 220153, -3616, 450))
+  {
+    MoveTo(114015, 220542, -3480)
+    MoveTo(114023, 221347, -3536)
+    MoveTo(111524, 221347, -3608)
+    MoveTo(111524, 219184, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  If (LocInRange(114306, 221709, -3624, 450))
+  {
+    MoveTo(114023, 221347, -3536)
+    MoveTo(111524, 221347, -3608)
+    MoveTo(111524, 219184, -3536)
+    MoveTo(111671, 219194, -3536)
+  }
+
+  MoveTo(111413, 219194, -3536)
+  MoveTo(111390, 219367, -3544)
+  NpcDialog(30899)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(5)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  MoveTo(147723, -54937, -2728)
+  MoveTo(147723, -53257, -2728)
+  MoveTo(147385, -52438, -2728)
+  NpcDialog(31281)
+  Delay(3000)
+  SelectDialog(4)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+
+
+QuestStep_8:
+  If (CheckNPCRange(33686) < 700)
+  {
+    SelectTarget(33686)
+    MoveToTarget(50)
+    Delay(3000)
+    NpcDialog(33686)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+
+    If (CountItem(34981) > 0)
+    {
+      UseItem(34981)
+      Msg(Console, "Delay 30 sec!")
+      Delay(30000)
+      Jump("QuestStep_9")
+    }
+
+    If (CountItem(34982) > 0)
+    {
+      UseItem(34982)
+      Msg(Console, "Delay 30 sec!")
+      Delay(30000)
+      Jump("QuestStep_10")
+    }
+  }
+
+  Delay(2000)
+  Jump("QuestStep_8")
+
+
+QuestStep_9:
+  If (LocInRange(146730, 14844, -1368, 1000))
+  {
+    MoveTo(147249, 15267, -1368)
+    MoveTo(147687, 15228, -1360)
+    MoveTo(148159, 14748, -1368)
+    SelectTarget(19293)
+    UseItem(34961)
+    Delay(2000)
+  }
+
+  If (CountItem(34962) > 0)
+  {
+    UseItem(736)
+    Msg(Console, "Delay 30 sec!")
+    Delay(30000)
+    Jump("QuestStep_11")
+  }
+
+  Delay(2000)
+  Jump("QuestStep_9")
+
+
+QuestStep_10:
+  If (LocInRange(22299, -49141, -1296 , 1000))
+  {
+    MoveTo(22195, -49707, -1296)
+    SelectTarget(19293)
+    UseItem(34961)
+    Delay(2000)
+  }
+
+  If (CountItem(34962) > 0)
+  {
+    UseItem(736)
+    Msg(Console, "Delay 30 sec!")
+    Delay(30000)
+    Jump("QuestStep_12")
+  }
+
+  Delay(2000)
+  Jump("QuestStep_10")
+
+
+QuestStep_11:
+  If (LocInRange(147360, 30519, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(146038,    30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144627, 28650, -2456, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144635, 26664, -2264, 1000))
+  {
+    MoveTo(144942, 27622, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144526, 24661, -2136, 1000))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(144559, 22835, -2136, 800))
+  {
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(145686, 21114, -2136, 1000))
+  {
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147331, 20750, -2096, 700))
+  {
+    MoveTo(146246, 21161, -2136)
+    MoveTo(144982, 22513, -2136)
+    MoveTo(144982, 24241, -2136)
+    MoveTo(146281, 24251, -2008)
+    MoveTo(146385, 25707, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(148946, 21121, -2136, 1000))
+  {
+    MoveTo(149853, 22529, -2136)
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150312, 22835, -2136, 800))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150345, 24661, -2136, 1000))
+  {
+    MoveTo(149869, 24225, -2136)
+    MoveTo(148525, 24201, -2008)
+    MoveTo(148509, 25753, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150236, 26664, -2264, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(150227, 28650, -2456, 1000))
+  {
+    MoveTo(149851, 27626, -2264)
+    MoveTo(148084, 27688, -2264)
+    MoveTo(148100, 26744, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(148700, 30519, -2456, 1000))
+  {
+    MoveTo(147423, 29993, -2456)
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147360, 29720, -2456, 400))
+  {
+    MoveTo(147432, 27825, -2264)
+    MoveTo(146780, 27817, -2264)
+    MoveTo(146756, 26777, -2200)
+    MoveTo(147428, 26736, -2200)
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147405, 24000, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  If (LocInRange(147405, 27600, -2200, 1800))
+  {
+    MoveTo(147388, 25848, -2008)
+    MoveTo(147137, 25843, -2008)
+  }
+
+  MoveTo(146827, 25823, -2008)
+  NpcDialog(30848)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  Jump("QuestStep_13")
+
+
+QuestStep_12:
+  If (LocInRange(43270, -46680, -808, 750))
+  {
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(43240, -47976, -792, 550))
+  {
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(44339, -47976, -792, 550))
+  {
+    MoveTo(43551, -47719, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(44455, -46990, -792, 435))
+  {
+    MoveTo(43551, -47719, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(45440, -47976, -792, 550))
+  {
+    MoveTo(43490, -47979, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(45883, -49048, -792, 525))
+  {
+    MoveTo(45902, -48011, -792)
+    MoveTo(43490, -47979, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(45120, -50097, -792, 525))
+  {
+    MoveTo(45848, -49069, -792)
+    MoveTo(45902, -48011, -792)
+    MoveTo(43490, -47979, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(45055, -49271, -792, 300))
+  {
+    MoveTo(45848, -49069, -792)
+    MoveTo(45902, -48011, -792)
+    MoveTo(43490, -47979, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(45135, -48750, -792, 225))
+  {
+    MoveTo(45153, -48005, -792)
+    MoveTo(43490, -47979, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(43884, -48927, -792, 400))
+  {
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(43790, -50127, -792, 800))
+  {
+    MoveTo(43861, -48931, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(44120, -51400, -792, 475))
+  {
+    MoveTo(43861, -48931, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(42835, -51730, -792, 800))
+  {
+    MoveTo(43769, -50147, -792)
+    MoveTo(43861, -48931, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(41332, -52391, -832, 700))
+  {
+    MoveTo(42689, -51555, -792)
+    MoveTo(43769, -50147, -792)
+    MoveTo(43861, -48931, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(42391, -48245, -792, 300))
+  {
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(41795, -48245, -800, 300))
+  {
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(41195, -48245, -800, 300))
+  {
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(40496, -48239, -768, 400))
+  {
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(36744, -50231, 896, 725))
+  {
+    MoveTo(38190, -49565, 896)    
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(38190, -49565, 896, 725))
+  {
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(36744, -46254, 896, 725))
+  {
+    MoveTo(38190, -46920, 896)
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(38190, -46920, 896, 725))
+  {
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(38900, -48239, 896, 600))
+  {
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(37701, -48239, 896, 600))
+  {
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(36502, -48239, 896, 600))
+  {
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  If (LocInRange(35295, -48239, 968, 600))
+  {
+    MoveTo(38295, -48055, 896)
+    NpcDialog(31698)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    SelectDialog(1)
+    Delay(3000)
+    CloseDialog()
+    MoveTo(38800, -48239, -1040)
+    MoveTo(39700, -48239, -768)
+    MoveTo(41195, -48245, -800)
+    MoveTo(42689, -48277, -792)
+    MoveTo(43449, -47611, -792)
+  }
+
+  MoveTo(43824, -47715, -792)
+  NpcDialog(31320)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  SelectDialog(1)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+  Jump("QuestStep_13")
+
+
+QuestStep_13:
+  MoveTo(147723, -54937, -2728)
+  MoveTo(147723, -53257, -2728)
+  MoveTo(147385, -52438, -2728)
+  NpcDialog(31281)
+  Delay(3000)
+  SelectDialog(4)
+  Delay(3000)
+  CloseDialog()
+  Delay(3000)
+
+
+QuestStep_14:
+  If (CheckNPCRange(33686) < 700)
+  {
+    SelectTarget(33686)
+    MoveToTarget(50)
+    Delay(3000)
+    NpcDialog(33686)
+    Delay(3000)
+    SelectDialog(2)
+    Delay(3000)
+    CloseDialog()
+    Delay(3000)
+    Msg(Console, "Change Noblesse Successful!")
+    Exit
+  }
+
+  Delay(2000)
+  Jump("QuestStep_14")
+
+
+Exit:

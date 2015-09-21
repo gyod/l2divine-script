@@ -1,0 +1,247 @@
+Begin:
+MoveTo(-113981, 259487, -1192)
+MoveTo(-114374, 258348, -1192)
+MoveTo(-114370, 257298, -1136)
+MoveTo(-113881, 256972, -1136)
+MoveTo(-113999, 256719, -1240)
+MoveTo(-114361, 256565, -1280)
+
+Sell:
+Msg(Console, "Selling everything I own!")
+MoveTo(-114412, 255750, -1512)
+MoveTo(-113416, 255991, -1496)
+NpcDialog(30004)
+Delay(2500)
+SelectDialog(1)
+Delay(2500)
+Sell()
+Delay(2500)
+	// Recipe: Requiem Slasher (60%) 
+AddItem(36734, *)
+	// Recipe: Requiem Avenger (60%)
+AddItem(36735, *)
+	// Recipe: Immortal Gauntlets (60%) 
+AddItem(36746, *)
+	// Recipe: Immortal Helmet (60%) 
+AddItem(36743, *)
+	// Recipe: Immortal Boots (60%) 
+AddItem(36747, *)
+	// Recipe: Immortal Ring (60%) 
+AddItem(36762, *)
+	// Immortal Boot Ingredient
+AddItem(36809, *)
+	// Immortal Gauntlet Ingredient 
+AddItem(36808, *)
+	// Immortal Helmet Ingredient 
+AddItem(36805, *)
+	// Immortal Ring Gem
+AddItem(36824, *)
+	// Requiem Avenger Fragment 
+AddItem(36797, *)
+	// Accessory Gem 
+AddItem(36557, *)
+	// Accessory Gem (Mid-grade) 
+AddItem(36558, *)
+	// Durable Leather 
+AddItem(36518, *)
+	// Leather
+AddItem(36517, *)
+	// Thin Braid 
+AddItem(36532, *)
+	// Synthetic Braid 
+AddItem(36533, *)
+	// Requiem Slasher Fragment 
+AddItem(36796, *)
+Confirm()
+CloseDialog()
+Delay(2500)
+
+SOE:
+If (CountItem(736) < 100)
+{
+Msg(Console, "Getting low on SOE, buying some!")
+NpcDialog(30004)
+Delay(2500)
+SelectDialog(1)
+Delay(2500)
+AddItem(736, 100)
+Confirm()
+CloseDialog()
+Delay(2500)
+}
+
+Store:
+Msg(Console, "Storing valueables!")
+MoveTo(-113755, 255299, -1504)
+MoveTo(-113609, 255300, -1496)
+NpcDialog(30005)
+Delay(2500)
+SelectDialog(2)
+Delay(2500)
+SelectDialog(1)
+Delay(2500)
+	// Requiem Slasher 
+AddItem(17292, *)
+	// Requiem Avenger 
+AddItem(17293, *)
+	// Immortal Helmet 
+AddItem(17304, *)
+	// Immortal Breastplate 
+AddItem(17305, *)
+	// Immortal Gaiters 
+AddItem(17306, *)
+	// Immortal Gauntlets 
+AddItem(17307, *)
+	// Immortal Boots 
+AddItem(17308, *)
+	// Immortal Shield 
+AddItem(17309, *)
+	// Immortal Leather Helmet  
+AddItem(17310, *)
+	// Immortal Leather Armor 
+AddItem(17311, *)
+	// Immortal Leather Leggings
+AddItem(17312, *)
+	// Immortal Leather Gloves 
+AddItem(17313, *)
+	// Immortal Leather Boots
+AddItem(17314, *)
+	// Immortal Circlet  
+AddItem(17316, *)
+	// Immortal Stockings 
+AddItem(17317, *)
+	// Immortal Gloves 
+AddItem(17318, *)
+	// Immortal Shoes 
+AddItem(17319, *)
+	// Immortal Sigil 
+AddItem(17320, *)
+	// Immortal Necklace
+AddItem(17321, *)
+	// Immortal Earring
+AddItem(17322, *)
+	// Immortal Ring 
+AddItem(17323, *)
+	// Earth Stone 
+AddItem(9548, *)
+	// Fire Stone
+AddItem(9546, *)
+	// Wind Stone
+AddItem(9549, *)
+	// Wind Crystal
+AddItem(9555, *)
+	// Earth Crystal
+AddItem(9554, *)
+	// Water Crystal
+AddItem(9554, *)
+	// Scroll: Enchant Armor (R-grade) 
+AddItem(17527, *)
+Delay(2500)
+Confirm()
+CloseDialog()
+Delay(2500)
+
+AdenaLoop:
+Msg(Console, "Storing 1 million in cash!")
+NpcDialog(30005)
+Delay(2500)
+SelectDialog(2)
+Delay(2500)
+SelectDialog(1)
+Delay(2500)
+If (CountItem(57) > 1000000)
+{
+AddItem(57, 1000000)
+}
+Delay(2500)
+Confirm()
+CloseDialog()
+Delay(2500)
+If (CountItem(57) > 1000000)
+{
+Jump("AdenaLoop")
+}
+Else
+{
+Jump("GetBuffs")
+}
+
+GetBuffs:
+Msg(Console, "Getting buffs!")
+MoveTo(-114714, 255085, -1520)
+MoveTo(-114570, 254266, -1528)
+NpcDialog(32327)
+Delay(2500)
+SelectDialog(2)
+Delay(2500)
+SelectDialog(2)
+Delay(2500)
+CloseDialog()
+
+Teleport:
+Msg(Console, "Moving to my area!")
+MoveTo(-114529, 254052, -1528)
+NpcDialog(33123)
+Delay(2500)
+SelectDialog(4)
+Delay(5000)
+CloseDialog()
+
+MoveToBattleArea:
+MoveTo(-109421, 237527, -2960)
+NpcDialog(33180)
+Delay(2500)
+SelectDialog(1)
+Delay(5000)
+CloseDialog()
+MoveTo(-115042, 230192, -1648)
+NpcDialog(33197)
+Delay(2500)
+SelectDialog(1)
+Delay(5000)
+CloseDialog()
+MoveTo(-116170, 236422, -3088)
+NpcDialog(33344)
+Delay(2500)
+SelectDialog(3)
+Delay(5000)
+CloseDialog()
+NpcDialog(33303)
+Delay(2500)
+SelectDialog(1)
+Delay(5000)
+CloseDialog()
+MoveTo(-115965, 149267, -10744)
+MoveTo(-118479, 149261, -10744)
+MoveTo(-118446, 150260, -10736)
+Msg(Console, "Home sweet home!")
+
+Battle:
+BattleStart()
+
+BuffCheck:
+If (CharBuffLevel(15642) > 0)
+{
+	Delay(500)
+	Jump("BuffCheck")
+}
+Else
+{
+BattleStop()
+Delay(1500)
+UseSkill(10517)
+Delay(5000)
+UseItem(736)
+Delay(25000)
+Jump("Check")
+}
+
+Check:
+If (Char.HP == 0)
+{
+ReturnToVillage()
+Msg(Console, "Didn't make it out alive!")
+Delay(5000)
+}
+
+Jump("Begin")

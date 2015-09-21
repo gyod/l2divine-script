@@ -1,12 +1,9 @@
 # l2divine-script
-Automatically exported from code.google.com/p/l2divine-script
-
-#L2DivineScript
+L2Divine Script
 
 # Introduction #
 
 The project is for eazy to download and maintain about L2Divine scripts posted officeal site.
-
 
 # Details #
 

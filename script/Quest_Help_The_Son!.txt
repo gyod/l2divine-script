@@ -61,6 +61,8 @@ SelectDialog(8)
 Delay(2000)
 SelectDialog(1)
 Delay(2000)
+SelectDialog(1)
+Delay(2000)
 CloseDialog()
 
 // Move to Maille Lizardman location
