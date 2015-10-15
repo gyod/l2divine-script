@@ -48,6 +48,7 @@
 17,ClearHuntingArea
 17,ClearItemList
 17,ClearMonsterList
+17,ClickQuestionMarkIcon
 17,CloseDialog
 17,CloseWindow
 17,Confirm
@@ -70,6 +71,7 @@
 17,FollowSelectTarget
 17,ForceAttack
 17,ForceAttackTarget
+17,ForcePetAction
 17,FoundEnemyInRange
 17,FoundKarmaPlayer
 17,FoundPlayerInRange
@@ -80,6 +82,7 @@
 17,Jump
 17,LearnSkill
 17,LeaveParty
+17,LoadSetting
 17,LocInRange
 17,Logout
 17,MoveTo
@@ -95,6 +98,7 @@
 17,PlayerInRange
 17,PlaySound
 17,QuestAccepted
+17,QuestionMarkIconAppear
 17,Recommend
 17,ReturnToVillage
 17,ReturnToClanHall
@@ -106,6 +110,7 @@
 17,SelectPlayerByClass
 17,SelectTarget
 17,Sell
+17,SendMail
 17,SetBattleArea
 17,SetRestArea
 17,SetPickup
