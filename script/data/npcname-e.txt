@@ -9819,7 +9819,7 @@ id	name	description	rgb[0]	rgb[1]	rgb[2]	reserved1
 34171	a,Melisa\0	a,Princess\0	9C	E8	A9	-1
 34172	a,Sayan\0	a,Sage\0	9C	E8	A9	-1
 34173	a,Kanna\0	a,Knight Captain\0	9C	E8	A9	-1
-34174	a,Sirr\0	a,	9C	E8	A9	-1
+34174	a,Sirra\0	a,	9C	E8	A9	-1
 34175	a,Knight\0	a,	9C	E8	A9	-1
 34176	a,Molly\0	a,	9C	E8	A9	-1
 34177	a,Molly\0	a,	9C	E8	A9	-1
