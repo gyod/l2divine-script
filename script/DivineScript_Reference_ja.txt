@@ -2,8 +2,8 @@
 | DivineScript リファレンス |
 +---------------------------+
 
-バージョン：	2.7
-最終更新日：	2015年09月01日
+バージョン：	2.8
+最終更新日：	2015年10月26日
 著者：		Dev, Zariche
 訳者：		gyo
 
@@ -90,6 +90,7 @@
 - PlaySound
 - QuestAccepted
 - QuestionMarkIconAppear
+- RealAllRegularMail
 - Recommend
 - Return
 - ReturnToVillage
@@ -959,6 +960,12 @@ QuestionMarkIconAppear()
 				// クエストを受諾する
 				ClickQuestionMarkIcon()
 			}
+
+RealAllRegularMail()
+	引数	なし
+	返値	なし
+	目的	すべての一般郵便と代引郵便を読み、アイテムを受け取り、読んだメールを削除する
+	※訳注：「Read」ではなく「Real」
 
 Recommend(Player Name)
 	引数	プレイヤー名

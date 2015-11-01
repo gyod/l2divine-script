@@ -2,8 +2,8 @@
 | DivineScript Reference |
 +------------------------+
 
-Version:	2.7
-Last updated:	Sep 1, 2015
+Version:	2.8
+Last updated:	Oct 26, 2015
 Author:		Dev, Zariche
 
 +-------------------+
@@ -89,6 +89,7 @@ Section 2: Commands
 - PlaySound
 - QuestAccepted
 - QuestionMarkIconAppear
+- RealAllRegularMail
 - Recommend
 - Return
 - ReturnToVillage
@@ -935,6 +936,11 @@ QuestionMarkIconAppear()
 				// Accept quest
 				ClickQuestionMarkIcon()
 			}
+
+RealAllRegularMail()
+	Parameter	None
+	Return		None
+	Propose		Read all regular mail and also claim items and delete
 
 Return
 	Parameter	None
