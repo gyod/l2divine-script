@@ -1,2 +1,0 @@
-"patcher.exe" -f
-pause
