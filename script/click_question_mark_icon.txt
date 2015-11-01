@@ -1,0 +1,16 @@
+If (QuestionMarkIconAppear())
+{   
+	Msg(Console, "Click ? Icon")
+	ClickQuestionMarkIcon()
+	Delay(5000)
+
+	// Accept quest
+	SelectDialog(1)
+	Delay(5000)
+
+	// ...
+}
+Else
+{
+	Msg(Console, "No ? appear")
+}
