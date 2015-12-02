@@ -1,0 +1,66 @@
+// http://www.l2divine.com/forum/topic_view.jsp?c=NxQ=&f=NxJEK2I=
+// SOA Nursery
+// by cpuleston on Tue Dec 01, 2015 11:36 AM
+//
+// On my tests with summoner, gets around 1200 Residue (not brilliant, but it's about the exp more for me)
+// Will attack the annoying little fella that steals from you, but not everytime, I believe this is unavoidable ayway, manually I can't always stop him..
+// To use, just port into SOA Nursery, and run script from the port point.. best results if you turn off pickup ..
+//
+
+MoveTo(-185856, 147519, -15296)
+
+NpcDialog(33152)
+Delay(2000)
+SelectDialog(1)
+Delay(2000)
+
+CloseDialog()
+CloseWindow()
+Delay(2000)
+
+ClearHuntingArea()
+AddHuntingArea(-185841, 146565, -15338, 500)
+AddHuntingArea(-185101, 146700, -15338, 500)
+AddHuntingArea(-184518, 147321, -15338, 500)
+AddHuntingArea(-184383, 147912, -15338, 500)
+AddHuntingArea(-184527, 148559, -15338, 500)
+AddHuntingArea(-184864, 148973, -15338, 500)
+AddHuntingArea(-185106, 149153, -15338, 500)
+AddHuntingArea(-185402, 149258, -15338, 500)
+AddHuntingArea(-185970, 149346, -15338, 500)
+AddHuntingArea(-186381, 149204, -15338, 500)
+AddHuntingArea(-187017, 148738, -15338, 500)
+AddHuntingArea(-187245, 148395, -15338, 500)
+AddHuntingArea(-187336, 147828, -15338, 500)
+AddHuntingArea(-187268, 147353, -15338, 500)
+AddHuntingArea(-187175, 147178, -15338, 500)
+AddHuntingArea(-186856, 146781, -15338, 500)
+AddHuntingArea(-186413, 146572, -15338, 500)
+AddHuntingArea(-185901, 146572, -15338, 500)
+
+BattleStart()
+Jump("CheckForMaguen")
+
+CheckForMaguen:
+If (TargetInRange(19037))
+{
+	Jump("Maguen")
+}
+Else
+{
+	Jump("CheckForMaguen")
+}
+
+Maguen:
+If (TargetInRange(19037))
+{
+	Msg(Console, "Maguen Is Here !!")
+	ForceAttack(19037)
+	Delay(1000)
+	Jump("Maguen")
+}
+Else
+{
+	Msg(Console, "He's gone.")
+	Jump("CheckForMaguen")
+}
